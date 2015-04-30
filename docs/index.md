@@ -16,6 +16,14 @@ This is document collection of euslisp application programs
 - [github project page](http://github.com/jsk-ros-pkg/jsk_roseus)
 - [documentation](roseus)
 
+## pr2eus
+- [github project page](http://github.com/jsk-ros-pkg/jsk_pr2eus)
+- [documentation](pr2eus)
+
+## hrpsys_ros_bridge
+- [github project page](http://github.com/start-jsk/rtmros_common)
+- [documentation](hrpsys_ros_bridge)
+
 ### for maintainers
 - [setup and build docs](misc/maintain)
 
