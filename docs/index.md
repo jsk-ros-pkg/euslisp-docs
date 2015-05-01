@@ -16,7 +16,7 @@ This is document collection of euslisp application programs
 - [github project page](http://github.com/jsk-ros-pkg/jsk_roseus)
 - [documentation](roseus)
 
-## pr2eus
+## pr2eus (robot-interface and pr2-interface)
 - [github project page](http://github.com/jsk-ros-pkg/jsk_pr2eus)
 - [documentation](pr2eus)
 
