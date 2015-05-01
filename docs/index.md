@@ -10,7 +10,7 @@ This is document collection of euslisp application programs
 ## jskeus
 
 - [github project page](http://github.com/euslisp/jskeus)
-- [jskeus manual](http://euslisp.github.io/jskeus/)
+- [jskeus manual](jskeus/jmanual)
 
 ## roseus
 - [github project page](http://github.com/jsk-ros-pkg/jsk_roseus)
