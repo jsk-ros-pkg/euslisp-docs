@@ -1,1 +1,1 @@
-# euslisp-docs [![Documentation Status](https://readthedocs.org/projects/euslisp-docs/badge/?version=latest)](https://readthedocs.org/projects/euslisp-docs/?badge=latest)
+# [euslisp-docs](http://euslisp-docs.readthedocs.org/) [![Documentation Status](https://readthedocs.org/projects/euslisp-docs/badge/?version=latest)](https://readthedocs.org/projects/euslisp-docs/?badge=latest)
