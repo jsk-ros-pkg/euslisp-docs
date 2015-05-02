@@ -70,7 +70,7 @@ with the same timestamp
 ##### **faces->marker-msg** faces header &key ((:color col) (float-vector 1 0 0)) ((:id idx) 0) ns lifetime 
 - nil
 
-##### **object->marker-msg** obj header &key coords ((:color col) (float-vector 1 1 1)) ((:alpha a) 1.0) ((:id idx) 0) ns lifetime 
+##### **object->marker-msg** obj header &key coords ((:color col) (float-vector 1 1 1)) ((:alpha a) 1.0) ((:id idx) 0) ns lifetime rainbow 
 - nil
 
 ##### **wireframe->marker-msg** wf header &rest args 
