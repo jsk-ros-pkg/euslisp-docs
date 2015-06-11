@@ -1,9 +1,9 @@
-% EusLisp version 9.12 Reference Manual Featuring Multithread and XToolKit
+% EusLisp version 9.13 Reference Manual Featuring Multithread and XToolKit
   ETL-TR-95-2 January, 1995
 % 
 % 
 
-**EusLisp** **version 9.12** **Reference Manual** Featuring Multithread and XToolKit \
+**EusLisp** **version 9.13** **Reference Manual** Featuring Multithread and XToolKit \
  ETL-TR-95-2 January, 1995
 ======================================================================================
 
@@ -456,7 +456,8 @@ Revision History
   ~ more error check on min/max, support arbitrary length for vplus,
     more quiet for non-ttyp mode, Version 9.11 is releaced.
 **2015**
-  ~ Version 9.12 is released, support ARM
+  ~ Version 9.12 is released, support ARM Version 9.13 is released,
+    support class documentation
 
 Installation
 ------------
@@ -17929,7 +17930,7 @@ Transformation](manual.html#27180)
 About this document ...
 =======================
 
-****EusLisp** **version 9.12** **Reference Manual** Featuring
+****EusLisp** **version 9.13** **Reference Manual** Featuring
 Multithread and XToolKit \
  ETL-TR-95-2 January, 1995**
 
@@ -17945,8 +17946,8 @@ Macquarie University, Sydney.
 The command line arguments were: **latex2html**
 `-dir /tmp/html/ -local_icons -auto_prefix -iso_language JP manual -split 1 -no_navigation`
 
-The translation was initiated by on 2015-05-13
+The translation was initiated by on 2015-06-11
 
 * * * * *
 
-2015-05-13
+2015-06-11
