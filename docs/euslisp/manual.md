@@ -1,9 +1,9 @@
-% EusLisp version 9.13 Reference Manual Featuring Multithread and XToolKit
+% EusLisp version 9.14 Reference Manual Featuring Multithread and XToolKit
   ETL-TR-95-2 January, 1995
 % 
 % 
 
-**EusLisp** **version 9.13** **Reference Manual** Featuring Multithread and XToolKit \
+**EusLisp** **version 9.14** **Reference Manual** Featuring Multithread and XToolKit \
  ETL-TR-95-2 January, 1995
 ======================================================================================
 
@@ -457,7 +457,9 @@ Revision History
     more quiet for non-ttyp mode, Version 9.11 is releaced.
 **2015**
   ~ Version 9.12 is released, support ARM Version 9.13 is released,
-    support class documentation
+    support class documentation Version 9.14 is released, fix assert
+    API. Now message is optional (defmacro assert (pred &optional
+    message)
 
 Installation
 ------------
@@ -17939,7 +17941,7 @@ Transformation](manual.html#27205)
 About this document ...
 =======================
 
-****EusLisp** **version 9.13** **Reference Manual** Featuring
+****EusLisp** **version 9.14** **Reference Manual** Featuring
 Multithread and XToolKit \
  ETL-TR-95-2 January, 1995**
 
