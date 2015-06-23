@@ -1,9 +1,9 @@
 % EusLisp EusLisp version 9.00/ irteus version 1.00 リファレンスマニュアル
-  -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 June 19, 2015
+  -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 June 23, 2015
 % 
 % 
 
-**EusLisp** **EusLisp version 9.00/ irteus version 1.00** **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 June 19, 2015
+**EusLisp** **EusLisp version 9.00/ irteus version 1.00** **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 June 23, 2015
 =========================================================================================================================================================
 
 **irteus 1.00** *東京大学大学院* 情報理工学系研究科 知能機械情報学専攻
@@ -1768,9 +1768,26 @@ Calculate jacobian matrix from link-list and move-target. Unit system is
 
 191\#191
 
-Move move-target to target-coords.
+:inverse-kinematics-loop is one loop calculation for
+:inverse-kinematics. In this method, joint position difference
+satisfying workspace difference (dif-pos, dif-rot) are calculated and
+euslisp model joint angles are updated. Optional arguments:
+:additional-check This argument is to add optional best-effort
+convergence conditions. :additional-check should be function or lambda.
+best-effort =\>In :inverse-kinematics-loop, 'success' is overwritten by
+'(and success additional-check)' In :inverse-kinematics, 'success is not
+overwritten. So, :inverse-kinematics-loop wait until ':additional-check'
+becomes 't' as possible, but ':additional-check' is neglected in the
+final :inverse-kinematics return. :min-loop Minimam loop count (nil by
+default). If integer is specified, :inverse-kinematics-loop does returns
+:ik-continues and continueing solving IK. If min-loop is nil, do not
+consider loop counting for IK convergence.
 
 192\#192
+
+Move move-target to target-coords.
+
+193\#193
 
 Solve inverse-kinematics for closed loop forward kinematics. Move
 move-target to target-coords with link-list. link-list loop should be
@@ -1886,18 +1903,6 @@ rotation-axis translation-axis &allow-other-keys*[メソッド]
 
 **:draw-collision-debug-view** [メソッド]
 
-**:inverse-kinematics-loop** *dif-pos dif-rot &rest args &key (stop 1)
-(loop 0) link-list move-target (rotation-axis (cond ((atom move-target)
-t) (t (make-list (length move-target) :initial-element t))))
-(translation-axis (cond ((atom move-target) t) (t (make-list (length
-move-target) :initial-element t)))) (thre (cond ((atom move-target) 1)
-(t (make-list (length move-target) :initial-element 1)))) (rthre (cond
-((atom move-target) (deg2rad 1)) (t (make-list (length move-target)
-:initial-element (deg2rad 1))))) (dif-pos-ratio 1.0) (dif-rot-ratio 1.0)
-union-link-list target-coords (jacobi) (additional-check) (centroid-thre
-1.0) (target-centroid-pos) (centroid-offset-func) (cog-translation-axis
-:z) debug-view ik-args &allow-other-keys*[メソッド]
-
 **:ik-convergence-check** *success dif-pos dif-rot rotation-axis
 translation-axis thre rthre centroid-thre target-centroid-pos
 centroid-offset-func cog-translation-axis &key (update-mass-properties
@@ -1979,7 +1984,7 @@ float-vector (calc-target-joint-dimension j-l)))*[関数]
       :super   cascaded-coords 
       :slots         (geometry::bodies :type cons) 
 
-193\#193
+194\#194
 
 Create bodyset object
 
@@ -2114,14 +2119,14 @@ Returns camera sensors.
 look at hand position, l/r supports :rarm, :larm, :arms, and '(:rarm
 :larm)
 
-194\#194
+195\#195
 
 solve inverse kinematics, move move-target to target-coords
 look-at-target suppots t, nil, float-vector, coords, list of
 float-vector, list of coords link-list is set by default based on
 move-target -\>root link link-list
 
-195\#195
+196\#196
 
 move move-target using dif-pos and dif-rot, look-at-target suppots t,
 nil, float-vector, coords, list of float-vector, list of coords
@@ -2137,15 +2142,15 @@ coordinates
 
 Set robot to initial posture.
 
-196\#196
+197\#197
 
 Returns torque vector
 
-197\#197
+198\#198
 
 Calculates end-effector force and moment from joint torques.
 
-198\#198
+199\#199
 
 fullbody inverse kinematics for legged robot. necessary args :
 target-coords, move-target, and link-list must include legs' (or leg's)
@@ -2159,7 +2164,7 @@ Print angle vector with limb alingment and limb indent. For example, if
 robot is rarm, larm, and torso, print result is: \#f( rarm-j0 ...
 rarm-jN larm-j0 ... larm-jN torso-j0 ... torso-jN )
 
-199\#199
+200\#200
 
 Calculate zmp[mm] from sensor local forces and moments If force\_z is
 large, zmp can be defined and returns 3D zmp. Otherwise, zmp cannot be
@@ -2170,18 +2175,18 @@ defined and returns nil.
 Calculate midcoords of :rleg and :lleg end-coords. In the following
 codes, leged robot is assumed.
 
-200\#200
+201\#201
 
 Fix robot's legs to a coords In the following codes, leged robot is
 assumed.
 
-201\#201
+202\#202
 
 Move robot COG to change centroid-on-foot location, leg : legs for
 target of robot's centroid, which should be :both, :rleg, and :lleg.
 fix-limbs : limb names which are fixed in this IK.
 
-202\#202
+203\#203
 
 Calculate walking pattern from foot step list and return pattern list as
 a list of angle-vector, root-coords, time, and so on.
@@ -2190,7 +2195,7 @@ a list of angle-vector, root-coords, time, and so on.
 
 Generate footstep parameter
 
-203\#203
+204\#204
 
 Calculate foot step list from goal x position [mm], goal y position
 [mm], and goal yaw orientation [deg].
@@ -2286,7 +2291,7 @@ extbody*[関数]
       :super   sensor-model 
       :slots         bumper-threshold 
 
-204\#204
+205\#205
 
 Create bumper model, b is the shape of an object and bt is the threshold
 in distance[mm].
@@ -2305,7 +2310,7 @@ object and 0 if not.
       :super   sensor-model 
       :slots         (vwing :forward (:projection :newprojection :view :viewpoint :view-direction :viewdistance :yon :hither)) pwidth pheight 
 
-205\#205
+206\#206
 
 Create camera model. b is the shape of an object
 
@@ -2361,7 +2366,7 @@ Returns ray vector of given x and y.
 
 **:get-image** *vwr &key (points) (colors)*[メソッド]
 
-206\#206
+207\#207
 
 Create camera object from given parameters.
 
@@ -2374,7 +2379,7 @@ Create camera object from given parameters.
       :super   cascaded-coords 
       :slots         name objs 
 
-207\#207
+208\#208
 
 Create scene model
 
@@ -2780,7 +2785,7 @@ create link for bvh model
       :super   sphere-joint 
       :slots         axis-order bvh-offset-rotation 
 
-208\#208
+209\#209
 
 create joint for bvh model
 
@@ -2818,7 +2823,7 @@ scl)) ((:bvh-offset-rotation bvh-rotation) (unit-matrix 3))
       :super   robot-model 
       :slots         nil 
 
-209\#209
+210\#210
 
 create robot model for bvh model
 
@@ -2892,7 +2897,7 @@ read bvh file
 
 read bvh file and anmiate robot model in the viewer
 
-210\#210
+211\#211
 
 load motion capture data
 
@@ -3121,7 +3126,7 @@ collada::links collada::joints*[関数]
       :super   cascaded-coords 
       :slots         parray carray narray curvature pcolor psize awidth asize box height width view-coords drawnormalmode transparent tcarray 
 
-211\#211
+212\#212
 
 Create point cloud object
 
@@ -3131,15 +3136,15 @@ change width and height, this method does not change points data
 
 **:points** *&optional pts wd ht*[メソッド]
 
-replace points, pts should be list of points or n**212\#212** matrix
+replace points, pts should be list of points or n**213\#213** matrix
 
 **:colors** *&optional cls*[メソッド]
 
-replace colors, cls should be list of points or n**212\#212** matrix
+replace colors, cls should be list of points or n**213\#213** matrix
 
 **:normals** *&optional nmls*[メソッド]
 
-replace normals by, nmls should be list of points or n**212\#212**3
+replace normals by, nmls should be list of points or n**213\#213**3
 matrix
 
 **:point-list** *&optional (remove-nan)*[メソッド]
@@ -3158,20 +3163,20 @@ return list of normals
 
 retrun centroid of this point cloud
 
-213\#213
+214\#214
 
 this method can take the same keywords with :filter-with-indices method.
 if :create is true, return filtered point cloud and original point cloud
 does not change.
 
-214\#214
+215\#215
 
 filter point cloud with list of index (points which are indicated by
 indices will remain). if :create is true, return filtered point cloud
 and original point cloud does not change. if :negative is true, points
 which are indicated by indices will be removed.
 
-215\#215
+216\#216
 
 create list of index where filter function retrun true. key, ckey, nkey
 are filter function for points, colors, normals. They are expected to
@@ -3181,7 +3186,7 @@ arguments and return t or nil. pcnkey is filter function for points,
 colors and normals. It is expected to take three arguments and return t
 or nil.
 
-216\#216
+217\#217
 
 downsample points with step
 
@@ -3551,7 +3556,7 @@ normal calculation if force option is true, clear current normalset. if
 exapnd option is ture, do :expand-vertices. if flat option is true,
 use-flat-shader
 
-217\#217
+218\#218
 
 create list of faces using vertices of this object
 
@@ -3690,7 +3695,7 @@ Returns permutation of given list
 
 Returns combination of given list
 
-218\#218
+219\#219
 
 Returns the elements of datum which maximizes key function
 
@@ -3700,7 +3705,7 @@ Returns the elements of datum which maximizes key function
 Create euslisp interpreter server, data sent to socket is evaluated as
 lisp expression
 
-219\#219
+220\#220
 
 Connect euslisp interpreter server until success
 
@@ -4047,7 +4052,7 @@ Index
 
 **:calc-gradh-from-link-list**
 
-[ロボットモデル](jmanual.html#5855)
+[ロボットモデル](jmanual.html#5866)
 
 **:calc-grasp-matrix**
 
@@ -4055,15 +4060,15 @@ Index
 
 **:calc-inverse-jacobian**
 
-[ロボットモデル](jmanual.html#5844)
+[ロボットモデル](jmanual.html#5855)
 
 **:calc-inverse-kinematics-nspace-from-link-list**
 
-[ロボットモデル](jmanual.html#6009)
+[ロボットモデル](jmanual.html#6020)
 
 **:calc-inverse-kinematics-weight-from-link-list**
 
-[ロボットモデル](jmanual.html#5987)
+[ロボットモデル](jmanual.html#5998)
 
 **:calc-jacobian**
 
@@ -4081,11 +4086,11 @@ Index
 
 **:calc-joint-angle-speed**
 
-[ロボットモデル](jmanual.html#5866)
+[ロボットモデル](jmanual.html#5877)
 
 **:calc-joint-angle-speed-gain**
 
-[ロボットモデル](jmanual.html#5877)
+[ロボットモデル](jmanual.html#5888)
 
 **:calc-normals**
 
@@ -4093,7 +4098,7 @@ Index
 
 **:calc-nspace-from-joint-limit**
 
-[ロボットモデル](jmanual.html#5998)
+[ロボットモデル](jmanual.html#6009)
 
 **:calc-one-tick-gait-parameter**
 
@@ -4105,11 +4110,11 @@ Index
 
 **:calc-target-axis-dimension**
 
-[ロボットモデル](jmanual.html#5811)
+[ロボットモデル](jmanual.html#5822)
 
 **:calc-target-joint-dimension**
 
-[ロボットモデル](jmanual.html#5833)
+[ロボットモデル](jmanual.html#5844)
 
 **:calc-u**
 
@@ -4118,7 +4123,7 @@ Index
 
 **:calc-union-link-list**
 
-[ロボットモデル](jmanual.html#5822)
+[ロボットモデル](jmanual.html#5833)
 
 **:calc-vel-from-pos**
 
@@ -4134,7 +4139,7 @@ Index
 
 **:calc-weight-from-joint-limit**
 
-[ロボットモデル](jmanual.html#5976)
+[ロボットモデル](jmanual.html#5987)
 
 **:calc-xk**
 
@@ -4212,23 +4217,23 @@ Index
 
 **:collision-avoidance**
 
-[ロボットモデル](jmanual.html#5932)
+[ロボットモデル](jmanual.html#5943)
 
 **:collision-avoidance-args**
 
-[ロボットモデル](jmanual.html#5921)
+[ロボットモデル](jmanual.html#5932)
 
 **:collision-avoidance-calc-distance**
 
-[ロボットモデル](jmanual.html#5910)
+[ロボットモデル](jmanual.html#5921)
 
 **:collision-avoidance-link-pair-from-link-list**
 
-[ロボットモデル](jmanual.html#5899)
+[ロボットモデル](jmanual.html#5910)
 
 **:collision-avoidance-links**
 
-[ロボットモデル](jmanual.html#5888)
+[ロボットモデル](jmanual.html#5899)
 
 **:collision-check-objects**
 
@@ -4334,7 +4339,7 @@ Index
 
 **:draw-collision-debug-view**
 
-[ロボットモデル](jmanual.html#6042)
+[ロボットモデル](jmanual.html#6053)
 
 **:draw-event**
 
@@ -4430,11 +4435,11 @@ Index
 
 **:find-joint-angle-limit-weight-old-from-union-link-list**
 
-[ロボットモデル](jmanual.html#5954)
+[ロボットモデル](jmanual.html#5965)
 
 **:find-link-route**
 
-[ロボットモデル](jmanual.html#5767)
+[ロボットモデル](jmanual.html#5778)
 
 **:find-node-in-close-list**
 
@@ -4668,20 +4673,20 @@ Index
 
 **:inverse-kinematics**
 
-[ロボットモデル](jmanual.html#5734) |
+[ロボットモデル](jmanual.html#5745) |
 [ロボットモデル](jmanual.html#8479)
 
 **:inverse-kinematics-args**
 
-[ロボットモデル](jmanual.html#6031)
+[ロボットモデル](jmanual.html#6042)
 
 **:inverse-kinematics-for-closed-loop-forward-kinematics**
 
-[ロボットモデル](jmanual.html#5745)
+[ロボットモデル](jmanual.html#5756)
 
 **:inverse-kinematics-loop**
 
-[ロボットモデル](jmanual.html#6053) |
+[ロボットモデル](jmanual.html#5734) |
 [ロボットモデル](jmanual.html#8490)
 
 **:inverse-kinematics-loop-for-look-at**
@@ -4839,11 +4844,11 @@ Index
 
 **:make-joint-min-max-table**
 
-[ロボットモデル](jmanual.html#5778)
+[ロボットモデル](jmanual.html#5789)
 
 **:make-min-max-table-using-collision-check**
 
-[ロボットモデル](jmanual.html#5789)
+[ロボットモデル](jmanual.html#5800)
 
 **:make-sole-polygon**
 
@@ -4883,11 +4888,11 @@ Index
 
 **:move-joints**
 
-[ロボットモデル](jmanual.html#5943)
+[ロボットモデル](jmanual.html#5954)
 
 **:move-joints-avoidance**
 
-[ロボットモデル](jmanual.html#6020)
+[ロボットモデル](jmanual.html#6031)
 
 **:move-viewing-around-viewtarget**
 
@@ -4971,7 +4976,7 @@ Index
 
 **:plot-joint-min-max-table-common**
 
-[ロボットモデル](jmanual.html#5800)
+[ロボットモデル](jmanual.html#5811)
 
 **:point-color**
 
@@ -5049,7 +5054,7 @@ Index
 
 **:reset-joint-angle-limit-weight-old**
 
-[ロボットモデル](jmanual.html#5965)
+[ロボットモデル](jmanual.html#5976)
 
 **:reset-offset-from-parent**
 
@@ -5228,7 +5233,7 @@ Index
 
 **:update-descendants**
 
-[ロボットモデル](jmanual.html#5756)
+[ロボットモデル](jmanual.html#5767)
 
 **:update-xk**
 
@@ -6266,7 +6271,7 @@ About this document ...
 
 ****EusLisp** **EusLisp version 9.00/ irteus version 1.00**
 **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 +
-JSK-TR-10-03 June 19, 2015**
+JSK-TR-10-03 June 23, 2015**
 
 This document was generated using the
 [**LaTeX**2`HTML`](http://www.latex2html.org/) translator Version 2008
@@ -6280,8 +6285,8 @@ Macquarie University, Sydney.
 The command line arguments were: **latex2html**
 `-dir /tmp/html/ -local_icons -auto_prefix -iso_language JP jmanual -split 1 -no_navigation`
 
-The translation was initiated by on 2015-06-19
+The translation was initiated by on 2015-06-23
 
 * * * * *
 
-2015-06-19
+2015-06-23
