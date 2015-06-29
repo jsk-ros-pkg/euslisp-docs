@@ -22,6 +22,27 @@
 - :super **propertied-object**
 - :slots callback-helpers buffers buffer-length 
 
+Exact time message filter synchronizes incoming channels by the timestamps contained in their headers, and outputs them in the form of a single callback that takes the same number of channels. This filter requres messages to have exactly the same timestamp in order to match. Your callback is only called if a message has been received on all specified channels with the same exact timestamp. <br>
+ <br>
+topic := ((topic message-type) (topic message-type) ...) <br>
+ <br>
+
+        ;; sample
+        (defclass image-caminfo-synchronizer
+          :super exact-time-message-filter)
+        
+        (defmethod image-caminfo-synchronizer
+          (:callback (image caminfo)
+        	(print (list image caminfo))
+        	(print (send-all (list image caminfo) :header :stamp))
+        	))
+        (ros::roseus "hoge")
+        (ros::roseus-add-msgs "sensor_msgs")
+        ;; test
+        (setq hoge (instance image-caminfo-synchronizer :init
+        		 (list (list "/multisense/left/image_rect_color" sensor_msgs::Image)
+        		   (list "/multisense/left/camera_info" sensor_msgs::CameraInfo))))
+        (ros::spin)
 
 
 #### :init
