@@ -17957,8 +17957,8 @@ Macquarie University, Sydney.
 The command line arguments were: **latex2html**
 `-dir /tmp/html/ -local_icons -auto_prefix -iso_language JP manual -split 1 -no_navigation`
 
-The translation was initiated by on 2015-06-19
+The translation was initiated by on 2015-07-16
 
 * * * * *
 
-2015-06-19
+2015-07-16
