@@ -1,9 +1,9 @@
 % EusLisp EusLisp version 9.00/ irteus version 1.00 リファレンスマニュアル
-  -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 July 17, 2015
+  -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 July 20, 2015
 % 
 % 
 
-**EusLisp** **EusLisp version 9.00/ irteus version 1.00** **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 July 17, 2015
+**EusLisp** **EusLisp version 9.00/ irteus version 1.00** **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 July 20, 2015
 =========================================================================================================================================================
 
 **irteus 1.00** *東京大学大学院* 情報理工学系研究科 知能機械情報学専攻
@@ -1877,9 +1877,10 @@ weight debug-view tmp-nspace*[メソッド]
 :calc-union-link-list link-list)) (fik-len (send self
 :calc-target-joint-dimension union-link-list)) (null-space) (debug-view)
 (additional-nspace-list) (cog-gain 0.0) (target-centroid-pos)
-(centroid-offset-func) (cog-translation-axis :z) (weight (fill
-(instantiate float-vector fik-len) 1.0)) (update-mass-properties t)
-(tmp-nspace (instantiate float-vector fik-len))*[メソッド]
+(centroid-offset-func) (cog-translation-axis :z) (cog-null-space nil)
+(weight (fill (instantiate float-vector fik-len) 1.0))
+(update-mass-properties t) (tmp-nspace (instantiate float-vector
+fik-len))*[メソッド]
 
 **:move-joints-avoidance** *union-vel &rest args &key union-link-list
 link-list (fik-len (send self :calc-target-joint-dimension
@@ -1890,7 +1891,7 @@ union-link-list)) (weight (fill (instantiate float-vector fik-len) 1))
 pair-list) (send self :collision-avoidance-link-pair-from-link-list
 link-list :obstacles (cadr (memq :obstacles args)) :debug (cadr (memq
 :debug-view args)))) (cog-gain 0.0) (target-centroid-pos)
-(centroid-offset-func) (cog-translation-axis :z)
+(centroid-offset-func) (cog-translation-axis :z) (cog-null-space nil)
 (additional-weight-list) (additional-nspace-list) (tmp-len (instantiate
 float-vector fik-len)) (tmp-len2 (instantiate float-vector fik-len))
 (tmp-weight (instantiate float-vector fik-len)) (tmp-nspace (instantiate
@@ -1899,7 +1900,8 @@ float-vector fik-len)) (tmp-mcc (make-matrix fik-len fik-len)) (tmp-mcc2
 &allow-other-keys*[メソッド]
 
 **:inverse-kinematics-args** *&rest args &key union-link-list
-rotation-axis translation-axis &allow-other-keys*[メソッド]
+rotation-axis translation-axis additional-jacobi-dimension
+&allow-other-keys*[メソッド]
 
 **:draw-collision-debug-view** [メソッド]
 
@@ -6310,7 +6312,7 @@ About this document ...
 
 ****EusLisp** **EusLisp version 9.00/ irteus version 1.00**
 **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 +
-JSK-TR-10-03 July 17, 2015**
+JSK-TR-10-03 July 20, 2015**
 
 This document was generated using the
 [**LaTeX**2`HTML`](http://www.latex2html.org/) translator Version 2008
@@ -6324,8 +6326,8 @@ Macquarie University, Sydney.
 The command line arguments were: **latex2html**
 `-dir /tmp/html/ -local_icons -auto_prefix -iso_language JP jmanual -split 1 -no_navigation`
 
-The translation was initiated by on 2015-07-17
+The translation was initiated by on 2015-07-20
 
 * * * * *
 
-2015-07-17
+2015-07-20
