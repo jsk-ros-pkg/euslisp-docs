@@ -1,9 +1,9 @@
 % EusLisp EusLisp version 9.00/ irteus version 1.00 リファレンスマニュアル
-  -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 July 20, 2015
+  -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 July 21, 2015
 % 
 % 
 
-**EusLisp** **EusLisp version 9.00/ irteus version 1.00** **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 July 20, 2015
+**EusLisp** **EusLisp version 9.00/ irteus version 1.00** **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 July 21, 2015
 =========================================================================================================================================================
 
 **irteus 1.00** *東京大学大学院* 情報理工学系研究科 知能機械情報学専攻
@@ -3206,6 +3206,11 @@ update object by pc
 transform points and normals with coords. if :create is true, return
 transformed point cloud and original point cloud does not change.
 
+**:convert-to-world** *&key (create)*[メソッド]
+
+transform points and normals with self coords. points data should be the
+same as displayed
+
 **:reset-box** [メソッド]
 
 **:box** [メソッド]
@@ -3257,7 +3262,7 @@ negative*[メソッド]
 (cons 360.0 0.0)) (vlimits (cons 1.0 0.15)) (slimits (cons 1.0 0.25))
 (rotate-hue) (color-scale 255.0) (sizelimits 1)*[メソッド]
 
-**:convert-to-world** *&key (create)*[メソッド]
+**:set-offset** *cds &key (create)*[メソッド]
 
 **:drawnormalmode** *&optional mode*[メソッド]
 
@@ -3576,11 +3581,16 @@ create list of faces using vertices of this object
 
 create faceset using vertices of this object
 
-**:set-offset** *gl::cds*[メソッド]
+**:set-offset** *gl::cds &key (gl::create)*[メソッド]
 
 move vertices in this object using given coordinates, this method change
 values of vertices. coordinates's method such as :transform just change
 view of this object
+
+**:convert-to-world** *&key (gl::create)*[メソッド]
+
+move vertices in this object using self's coordinates. vertices data
+should be moved as the same as displayed
 
 **:glvertices** *&optional (name) (gl::test \#'string=)*[メソッド]
 
@@ -3894,21 +3904,21 @@ Index
 
 **:action**
 
-[グラフ表現](jmanual.html#17344)
+[グラフ表現](jmanual.html#17365)
 
 **:actual-vertices**
 
-[GL/X表示](jmanual.html#18821)
+[GL/X表示](jmanual.html#18845)
 
 **:add-arc**
 
-[グラフ表現](jmanual.html#16745) | [グラフ表現](jmanual.html#17092) |
-[グラフ表現](jmanual.html#17187)
+[グラフ表現](jmanual.html#16766) | [グラフ表現](jmanual.html#17113) |
+[グラフ表現](jmanual.html#17208)
 
 **:add-arc-from-to**
 
-[グラフ表現](jmanual.html#16968) | [グラフ表現](jmanual.html#17103) |
-[グラフ表現](jmanual.html#17198)
+[グラフ表現](jmanual.html#16989) | [グラフ表現](jmanual.html#17124) |
+[グラフ表現](jmanual.html#17219)
 
 **:add-child-links**
 
@@ -3920,21 +3930,21 @@ Index
 
 **:add-list-to-open-list**
 
-[グラフ表現](jmanual.html#17490) | [グラフ表現](jmanual.html#17585) |
-[グラフ表現](jmanual.html#17658) | [グラフ表現](jmanual.html#17731)
+[グラフ表現](jmanual.html#17511) | [グラフ表現](jmanual.html#17606) |
+[グラフ表現](jmanual.html#17679) | [グラフ表現](jmanual.html#17752)
 
 **:add-neighbor**
 
-[グラフ表現](jmanual.html#16789)
+[グラフ表現](jmanual.html#16810)
 
 **:add-node**
 
-[グラフ表現](jmanual.html#16935)
+[グラフ表現](jmanual.html#16956)
 
 **:add-object-to-open-list**
 
-[グラフ表現](jmanual.html#17501) | [グラフ表現](jmanual.html#17596) |
-[グラフ表現](jmanual.html#17669) | [グラフ表現](jmanual.html#17742)
+[グラフ表現](jmanual.html#17522) | [グラフ表現](jmanual.html#17617) |
+[グラフ表現](jmanual.html#17690) | [グラフ表現](jmanual.html#17763)
 
 **:add-parent-link**
 
@@ -3942,19 +3952,19 @@ Index
 
 **:add-tabbed-panel**
 
-[GL/X表示](jmanual.html#19666)
+[GL/X表示](jmanual.html#19708)
 
 **:add-to-open-list**
 
-[グラフ表現](jmanual.html#17457)
+[グラフ表現](jmanual.html#17478)
 
 **:adjacency-list**
 
-[グラフ表現](jmanual.html#17001)
+[グラフ表現](jmanual.html#17022)
 
 **:adjacency-matrix**
 
-[グラフ表現](jmanual.html#16990)
+[グラフ表現](jmanual.html#17011)
 
 **:analysis-level**
 
@@ -3984,15 +3994,15 @@ Index
 
 **:append**
 
-[ポイントクラウドデータ](jmanual.html#15627)
+[ポイントクラウドデータ](jmanual.html#15630)
 
 **:append-glvertices**
 
-[GL/X表示](jmanual.html#18954)
+[GL/X表示](jmanual.html#18988)
 
 **:arc-list**
 
-[グラフ表現](jmanual.html#16723)
+[グラフ表現](jmanual.html#16744)
 
 **:arms**
 
@@ -4004,7 +4014,7 @@ Index
 
 **:axis-length**
 
-[ポイントクラウドデータ](jmanual.html#15833)
+[ポイントクラウドデータ](jmanual.html#15846)
 
 **:axis-order**
 
@@ -4012,7 +4022,7 @@ Index
 
 **:axis-width**
 
-[ポイントクラウドデータ](jmanual.html#15844)
+[ポイントクラウドデータ](jmanual.html#15857)
 
 **:bodies**
 
@@ -4021,8 +4031,8 @@ Index
 
 **:box**
 
-[ポイントクラウドデータ](jmanual.html#15712) |
-[GL/X表示](jmanual.html#19085)
+[ポイントクラウドデータ](jmanual.html#15725) |
+[GL/X表示](jmanual.html#19119)
 
 **:bvh-offset-rotate**
 
@@ -4043,7 +4053,7 @@ Index
 
 **:calc-bounding-box**
 
-[GL/X表示](jmanual.html#18831)
+[GL/X表示](jmanual.html#18855)
 
 **:calc-current-refzmp**
 
@@ -4110,7 +4120,7 @@ Index
 
 **:calc-normals**
 
-[GL/X表示](jmanual.html#18892)
+[GL/X表示](jmanual.html#18916)
 
 **:calc-nspace-from-joint-limit**
 
@@ -4183,7 +4193,7 @@ Index
 **:centroid**
 
 [ロボットモデル](jmanual.html#5463) |
-[ポイントクラウドデータ](jmanual.html#15617)
+[ポイントクラウドデータ](jmanual.html#15620)
 
 **:change-background**
 
@@ -4191,7 +4201,7 @@ Index
 
 **:change-tabbed-panel**
 
-[GL/X表示](jmanual.html#19677)
+[GL/X表示](jmanual.html#19719)
 
 **:channels**
 
@@ -4207,24 +4217,24 @@ Index
 
 **:clear-color**
 
-[ポイントクラウドデータ](jmanual.html#15855)
+[ポイントクラウドデータ](jmanual.html#15868)
 
 **:clear-nodes**
 
-[グラフ表現](jmanual.html#16957)
+[グラフ表現](jmanual.html#16978)
 
 **:clear-normal**
 
-[ポイントクラウドデータ](jmanual.html#15866)
+[ポイントクラウドデータ](jmanual.html#15879)
 
 **:clear-open-list**
 
-[グラフ表現](jmanual.html#17479) | [グラフ表現](jmanual.html#17574) |
-[グラフ表現](jmanual.html#17647) | [グラフ表現](jmanual.html#17720)
+[グラフ表現](jmanual.html#17500) | [グラフ表現](jmanual.html#17595) |
+[グラフ表現](jmanual.html#17668) | [グラフ表現](jmanual.html#17741)
 
 **:close-list**
 
-[グラフ表現](jmanual.html#17534)
+[グラフ表現](jmanual.html#17555)
 
 **:cog-z**
 
@@ -4253,7 +4263,7 @@ Index
 
 **:collision-check-objects**
 
-[GL/X表示](jmanual.html#19074)
+[GL/X表示](jmanual.html#19108)
 
 **:collision-check-pairs**
 
@@ -4261,11 +4271,11 @@ Index
 
 **:color-list**
 
-[ポイントクラウドデータ](jmanual.html#15597)
+[ポイントクラウドデータ](jmanual.html#15600)
 
 **:colors**
 
-[ポイントクラウドデータ](jmanual.html#15567)
+[ポイントクラウドデータ](jmanual.html#15570)
 
 **:configurenotify**
 
@@ -4273,19 +4283,20 @@ Index
 
 **:convert-to-faces**
 
-[GL/X表示](jmanual.html#18913)
+[GL/X表示](jmanual.html#18937)
 
 **:convert-to-faceset**
 
-[GL/X表示](jmanual.html#18924)
+[GL/X表示](jmanual.html#18948)
 
 **:convert-to-world**
 
-[ポイントクラウドデータ](jmanual.html#15943)
+[ポイントクラウドデータ](jmanual.html#15704) |
+[GL/X表示](jmanual.html#18968)
 
 **:copy-from**
 
-[ポイントクラウドデータ](jmanual.html#15681)
+[ポイントクラウドデータ](jmanual.html#15684)
 
 **:copy-state-to**
 
@@ -4293,11 +4304,11 @@ Index
 
 **:cost**
 
-[グラフ表現](jmanual.html#17063) | [グラフ表現](jmanual.html#17322)
+[グラフ表現](jmanual.html#17084) | [グラフ表現](jmanual.html#17343)
 
 **:create**
 
-[ロボットビューワ](jmanual.html#11516) | [GL/X表示](jmanual.html#19655)
+[ロボットビューワ](jmanual.html#11516) | [GL/X表示](jmanual.html#19697)
 
 **:current-refzmp**
 
@@ -4305,11 +4316,11 @@ Index
 
 **:curvature-list**
 
-[ポイントクラウドデータ](jmanual.html#15789)
+[ポイントクラウドデータ](jmanual.html#15802)
 
 **:curvatures**
 
-[ポイントクラウドデータ](jmanual.html#15778)
+[ポイントクラウドデータ](jmanual.html#15791)
 
 **:cx**
 
@@ -4350,8 +4361,8 @@ Index
 **:draw**
 
 [センサモデル](jmanual.html#9508) |
-[ポイントクラウドデータ](jmanual.html#15976) |
-[GL/X表示](jmanual.html#19063) | [GL/X表示](jmanual.html#19125)
+[ポイントクラウドデータ](jmanual.html#15989) |
+[GL/X表示](jmanual.html#19097) | [GL/X表示](jmanual.html#19159)
 
 **:draw-collision-debug-view**
 
@@ -4367,7 +4378,7 @@ Index
 
 **:draw-label**
 
-[GL/X表示](jmanual.html#19739)
+[GL/X表示](jmanual.html#19781)
 
 **:draw-objects**
 
@@ -4377,7 +4388,7 @@ Index
 **:draw-on**
 
 [ロボットモデル](jmanual.html#7768) | [センサモデル](jmanual.html#9670)
-| [GL/X表示](jmanual.html#19052)
+| [GL/X表示](jmanual.html#19086)
 
 **:draw-sensor**
 
@@ -4386,7 +4397,7 @@ Index
 
 **:drawnormalmode**
 
-[ポイントクラウドデータ](jmanual.html#15954)
+[ポイントクラウドデータ](jmanual.html#15967)
 
 **:dump-hierarchy**
 
@@ -4406,15 +4417,15 @@ Index
 
 **:expand**
 
-[グラフ表現](jmanual.html#17300)
+[グラフ表現](jmanual.html#17321)
 
 **:expand-vertices**
 
-[GL/X表示](jmanual.html#18861)
+[GL/X表示](jmanual.html#18885)
 
 **:expand-vertices-info**
 
-[GL/X表示](jmanual.html#19030)
+[GL/X表示](jmanual.html#19064)
 
 **:expose**
 
@@ -4423,23 +4434,23 @@ Index
 **:faces**
 
 [ロボットモデル](jmanual.html#7746) |
-[ロボットモデル](jmanual.html#5683) | [GL/X表示](jmanual.html#19041)
+[ロボットモデル](jmanual.html#5683) | [GL/X表示](jmanual.html#19075)
 
 **:filename**
 
-[GL/X表示](jmanual.html#18975)
+[GL/X表示](jmanual.html#19009)
 
 **:filter**
 
-[ポイントクラウドデータ](jmanual.html#15637)
+[ポイントクラウドデータ](jmanual.html#15640)
 
 **:filter-with-indices**
 
-[ポイントクラウドデータ](jmanual.html#15648)
+[ポイントクラウドデータ](jmanual.html#15651)
 
 **:filtered-indices**
 
-[ポイントクラウドデータ](jmanual.html#15659)
+[ポイントクラウドデータ](jmanual.html#15662)
 
 **:finalize-gait-parameter**
 
@@ -4447,7 +4458,7 @@ Index
 
 **:find-action**
 
-[グラフ表現](jmanual.html#17238)
+[グラフ表現](jmanual.html#17259)
 
 **:find-joint-angle-limit-weight-old-from-union-link-list**
 
@@ -4459,7 +4470,7 @@ Index
 
 **:find-node-in-close-list**
 
-[グラフ表現](jmanual.html#17435)
+[グラフ表現](jmanual.html#17456)
 
 **:find-object**
 
@@ -4487,7 +4498,7 @@ Index
 
 **:fn**
 
-[グラフ表現](jmanual.html#17764) | [グラフ表現](jmanual.html#17804)
+[グラフ表現](jmanual.html#17785) | [グラフ表現](jmanual.html#17825)
 
 **:foot-midcoords**
 
@@ -4519,7 +4530,7 @@ Index
 
 **:from**
 
-[グラフ表現](jmanual.html#16840)
+[グラフ表現](jmanual.html#16861)
 
 **:fullbody-inverse-kinematics**
 
@@ -4539,7 +4550,7 @@ Index
 
 **:generate-color-histogram-hs**
 
-[ポイントクラウドデータ](jmanual.html#15932)
+[ポイントクラウドデータ](jmanual.html#15945)
 
 **:get-counter-footstep-limbs**
 
@@ -4563,11 +4574,11 @@ Index
 
 **:get-material**
 
-[GL/X表示](jmanual.html#19008)
+[GL/X表示](jmanual.html#19042)
 
 **:get-meshinfo**
 
-[GL/X表示](jmanual.html#18986)
+[GL/X表示](jmanual.html#19020)
 
 **:get-sensor-method**
 
@@ -4583,11 +4594,11 @@ Index
 
 **:glvertices**
 
-[GL/X表示](jmanual.html#19114) | [GL/X表示](jmanual.html#18944)
+[GL/X表示](jmanual.html#19148) | [GL/X表示](jmanual.html#18978)
 
 **:gn**
 
-[グラフ表現](jmanual.html#17815)
+[グラフ表現](jmanual.html#17836)
 
 **:go-pos-params-\>footstep-list**
 
@@ -4595,11 +4606,11 @@ Index
 
 **:goal-state**
 
-[グラフ表現](jmanual.html#17176)
+[グラフ表現](jmanual.html#17197)
 
 **:goal-test**
 
-[グラフ表現](jmanual.html#17143)
+[グラフ表現](jmanual.html#17164)
 
 **:gripper**
 
@@ -4612,11 +4623,11 @@ Index
 **:height**
 
 [センサモデル](jmanual.html#9569) |
-[ポイントクラウドデータ](jmanual.html#15756)
+[ポイントクラウドデータ](jmanual.html#15769)
 
 **:hn**
 
-[グラフ表現](jmanual.html#17826)
+[グラフ表現](jmanual.html#17847)
 
 **:ik-convergence-check**
 
@@ -4624,11 +4635,11 @@ Index
 
 **:image-circle-filter**
 
-[ポイントクラウドデータ](jmanual.html#15910)
+[ポイントクラウドデータ](jmanual.html#15923)
 
 **:image-position-inlier**
 
-[ポイントクラウドデータ](jmanual.html#15899)
+[ポイントクラウドデータ](jmanual.html#15912)
 
 **:imu-sensor**
 
@@ -4665,14 +4676,14 @@ Index
 [BVHデータ](jmanual.html#12890) | [BVHデータ](jmanual.html#12919) |
 [BVHデータ](jmanual.html#12948) | [BVHデータ](jmanual.html#12427) |
 [BVHデータ](jmanual.html#12488) | [BVHデータ](jmanual.html#12656) |
-[ポイントクラウドデータ](jmanual.html#15536) |
-[グラフ表現](jmanual.html#16712) | [グラフ表現](jmanual.html#16829) |
-[グラフ表現](jmanual.html#16891) | [グラフ表現](jmanual.html#17052) |
-[グラフ表現](jmanual.html#17227) | [グラフ表現](jmanual.html#17278) |
-[グラフ表現](jmanual.html#17373) | [グラフ表現](jmanual.html#17563) |
-[グラフ表現](jmanual.html#17636) | [グラフ表現](jmanual.html#17709) |
-[グラフ表現](jmanual.html#17793) | [GL/X表示](jmanual.html#18964) |
-[ユーティリティ関数](jmanual.html#19989)
+[ポイントクラウドデータ](jmanual.html#15539) |
+[グラフ表現](jmanual.html#16733) | [グラフ表現](jmanual.html#16850) |
+[グラフ表現](jmanual.html#16912) | [グラフ表現](jmanual.html#17073) |
+[グラフ表現](jmanual.html#17248) | [グラフ表現](jmanual.html#17299) |
+[グラフ表現](jmanual.html#17394) | [グラフ表現](jmanual.html#17584) |
+[グラフ表現](jmanual.html#17657) | [グラフ表現](jmanual.html#17730) |
+[グラフ表現](jmanual.html#17814) | [GL/X表示](jmanual.html#18998) |
+[ユーティリティ関数](jmanual.html#20031)
 
 **:init-end-coords**
 
@@ -4900,7 +4911,7 @@ Index
 
 **:mirror-axis**
 
-[GL/X表示](jmanual.html#18902)
+[GL/X表示](jmanual.html#18926)
 
 **:model**
 
@@ -4928,23 +4939,23 @@ Index
 
 **:neighbor-action-alist**
 
-[グラフ表現](jmanual.html#17249)
+[グラフ表現](jmanual.html#17270)
 
 **:neighbors**
 
-[グラフ表現](jmanual.html#16800)
+[グラフ表現](jmanual.html#16821)
 
 **:nfilter**
 
-[ポイントクラウドデータ](jmanual.html#15877)
+[ポイントクラウドデータ](jmanual.html#15890)
 
 **:node**
 
-[グラフ表現](jmanual.html#16913)
+[グラフ表現](jmanual.html#16934)
 
 **:nodes**
 
-[グラフ表現](jmanual.html#16924)
+[グラフ表現](jmanual.html#16945)
 
 **:nomethod**
 
@@ -4953,15 +4964,15 @@ Index
 
 **:normal-list**
 
-[ポイントクラウドデータ](jmanual.html#15607)
+[ポイントクラウドデータ](jmanual.html#15610)
 
 **:normals**
 
-[ポイントクラウドデータ](jmanual.html#15577)
+[ポイントクラウドデータ](jmanual.html#15580)
 
 **:null-open-list?**
 
-[グラフ表現](jmanual.html#17468)
+[グラフ表現](jmanual.html#17489)
 
 **:object**
 
@@ -4979,11 +4990,11 @@ Index
 
 **:open-list**
 
-[グラフ表現](jmanual.html#17523)
+[グラフ表現](jmanual.html#17544)
 
 **:parent**
 
-[グラフ表現](jmanual.html#17333)
+[グラフ表現](jmanual.html#17354)
 
 **:parent-link**
 
@@ -4992,11 +5003,11 @@ Index
 
 **:path**
 
-[グラフ表現](jmanual.html#17289)
+[グラフ表現](jmanual.html#17310)
 
 **:path-cost**
 
-[グラフ表現](jmanual.html#17114) | [グラフ表現](jmanual.html#17154)
+[グラフ表現](jmanual.html#17135) | [グラフ表現](jmanual.html#17175)
 
 **:plot-joint-min-max-table**
 
@@ -5008,28 +5019,28 @@ Index
 
 **:point-color**
 
-[ポイントクラウドデータ](jmanual.html#15811)
+[ポイントクラウドデータ](jmanual.html#15824)
 
 **:point-list**
 
-[ポイントクラウドデータ](jmanual.html#15587)
+[ポイントクラウドデータ](jmanual.html#15590)
 
 **:point-size**
 
-[ポイントクラウドデータ](jmanual.html#15822)
+[ポイントクラウドデータ](jmanual.html#15835)
 
 **:points**
 
-[ポイントクラウドデータ](jmanual.html#15557)
+[ポイントクラウドデータ](jmanual.html#15560)
 
 **:pop-from-open-list**
 
-[グラフ表現](jmanual.html#17512) | [グラフ表現](jmanual.html#17607) |
-[グラフ表現](jmanual.html#17680) | [グラフ表現](jmanual.html#17753)
+[グラフ表現](jmanual.html#17533) | [グラフ表現](jmanual.html#17628) |
+[グラフ表現](jmanual.html#17701) | [グラフ表現](jmanual.html#17774)
 
 **:prin1**
 
-[グラフ表現](jmanual.html#16862)
+[グラフ表現](jmanual.html#16883)
 
 **:print-vector-for-robot-limb**
 
@@ -5066,19 +5077,19 @@ Index
 
 **:remove-all-arcs**
 
-[グラフ表現](jmanual.html#16767)
+[グラフ表現](jmanual.html#16788)
 
 **:remove-arc**
 
-[グラフ表現](jmanual.html#16756) | [グラフ表現](jmanual.html#16979)
+[グラフ表現](jmanual.html#16777) | [グラフ表現](jmanual.html#17000)
 
 **:remove-node**
 
-[グラフ表現](jmanual.html#16946)
+[グラフ表現](jmanual.html#16967)
 
 **:reset-box**
 
-[ポイントクラウドデータ](jmanual.html#15701)
+[ポイントクラウドデータ](jmanual.html#15714)
 
 **:reset-joint-angle-limit-weight-old**
 
@@ -5086,11 +5097,11 @@ Index
 
 **:reset-offset-from-parent**
 
-[GL/X表示](jmanual.html#18851)
+[GL/X表示](jmanual.html#18875)
 
 **:resize**
 
-[ロボットビューワ](jmanual.html#11560) | [GL/X表示](jmanual.html#19710)
+[ロボットビューワ](jmanual.html#11560) | [GL/X表示](jmanual.html#19752)
 
 **:rleg**
 
@@ -5110,8 +5121,8 @@ Index
 
 **:set-color**
 
-[ポイントクラウドデータ](jmanual.html#15800) |
-[GL/X表示](jmanual.html#19136) | [GL/X表示](jmanual.html#18811)
+[ポイントクラウドデータ](jmanual.html#15813) |
+[GL/X表示](jmanual.html#19170) | [GL/X表示](jmanual.html#18835)
 
 **:set-cursor-pos-event**
 
@@ -5119,15 +5130,16 @@ Index
 
 **:set-material**
 
-[GL/X表示](jmanual.html#19019)
+[GL/X表示](jmanual.html#19053)
 
 **:set-meshinfo**
 
-[GL/X表示](jmanual.html#18997)
+[GL/X表示](jmanual.html#19031)
 
 **:set-offset**
 
-[GL/X表示](jmanual.html#18934)
+[ポイントクラウドデータ](jmanual.html#15956) |
+[GL/X表示](jmanual.html#18958)
 
 **:signal**
 
@@ -5139,16 +5151,16 @@ Index
 
 **:size**
 
-[ポイントクラウドデータ](jmanual.html#15734)
+[ポイントクラウドデータ](jmanual.html#15747)
 
 **:size-change**
 
-[ポイントクラウドデータ](jmanual.html#15547)
+[ポイントクラウドデータ](jmanual.html#15550)
 
 **:solve**
 
 [動力学計算・歩行動作生成](jmanual.html#10372) |
-[グラフ表現](jmanual.html#17384) | [グラフ表現](jmanual.html#17446)
+[グラフ表現](jmanual.html#17405) | [グラフ表現](jmanual.html#17467)
 
 **:solve-angle-vector**
 
@@ -5160,11 +5172,11 @@ Index
 
 **:solve-by-name**
 
-[グラフ表現](jmanual.html#17395)
+[グラフ表現](jmanual.html#17416)
 
 **:solve-init**
 
-[グラフ表現](jmanual.html#17424)
+[グラフ表現](jmanual.html#17445)
 
 **:speed-to-angle**
 
@@ -5186,31 +5198,31 @@ Index
 
 **:start**
 
-[ユーティリティ関数](jmanual.html#19999)
+[ユーティリティ関数](jmanual.html#20041)
 
 **:start-state**
 
-[グラフ表現](jmanual.html#17165)
+[グラフ表現](jmanual.html#17186)
 
 **:state**
 
-[グラフ表現](jmanual.html#17311)
+[グラフ表現](jmanual.html#17332)
 
 **:step**
 
-[ポイントクラウドデータ](jmanual.html#15670)
+[ポイントクラウドデータ](jmanual.html#15673)
 
 **:step-inlier**
 
-[ポイントクラウドデータ](jmanual.html#15921)
+[ポイントクラウドデータ](jmanual.html#15934)
 
 **:stop**
 
-[ユーティリティ関数](jmanual.html#20009)
+[ユーティリティ関数](jmanual.html#20051)
 
 **:successors**
 
-[グラフ表現](jmanual.html#16734) | [グラフ表現](jmanual.html#16902)
+[グラフ表現](jmanual.html#16755) | [グラフ表現](jmanual.html#16923)
 
 **:support-polygon**
 
@@ -5222,15 +5234,15 @@ Index
 
 **:tabbed-button**
 
-[GL/X表示](jmanual.html#19688)
+[GL/X表示](jmanual.html#19730)
 
 **:tabbed-panel**
 
-[GL/X表示](jmanual.html#19699)
+[GL/X表示](jmanual.html#19741)
 
 **:to**
 
-[グラフ表現](jmanual.html#16851)
+[グラフ表現](jmanual.html#16872)
 
 **:torque-vector**
 
@@ -5242,11 +5254,11 @@ Index
 
 **:transform-points**
 
-[ポイントクラウドデータ](jmanual.html#15691)
+[ポイントクラウドデータ](jmanual.html#15694)
 
 **:transparent**
 
-[ポイントクラウドデータ](jmanual.html#15965)
+[ポイントクラウドデータ](jmanual.html#15978)
 
 **:type**
 
@@ -5254,7 +5266,7 @@ Index
 
 **:unlink**
 
-[グラフ表現](jmanual.html#16778)
+[グラフ表現](jmanual.html#16799)
 
 **:update**
 
@@ -5278,24 +5290,24 @@ Index
 
 **:use-flat-shader**
 
-[GL/X表示](jmanual.html#18871)
+[GL/X表示](jmanual.html#18895)
 
 **:use-smooth-shader**
 
-[GL/X表示](jmanual.html#18881)
+[GL/X表示](jmanual.html#18905)
 
 **:vertices**
 
-[ポイントクラウドデータ](jmanual.html#15723) |
-[GL/X表示](jmanual.html#18841)
+[ポイントクラウドデータ](jmanual.html#15736) |
+[GL/X表示](jmanual.html#18865)
 
 **:view-coords**
 
-[ポイントクラウドデータ](jmanual.html#15767)
+[ポイントクラウドデータ](jmanual.html#15780)
 
 **:viewangle-inlier**
 
-[ポイントクラウドデータ](jmanual.html#15888)
+[ポイントクラウドデータ](jmanual.html#15901)
 
 **:viewer**
 
@@ -5320,7 +5332,7 @@ Index
 **:width**
 
 [センサモデル](jmanual.html#9559) |
-[ポイントクラウドデータ](jmanual.html#15745)
+[ポイントクラウドデータ](jmanual.html#15758)
 
 **:worldcoords**
 
@@ -5329,15 +5341,15 @@ Index
 
 **:write-to-dot**
 
-[グラフ表現](jmanual.html#17012)
+[グラフ表現](jmanual.html#17033)
 
 **:write-to-pdf**
 
-[グラフ表現](jmanual.html#17023)
+[グラフ表現](jmanual.html#17044)
 
 **a-graph-search-solver**
 
-[グラフ表現](jmanual.html#17776)
+[グラフ表現](jmanual.html#17797)
 
 **all-child-links**
 
@@ -5353,19 +5365,19 @@ Index
 
 **arc**
 
-[グラフ表現](jmanual.html#16812)
+[グラフ表現](jmanual.html#16833)
 
 **arced-node**
 
-[グラフ表現](jmanual.html#17210)
+[グラフ表現](jmanual.html#17231)
 
 **atan2**
 
-[数学関数](jmanual.html#20515)
+[数学関数](jmanual.html#20557)
 
 **best-first-graph-search-solver**
 
-[グラフ表現](jmanual.html#17692)
+[グラフ表現](jmanual.html#17713)
 
 **body-to-faces**
 
@@ -5385,7 +5397,7 @@ Index
 
 **breadth-first-graph-search-solver**
 
-[グラフ表現](jmanual.html#17546)
+[グラフ表現](jmanual.html#17567)
 
 **bumper-model**
 
@@ -5773,19 +5785,19 @@ Index
 
 **color-category10**
 
-[ユーティリティ関数](jmanual.html#20121)
+[ユーティリティ関数](jmanual.html#20163)
 
 **color-category20**
 
-[ユーティリティ関数](jmanual.html#20131)
+[ユーティリティ関数](jmanual.html#20173)
 
 **combination**
 
-[ユーティリティ関数](jmanual.html#20029)
+[ユーティリティ関数](jmanual.html#20071)
 
 **connect-server-until-success**
 
-[ユーティリティ関数](jmanual.html#20060)
+[ユーティリティ関数](jmanual.html#20102)
 
 **convert-irtmodel-to-collada**
 
@@ -5793,31 +5805,31 @@ Index
 
 **costed-arc**
 
-[グラフ表現](jmanual.html#17035)
+[グラフ表現](jmanual.html#17056)
 
 **costed-graph**
 
-[グラフ表現](jmanual.html#17075)
+[グラフ表現](jmanual.html#17096)
 
 **depth-first-graph-search-solver**
 
-[グラフ表現](jmanual.html#17619)
+[グラフ表現](jmanual.html#17640)
 
 **diagonal**
 
-[数学関数](jmanual.html#20495)
+[数学関数](jmanual.html#20537)
 
 **directed-graph**
 
-[グラフ表現](jmanual.html#16874)
+[グラフ表現](jmanual.html#16895)
 
 **eigen-decompose**
 
-[数学関数](jmanual.html#20668)
+[数学関数](jmanual.html#20710)
 
 **eus-server**
 
-[ユーティリティ関数](jmanual.html#20050)
+[ユーティリティ関数](jmanual.html#20092)
 
 **eus2collada**
 
@@ -5837,19 +5849,19 @@ Index
 
 **find-extreams**
 
-[ユーティリティ関数](jmanual.html#20039)
+[ユーティリティ関数](jmanual.html#20081)
 
 **format-array**
 
-[ユーティリティ関数](jmanual.html#20071)
+[ユーティリティ関数](jmanual.html#20113)
 
 **forward-message-to**
 
-[ユーティリティ関数](jmanual.html#20151)
+[ユーティリティ関数](jmanual.html#20193)
 
 **forward-message-to-all**
 
-[ユーティリティ関数](jmanual.html#20162)
+[ユーティリティ関数](jmanual.html#20204)
 
 **gait-generator**
 
@@ -5857,7 +5869,7 @@ Index
 
 **gaussian-random**
 
-[数学関数](jmanual.html#20626)
+[数学関数](jmanual.html#20668)
 
 **geometry::face-to-tessel-triangle**
 
@@ -5893,55 +5905,55 @@ Index
 
 **gl::delete-displaylist-id**
 
-[GL/X表示](jmanual.html#19209)
+[GL/X表示](jmanual.html#19243)
 
 **gl::draw-glbody**
 
-[GL/X表示](jmanual.html#19231)
+[GL/X表示](jmanual.html#19265)
 
 **gl::draw-globjects**
 
-[GL/X表示](jmanual.html#19220)
+[GL/X表示](jmanual.html#19254)
 
 **gl::find-color**
 
-[GL/X表示](jmanual.html#19147)
+[GL/X表示](jmanual.html#19181)
 
 **gl::glbody**
 
-[GL/X表示](jmanual.html#19097)
+[GL/X表示](jmanual.html#19131)
 
 **gl::glvertices**
 
-[GL/X表示](jmanual.html#18794)
+[GL/X表示](jmanual.html#18818)
 
 **gl::make-glvertices-from-faces**
 
-[GL/X表示](jmanual.html#19177)
+[GL/X表示](jmanual.html#19211)
 
 **gl::make-glvertices-from-faceset**
 
-[GL/X表示](jmanual.html#19167)
+[GL/X表示](jmanual.html#19201)
 
 **gl::reset-gl-attribute**
 
-[GL/X表示](jmanual.html#19198)
+[GL/X表示](jmanual.html#19232)
 
 **gl::set-stereo-gl-attribute**
 
-[GL/X表示](jmanual.html#19187)
+[GL/X表示](jmanual.html#19221)
 
 **gl::transparent**
 
-[GL/X表示](jmanual.html#19157)
+[GL/X表示](jmanual.html#19191)
 
 **graph**
 
-[グラフ表現](jmanual.html#17126)
+[グラフ表現](jmanual.html#17147)
 
 **graph-search-solver**
 
-[グラフ表現](jmanual.html#17407)
+[グラフ表現](jmanual.html#17428)
 
 **height-of-cylinder**
 
@@ -5949,15 +5961,15 @@ Index
 
 **his2rgb**
 
-[ユーティリティ関数](jmanual.html#20081)
+[ユーティリティ関数](jmanual.html#20123)
 
 **hvs2rgb**
 
-[ユーティリティ関数](jmanual.html#20091)
+[ユーティリティ関数](jmanual.html#20133)
 
 **inverse-matrix**
 
-[数学関数](jmanual.html#20485)
+[数学関数](jmanual.html#20527)
 
 **irtviewer-dummy**
 
@@ -5981,27 +5993,27 @@ Index
 
 **lmeds**
 
-[数学関数](jmanual.html#20712)
+[数学関数](jmanual.html#20754)
 
 **lmeds-error**
 
-[数学関数](jmanual.html#20723)
+[数学関数](jmanual.html#20765)
 
 **lmeds-error-mat**
 
-[数学関数](jmanual.html#20734)
+[数学関数](jmanual.html#20776)
 
 **lms**
 
-[数学関数](jmanual.html#20679)
+[数学関数](jmanual.html#20721)
 
 **lms-error**
 
-[数学関数](jmanual.html#20701)
+[数学関数](jmanual.html#20743)
 
 **lms-estimate**
 
-[数学関数](jmanual.html#20690)
+[数学関数](jmanual.html#20732)
 
 **load-mcd**
 
@@ -6029,7 +6041,7 @@ Index
 
 **make-random-pointcloud**
 
-[ポイントクラウドデータ](jmanual.html#15987)
+[ポイントクラウドデータ](jmanual.html#16000)
 
 **make-ring**
 
@@ -6037,7 +6049,7 @@ Index
 
 **make-robot-model-from-name**
 
-[ユーティリティ関数](jmanual.html#20141)
+[ユーティリティ関数](jmanual.html#20183)
 
 **make-sphere**
 
@@ -6045,19 +6057,19 @@ Index
 
 **manipulability**
 
-[数学関数](jmanual.html#20606)
+[数学関数](jmanual.html#20648)
 
 **mapjoin**
 
-[ユーティリティ関数](jmanual.html#20173)
+[ユーティリティ関数](jmanual.html#20215)
 
 **matrix-exponent**
 
-[数学関数](jmanual.html#20566)
+[数学関数](jmanual.html#20608)
 
 **matrix-log**
 
-[数学関数](jmanual.html#20556)
+[数学関数](jmanual.html#20598)
 
 **matrix-to-euler-angle**
 
@@ -6065,7 +6077,7 @@ Index
 
 **matrix2quaternion**
 
-[数学関数](jmanual.html#20536)
+[数学関数](jmanual.html#20578)
 
 **midcoords**
 
@@ -6073,11 +6085,11 @@ Index
 
 **midrot**
 
-[数学関数](jmanual.html#20576)
+[数学関数](jmanual.html#20618)
 
 **minor-matrix**
 
-[数学関数](jmanual.html#20505)
+[数学関数](jmanual.html#20547)
 
 **motion-capture-data**
 
@@ -6085,19 +6097,19 @@ Index
 
 **mtimer**
 
-[ユーティリティ関数](jmanual.html#19972)
+[ユーティリティ関数](jmanual.html#20014)
 
 **need-thread**
 
-[ユーティリティ関数](jmanual.html#20184)
+[ユーティリティ関数](jmanual.html#20226)
 
 **node**
 
-[グラフ表現](jmanual.html#16695)
+[グラフ表現](jmanual.html#16716)
 
 **normalize-vector**
 
-[数学関数](jmanual.html#20636)
+[数学関数](jmanual.html#20678)
 
 **objects**
 
@@ -6113,7 +6125,7 @@ Index
 
 **outer-product-matrix**
 
-[数学関数](jmanual.html#20525)
+[数学関数](jmanual.html#20567)
 
 **parse-bvh-sexp**
 
@@ -6121,15 +6133,15 @@ Index
 
 **permutation**
 
-[ユーティリティ関数](jmanual.html#20019)
+[ユーティリティ関数](jmanual.html#20061)
 
 **piped-fork-returns-list**
 
-[ユーティリティ関数](jmanual.html#20195)
+[ユーティリティ関数](jmanual.html#20237)
 
 **pointcloud**
 
-[ポイントクラウドデータ](jmanual.html#15519)
+[ポイントクラウドデータ](jmanual.html#15522)
 
 **pqp-collision-check**
 
@@ -6153,15 +6165,15 @@ Index
 
 **pseudo-inverse**
 
-[数学関数](jmanual.html#20586)
+[数学関数](jmanual.html#20628)
 
 **pseudo-inverse-org**
 
-[数学関数](jmanual.html#20646)
+[数学関数](jmanual.html#20688)
 
 **quaternion2matrix**
 
-[数学関数](jmanual.html#20546)
+[数学関数](jmanual.html#20588)
 
 **radius-of-cylinder**
 
@@ -6173,7 +6185,7 @@ Index
 
 **random-gauss**
 
-[数学関数](jmanual.html#20616)
+[数学関数](jmanual.html#20658)
 
 **read-bvh**
 
@@ -6181,19 +6193,19 @@ Index
 
 **read-image-file**
 
-[画像関数](jmanual.html#20976)
+[画像関数](jmanual.html#21018)
 
 **read-png-file**
 
-[画像関数](jmanual.html#21032)
+[画像関数](jmanual.html#21074)
 
 **rgb2his**
 
-[ユーティリティ関数](jmanual.html#20101)
+[ユーティリティ関数](jmanual.html#20143)
 
 **rgb2hvs**
 
-[ユーティリティ関数](jmanual.html#20111)
+[ユーティリティ関数](jmanual.html#20153)
 
 **riccati-equation**
 
@@ -6221,11 +6233,11 @@ Index
 
 **solver**
 
-[グラフ表現](jmanual.html#17356)
+[グラフ表現](jmanual.html#17377)
 
 **solver-node**
 
-[グラフ表現](jmanual.html#17261)
+[グラフ表現](jmanual.html#17282)
 
 **sphere-joint**
 
@@ -6233,11 +6245,11 @@ Index
 
 **sr-inverse**
 
-[数学関数](jmanual.html#20596)
+[数学関数](jmanual.html#20638)
 
 **sr-inverse-org**
 
-[数学関数](jmanual.html#20657)
+[数学関数](jmanual.html#20699)
 
 **transform-coords**
 
@@ -6257,11 +6269,11 @@ Index
 
 **write-image-file**
 
-[画像関数](jmanual.html#20988)
+[画像関数](jmanual.html#21030)
 
 **write-png-file**
 
-[画像関数](jmanual.html#21043)
+[画像関数](jmanual.html#21085)
 
 **x-of-cube**
 
@@ -6273,11 +6285,11 @@ Index
 
 **x::event-far**
 
-[GL/X表示](jmanual.html#19761)
+[GL/X表示](jmanual.html#19803)
 
 **x::event-near**
 
-[GL/X表示](jmanual.html#19772)
+[GL/X表示](jmanual.html#19814)
 
 **x::irtviewer**
 
@@ -6289,15 +6301,15 @@ Index
 
 **x::panel-tab-button-item**
 
-[GL/X表示](jmanual.html#19722)
+[GL/X表示](jmanual.html#19764)
 
 **x::tabbed-panel**
 
-[GL/X表示](jmanual.html#19638)
+[GL/X表示](jmanual.html#19680)
 
 **x::window-main-one**
 
-[GL/X表示](jmanual.html#19750)
+[GL/X表示](jmanual.html#19792)
 
 **y-of-cube**
 
@@ -6312,7 +6324,7 @@ About this document ...
 
 ****EusLisp** **EusLisp version 9.00/ irteus version 1.00**
 **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 +
-JSK-TR-10-03 July 20, 2015**
+JSK-TR-10-03 July 21, 2015**
 
 This document was generated using the
 [**LaTeX**2`HTML`](http://www.latex2html.org/) translator Version 2008
@@ -6326,8 +6338,8 @@ Macquarie University, Sydney.
 The command line arguments were: **latex2html**
 `-dir /tmp/html/ -local_icons -auto_prefix -iso_language JP jmanual -split 1 -no_navigation`
 
-The translation was initiated by on 2015-07-20
+The translation was initiated by on 2015-07-21
 
 * * * * *
 
-2015-07-20
+2015-07-21
