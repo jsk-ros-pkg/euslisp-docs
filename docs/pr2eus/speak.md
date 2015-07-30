@@ -1,6 +1,4 @@
-##### **speak-jp** jp-str 
-- nil
+speak-jp *jp-str* 
 
-##### **speak-en** en-str &key (google nil) (wait nil) 
-- nil
+speak-en *en-str* *&key* *(google nil)* *(wait nil)* 
 
