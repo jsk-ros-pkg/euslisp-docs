@@ -1,6 +1,6 @@
 ### pr2-interface
 - :super **robot-interface**
-- :slots r-gripper-action l-gripper-action move-base-action move-base-trajectory-action finger-pressure-origin 
+- :slots r-gripper-action l-gripper-action move-base-action move-base-trajectory-action finger-pressure-origin move-base-goal-msg move-base-goal-coords move-base-goal-map-to-frame 
 
 
 
@@ -70,9 +70,17 @@ send-action [ send message to action server, it means robot will move ] <br>
 
 :make-plan *st-cds* *goal-cds* *&key* *(start-frame-id /world)* *(goal-frame-id /world)* 
 
-:move-to *coords* *&key* *(retry 10)* *(frame-id /world)* *(wait-for-server-timeout 5)* 
+:move-to *coords* *&rest* *args* *&key* *(no-wait nil)* *&allow-other-keys* 
+
+:move-to-send *coords* *&key* *(frame-id /world)* *(wait-for-server-timeout 5)* *(count 0)* *&allow-other-keys* 
+
+:move-to-wait *&rest* *args* *&key* *(retry 10)* *(frame-id /world)* *&allow-other-keys* 
 
 :go-pos *x* *y* *&optional* *(d 0)* 
+
+:go-pos-no-wait *x* *y* *&optional* *(d 0)* 
+
+:go-wait 
 
 :go-velocity *x* *y* *d* *&optional* *(msec 1000)* *&key* *(stop t)* *(wait)* 
 
