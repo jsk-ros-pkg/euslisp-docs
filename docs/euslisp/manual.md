@@ -12007,7 +12007,33 @@ extends pathname to allow URL notation.
 
 **url-pathname** *name*[function]
 
-**read-http** *url &key (timeout 10) (retry 5))*[function]
+instantiates url-pathname class object from url string or url-pathname
+class object.
+
+**escape-url** *url &optional (ss \*standard-output\*) (queryp
+t)*[function]
+
+writes percent-escaped `url` to stream `ss` (default:
+`*standard-output*`). If `queryp` is T, then `Space` in `url` is encoded
+to `+`, otherwise escaped as `Space`. This option is convenient for
+sending url query to server with separation.
+
+**escaped-url-string-from-namestring** *url-string &optional (queryp
+t)*[function]
+
+returns result of `escape-url` as string.
+
+**unescape-url** *url &optional (ss \*standard-output\*) (queryp
+t)*[function]
+
+unescapes percent-escaped `url` and writes unescaped url to stream `ss`.
+
+**unescaped-url-string-from-namestring** *url-string &optional (queryp
+t)*[function]
+
+returns result of `unescape-url` as string.
+
+**read-http** *url &key (timeout 10) (retry 5)*[function]
 
 makes a socket connection to the designated url, and read the html
 document. The result is a list of tags and plain strings. HTML tags are
@@ -14842,6 +14868,14 @@ Colormaps](manual.html#44146)
 
 [Evaluators](manual.html#18831)
 
+**escape-url**
+
+[HTTP Client](manual.html#50651)
+
+**escaped-url-string-from-namestring**
+
+[HTTP Client](manual.html#50669)
+
 **euc2sjis**
 
 [Japanese Text](manual.html#14248)
@@ -14948,7 +14982,7 @@ Colormaps](manual.html#44146)
 
 **extract-html**
 
-[HTTP Client](manual.html#50637)
+[HTTP Client](manual.html#50713)
 
 **ez**
 
@@ -14991,11 +15025,11 @@ Interface](manual.html#23358)
 
 **fcgi-connection**
 
-[Fast-CGI](manual.html#50728)
+[Fast-CGI](manual.html#50804)
 
 **fcgi-loop**
 
-[Fast-CGI](manual.html#50745)
+[Fast-CGI](manual.html#50821)
 
 **file-newer**
 
@@ -15183,7 +15217,7 @@ Interface](manual.html#23358)
 
 **gen**
 
-[HTTP CGI Programming](manual.html#50657)
+[HTTP CGI Programming](manual.html#50733)
 
 **gensym**
 
@@ -15199,7 +15233,7 @@ Interface](manual.html#23358)
 
 **get-cgi-query**
 
-[HTTP CGI Programming](manual.html#50687)
+[HTTP CGI Programming](manual.html#50763)
 
 **get-dispatch-macro-character**
 
@@ -15283,15 +15317,15 @@ Interface](manual.html#23358)
 
 **html**
 
-[HTTP CGI Programming](manual.html#50667)
+[HTTP CGI Programming](manual.html#50743)
 
 **html-header**
 
-[HTTP CGI Programming](manual.html#50707)
+[HTTP CGI Programming](manual.html#50783)
 
 **html-table**
 
-[HTTP CGI Programming](manual.html#50677)
+[HTTP CGI Programming](manual.html#50753)
 
 **i**
 
@@ -15996,7 +16030,7 @@ Interface](manual.html#23358)
 
 **parse-http-query**
 
-[HTTP CGI Programming](manual.html#50697)
+[HTTP CGI Programming](manual.html#50773)
 
 **parse-namestring**
 
@@ -16232,7 +16266,7 @@ Interface](manual.html#23358)
 
 **qval**
 
-[HTTP CGI Programming](manual.html#50717)
+[HTTP CGI Programming](manual.html#50793)
 
 **rad2deg**
 
@@ -16288,7 +16322,7 @@ Interface](manual.html#23358)
 
 **read-http**
 
-[HTTP Client](manual.html#50627)
+[HTTP Client](manual.html#50703)
 
 **read-line**
 
@@ -16332,7 +16366,7 @@ Interface](manual.html#23358)
 
 **remove-html-tags**
 
-[HTTP Client](manual.html#50647)
+[HTTP Client](manual.html#50723)
 
 **remove-if**
 
@@ -17026,6 +17060,14 @@ Transformation](manual.html#27327)
 
 [Packages](manual.html#8069)
 
+**unescape-url**
+
+[HTTP Client](manual.html#50680)
+
+**unescaped-url-string-from-namestring**
+
+[HTTP Client](manual.html#50692)
+
 **unexport**
 
 [Packages](manual.html#8321)
@@ -17500,8 +17542,8 @@ Transformation](manual.html#27327)
 
 **url-pathname**
 
-[URL-Pathnames](manual.html#16403) | [HTTP Client](manual.html#50600) |
-[HTTP Client](manual.html#50617)
+[URL-Pathnames](manual.html#16403) | [HTTP Client](manual.html#50624) |
+[HTTP Client](manual.html#50641)
 
 **use-package**
 
@@ -17770,8 +17812,8 @@ Macquarie University, Sydney.
 The command line arguments were: **latex2html**
 `-dir /tmp/html/ -local_icons -auto_prefix -iso_language JP manual -split 1 -no_navigation`
 
-The translation was initiated by on 2015-08-06
+The translation was initiated by on 2015-08-10
 
 * * * * *
 
-2015-08-06
+2015-08-10
