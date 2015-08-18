@@ -1,9 +1,9 @@
-% EusLisp version 9.14 Reference Manual Featuring Multithread and XToolKit
+% EusLisp version 9.15 Reference Manual Featuring Multithread and XToolKit
   ETL-TR-95-2 January, 1995
 % 
 % 
 
-**EusLisp** **version 9.14** **Reference Manual** Featuring Multithread and XToolKit \
+**EusLisp** **version 9.15** **Reference Manual** Featuring Multithread and XToolKit \
  ETL-TR-95-2 January, 1995
 ======================================================================================
 
@@ -249,7 +249,10 @@ Revision History
   ~ Version 9.12 is released, support ARM Version 9.13 is released,
     support class documentation Version 9.14 is released, fix assert
     API. Now message is optional (defmacro assert (pred &optional
-    message)
+    message) Version 9.15 is released, fix char comparison function
+    (previous version retuns opossite result), support multiple argument
+    at function /=, add url encode feature (escape-url function),
+    support microsecond add/subtract in interval-time class
 
 Installation
 ------------
@@ -17796,7 +17799,7 @@ Transformation](manual.html#27327)
 About this document ...
 =======================
 
-****EusLisp** **version 9.14** **Reference Manual** Featuring
+****EusLisp** **version 9.15** **Reference Manual** Featuring
 Multithread and XToolKit \
  ETL-TR-95-2 January, 1995**
 
@@ -17812,8 +17815,8 @@ Macquarie University, Sydney.
 The command line arguments were: **latex2html**
 `-dir /tmp/html/ -local_icons -auto_prefix -iso_language JP manual -split 1 -no_navigation`
 
-The translation was initiated by on 2015-08-17
+The translation was initiated by on 2015-08-18
 
 * * * * *
 
-2015-08-17
+2015-08-18
