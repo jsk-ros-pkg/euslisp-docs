@@ -1,9 +1,9 @@
 % EusLisp EusLisp version 9.00/ irteus version 1.00 リファレンスマニュアル
-  -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 August 19, 2015
+  -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 August 20, 2015
 % 
 % 
 
-**EusLisp** **EusLisp version 9.00/ irteus version 1.00** **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 August 19, 2015
+**EusLisp** **EusLisp version 9.00/ irteus version 1.00** **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 August 20, 2015
 ===========================================================================================================================================================
 
 **irteus 1.00** *東京大学大学院* 情報理工学系研究科 知能機械情報学専攻
@@ -4129,6 +4129,18 @@ make random gauss, m:mean s:standard-deviation
 make random gauss vector, replacement for quasi-random defined in
 matlib.c
 
+**concatenate-matrix-column** *&rest args*[関数]
+
+Concatenate matrix in column direction.
+
+**concatenate-matrix-row** *&rest args*[関数]
+
+Concatenate matrix in row direction.
+
+**concatenate-matrix-diagonal** *&rest args*[関数]
+
+Concatenate matrix in diagonal.
+
 **normalize-vector** *v &optional r (eps 1.000000e-20)*[関数]
 
 calculate normalize-vector \#f(0 0 0)-\>\#f(0 0 0).
@@ -5686,7 +5698,7 @@ Index
 
 **atan2**
 
-[数学関数](jmanual.html#20774)
+[数学関数](jmanual.html#20783)
 
 **best-first-graph-search-solver**
 
@@ -6108,6 +6120,18 @@ Index
 
 [ユーティリティ関数](jmanual.html#20288)
 
+**concatenate-matrix-column**
+
+[数学関数](jmanual.html#20904)
+
+**concatenate-matrix-diagonal**
+
+[数学関数](jmanual.html#20924)
+
+**concatenate-matrix-row**
+
+[数学関数](jmanual.html#20914)
+
 **connect-server-until-success**
 
 [ユーティリティ関数](jmanual.html#20319)
@@ -6130,7 +6154,7 @@ Index
 
 **diagonal**
 
-[数学関数](jmanual.html#20754)
+[数学関数](jmanual.html#20763)
 
 **directed-graph**
 
@@ -6138,7 +6162,7 @@ Index
 
 **eigen-decompose**
 
-[数学関数](jmanual.html#20927)
+[数学関数](jmanual.html#20966)
 
 **eus-server**
 
@@ -6182,7 +6206,7 @@ Index
 
 **gaussian-random**
 
-[数学関数](jmanual.html#20885)
+[数学関数](jmanual.html#20894)
 
 **geometry::face-to-tessel-triangle**
 
@@ -6290,7 +6314,7 @@ Index
 
 **inverse-matrix**
 
-[数学関数](jmanual.html#20744)
+[数学関数](jmanual.html#20753)
 
 **irtviewer-dummy**
 
@@ -6314,27 +6338,27 @@ Index
 
 **lmeds**
 
-[数学関数](jmanual.html#20971)
+[数学関数](jmanual.html#21010)
 
 **lmeds-error**
 
-[数学関数](jmanual.html#20982)
+[数学関数](jmanual.html#21021)
 
 **lmeds-error-mat**
 
-[数学関数](jmanual.html#20993)
+[数学関数](jmanual.html#21032)
 
 **lms**
 
-[数学関数](jmanual.html#20938)
+[数学関数](jmanual.html#20977)
 
 **lms-error**
 
-[数学関数](jmanual.html#20960)
+[数学関数](jmanual.html#20999)
 
 **lms-estimate**
 
-[数学関数](jmanual.html#20949)
+[数学関数](jmanual.html#20988)
 
 **load-mcd**
 
@@ -6378,7 +6402,7 @@ Index
 
 **manipulability**
 
-[数学関数](jmanual.html#20865)
+[数学関数](jmanual.html#20874)
 
 **mapjoin**
 
@@ -6386,11 +6410,11 @@ Index
 
 **matrix-exponent**
 
-[数学関数](jmanual.html#20825)
+[数学関数](jmanual.html#20834)
 
 **matrix-log**
 
-[数学関数](jmanual.html#20815)
+[数学関数](jmanual.html#20824)
 
 **matrix-to-euler-angle**
 
@@ -6398,7 +6422,7 @@ Index
 
 **matrix2quaternion**
 
-[数学関数](jmanual.html#20795)
+[数学関数](jmanual.html#20804)
 
 **midcoords**
 
@@ -6406,11 +6430,11 @@ Index
 
 **midrot**
 
-[数学関数](jmanual.html#20835)
+[数学関数](jmanual.html#20844)
 
 **minor-matrix**
 
-[数学関数](jmanual.html#20764)
+[数学関数](jmanual.html#20773)
 
 **motion-capture-data**
 
@@ -6430,7 +6454,7 @@ Index
 
 **normalize-vector**
 
-[数学関数](jmanual.html#20895)
+[数学関数](jmanual.html#20934)
 
 **objects**
 
@@ -6446,7 +6470,7 @@ Index
 
 **outer-product-matrix**
 
-[数学関数](jmanual.html#20784)
+[数学関数](jmanual.html#20793)
 
 **parse-bvh-sexp**
 
@@ -6486,15 +6510,15 @@ Index
 
 **pseudo-inverse**
 
-[数学関数](jmanual.html#20845)
+[数学関数](jmanual.html#20854)
 
 **pseudo-inverse-org**
 
-[数学関数](jmanual.html#20905)
+[数学関数](jmanual.html#20944)
 
 **quaternion2matrix**
 
-[数学関数](jmanual.html#20805)
+[数学関数](jmanual.html#20814)
 
 **radius-of-cylinder**
 
@@ -6506,7 +6530,7 @@ Index
 
 **random-gauss**
 
-[数学関数](jmanual.html#20875)
+[数学関数](jmanual.html#20884)
 
 **read-bvh**
 
@@ -6514,11 +6538,11 @@ Index
 
 **read-image-file**
 
-[画像関数](jmanual.html#21235)
+[画像関数](jmanual.html#21298)
 
 **read-png-file**
 
-[画像関数](jmanual.html#21291)
+[画像関数](jmanual.html#21354)
 
 **rgb2his**
 
@@ -6566,11 +6590,11 @@ Index
 
 **sr-inverse**
 
-[数学関数](jmanual.html#20855)
+[数学関数](jmanual.html#20864)
 
 **sr-inverse-org**
 
-[数学関数](jmanual.html#20916)
+[数学関数](jmanual.html#20955)
 
 **transform-coords**
 
@@ -6590,11 +6614,11 @@ Index
 
 **write-image-file**
 
-[画像関数](jmanual.html#21247)
+[画像関数](jmanual.html#21310)
 
 **write-png-file**
 
-[画像関数](jmanual.html#21302)
+[画像関数](jmanual.html#21365)
 
 **x-of-cube**
 
@@ -6645,7 +6669,7 @@ About this document ...
 
 ****EusLisp** **EusLisp version 9.00/ irteus version 1.00**
 **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 +
-JSK-TR-10-03 August 19, 2015**
+JSK-TR-10-03 August 20, 2015**
 
 This document was generated using the
 [**LaTeX**2`HTML`](http://www.latex2html.org/) translator Version 2008
@@ -6659,8 +6683,8 @@ Macquarie University, Sydney.
 The command line arguments were: **latex2html**
 `-dir /tmp/html/ -local_icons -auto_prefix -iso_language JP jmanual -split 1 -no_navigation`
 
-The translation was initiated by on 2015-08-19
+The translation was initiated by on 2015-08-20
 
 * * * * *
 
-2015-08-19
+2015-08-20
