@@ -1,6 +1,6 @@
 ### pr2-interface
 - :super **robot-interface**
-- :slots r-gripper-action l-gripper-action move-base-action move-base-trajectory-action finger-pressure-origin move-base-goal-msg move-base-goal-coords move-base-goal-map-to-frame go-pos-unsafe-goal-msg 
+- :slots r-gripper-action l-gripper-action move-base-action move-base-trajectory-action finger-pressure-origin move-base-goal-msg move-base-goal-coords move-base-goal-map-to-frame go-pos-unsafe-goal-msg current-goal-coords 
 
 
 
@@ -91,6 +91,8 @@ send-action [ send message to action server, it means robot will move ] <br>
 :go-pos-unsafe-wait 
 
 :wait-torso *&optional* *(timeout 0)* 
+
+:robot-interface-simulation-callback 
 
 :check-continuous-joint-move-over-180 *diff-av* 
 

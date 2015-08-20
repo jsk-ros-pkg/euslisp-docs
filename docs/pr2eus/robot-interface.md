@@ -1,14 +1,20 @@
 ### controller-action-client
 - :super **ros::simple-action-client**
-- :slots time-to-finish 
+- :slots time-to-finish ri angle-vector-sequence timer-sequence current-time current-angle-vector previous-angle-vector scale-angle-vector 
 
 
 
-:init *&rest* *args* 
+:init *r* *&rest* *args* 
 
 :time-to-finish 
 
 :action-feedback-cb *msg* 
+
+:push-angle-vector-simulation *av* *tm* *&optional* *prev-av* 
+
+:pop-angle-vector-simulation 
+
+:interpolatingp 
 
 
 ### robot-interface
@@ -72,12 +78,14 @@ robot-interface is object for interacting real robot thorugh JointTrajectoryActi
 - Wait until last sent motion is finished <br>
 - ctype : controller to be wait <br>
 - timeout : max time of for waiting <br>
+- return values is a list of interpolatingp for all controllers, so (null (some #'identity (send *ri* :wait-interpolation))) -> t if all interpolation has stopped <br>
 
 
 #### :interpolatingp
 &nbsp;&nbsp;&nbsp;*&optional* *(ctype)* 
 
-- Check inf the last sent motion is executing <br>
+- Check if the last sent motion is executing <br>
+return t if interpolating <br>
 
 
 #### :wait-interpolation-smooth
@@ -88,6 +96,7 @@ robot-interface is object for interacting real robot thorugh JointTrajectoryActi
         (dolist (av (list av1 av2 av3 av4))
             (send *ri* :angle-vector av)
             (send *ri* :wait-interpolation-smooth 300))
+Return value is a list of interpolatingp for all controllers, so (null (some #'identity (send *ri* :wait-interpolation))) -> t if all interpolation has stopped <br>
 
 
 #### :interpolating-smoothp
@@ -181,6 +190,8 @@ robot-interface is object for interacting real robot thorugh JointTrajectoryActi
 
 
 :add-controller *ctype* *&key* *(joint-enable-check)* *(create-actions)* 
+
+:robot-interface-simulation-callback 
 
 :publish-joint-state *&optional* *(joint-list (send robot :joint-list))* 
 
