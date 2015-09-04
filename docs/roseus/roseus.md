@@ -458,5 +458,3 @@ ros::find-load-msg-path *ros::pkg*
 
 ros::load-ros-manifest *ros::pkg* 
 
-compiler::compile-file-if-src-newer-so *compiler::srcfile* *&key* *(compiler::out-prefix)* *(compiler::output-dir ./)* *(compiler::clear-files)* *&rest* *args* 
-
