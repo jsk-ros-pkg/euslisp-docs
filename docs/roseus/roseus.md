@@ -46,6 +46,27 @@
 :prin1 *&optional* *(ros::strm t)* *&rest* *ros::msgs* 
 
 
+### ros::timer-event
+- :super **propertied-object**
+- :slots ros::last-expected ros::last-real ros::current-expected ros::current-real ros::last-duration 
+
+
+
+:init 
+
+:prin1 *&optional* *(ros::strm t)* *&rest* *ros::msgs* 
+
+:last-expected *&rest* *args* 
+
+:last-real *&rest* *args* 
+
+:current-expected *&rest* *args* 
+
+:current-real *&rest* *args* 
+
+:last-duration *&rest* *args* 
+
+
 ### ros::rate ###
 
 
