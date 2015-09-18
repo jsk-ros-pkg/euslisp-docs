@@ -1,10 +1,10 @@
 % EusLisp EusLisp version 9.00/ irteus version 1.00 リファレンスマニュアル
-  -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 September 16,
+  -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 September 18,
   2015
 % 
 % 
 
-**EusLisp** **EusLisp version 9.00/ irteus version 1.00** **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 September 16, 2015
+**EusLisp** **EusLisp version 9.00/ irteus version 1.00** **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 September 18, 2015
 ==============================================================================================================================================================
 
 **irteus 1.00** *東京大学大学院* 情報理工学系研究科 知能機械情報学専攻
@@ -1893,9 +1893,15 @@ consider loop counting for IK convergence.
 \\&rest args \\&key... ...l-jacobi) \\\\ \\\> (additional-vel) \\\\ \\\>
 \\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img192.png)
 
-Move move-target to target-coords. dump-command should be t, nil, or
-:fail-only. t : dump log both in success and fail. :fail-only : dump log
-only in fail. nil : do not dump log.
+Move move-target to target-coords. dump-command should be t, nil,
+:always, :fail-only, :always-with-debug-log, or
+:fail-only-with-debug-log. Log are success/fail log and ik debug
+information log. t or :always : dump log both in success and fail (for
+success/fail log). :always-with-debug-log : dump log both in success and
+fail (for success/fail log and ik debug information log). :fail-only :
+dump log only in fail (for success/fail log). :always-with-debug-log :
+dump log only in fail (for success/fail log and ik debug information
+log). nil : do not dump log.
 
 ![\\begin{emtabbing} {\\bf
 :inverse-kinematics-for-closed-loop-forward-kinematics} ... ...\\\>
@@ -6703,7 +6709,7 @@ About this document ...
 
 ****EusLisp** **EusLisp version 9.00/ irteus version 1.00**
 **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 +
-JSK-TR-10-03 September 16, 2015**
+JSK-TR-10-03 September 18, 2015**
 
 This document was generated using the
 [**LaTeX**2`HTML`](http://www.latex2html.org/) translator Version 2008
@@ -6717,8 +6723,8 @@ Macquarie University, Sydney.
 The command line arguments were: **latex2html**
 `-dir /tmp/html/ -local_icons -auto_prefix -iso_language JP jmanual -split 1 -no_navigation`
 
-The translation was initiated by on 2015-09-16
+The translation was initiated by on 2015-09-18
 
 * * * * *
 
-2015-09-16
+2015-09-18
