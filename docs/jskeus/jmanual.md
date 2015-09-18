@@ -1904,9 +1904,9 @@ dump log only in fail (for success/fail log and ik debug information
 log). nil : do not dump log.
 
 ![\\begin{emtabbing} {\\bf
-:inverse-kinematics-for-closed-loop-forward-kinematics} ... ...\\\>
-(constrained-joint-angle-list) \\\\ \\\> \\&allow-other-keys \\rm
-\\end{emtabbing}](jmanual-img193.png)
+:inverse-kinematics-for-closed-loop-forward-kinematics} ...
+...t-angle-list) \\\\ \\\> (min-loop 2) \\\\ \\\> \\&allow-other-keys
+\\rm \\end{emtabbing}](jmanual-img193.png)
 
 Solve inverse-kinematics for closed loop forward kinematics. Move
 move-target to target-coords with link-list. link-list loop should be
@@ -2313,7 +2313,7 @@ all-torque \\&key... ...(send self limb :end-coords)) \\\\lq
 Calculates end-effector force and moment from joint torques.
 
 ![\\begin{emtabbing} {\\bf :fullbody-inverse-kinematics} \\it
-target-coords \\&rest a... ...gs nil) \\\\ \\\> (cog-null-space t) \\\\
+target-coords \\&rest a... ...null-space t) \\\\ \\\> (min-loop 2) \\\\
 \\\> \\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img200.png)
 
 fullbody inverse kinematics for legged robot. necessary args :
