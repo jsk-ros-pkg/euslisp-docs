@@ -1,11 +1,10 @@
 % EusLisp EusLisp version 9.00/ irteus version 1.00 リファレンスマニュアル
-  -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 September 18,
-  2015
+  -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 October 1, 2015
 % 
 % 
 
-**EusLisp** **EusLisp version 9.00/ irteus version 1.00** **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 September 18, 2015
-==============================================================================================================================================================
+**EusLisp** **EusLisp version 9.00/ irteus version 1.00** **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 October 1, 2015
+===========================================================================================================================================================
 
 **irteus 1.00** *東京大学大学院* 情報理工学系研究科 知能機械情報学専攻
 
@@ -3918,6 +3917,8 @@ append list of glvertices to this object
 
 **:box** [メソッド]
 
+**:make-pqpmodel** *&key (gl::fat 0)*[メソッド]
+
 **gl::glbody** [クラス]
 
       :super   body 
@@ -4224,7 +4225,7 @@ Index
 
 **:actual-vertices**
 
-[GL/X表示](jmanual.html#19111)
+[GL/X表示](jmanual.html#19114)
 
 **:add-arc**
 
@@ -4268,7 +4269,7 @@ Index
 
 **:add-tabbed-panel**
 
-[GL/X表示](jmanual.html#20013)
+[GL/X表示](jmanual.html#20035)
 
 **:add-to-open-list**
 
@@ -4314,7 +4315,7 @@ Index
 
 **:append-glvertices**
 
-[GL/X表示](jmanual.html#19254)
+[GL/X表示](jmanual.html#19257)
 
 **:arc-list**
 
@@ -4344,7 +4345,7 @@ Index
 **:box**
 
 [ポイントクラウドデータ](jmanual.html#15984) |
-[GL/X表示](jmanual.html#19385)
+[GL/X表示](jmanual.html#19388)
 
 **:bvh-offset-rotate**
 
@@ -4365,7 +4366,7 @@ Index
 
 **:calc-bounding-box**
 
-[GL/X表示](jmanual.html#19121)
+[GL/X表示](jmanual.html#19124)
 
 **:calc-current-refzmp**
 
@@ -4436,7 +4437,7 @@ Index
 
 **:calc-normals**
 
-[GL/X表示](jmanual.html#19182)
+[GL/X表示](jmanual.html#19185)
 
 **:calc-nspace-from-joint-limit**
 
@@ -4523,7 +4524,7 @@ Index
 
 **:change-tabbed-panel**
 
-[GL/X表示](jmanual.html#20024)
+[GL/X表示](jmanual.html#20046)
 
 **:channels**
 
@@ -4588,7 +4589,7 @@ Index
 
 **:collision-check-objects**
 
-[GL/X表示](jmanual.html#19374)
+[GL/X表示](jmanual.html#19377)
 
 **:collision-check-pairs**
 
@@ -4608,16 +4609,16 @@ Index
 
 **:convert-to-faces**
 
-[GL/X表示](jmanual.html#19203)
+[GL/X表示](jmanual.html#19206)
 
 **:convert-to-faceset**
 
-[GL/X表示](jmanual.html#19214)
+[GL/X表示](jmanual.html#19217)
 
 **:convert-to-world**
 
 [ポイントクラウドデータ](jmanual.html#15963) |
-[GL/X表示](jmanual.html#19234)
+[GL/X表示](jmanual.html#19237)
 
 **:copy-from**
 
@@ -4633,7 +4634,7 @@ Index
 
 **:create**
 
-[ロボットビューワ](jmanual.html#11775) | [GL/X表示](jmanual.html#20002)
+[ロボットビューワ](jmanual.html#11775) | [GL/X表示](jmanual.html#20024)
 
 **:current-additional-data**
 
@@ -4701,7 +4702,7 @@ Index
 
 [センサモデル](jmanual.html#9640) |
 [ポイントクラウドデータ](jmanual.html#16248) |
-[GL/X表示](jmanual.html#19363) | [GL/X表示](jmanual.html#19425)
+[GL/X表示](jmanual.html#19366) | [GL/X表示](jmanual.html#19439)
 
 **:draw-collision-debug-view**
 
@@ -4717,7 +4718,7 @@ Index
 
 **:draw-label**
 
-[GL/X表示](jmanual.html#20086)
+[GL/X表示](jmanual.html#20108)
 
 **:draw-objects**
 
@@ -4731,7 +4732,7 @@ Index
 **:draw-on**
 
 [ロボットモデル](jmanual.html#7869) | [センサモデル](jmanual.html#9813)
-| [GL/X表示](jmanual.html#19352)
+| [GL/X表示](jmanual.html#19355)
 
 **:draw-sensor**
 
@@ -4764,11 +4765,11 @@ Index
 
 **:expand-vertices**
 
-[GL/X表示](jmanual.html#19151)
+[GL/X表示](jmanual.html#19154)
 
 **:expand-vertices-info**
 
-[GL/X表示](jmanual.html#19330)
+[GL/X表示](jmanual.html#19333)
 
 **:expose**
 
@@ -4777,11 +4778,11 @@ Index
 **:faces**
 
 [ロボットモデル](jmanual.html#7847) |
-[ロボットモデル](jmanual.html#5693) | [GL/X表示](jmanual.html#19341)
+[ロボットモデル](jmanual.html#5693) | [GL/X表示](jmanual.html#19344)
 
 **:filename**
 
-[GL/X表示](jmanual.html#19275)
+[GL/X表示](jmanual.html#19278)
 
 **:filter**
 
@@ -4922,11 +4923,11 @@ Index
 
 **:get-material**
 
-[GL/X表示](jmanual.html#19308)
+[GL/X表示](jmanual.html#19311)
 
 **:get-meshinfo**
 
-[GL/X表示](jmanual.html#19286)
+[GL/X表示](jmanual.html#19289)
 
 **:get-sensor-method**
 
@@ -4942,7 +4943,7 @@ Index
 
 **:glvertices**
 
-[GL/X表示](jmanual.html#19414) | [GL/X表示](jmanual.html#19244)
+[GL/X表示](jmanual.html#19428) | [GL/X表示](jmanual.html#19247)
 
 **:gn**
 
@@ -5034,8 +5035,8 @@ Index
 [グラフ表現](jmanual.html#17507) | [グラフ表現](jmanual.html#17558) |
 [グラフ表現](jmanual.html#17653) | [グラフ表現](jmanual.html#17843) |
 [グラフ表現](jmanual.html#17916) | [グラフ表現](jmanual.html#17989) |
-[グラフ表現](jmanual.html#18073) | [GL/X表示](jmanual.html#19264) |
-[ユーティリティ関数](jmanual.html#20336)
+[グラフ表現](jmanual.html#18073) | [GL/X表示](jmanual.html#19267) |
+[ユーティリティ関数](jmanual.html#20358)
 
 **:init-end-coords**
 
@@ -5245,6 +5246,10 @@ Index
 
 [ロボットモデル](jmanual.html#5861)
 
+**:make-pqpmodel**
+
+[GL/X表示](jmanual.html#19399)
+
 **:make-sole-polygon**
 
 [ロボットモデル](jmanual.html#8993)
@@ -5271,7 +5276,7 @@ Index
 
 **:mirror-axis**
 
-[GL/X表示](jmanual.html#19192)
+[GL/X表示](jmanual.html#19195)
 
 **:model**
 
@@ -5461,11 +5466,11 @@ Index
 
 **:reset-offset-from-parent**
 
-[GL/X表示](jmanual.html#19141)
+[GL/X表示](jmanual.html#19144)
 
 **:resize**
 
-[ロボットビューワ](jmanual.html#11819) | [GL/X表示](jmanual.html#20057)
+[ロボットビューワ](jmanual.html#11819) | [GL/X表示](jmanual.html#20079)
 
 **:rleg**
 
@@ -5486,7 +5491,7 @@ Index
 **:set-color**
 
 [ポイントクラウドデータ](jmanual.html#16072) |
-[GL/X表示](jmanual.html#19436) | [GL/X表示](jmanual.html#19101)
+[GL/X表示](jmanual.html#19450) | [GL/X表示](jmanual.html#19104)
 
 **:set-cursor-pos-event**
 
@@ -5494,11 +5499,11 @@ Index
 
 **:set-material**
 
-[GL/X表示](jmanual.html#19319)
+[GL/X表示](jmanual.html#19322)
 
 **:set-meshinfo**
 
-[GL/X表示](jmanual.html#19297)
+[GL/X表示](jmanual.html#19300)
 
 **:set-midpoint-for-interlocking-joints**
 
@@ -5507,7 +5512,7 @@ Index
 **:set-offset**
 
 [ポイントクラウドデータ](jmanual.html#16215) |
-[GL/X表示](jmanual.html#19224)
+[GL/X表示](jmanual.html#19227)
 
 **:signal**
 
@@ -5566,7 +5571,7 @@ Index
 
 **:start**
 
-[ユーティリティ関数](jmanual.html#20346)
+[ユーティリティ関数](jmanual.html#20368)
 
 **:start-state**
 
@@ -5586,7 +5591,7 @@ Index
 
 **:stop**
 
-[ユーティリティ関数](jmanual.html#20356)
+[ユーティリティ関数](jmanual.html#20378)
 
 **:successors**
 
@@ -5602,11 +5607,11 @@ Index
 
 **:tabbed-button**
 
-[GL/X表示](jmanual.html#20035)
+[GL/X表示](jmanual.html#20057)
 
 **:tabbed-panel**
 
-[GL/X表示](jmanual.html#20046)
+[GL/X表示](jmanual.html#20068)
 
 **:to**
 
@@ -5655,16 +5660,16 @@ Index
 
 **:use-flat-shader**
 
-[GL/X表示](jmanual.html#19161)
+[GL/X表示](jmanual.html#19164)
 
 **:use-smooth-shader**
 
-[GL/X表示](jmanual.html#19171)
+[GL/X表示](jmanual.html#19174)
 
 **:vertices**
 
 [ポイントクラウドデータ](jmanual.html#15995) |
-[GL/X表示](jmanual.html#19131)
+[GL/X表示](jmanual.html#19134)
 
 **:view-coords**
 
@@ -5738,7 +5743,7 @@ Index
 
 **atan2**
 
-[数学関数](jmanual.html#20871)
+[数学関数](jmanual.html#20893)
 
 **best-first-graph-search-solver**
 
@@ -6150,31 +6155,31 @@ Index
 
 **color-category10**
 
-[ユーティリティ関数](jmanual.html#20468)
+[ユーティリティ関数](jmanual.html#20490)
 
 **color-category20**
 
-[ユーティリティ関数](jmanual.html#20478)
+[ユーティリティ関数](jmanual.html#20500)
 
 **combination**
 
-[ユーティリティ関数](jmanual.html#20376)
+[ユーティリティ関数](jmanual.html#20398)
 
 **concatenate-matrix-column**
 
-[数学関数](jmanual.html#20992)
+[数学関数](jmanual.html#21014)
 
 **concatenate-matrix-diagonal**
 
-[数学関数](jmanual.html#21012)
+[数学関数](jmanual.html#21034)
 
 **concatenate-matrix-row**
 
-[数学関数](jmanual.html#21002)
+[数学関数](jmanual.html#21024)
 
 **connect-server-until-success**
 
-[ユーティリティ関数](jmanual.html#20407)
+[ユーティリティ関数](jmanual.html#20429)
 
 **convert-irtmodel-to-collada**
 
@@ -6194,7 +6199,7 @@ Index
 
 **diagonal**
 
-[数学関数](jmanual.html#20851)
+[数学関数](jmanual.html#20873)
 
 **directed-graph**
 
@@ -6202,11 +6207,11 @@ Index
 
 **eigen-decompose**
 
-[数学関数](jmanual.html#21054)
+[数学関数](jmanual.html#21076)
 
 **eus-server**
 
-[ユーティリティ関数](jmanual.html#20397)
+[ユーティリティ関数](jmanual.html#20419)
 
 **eus2collada**
 
@@ -6226,19 +6231,19 @@ Index
 
 **find-extreams**
 
-[ユーティリティ関数](jmanual.html#20386)
+[ユーティリティ関数](jmanual.html#20408)
 
 **format-array**
 
-[ユーティリティ関数](jmanual.html#20418)
+[ユーティリティ関数](jmanual.html#20440)
 
 **forward-message-to**
 
-[ユーティリティ関数](jmanual.html#20498)
+[ユーティリティ関数](jmanual.html#20520)
 
 **forward-message-to-all**
 
-[ユーティリティ関数](jmanual.html#20509)
+[ユーティリティ関数](jmanual.html#20531)
 
 **gait-generator**
 
@@ -6246,7 +6251,7 @@ Index
 
 **gaussian-random**
 
-[数学関数](jmanual.html#20982)
+[数学関数](jmanual.html#21004)
 
 **geometry::face-to-tessel-triangle**
 
@@ -6282,55 +6287,55 @@ Index
 
 **gl::\_dump-wrl-shape**
 
-[GL/X表示](jmanual.html#19552)
+[GL/X表示](jmanual.html#19566)
 
 **gl::delete-displaylist-id**
 
-[GL/X表示](jmanual.html#19519)
+[GL/X表示](jmanual.html#19533)
 
 **gl::draw-glbody**
 
-[GL/X表示](jmanual.html#19541)
+[GL/X表示](jmanual.html#19555)
 
 **gl::draw-globjects**
 
-[GL/X表示](jmanual.html#19530)
+[GL/X表示](jmanual.html#19544)
 
 **gl::find-color**
 
-[GL/X表示](jmanual.html#19447)
+[GL/X表示](jmanual.html#19461)
 
 **gl::glbody**
 
-[GL/X表示](jmanual.html#19397)
+[GL/X表示](jmanual.html#19411)
 
 **gl::glvertices**
 
-[GL/X表示](jmanual.html#19084)
+[GL/X表示](jmanual.html#19087)
 
 **gl::make-glvertices-from-faces**
 
-[GL/X表示](jmanual.html#19477)
+[GL/X表示](jmanual.html#19491)
 
 **gl::make-glvertices-from-faceset**
 
-[GL/X表示](jmanual.html#19467)
+[GL/X表示](jmanual.html#19481)
 
 **gl::reset-gl-attribute**
 
-[GL/X表示](jmanual.html#19508)
+[GL/X表示](jmanual.html#19522)
 
 **gl::set-stereo-gl-attribute**
 
-[GL/X表示](jmanual.html#19497)
+[GL/X表示](jmanual.html#19511)
 
 **gl::transparent**
 
-[GL/X表示](jmanual.html#19457)
+[GL/X表示](jmanual.html#19471)
 
 **gl::write-wrl-from-glvertices**
 
-[GL/X表示](jmanual.html#19487)
+[GL/X表示](jmanual.html#19501)
 
 **graph**
 
@@ -6346,15 +6351,15 @@ Index
 
 **his2rgb**
 
-[ユーティリティ関数](jmanual.html#20428)
+[ユーティリティ関数](jmanual.html#20450)
 
 **hvs2rgb**
 
-[ユーティリティ関数](jmanual.html#20438)
+[ユーティリティ関数](jmanual.html#20460)
 
 **inverse-matrix**
 
-[数学関数](jmanual.html#20841)
+[数学関数](jmanual.html#20863)
 
 **irtviewer-dummy**
 
@@ -6378,27 +6383,27 @@ Index
 
 **lmeds**
 
-[数学関数](jmanual.html#21098)
+[数学関数](jmanual.html#21120)
 
 **lmeds-error**
 
-[数学関数](jmanual.html#21109)
+[数学関数](jmanual.html#21131)
 
 **lmeds-error-mat**
 
-[数学関数](jmanual.html#21120)
+[数学関数](jmanual.html#21142)
 
 **lms**
 
-[数学関数](jmanual.html#21065)
+[数学関数](jmanual.html#21087)
 
 **lms-error**
 
-[数学関数](jmanual.html#21087)
+[数学関数](jmanual.html#21109)
 
 **lms-estimate**
 
-[数学関数](jmanual.html#21076)
+[数学関数](jmanual.html#21098)
 
 **load-mcd**
 
@@ -6434,7 +6439,7 @@ Index
 
 **make-robot-model-from-name**
 
-[ユーティリティ関数](jmanual.html#20488)
+[ユーティリティ関数](jmanual.html#20510)
 
 **make-sphere**
 
@@ -6442,19 +6447,19 @@ Index
 
 **manipulability**
 
-[数学関数](jmanual.html#20962)
+[数学関数](jmanual.html#20984)
 
 **mapjoin**
 
-[ユーティリティ関数](jmanual.html#20520)
+[ユーティリティ関数](jmanual.html#20542)
 
 **matrix-exponent**
 
-[数学関数](jmanual.html#20922)
+[数学関数](jmanual.html#20944)
 
 **matrix-log**
 
-[数学関数](jmanual.html#20912)
+[数学関数](jmanual.html#20934)
 
 **matrix-to-euler-angle**
 
@@ -6462,7 +6467,7 @@ Index
 
 **matrix2quaternion**
 
-[数学関数](jmanual.html#20892)
+[数学関数](jmanual.html#20914)
 
 **midcoords**
 
@@ -6470,11 +6475,11 @@ Index
 
 **midrot**
 
-[数学関数](jmanual.html#20932)
+[数学関数](jmanual.html#20954)
 
 **minor-matrix**
 
-[数学関数](jmanual.html#20861)
+[数学関数](jmanual.html#20883)
 
 **motion-capture-data**
 
@@ -6482,11 +6487,11 @@ Index
 
 **mtimer**
 
-[ユーティリティ関数](jmanual.html#20319)
+[ユーティリティ関数](jmanual.html#20341)
 
 **need-thread**
 
-[ユーティリティ関数](jmanual.html#20531)
+[ユーティリティ関数](jmanual.html#20553)
 
 **node**
 
@@ -6494,7 +6499,7 @@ Index
 
 **normalize-vector**
 
-[数学関数](jmanual.html#21022)
+[数学関数](jmanual.html#21044)
 
 **objects**
 
@@ -6510,7 +6515,7 @@ Index
 
 **outer-product-matrix**
 
-[数学関数](jmanual.html#20881)
+[数学関数](jmanual.html#20903)
 
 **parse-bvh-sexp**
 
@@ -6518,11 +6523,11 @@ Index
 
 **permutation**
 
-[ユーティリティ関数](jmanual.html#20366)
+[ユーティリティ関数](jmanual.html#20388)
 
 **piped-fork-returns-list**
 
-[ユーティリティ関数](jmanual.html#20542)
+[ユーティリティ関数](jmanual.html#20564)
 
 **pointcloud**
 
@@ -6550,15 +6555,15 @@ Index
 
 **pseudo-inverse**
 
-[数学関数](jmanual.html#20942)
+[数学関数](jmanual.html#20964)
 
 **pseudo-inverse-org**
 
-[数学関数](jmanual.html#21032)
+[数学関数](jmanual.html#21054)
 
 **quaternion2matrix**
 
-[数学関数](jmanual.html#20902)
+[数学関数](jmanual.html#20924)
 
 **radius-of-cylinder**
 
@@ -6570,7 +6575,7 @@ Index
 
 **random-gauss**
 
-[数学関数](jmanual.html#20972)
+[数学関数](jmanual.html#20994)
 
 **read-bvh**
 
@@ -6578,19 +6583,19 @@ Index
 
 **read-image-file**
 
-[画像関数](jmanual.html#21386)
+[画像関数](jmanual.html#21408)
 
 **read-png-file**
 
-[画像関数](jmanual.html#21442)
+[画像関数](jmanual.html#21464)
 
 **rgb2his**
 
-[ユーティリティ関数](jmanual.html#20448)
+[ユーティリティ関数](jmanual.html#20470)
 
 **rgb2hvs**
 
-[ユーティリティ関数](jmanual.html#20458)
+[ユーティリティ関数](jmanual.html#20480)
 
 **riccati-equation**
 
@@ -6630,11 +6635,11 @@ Index
 
 **sr-inverse**
 
-[数学関数](jmanual.html#20952)
+[数学関数](jmanual.html#20974)
 
 **sr-inverse-org**
 
-[数学関数](jmanual.html#21043)
+[数学関数](jmanual.html#21065)
 
 **transform-coords**
 
@@ -6654,11 +6659,11 @@ Index
 
 **write-image-file**
 
-[画像関数](jmanual.html#21398)
+[画像関数](jmanual.html#21420)
 
 **write-png-file**
 
-[画像関数](jmanual.html#21453)
+[画像関数](jmanual.html#21475)
 
 **x-of-cube**
 
@@ -6670,11 +6675,11 @@ Index
 
 **x::event-far**
 
-[GL/X表示](jmanual.html#20108)
+[GL/X表示](jmanual.html#20130)
 
 **x::event-near**
 
-[GL/X表示](jmanual.html#20119)
+[GL/X表示](jmanual.html#20141)
 
 **x::irtviewer**
 
@@ -6686,15 +6691,15 @@ Index
 
 **x::panel-tab-button-item**
 
-[GL/X表示](jmanual.html#20069)
+[GL/X表示](jmanual.html#20091)
 
 **x::tabbed-panel**
 
-[GL/X表示](jmanual.html#19985)
+[GL/X表示](jmanual.html#20007)
 
 **x::window-main-one**
 
-[GL/X表示](jmanual.html#20097)
+[GL/X表示](jmanual.html#20119)
 
 **y-of-cube**
 
@@ -6709,7 +6714,7 @@ About this document ...
 
 ****EusLisp** **EusLisp version 9.00/ irteus version 1.00**
 **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 +
-JSK-TR-10-03 September 18, 2015**
+JSK-TR-10-03 October 1, 2015**
 
 This document was generated using the
 [**LaTeX**2`HTML`](http://www.latex2html.org/) translator Version 2008
@@ -6723,8 +6728,8 @@ Macquarie University, Sydney.
 The command line arguments were: **latex2html**
 `-dir /tmp/html/ -local_icons -auto_prefix -iso_language JP jmanual -split 1 -no_navigation`
 
-The translation was initiated by on 2015-09-18
+The translation was initiated by on 2015-10-01
 
 * * * * *
 
-2015-09-18
+2015-10-01
