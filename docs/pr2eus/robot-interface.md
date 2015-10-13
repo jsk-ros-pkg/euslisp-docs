@@ -172,6 +172,40 @@ Return value is a list of interpolatingp for all controllers, so (null (some #'i
 - When warning mode, it wait for user's key input before sending angle-vector to the robot <br>
 
 
+#### :go-pos
+&nbsp;&nbsp;&nbsp;*x* *y* *&optional* *(d 0)* 
+
+- move robot toward x, y, degree and wait to reach that goal. return t if reached or nil if fail <br>
+    the robot moves relative to current position. <br>
+    using [m] and [degree] is historical reason from original hrpsys code <br>
+
+
+#### :go-pos-no-wait
+&nbsp;&nbsp;&nbsp;*x* *y* *&optional* *(d 0)* 
+
+- no-wait version of :go-pos. this function is always assumed to return t <br>
+
+
+#### :go-wait
+
+
+- wait until :go-pos-no-wait reached to the goal, return t if reached or nil if fail <br>
+
+
+#### :go-velocity
+&nbsp;&nbsp;&nbsp;*x* *y* *d* *&optional* *(msec 1000)* *&key* *(stop t)* <br>&nbsp;&nbsp;&nbsp;*(wait)* 
+
+- move robot at given speed for given msec. <br>
+    if stop is t, robot stops after msec, use wait t for blocking call <br>
+    return nil if aborted while waiting by enabling :wait, otherwise return t <br>
+
+
+#### :go-stop
+
+
+- stop go-velocity. return t if robot successfly stops, otherwise return nil <br>
+
+
 #### :nod
 &nbsp;&nbsp;&nbsp;*&key* *(angle 40)* <br>&nbsp;&nbsp;&nbsp;*(time 3000)* 
 
