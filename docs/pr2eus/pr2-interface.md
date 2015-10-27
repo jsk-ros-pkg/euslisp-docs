@@ -103,9 +103,13 @@ send-action [ send message to action server, it means robot will move ] <br>
 :angle-vector-with-constraint *av1* *&optional* *(tm 3000)* *(arm :arms)* *&key* *(rotation-axis t)* *(translation-axis t)* *&rest* *args* 
 
 
-speak-jp *jp-str* 
+send-speak-msg *msg* *&key* *(topic-name robotsound)* *(timeout 0)* *wait* 
 
-speak-en *en-str* *&key* *(google nil)* *(wait nil)* 
+speak-google *str* *&key* *(lang :ja)* *wait* *(topic-name robotsound)* *(timeout 20)* 
+
+speak-jp *str* *&key* *wait* *google* *(topic-name robotsound_jp)* *(timeout 20)* 
+
+speak-en *str* *&key* *wait* *google* *(topic-name robotsound)* *(timeout 20)* 
 
 pr2-init *&optional* *(create-viewer)* 
 
