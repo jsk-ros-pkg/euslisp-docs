@@ -1,9 +1,9 @@
 % EusLisp EusLisp version 9.00/ irteus version 1.00 リファレンスマニュアル
-  -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 October 15, 2015
+  -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 October 30, 2015
 % 
 % 
 
-**EusLisp** **EusLisp version 9.00/ irteus version 1.00** **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 October 15, 2015
+**EusLisp** **EusLisp version 9.00/ irteus version 1.00** **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 October 30, 2015
 ============================================================================================================================================================
 
 **irteus 1.00** *東京大学大学院* 情報理工学系研究科 知能機械情報学専攻
@@ -2551,6 +2551,8 @@ Returns 3d position
 
 Returns ray vector of given x and y.
 
+**:create-viewer** [メソッド]
+
 **:viewing** *&rest args*[メソッド]
 
 **:image-viewer** *&rest args*[メソッド]
@@ -4226,25 +4228,25 @@ Index
 
 **:3d-point**
 
-[センサモデル](jmanual.html#9814)
+[センサモデル](jmanual.html#9817)
 
 **:action**
 
-[グラフ表現](jmanual.html#17667)
+[グラフ表現](jmanual.html#17689)
 
 **:actual-vertices**
 
-[GL/X表示](jmanual.html#19157)
+[GL/X表示](jmanual.html#19179)
 
 **:add-arc**
 
-[グラフ表現](jmanual.html#17068) | [グラフ表現](jmanual.html#17415) |
-[グラフ表現](jmanual.html#17510)
+[グラフ表現](jmanual.html#17090) | [グラフ表現](jmanual.html#17437) |
+[グラフ表現](jmanual.html#17532)
 
 **:add-arc-from-to**
 
-[グラフ表現](jmanual.html#17291) | [グラフ表現](jmanual.html#17426) |
-[グラフ表現](jmanual.html#17521)
+[グラフ表現](jmanual.html#17313) | [グラフ表現](jmanual.html#17448) |
+[グラフ表現](jmanual.html#17543)
 
 **:add-child-links**
 
@@ -4256,21 +4258,21 @@ Index
 
 **:add-list-to-open-list**
 
-[グラフ表現](jmanual.html#17813) | [グラフ表現](jmanual.html#17908) |
-[グラフ表現](jmanual.html#17981) | [グラフ表現](jmanual.html#18054)
+[グラフ表現](jmanual.html#17835) | [グラフ表現](jmanual.html#17930) |
+[グラフ表現](jmanual.html#18003) | [グラフ表現](jmanual.html#18076)
 
 **:add-neighbor**
 
-[グラフ表現](jmanual.html#17112)
+[グラフ表現](jmanual.html#17134)
 
 **:add-node**
 
-[グラフ表現](jmanual.html#17258)
+[グラフ表現](jmanual.html#17280)
 
 **:add-object-to-open-list**
 
-[グラフ表現](jmanual.html#17824) | [グラフ表現](jmanual.html#17919) |
-[グラフ表現](jmanual.html#17992) | [グラフ表現](jmanual.html#18065)
+[グラフ表現](jmanual.html#17846) | [グラフ表現](jmanual.html#17941) |
+[グラフ表現](jmanual.html#18014) | [グラフ表現](jmanual.html#18087)
 
 **:add-parent-link**
 
@@ -4278,19 +4280,19 @@ Index
 
 **:add-tabbed-panel**
 
-[GL/X表示](jmanual.html#20078)
+[GL/X表示](jmanual.html#20100)
 
 **:add-to-open-list**
 
-[グラフ表現](jmanual.html#17780)
+[グラフ表現](jmanual.html#17802)
 
 **:adjacency-list**
 
-[グラフ表現](jmanual.html#17324)
+[グラフ表現](jmanual.html#17346)
 
 **:adjacency-matrix**
 
-[グラフ表現](jmanual.html#17313)
+[グラフ表現](jmanual.html#17335)
 
 **:analysis-level**
 
@@ -4308,27 +4310,27 @@ Index
 
 **:angle-vector**
 
-[ロボットモデル](jmanual.html#5703) | [BVHデータ](jmanual.html#12980)
+[ロボットモデル](jmanual.html#5703) | [BVHデータ](jmanual.html#13002)
 
 **:animate**
 
-[BVHデータ](jmanual.html#13163)
+[BVHデータ](jmanual.html#13185)
 
 **:animation**
 
-[BVHデータ](jmanual.html#13130)
+[BVHデータ](jmanual.html#13152)
 
 **:append**
 
-[ポイントクラウドデータ](jmanual.html#15932)
+[ポイントクラウドデータ](jmanual.html#15954)
 
 **:append-glvertices**
 
-[GL/X表示](jmanual.html#19300)
+[GL/X表示](jmanual.html#19322)
 
 **:arc-list**
 
-[グラフ表現](jmanual.html#17046)
+[グラフ表現](jmanual.html#17068)
 
 **:arms**
 
@@ -4336,33 +4338,33 @@ Index
 
 **:axis-length**
 
-[ポイントクラウドデータ](jmanual.html#16148)
+[ポイントクラウドデータ](jmanual.html#16170)
 
 **:axis-order**
 
-[BVHデータ](jmanual.html#12834) | [BVHデータ](jmanual.html#12918)
+[BVHデータ](jmanual.html#12856) | [BVHデータ](jmanual.html#12940)
 
 **:axis-width**
 
-[ポイントクラウドデータ](jmanual.html#16159)
+[ポイントクラウドデータ](jmanual.html#16181)
 
 **:bodies**
 
 [ロボットモデル](jmanual.html#7836) |
-[ロボットモデル](jmanual.html#5683) | [環境モデル](jmanual.html#10319)
+[ロボットモデル](jmanual.html#5683) | [環境モデル](jmanual.html#10341)
 
 **:box**
 
-[ポイントクラウドデータ](jmanual.html#16027) |
-[GL/X表示](jmanual.html#19431)
+[ポイントクラウドデータ](jmanual.html#16049) |
+[GL/X表示](jmanual.html#19453)
 
 **:bvh-offset-rotate**
 
-[BVHデータ](jmanual.html#13057)
+[BVHデータ](jmanual.html#13079)
 
 **:bvh-offset-rotation**
 
-[BVHデータ](jmanual.html#12845) | [BVHデータ](jmanual.html#12929)
+[BVHデータ](jmanual.html#12867) | [BVHデータ](jmanual.html#12951)
 
 **:calc-angle-speed-gain**
 
@@ -4375,15 +4377,15 @@ Index
 
 **:calc-bounding-box**
 
-[GL/X表示](jmanual.html#19167)
+[GL/X表示](jmanual.html#19189)
 
 **:calc-current-refzmp**
 
-[動力学計算・歩行動作生成](jmanual.html#11110)
+[動力学計算・歩行動作生成](jmanual.html#11132)
 
 **:calc-current-swing-leg-coords**
 
-[動力学計算・歩行動作生成](jmanual.html#11088)
+[動力学計算・歩行動作生成](jmanual.html#11110)
 
 **:calc-dav-gain**
 
@@ -4391,8 +4393,8 @@ Index
 
 **:calc-f**
 
-[動力学計算・歩行動作生成](jmanual.html#10736) |
-[動力学計算・歩行動作生成](jmanual.html#10808)
+[動力学計算・歩行動作生成](jmanual.html#10758) |
+[動力学計算・歩行動作生成](jmanual.html#10830)
 
 **:calc-force-from-joint-torque**
 
@@ -4446,7 +4448,7 @@ Index
 
 **:calc-normals**
 
-[GL/X表示](jmanual.html#19228)
+[GL/X表示](jmanual.html#19250)
 
 **:calc-nspace-from-joint-limit**
 
@@ -4454,11 +4456,11 @@ Index
 
 **:calc-one-tick-gait-parameter**
 
-[動力学計算・歩行動作生成](jmanual.html#11121)
+[動力学計算・歩行動作生成](jmanual.html#11143)
 
 **:calc-ratio-from-double-support-ratio**
 
-[動力学計算・歩行動作生成](jmanual.html#11099)
+[動力学計算・歩行動作生成](jmanual.html#11121)
 
 **:calc-static-balance-point**
 
@@ -4474,8 +4476,8 @@ Index
 
 **:calc-u**
 
-[動力学計算・歩行動作生成](jmanual.html#10747) |
-[動力学計算・歩行動作生成](jmanual.html#10819)
+[動力学計算・歩行動作生成](jmanual.html#10769) |
+[動力学計算・歩行動作生成](jmanual.html#10841)
 
 **:calc-union-link-list**
 
@@ -4503,8 +4505,8 @@ Index
 
 **:calc-xk**
 
-[動力学計算・歩行動作生成](jmanual.html#10758) |
-[動力学計算・歩行動作生成](jmanual.html#10830)
+[動力学計算・歩行動作生成](jmanual.html#10780) |
+[動力学計算・歩行動作生成](jmanual.html#10852)
 
 **:calc-zmp-from-forces-moments**
 
@@ -4520,24 +4522,24 @@ Index
 
 **:cart-zmp**
 
-[動力学計算・歩行動作生成](jmanual.html#10880)
+[動力学計算・歩行動作生成](jmanual.html#10902)
 
 **:centroid**
 
 [ロボットモデル](jmanual.html#5473) |
-[ポイントクラウドデータ](jmanual.html#15922)
+[ポイントクラウドデータ](jmanual.html#15944)
 
 **:change-background**
 
-[ロボットビューワ](jmanual.html#12016)
+[ロボットビューワ](jmanual.html#12038)
 
 **:change-tabbed-panel**
 
-[GL/X表示](jmanual.html#20089)
+[GL/X表示](jmanual.html#20111)
 
 **:channels**
 
-[BVHデータ](jmanual.html#12761)
+[BVHデータ](jmanual.html#12783)
 
 **:check-interlocking-joint-angle-validity**
 
@@ -4553,28 +4555,28 @@ Index
 
 **:clear-color**
 
-[ポイントクラウドデータ](jmanual.html#16170)
+[ポイントクラウドデータ](jmanual.html#16192)
 
 **:clear-nodes**
 
-[グラフ表現](jmanual.html#17280)
+[グラフ表現](jmanual.html#17302)
 
 **:clear-normal**
 
-[ポイントクラウドデータ](jmanual.html#16181)
+[ポイントクラウドデータ](jmanual.html#16203)
 
 **:clear-open-list**
 
-[グラフ表現](jmanual.html#17802) | [グラフ表現](jmanual.html#17897) |
-[グラフ表現](jmanual.html#17970) | [グラフ表現](jmanual.html#18043)
+[グラフ表現](jmanual.html#17824) | [グラフ表現](jmanual.html#17919) |
+[グラフ表現](jmanual.html#17992) | [グラフ表現](jmanual.html#18065)
 
 **:close-list**
 
-[グラフ表現](jmanual.html#17857)
+[グラフ表現](jmanual.html#17879)
 
 **:cog-z**
 
-[動力学計算・歩行動作生成](jmanual.html#10950)
+[動力学計算・歩行動作生成](jmanual.html#10972)
 
 **:collision-avoidance**
 
@@ -4598,7 +4600,7 @@ Index
 
 **:collision-check-objects**
 
-[GL/X表示](jmanual.html#19420)
+[GL/X表示](jmanual.html#19442)
 
 **:collision-check-pairs**
 
@@ -4606,90 +4608,94 @@ Index
 
 **:color-list**
 
-[ポイントクラウドデータ](jmanual.html#15902)
+[ポイントクラウドデータ](jmanual.html#15924)
 
 **:colors**
 
-[ポイントクラウドデータ](jmanual.html#15872)
+[ポイントクラウドデータ](jmanual.html#15894)
 
 **:configurenotify**
 
-[ロボットビューワ](jmanual.html#11873)
+[ロボットビューワ](jmanual.html#11895)
 
 **:convert-to-faces**
 
-[GL/X表示](jmanual.html#19249)
+[GL/X表示](jmanual.html#19271)
 
 **:convert-to-faceset**
 
-[GL/X表示](jmanual.html#19260)
+[GL/X表示](jmanual.html#19282)
 
 **:convert-to-world**
 
-[ポイントクラウドデータ](jmanual.html#16006) |
-[GL/X表示](jmanual.html#19280)
+[ポイントクラウドデータ](jmanual.html#16028) |
+[GL/X表示](jmanual.html#19302)
 
 **:copy-from**
 
-[ポイントクラウドデータ](jmanual.html#15986)
+[ポイントクラウドデータ](jmanual.html#16008)
 
 **:copy-state-to**
 
-[BVHデータ](jmanual.html#13024)
+[BVHデータ](jmanual.html#13046)
 
 **:cost**
 
-[グラフ表現](jmanual.html#17386) | [グラフ表現](jmanual.html#17645)
+[グラフ表現](jmanual.html#17408) | [グラフ表現](jmanual.html#17667)
 
 **:create**
 
-[ロボットビューワ](jmanual.html#11818) | [GL/X表示](jmanual.html#20067)
+[ロボットビューワ](jmanual.html#11840) | [GL/X表示](jmanual.html#20089)
+
+**:create-viewer**
+
+[センサモデル](jmanual.html#9837)
 
 **:current-additional-data**
 
-[動力学計算・歩行動作生成](jmanual.html#10716) |
-[動力学計算・歩行動作生成](jmanual.html#10930)
+[動力学計算・歩行動作生成](jmanual.html#10738) |
+[動力学計算・歩行動作生成](jmanual.html#10952)
 
 **:current-output-vector**
 
-[動力学計算・歩行動作生成](jmanual.html#10706) |
-[動力学計算・歩行動作生成](jmanual.html#10798)
+[動力学計算・歩行動作生成](jmanual.html#10728) |
+[動力学計算・歩行動作生成](jmanual.html#10820)
 
 **:current-reference-output-vector**
 
-[動力学計算・歩行動作生成](jmanual.html#10686)
+[動力学計算・歩行動作生成](jmanual.html#10708)
 
 **:current-refzmp**
 
-[動力学計算・歩行動作生成](jmanual.html#10900)
+[動力学計算・歩行動作生成](jmanual.html#10922)
 
 **:current-state-vector**
 
-[動力学計算・歩行動作生成](jmanual.html#10696)
+[動力学計算・歩行動作生成](jmanual.html#10718)
 
 **:curvature-list**
 
-[ポイントクラウドデータ](jmanual.html#16104)
+[ポイントクラウドデータ](jmanual.html#16126)
 
 **:curvatures**
 
-[ポイントクラウドデータ](jmanual.html#16093)
+[ポイントクラウドデータ](jmanual.html#16115)
 
 **:cx**
 
-[センサモデル](jmanual.html#9764)
+[センサモデル](jmanual.html#9767)
 
 **:cy**
 
-[センサモデル](jmanual.html#9774)
+[センサモデル](jmanual.html#9777)
 
 **:cycloid-midcoords**
 
-[動力学計算・歩行動作生成](jmanual.html#11187)
+[動力学計算・歩行動作生成](jmanual.html#11209)
 
 **:cycloid-midpoint**
 
-[動力学計算・歩行動作生成](jmanual.html#11176)
+[動力学計算・歩行動作生成](jmanual.html#11198)
 
 **:default-coords**
 
@@ -4713,9 +4719,9 @@ Index
 
 **:draw**
 
-[センサモデル](jmanual.html#9683) |
-[ポイントクラウドデータ](jmanual.html#16291) |
-[GL/X表示](jmanual.html#19409) | [GL/X表示](jmanual.html#19482)
+[センサモデル](jmanual.html#9686) |
+[ポイントクラウドデータ](jmanual.html#16313) |
+[GL/X表示](jmanual.html#19431) | [GL/X表示](jmanual.html#19504)
 
 **:draw-collision-debug-view**
 
@@ -4723,7 +4729,7 @@ Index
 
 **:draw-event**
 
-[ロボットビューワ](jmanual.html#11961)
+[ロボットビューワ](jmanual.html#11983)
 
 **:draw-gg-debug-view**
 
@@ -4731,42 +4737,42 @@ Index
 
 **:draw-label**
 
-[GL/X表示](jmanual.html#20151)
+[GL/X表示](jmanual.html#20173)
 
 **:draw-objects**
 
-[センサモデル](jmanual.html#9878) |
-[ロボットビューワ](jmanual.html#11972)
+[センサモデル](jmanual.html#9892) |
+[ロボットビューワ](jmanual.html#11994)
 
 **:draw-objects-raw**
 
-[センサモデル](jmanual.html#9889)
+[センサモデル](jmanual.html#9903)
 
 **:draw-on**
 
-[ロボットモデル](jmanual.html#7869) | [センサモデル](jmanual.html#9856)
-| [GL/X表示](jmanual.html#19398)
+[ロボットモデル](jmanual.html#7869) | [センサモデル](jmanual.html#9870)
+| [GL/X表示](jmanual.html#19420)
 
 **:draw-sensor**
 
-[センサモデル](jmanual.html#9622) | [センサモデル](jmanual.html#9694) |
-[センサモデル](jmanual.html#9867)
+[センサモデル](jmanual.html#9625) | [センサモデル](jmanual.html#9697) |
+[センサモデル](jmanual.html#9881)
 
 **:drawnormalmode**
 
-[ポイントクラウドデータ](jmanual.html#16269)
+[ポイントクラウドデータ](jmanual.html#16291)
 
 **:dump-hierarchy**
 
-[BVHデータ](jmanual.html#13002)
+[BVHデータ](jmanual.html#13024)
 
 **:dump-joints**
 
-[BVHデータ](jmanual.html#12991)
+[BVHデータ](jmanual.html#13013)
 
 **:dump-motion**
 
-[BVHデータ](jmanual.html#13013)
+[BVHデータ](jmanual.html#13035)
 
 **:end-coords**
 
@@ -4774,48 +4780,48 @@ Index
 
 **:expand**
 
-[グラフ表現](jmanual.html#17623)
+[グラフ表現](jmanual.html#17645)
 
 **:expand-vertices**
 
-[GL/X表示](jmanual.html#19197)
+[GL/X表示](jmanual.html#19219)
 
 **:expand-vertices-info**
 
-[GL/X表示](jmanual.html#19376)
+[GL/X表示](jmanual.html#19398)
 
 **:expose**
 
-[ロボットビューワ](jmanual.html#11851)
+[ロボットビューワ](jmanual.html#11873)
 
 **:faces**
 
 [ロボットモデル](jmanual.html#7847) |
-[ロボットモデル](jmanual.html#5693) | [GL/X表示](jmanual.html#19387)
+[ロボットモデル](jmanual.html#5693) | [GL/X表示](jmanual.html#19409)
 
 **:filename**
 
-[GL/X表示](jmanual.html#19321)
+[GL/X表示](jmanual.html#19343)
 
 **:filter**
 
-[ポイントクラウドデータ](jmanual.html#15942)
+[ポイントクラウドデータ](jmanual.html#15964)
 
 **:filter-with-indices**
 
-[ポイントクラウドデータ](jmanual.html#15953)
+[ポイントクラウドデータ](jmanual.html#15975)
 
 **:filtered-indices**
 
-[ポイントクラウドデータ](jmanual.html#15964)
+[ポイントクラウドデータ](jmanual.html#15986)
 
 **:finalize-gait-parameter**
 
-[動力学計算・歩行動作生成](jmanual.html#11066)
+[動力学計算・歩行動作生成](jmanual.html#11088)
 
 **:find-action**
 
-[グラフ表現](jmanual.html#17561)
+[グラフ表現](jmanual.html#17583)
 
 **:find-joint-angle-limit-weight-old-from-union-link-list**
 
@@ -4827,24 +4833,24 @@ Index
 
 **:find-node-in-close-list**
 
-[グラフ表現](jmanual.html#17758)
+[グラフ表現](jmanual.html#17780)
 
 **:find-object**
 
-[環境モデル](jmanual.html#10279)
+[環境モデル](jmanual.html#10301)
 
 **:finishedp**
 
-[動力学計算・歩行動作生成](jmanual.html#10666) |
-[動力学計算・歩行動作生成](jmanual.html#10920)
+[動力学計算・歩行動作生成](jmanual.html#10688) |
+[動力学計算・歩行動作生成](jmanual.html#10942)
 
 **:fix-joint-angle**
 
-[BVHデータ](jmanual.html#13035)
+[BVHデータ](jmanual.html#13057)
 
 **:fix-joint-order**
 
-[BVHデータ](jmanual.html#13046)
+[BVHデータ](jmanual.html#13068)
 
 **:fix-leg-to-coords**
 
@@ -4852,11 +4858,11 @@ Index
 
 **:flush**
 
-[ロボットビューワ](jmanual.html#12005)
+[ロボットビューワ](jmanual.html#12027)
 
 **:fn**
 
-[グラフ表現](jmanual.html#18087) | [グラフ表現](jmanual.html#18127)
+[グラフ表現](jmanual.html#18109) | [グラフ表現](jmanual.html#18149)
 
 **:foot-midcoords**
 
@@ -4876,19 +4882,19 @@ Index
 
 **:fovy**
 
-[センサモデル](jmanual.html#9754)
+[センサモデル](jmanual.html#9757)
 
 **:frame**
 
-[BVHデータ](jmanual.html#13141)
+[BVHデータ](jmanual.html#13163)
 
 **:frame-length**
 
-[BVHデータ](jmanual.html#13152)
+[BVHデータ](jmanual.html#13174)
 
 **:from**
 
-[グラフ表現](jmanual.html#17163)
+[グラフ表現](jmanual.html#17185)
 
 **:fullbody-inverse-kinematics**
 
@@ -4896,11 +4902,11 @@ Index
 
 **:fx**
 
-[センサモデル](jmanual.html#9784)
+[センサモデル](jmanual.html#9787)
 
 **:fy**
 
-[センサモデル](jmanual.html#9794)
+[センサモデル](jmanual.html#9797)
 
 **:gen-footstep-parameter**
 
@@ -4908,39 +4914,39 @@ Index
 
 **:generate-color-histogram-hs**
 
-[ポイントクラウドデータ](jmanual.html#16247)
+[ポイントクラウドデータ](jmanual.html#16269)
 
 **:get-counter-footstep-limbs**
 
-[動力学計算・歩行動作生成](jmanual.html#11011)
+[動力学計算・歩行動作生成](jmanual.html#11033)
 
 **:get-footstep-limbs**
 
-[動力学計算・歩行動作生成](jmanual.html#11000)
+[動力学計算・歩行動作生成](jmanual.html#11022)
 
 **:get-image**
 
-[センサモデル](jmanual.html#9900)
+[センサモデル](jmanual.html#9914)
 
 **:get-image-raw**
 
-[センサモデル](jmanual.html#9911)
+[センサモデル](jmanual.html#9925)
 
 **:get-limbs-zmp**
 
-[動力学計算・歩行動作生成](jmanual.html#11033)
+[動力学計算・歩行動作生成](jmanual.html#11055)
 
 **:get-limbs-zmp-list**
 
-[動力学計算・歩行動作生成](jmanual.html#11022)
+[動力学計算・歩行動作生成](jmanual.html#11044)
 
 **:get-material**
 
-[GL/X表示](jmanual.html#19354)
+[GL/X表示](jmanual.html#19376)
 
 **:get-meshinfo**
 
-[GL/X表示](jmanual.html#19332)
+[GL/X表示](jmanual.html#19354)
 
 **:get-sensor-method**
 
@@ -4952,15 +4958,15 @@ Index
 
 **:get-swing-limbs**
 
-[動力学計算・歩行動作生成](jmanual.html#11044)
+[動力学計算・歩行動作生成](jmanual.html#11066)
 
 **:glvertices**
 
-[GL/X表示](jmanual.html#19471) | [GL/X表示](jmanual.html#19290)
+[GL/X表示](jmanual.html#19493) | [GL/X表示](jmanual.html#19312)
 
 **:gn**
 
-[グラフ表現](jmanual.html#18138)
+[グラフ表現](jmanual.html#18160)
 
 **:go-pos-params-\>footstep-list**
 
@@ -4972,11 +4978,11 @@ Index
 
 **:goal-state**
 
-[グラフ表現](jmanual.html#17499)
+[グラフ表現](jmanual.html#17521)
 
 **:goal-test**
 
-[グラフ表現](jmanual.html#17466)
+[グラフ表現](jmanual.html#17488)
 
 **:gripper**
 
@@ -4988,12 +4994,12 @@ Index
 
 **:height**
 
-[センサモデル](jmanual.html#9744) |
-[ポイントクラウドデータ](jmanual.html#16071)
+[センサモデル](jmanual.html#9747) |
+[ポイントクラウドデータ](jmanual.html#16093)
 
 **:hn**
 
-[グラフ表現](jmanual.html#18149)
+[グラフ表現](jmanual.html#18171)
 
 **:ik-convergence-check**
 
@@ -5001,15 +5007,15 @@ Index
 
 **:image-circle-filter**
 
-[ポイントクラウドデータ](jmanual.html#16225)
+[ポイントクラウドデータ](jmanual.html#16247)
 
 **:image-position-inlier**
 
-[ポイントクラウドデータ](jmanual.html#16214)
+[ポイントクラウドデータ](jmanual.html#16236)
 
 **:image-viewer**
 
-[センサモデル](jmanual.html#9845)
+[センサモデル](jmanual.html#9859)
 
 **:imu-sensor**
 
@@ -5034,30 +5040,30 @@ Index
 [ロボットモデル](jmanual.html#5328) |
 [ロボットモデル](jmanual.html#5432) |
 [ロボットモデル](jmanual.html#5612) |
-[ロボットモデル](jmanual.html#7825) | [センサモデル](jmanual.html#9633)
-| [センサモデル](jmanual.html#9662) | [センサモデル](jmanual.html#9723)
-| [環境モデル](jmanual.html#10258) |
-[動力学計算・歩行動作生成](jmanual.html#10605) |
-[動力学計算・歩行動作生成](jmanual.html#10989) |
-[動力学計算・歩行動作生成](jmanual.html#10645) |
-[動力学計算・歩行動作生成](jmanual.html#10787) |
-[動力学計算・歩行動作生成](jmanual.html#10859) |
-[BVHデータ](jmanual.html#12874) | [BVHデータ](jmanual.html#13108) |
-[BVHデータ](jmanual.html#13192) | [BVHデータ](jmanual.html#13221) |
-[BVHデータ](jmanual.html#13250) | [BVHデータ](jmanual.html#12729) |
-[BVHデータ](jmanual.html#12790) | [BVHデータ](jmanual.html#12958) |
-[ポイントクラウドデータ](jmanual.html#15841) |
-[グラフ表現](jmanual.html#17035) | [グラフ表現](jmanual.html#17152) |
-[グラフ表現](jmanual.html#17214) | [グラフ表現](jmanual.html#17375) |
-[グラフ表現](jmanual.html#17550) | [グラフ表現](jmanual.html#17601) |
-[グラフ表現](jmanual.html#17696) | [グラフ表現](jmanual.html#17886) |
-[グラフ表現](jmanual.html#17959) | [グラフ表現](jmanual.html#18032) |
-[グラフ表現](jmanual.html#18116) | [GL/X表示](jmanual.html#19310) |
-[ユーティリティ関数](jmanual.html#20401)
+[ロボットモデル](jmanual.html#7825) | [センサモデル](jmanual.html#9636)
+| [センサモデル](jmanual.html#9665) | [センサモデル](jmanual.html#9726)
+| [環境モデル](jmanual.html#10280) |
+[動力学計算・歩行動作生成](jmanual.html#10627) |
+[動力学計算・歩行動作生成](jmanual.html#11011) |
+[動力学計算・歩行動作生成](jmanual.html#10667) |
+[動力学計算・歩行動作生成](jmanual.html#10809) |
+[動力学計算・歩行動作生成](jmanual.html#10881) |
+[BVHデータ](jmanual.html#12896) | [BVHデータ](jmanual.html#13130) |
+[BVHデータ](jmanual.html#13214) | [BVHデータ](jmanual.html#13243) |
+[BVHデータ](jmanual.html#13272) | [BVHデータ](jmanual.html#12751) |
+[BVHデータ](jmanual.html#12812) | [BVHデータ](jmanual.html#12980) |
+[ポイントクラウドデータ](jmanual.html#15863) |
+[グラフ表現](jmanual.html#17057) | [グラフ表現](jmanual.html#17174) |
+[グラフ表現](jmanual.html#17236) | [グラフ表現](jmanual.html#17397) |
+[グラフ表現](jmanual.html#17572) | [グラフ表現](jmanual.html#17623) |
+[グラフ表現](jmanual.html#17718) | [グラフ表現](jmanual.html#17908) |
+[グラフ表現](jmanual.html#17981) | [グラフ表現](jmanual.html#18054) |
+[グラフ表現](jmanual.html#18138) | [GL/X表示](jmanual.html#19332) |
+[ユーティリティ関数](jmanual.html#20423)
 
 **:init-end-coords**
 
-[BVHデータ](jmanual.html#13068)
+[BVHデータ](jmanual.html#13090)
 
 **:init-ending**
 
@@ -5070,11 +5076,11 @@ Index
 
 **:init-root-link**
 
-[BVHデータ](jmanual.html#13079)
+[BVHデータ](jmanual.html#13101)
 
 **:initialize-gait-parameter**
 
-[動力学計算・歩行動作生成](jmanual.html#11055)
+[動力学計算・歩行動作生成](jmanual.html#11077)
 
 **:interlocking-joint-pairs**
 
@@ -5122,15 +5128,15 @@ Index
 
 **:joint-angle-bvh**
 
-[BVHデータ](jmanual.html#12801) | [BVHデータ](jmanual.html#12885)
+[BVHデータ](jmanual.html#12823) | [BVHデータ](jmanual.html#12907)
 
 **:joint-angle-bvh-impl**
 
-[BVHデータ](jmanual.html#12823) | [BVHデータ](jmanual.html#12907)
+[BVHデータ](jmanual.html#12845) | [BVHデータ](jmanual.html#12929)
 
 **:joint-angle-bvh-offset**
 
-[BVHデータ](jmanual.html#12812) | [BVHデータ](jmanual.html#12896)
+[BVHデータ](jmanual.html#12834) | [BVHデータ](jmanual.html#12918)
 
 **:joint-angle-limit-nspace-for-6dof**
 
@@ -5197,11 +5203,11 @@ Index
 
 **:last-reference-output-vector**
 
-[動力学計算・歩行動作生成](jmanual.html#10676)
+[動力学計算・歩行動作生成](jmanual.html#10698)
 
 **:last-refzmp**
 
-[動力学計算・歩行動作生成](jmanual.html#10890)
+[動力学計算・歩行動作生成](jmanual.html#10912)
 
 **:legs**
 
@@ -5229,7 +5235,7 @@ Index
 
 **:look-all**
 
-[ロボットビューワ](jmanual.html#11917)
+[ロボットビューワ](jmanual.html#11939)
 
 **:look-at-hand**
 
@@ -5241,11 +5247,11 @@ Index
 
 **:look1**
 
-[ロボットビューワ](jmanual.html#11906)
+[ロボットビューワ](jmanual.html#11928)
 
 **:make-bvh-link**
 
-[BVHデータ](jmanual.html#12969)
+[BVHデータ](jmanual.html#12991)
 
 **:make-default-linear-link-joint-between-attach-coords**
 
@@ -5253,7 +5259,7 @@ Index
 
 **:make-gait-parameter**
 
-[動力学計算・歩行動作生成](jmanual.html#11077)
+[動力学計算・歩行動作生成](jmanual.html#11099)
 
 **:make-joint-min-max-table**
 
@@ -5265,7 +5271,7 @@ Index
 
 **:make-pqpmodel**
 
-[GL/X表示](jmanual.html#19442)
+[GL/X表示](jmanual.html#19464)
 
 **:make-sole-polygon**
 
@@ -5293,11 +5299,11 @@ Index
 
 **:mirror-axis**
 
-[GL/X表示](jmanual.html#19238)
+[GL/X表示](jmanual.html#19260)
 
 **:model**
 
-[BVHデータ](jmanual.html#13119)
+[BVHデータ](jmanual.html#13141)
 
 **:move-centroid-on-foot**
 
@@ -5305,7 +5311,7 @@ Index
 
 **:move-coords-event**
 
-[ロボットビューワ](jmanual.html#11950)
+[ロボットビューワ](jmanual.html#11972)
 
 **:move-joints**
 
@@ -5317,66 +5323,66 @@ Index
 
 **:move-viewing-around-viewtarget**
 
-[ロボットビューワ](jmanual.html#11928)
+[ロボットビューワ](jmanual.html#11950)
 
 **:neighbor-action-alist**
 
-[グラフ表現](jmanual.html#17572)
+[グラフ表現](jmanual.html#17594)
 
 **:neighbors**
 
-[グラフ表現](jmanual.html#17123)
+[グラフ表現](jmanual.html#17145)
 
 **:nfilter**
 
-[ポイントクラウドデータ](jmanual.html#16192)
+[ポイントクラウドデータ](jmanual.html#16214)
 
 **:node**
 
-[グラフ表現](jmanual.html#17236)
+[グラフ表現](jmanual.html#17258)
 
 **:nodes**
 
-[グラフ表現](jmanual.html#17247)
+[グラフ表現](jmanual.html#17269)
 
 **:nomethod**
 
-[ロボットビューワ](jmanual.html#12045) |
-[ロボットビューワ](jmanual.html#12085)
+[ロボットビューワ](jmanual.html#12067) |
+[ロボットビューワ](jmanual.html#12107)
 
 **:normal-list**
 
-[ポイントクラウドデータ](jmanual.html#15912)
+[ポイントクラウドデータ](jmanual.html#15934)
 
 **:normals**
 
-[ポイントクラウドデータ](jmanual.html#15882)
+[ポイントクラウドデータ](jmanual.html#15904)
 
 **:null-open-list?**
 
-[グラフ表現](jmanual.html#17791)
+[グラフ表現](jmanual.html#17813)
 
 **:object**
 
-[環境モデル](jmanual.html#10299)
+[環境モデル](jmanual.html#10321)
 
 **:objects**
 
-[環境モデル](jmanual.html#10269) |
-[ロボットビューワ](jmanual.html#11983) |
-[ロボットビューワ](jmanual.html#12074)
+[環境モデル](jmanual.html#10291) |
+[ロボットビューワ](jmanual.html#12005) |
+[ロボットビューワ](jmanual.html#12096)
 
 **:offset**
 
-[BVHデータ](jmanual.html#12750)
+[BVHデータ](jmanual.html#12772)
 
 **:open-list**
 
-[グラフ表現](jmanual.html#17846)
+[グラフ表現](jmanual.html#17868)
 
 **:parent**
 
-[グラフ表現](jmanual.html#17656)
+[グラフ表現](jmanual.html#17678)
 
 **:parent-link**
 
@@ -5385,16 +5391,16 @@ Index
 
 **:pass-preview-controller**
 
-[動力学計算・歩行動作生成](jmanual.html#10726) |
-[動力学計算・歩行動作生成](jmanual.html#10940)
+[動力学計算・歩行動作生成](jmanual.html#10748) |
+[動力学計算・歩行動作生成](jmanual.html#10962)
 
 **:path**
 
-[グラフ表現](jmanual.html#17612)
+[グラフ表現](jmanual.html#17634)
 
 **:path-cost**
 
-[グラフ表現](jmanual.html#17437) | [グラフ表現](jmanual.html#17477)
+[グラフ表現](jmanual.html#17459) | [グラフ表現](jmanual.html#17499)
 
 **:plot-joint-min-max-table**
 
@@ -5406,28 +5412,28 @@ Index
 
 **:point-color**
 
-[ポイントクラウドデータ](jmanual.html#16126)
+[ポイントクラウドデータ](jmanual.html#16148)
 
 **:point-list**
 
-[ポイントクラウドデータ](jmanual.html#15892)
+[ポイントクラウドデータ](jmanual.html#15914)
 
 **:point-size**
 
-[ポイントクラウドデータ](jmanual.html#16137)
+[ポイントクラウドデータ](jmanual.html#16159)
 
 **:points**
 
-[ポイントクラウドデータ](jmanual.html#15862)
+[ポイントクラウドデータ](jmanual.html#15884)
 
 **:pop-from-open-list**
 
-[グラフ表現](jmanual.html#17835) | [グラフ表現](jmanual.html#17930) |
-[グラフ表現](jmanual.html#18003) | [グラフ表現](jmanual.html#18076)
+[グラフ表現](jmanual.html#17857) | [グラフ表現](jmanual.html#17952) |
+[グラフ表現](jmanual.html#18025) | [グラフ表現](jmanual.html#18098)
 
 **:prin1**
 
-[グラフ表現](jmanual.html#17185)
+[グラフ表現](jmanual.html#17207)
 
 **:print-vector-for-robot-limb**
 
@@ -5435,11 +5441,11 @@ Index
 
 **:proc-one-tick**
 
-[動力学計算・歩行動作生成](jmanual.html#11132)
+[動力学計算・歩行動作生成](jmanual.html#11154)
 
 **:profile**
 
-[センサモデル](jmanual.html#9578)
+[センサモデル](jmanual.html#9581)
 
 **:rarm**
 
@@ -5447,35 +5453,35 @@ Index
 
 **:ray**
 
-[センサモデル](jmanual.html#9824)
+[センサモデル](jmanual.html#9827)
 
 **:read**
 
-[センサモデル](jmanual.html#9611)
+[センサモデル](jmanual.html#9614)
 
 **:redraw**
 
-[ロボットビューワ](jmanual.html#11840)
+[ロボットビューワ](jmanual.html#11862)
 
 **:refcog**
 
-[動力学計算・歩行動作生成](jmanual.html#10870)
+[動力学計算・歩行動作生成](jmanual.html#10892)
 
 **:remove-all-arcs**
 
-[グラフ表現](jmanual.html#17090)
+[グラフ表現](jmanual.html#17112)
 
 **:remove-arc**
 
-[グラフ表現](jmanual.html#17079) | [グラフ表現](jmanual.html#17302)
+[グラフ表現](jmanual.html#17101) | [グラフ表現](jmanual.html#17324)
 
 **:remove-node**
 
-[グラフ表現](jmanual.html#17269)
+[グラフ表現](jmanual.html#17291)
 
 **:reset-box**
 
-[ポイントクラウドデータ](jmanual.html#16016)
+[ポイントクラウドデータ](jmanual.html#16038)
 
 **:reset-joint-angle-limit-weight-old**
 
@@ -5483,11 +5489,11 @@ Index
 
 **:reset-offset-from-parent**
 
-[GL/X表示](jmanual.html#19187)
+[GL/X表示](jmanual.html#19209)
 
 **:resize**
 
-[ロボットビューワ](jmanual.html#11862) | [GL/X表示](jmanual.html#20122)
+[ロボットビューワ](jmanual.html#11884) | [GL/X表示](jmanual.html#20144)
 
 **:rleg**
 
@@ -5495,11 +5501,11 @@ Index
 
 **:screen-point**
 
-[センサモデル](jmanual.html#9804)
+[センサモデル](jmanual.html#9807)
 
 **:select-drawmode**
 
-[ロボットビューワ](jmanual.html#11994)
+[ロボットビューワ](jmanual.html#12016)
 
 **:self-collision-check**
 
@@ -5507,20 +5513,20 @@ Index
 
 **:set-color**
 
-[ポイントクラウドデータ](jmanual.html#16115) |
-[GL/X表示](jmanual.html#19493) | [GL/X表示](jmanual.html#19147)
+[ポイントクラウドデータ](jmanual.html#16137) |
+[GL/X表示](jmanual.html#19515) | [GL/X表示](jmanual.html#19169)
 
 **:set-cursor-pos-event**
 
-[ロボットビューワ](jmanual.html#11939)
+[ロボットビューワ](jmanual.html#11961)
 
 **:set-material**
 
-[GL/X表示](jmanual.html#19365)
+[GL/X表示](jmanual.html#19387)
 
 **:set-meshinfo**
 
-[GL/X表示](jmanual.html#19343)
+[GL/X表示](jmanual.html#19365)
 
 **:set-midpoint-for-interlocking-joints**
 
@@ -5528,45 +5534,45 @@ Index
 
 **:set-offset**
 
-[ポイントクラウドデータ](jmanual.html#16258) |
-[GL/X表示](jmanual.html#19270)
+[ポイントクラウドデータ](jmanual.html#16280) |
+[GL/X表示](jmanual.html#19292)
 
 **:signal**
 
-[センサモデル](jmanual.html#9589)
+[センサモデル](jmanual.html#9592)
 
 **:simulate**
 
-[センサモデル](jmanual.html#9600) | [センサモデル](jmanual.html#9673)
+[センサモデル](jmanual.html#9603) | [センサモデル](jmanual.html#9676)
 
 **:size**
 
-[ポイントクラウドデータ](jmanual.html#16049)
+[ポイントクラウドデータ](jmanual.html#16071)
 
 **:size-change**
 
-[ポイントクラウドデータ](jmanual.html#15852)
+[ポイントクラウドデータ](jmanual.html#15874)
 
 **:solve**
 
-[動力学計算・歩行動作生成](jmanual.html#10616) |
-[グラフ表現](jmanual.html#17707) | [グラフ表現](jmanual.html#17769)
+[動力学計算・歩行動作生成](jmanual.html#10638) |
+[グラフ表現](jmanual.html#17729) | [グラフ表現](jmanual.html#17791)
 
 **:solve-angle-vector**
 
-[動力学計算・歩行動作生成](jmanual.html#11154)
+[動力学計算・歩行動作生成](jmanual.html#11176)
 
 **:solve-av-by-move-centroid-on-foot**
 
-[動力学計算・歩行動作生成](jmanual.html#11165)
+[動力学計算・歩行動作生成](jmanual.html#11187)
 
 **:solve-by-name**
 
-[グラフ表現](jmanual.html#17718)
+[グラフ表現](jmanual.html#17740)
 
 **:solve-init**
 
-[グラフ表現](jmanual.html#17747)
+[グラフ表現](jmanual.html#17769)
 
 **:speed-to-angle**
 
@@ -5580,39 +5586,39 @@ Index
 
 **:spot**
 
-[環境モデル](jmanual.html#10309)
+[環境モデル](jmanual.html#10331)
 
 **:spots**
 
-[環境モデル](jmanual.html#10289)
+[環境モデル](jmanual.html#10311)
 
 **:start**
 
-[ユーティリティ関数](jmanual.html#20411)
+[ユーティリティ関数](jmanual.html#20433)
 
 **:start-state**
 
-[グラフ表現](jmanual.html#17488)
+[グラフ表現](jmanual.html#17510)
 
 **:state**
 
-[グラフ表現](jmanual.html#17634)
+[グラフ表現](jmanual.html#17656)
 
 **:step**
 
-[ポイントクラウドデータ](jmanual.html#15975)
+[ポイントクラウドデータ](jmanual.html#15997)
 
 **:step-inlier**
 
-[ポイントクラウドデータ](jmanual.html#16236)
+[ポイントクラウドデータ](jmanual.html#16258)
 
 **:stop**
 
-[ユーティリティ関数](jmanual.html#20421)
+[ユーティリティ関数](jmanual.html#20443)
 
 **:successors**
 
-[グラフ表現](jmanual.html#17057) | [グラフ表現](jmanual.html#17225)
+[グラフ表現](jmanual.html#17079) | [グラフ表現](jmanual.html#17247)
 
 **:support-polygon**
 
@@ -5624,15 +5630,15 @@ Index
 
 **:tabbed-button**
 
-[GL/X表示](jmanual.html#20100)
+[GL/X表示](jmanual.html#20122)
 
 **:tabbed-panel**
 
-[GL/X表示](jmanual.html#20111)
+[GL/X表示](jmanual.html#20133)
 
 **:to**
 
-[グラフ表現](jmanual.html#17174)
+[グラフ表現](jmanual.html#17196)
 
 **:torque-vector**
 
@@ -5644,27 +5650,27 @@ Index
 
 **:transform-points**
 
-[ポイントクラウドデータ](jmanual.html#15996)
+[ポイントクラウドデータ](jmanual.html#16018)
 
 **:transparent**
 
-[ポイントクラウドデータ](jmanual.html#16280)
+[ポイントクラウドデータ](jmanual.html#16302)
 
 **:type**
 
-[BVHデータ](jmanual.html#12739)
+[BVHデータ](jmanual.html#12761)
 
 **:unlink**
 
-[グラフ表現](jmanual.html#17101)
+[グラフ表現](jmanual.html#17123)
 
 **:update-cog-z**
 
-[動力学計算・歩行動作生成](jmanual.html#10960)
+[動力学計算・歩行動作生成](jmanual.html#10982)
 
 **:update-current-gait-parameter**
 
-[動力学計算・歩行動作生成](jmanual.html#11143)
+[動力学計算・歩行動作生成](jmanual.html#11165)
 
 **:update-descendants**
 
@@ -5672,45 +5678,45 @@ Index
 
 **:update-xk**
 
-[動力学計算・歩行動作生成](jmanual.html#10656) |
-[動力学計算・歩行動作生成](jmanual.html#10910)
+[動力学計算・歩行動作生成](jmanual.html#10678) |
+[動力学計算・歩行動作生成](jmanual.html#10932)
 
 **:use-flat-shader**
 
-[GL/X表示](jmanual.html#19207)
+[GL/X表示](jmanual.html#19229)
 
 **:use-smooth-shader**
 
-[GL/X表示](jmanual.html#19217)
+[GL/X表示](jmanual.html#19239)
 
 **:vertices**
 
-[ポイントクラウドデータ](jmanual.html#16038) |
-[GL/X表示](jmanual.html#19177)
+[ポイントクラウドデータ](jmanual.html#16060) |
+[GL/X表示](jmanual.html#19199)
 
 **:view-coords**
 
-[ポイントクラウドデータ](jmanual.html#16082)
+[ポイントクラウドデータ](jmanual.html#16104)
 
 **:viewangle-inlier**
 
-[ポイントクラウドデータ](jmanual.html#16203)
+[ポイントクラウドデータ](jmanual.html#16225)
 
 **:viewer**
 
-[ロボットビューワ](jmanual.html#11829)
+[ロボットビューワ](jmanual.html#11851)
 
 **:viewing**
 
-[センサモデル](jmanual.html#9834)
+[センサモデル](jmanual.html#9848)
 
 **:viewpoint**
 
-[ロボットビューワ](jmanual.html#11895)
+[ロボットビューワ](jmanual.html#11917)
 
 **:viewtarget**
 
-[ロボットビューワ](jmanual.html#11884)
+[ロボットビューワ](jmanual.html#11906)
 
 **:weight**
 
@@ -5718,8 +5724,8 @@ Index
 
 **:width**
 
-[センサモデル](jmanual.html#9734) |
-[ポイントクラウドデータ](jmanual.html#16060)
+[センサモデル](jmanual.html#9737) |
+[ポイントクラウドデータ](jmanual.html#16082)
 
 **:worldcoords**
 
@@ -5728,15 +5734,15 @@ Index
 
 **:write-to-dot**
 
-[グラフ表現](jmanual.html#17335)
+[グラフ表現](jmanual.html#17357)
 
 **:write-to-pdf**
 
-[グラフ表現](jmanual.html#17346)
+[グラフ表現](jmanual.html#17368)
 
 **a-graph-search-solver**
 
-[グラフ表現](jmanual.html#18099)
+[グラフ表現](jmanual.html#18121)
 
 **all-child-links**
 
@@ -5752,19 +5758,19 @@ Index
 
 **arc**
 
-[グラフ表現](jmanual.html#17135)
+[グラフ表現](jmanual.html#17157)
 
 **arced-node**
 
-[グラフ表現](jmanual.html#17533)
+[グラフ表現](jmanual.html#17555)
 
 **atan2**
 
-[数学関数](jmanual.html#20936)
+[数学関数](jmanual.html#20958)
 
 **best-first-graph-search-solver**
 
-[グラフ表現](jmanual.html#18015)
+[グラフ表現](jmanual.html#18037)
 
 **body-to-faces**
 
@@ -5784,31 +5790,31 @@ Index
 
 **breadth-first-graph-search-solver**
 
-[グラフ表現](jmanual.html#17869)
+[グラフ表現](jmanual.html#17891)
 
 **bumper-model**
 
-[センサモデル](jmanual.html#9645)
+[センサモデル](jmanual.html#9648)
 
 **bvh-6dof-joint**
 
-[BVHデータ](jmanual.html#12857)
+[BVHデータ](jmanual.html#12879)
 
 **bvh-link**
 
-[BVHデータ](jmanual.html#12712)
+[BVHデータ](jmanual.html#12734)
 
 **bvh-robot-model**
 
-[BVHデータ](jmanual.html#12941)
+[BVHデータ](jmanual.html#12963)
 
 **bvh-sphere-joint**
 
-[BVHデータ](jmanual.html#12773)
+[BVHデータ](jmanual.html#12795)
 
 **bvh2eus**
 
-[BVHデータ](jmanual.html#13271)
+[BVHデータ](jmanual.html#13293)
 
 **calc-angle-speed-gain-scalar**
 
@@ -5824,11 +5830,11 @@ Index
 
 **calc-inertia-matrix-linear**
 
-[動力学計算・歩行動作生成](jmanual.html#11209)
+[動力学計算・歩行動作生成](jmanual.html#11231)
 
 **calc-inertia-matrix-rotational**
 
-[動力学計算・歩行動作生成](jmanual.html#11198)
+[動力学計算・歩行動作生成](jmanual.html#11220)
 
 **calc-jacobian-default-rotate-vector**
 
@@ -5856,7 +5862,7 @@ Index
 
 **camera-model**
 
-[センサモデル](jmanual.html#9706)
+[センサモデル](jmanual.html#9709)
 
 **cascaded-link**
 
@@ -5864,375 +5870,375 @@ Index
 
 **cmu-bvh-robot-model**
 
-[BVHデータ](jmanual.html#13233)
+[BVHデータ](jmanual.html#13255)
 
 **collada::-\>string**
 
-[Colladaデータ](jmanual.html#14131)
+[Colladaデータ](jmanual.html#14153)
 
 **collada::cat-clark**
 
-[Colladaデータ](jmanual.html#14208)
+[Colladaデータ](jmanual.html#14230)
 
 **collada::cat-normal**
 
-[Colladaデータ](jmanual.html#14197)
+[Colladaデータ](jmanual.html#14219)
 
 **collada::collada-geometry-id-base**
 
-[Colladaデータ](jmanual.html#14769)
+[Colladaデータ](jmanual.html#14791)
 
 **collada::collada-geometry-name-base**
 
-[Colladaデータ](jmanual.html#14780)
+[Colladaデータ](jmanual.html#14802)
 
 **collada::collada-joint-id**
 
-[Colladaデータ](jmanual.html#14703)
+[Colladaデータ](jmanual.html#14725)
 
 **collada::collada-node-id**
 
-[Colladaデータ](jmanual.html#14351)
+[Colladaデータ](jmanual.html#14373)
 
 **collada::collada-node-name**
 
-[Colladaデータ](jmanual.html#14362)
+[Colladaデータ](jmanual.html#14384)
 
 **collada::enum-integer-list**
 
-[Colladaデータ](jmanual.html#14868)
+[Colladaデータ](jmanual.html#14890)
 
 **collada::estimate-class-name**
 
-[Colladaデータ](jmanual.html#14890)
+[Colladaデータ](jmanual.html#14912)
 
 **collada::eusmodel-description**
 
-[Colladaデータ](jmanual.html#14060)
+[Colladaデータ](jmanual.html#14082)
 
 **collada::eusmodel-description-\>collada**
 
-[Colladaデータ](jmanual.html#14090)
+[Colladaデータ](jmanual.html#14112)
 
 **collada::eusmodel-description-\>collada-kinematics-model**
 
-[Colladaデータ](jmanual.html#14538)
+[Colladaデータ](jmanual.html#14560)
 
 **collada::eusmodel-description-\>collada-library-articulated-systems**
 
-[Colladaデータ](jmanual.html#14626)
+[Colladaデータ](jmanual.html#14648)
 
 **collada::eusmodel-description-\>collada-library-geometries**
 
-[Colladaデータ](jmanual.html#14758)
+[Colladaデータ](jmanual.html#14780)
 
 **collada::eusmodel-description-\>collada-library-joints**
 
-[Colladaデータ](jmanual.html#14681)
+[Colladaデータ](jmanual.html#14703)
 
 **collada::eusmodel-description-\>collada-library-kinematics-models**
 
-[Colladaデータ](jmanual.html#14527)
+[Colladaデータ](jmanual.html#14549)
 
 **collada::eusmodel-description-\>collada-library-kinematics-scenes**
 
-[Colladaデータ](jmanual.html#14516)
+[Colladaデータ](jmanual.html#14538)
 
 **collada::eusmodel-description-\>collada-library-physics-models**
 
-[Colladaデータ](jmanual.html#14560)
+[Colladaデータ](jmanual.html#14582)
 
 **collada::eusmodel-description-\>collada-library-physics-scenes**
 
-[Colladaデータ](jmanual.html#14549)
+[Colladaデータ](jmanual.html#14571)
 
 **collada::eusmodel-description-\>collada-library-visual-scenes**
 
-[Colladaデータ](jmanual.html#14483)
+[Colladaデータ](jmanual.html#14505)
 
 **collada::eusmodel-description-\>collada-links**
 
-[Colladaデータ](jmanual.html#14593)
+[Colladaデータ](jmanual.html#14615)
 
 **collada::eusmodel-description-\>collada-links-tree**
 
-[Colladaデータ](jmanual.html#14648)
+[Colladaデータ](jmanual.html#14670)
 
 **collada::eusmodel-description-\>collada-node**
 
-[Colladaデータ](jmanual.html#14472)
+[Colladaデータ](jmanual.html#14494)
 
 **collada::eusmodel-description-\>collada-node-transformations**
 
-[Colladaデータ](jmanual.html#14461)
+[Colladaデータ](jmanual.html#14483)
 
 **collada::eusmodel-description-\>collada-scene**
 
-[Colladaデータ](jmanual.html#14747)
+[Colladaデータ](jmanual.html#14769)
 
 **collada::eusmodel-endcoords-description**
 
-[Colladaデータ](jmanual.html#14307)
+[Colladaデータ](jmanual.html#14329)
 
 **collada::eusmodel-endcoords-description-\>openrave-manipulator**
 
-[Colladaデータ](jmanual.html#14637)
+[Colladaデータ](jmanual.html#14659)
 
 **collada::eusmodel-endcoords-specs**
 
-[Colladaデータ](jmanual.html#14274)
+[Colladaデータ](jmanual.html#14296)
 
 **collada::eusmodel-joint-description**
 
-[Colladaデータ](jmanual.html#14296)
+[Colladaデータ](jmanual.html#14318)
 
 **collada::eusmodel-joint-spec**
 
-[Colladaデータ](jmanual.html#14252)
+[Colladaデータ](jmanual.html#14274)
 
 **collada::eusmodel-joint-specs**
 
-[Colladaデータ](jmanual.html#14080)
+[Colladaデータ](jmanual.html#14102)
 
 **collada::eusmodel-limit-spec**
 
-[Colladaデータ](jmanual.html#14263)
+[Colladaデータ](jmanual.html#14285)
 
 **collada::eusmodel-link-description**
 
-[Colladaデータ](jmanual.html#14285)
+[Colladaデータ](jmanual.html#14307)
 
 **collada::eusmodel-link-spec**
 
-[Colladaデータ](jmanual.html#14230)
+[Colladaデータ](jmanual.html#14252)
 
 **collada::eusmodel-link-specs**
 
-[Colladaデータ](jmanual.html#14070)
+[Colladaデータ](jmanual.html#14092)
 
 **collada::eusmodel-mesh-spec**
 
-[Colladaデータ](jmanual.html#14241)
+[Colladaデータ](jmanual.html#14263)
 
 **collada::find-child-link-descriptions**
 
-[Colladaデータ](jmanual.html#14615)
+[Colladaデータ](jmanual.html#14637)
 
 **collada::find-joint-from-link-description**
 
-[Colladaデータ](jmanual.html#14604)
+[Colladaデータ](jmanual.html#14626)
 
 **collada::find-link-from-links-description**
 
-[Colladaデータ](jmanual.html#14582)
+[Colladaデータ](jmanual.html#14604)
 
 **collada::find-parent-liks-from-link-description**
 
-[Colladaデータ](jmanual.html#14450)
+[Colladaデータ](jmanual.html#14472)
 
 **collada::find-root-link-from-joints-description**
 
-[Colladaデータ](jmanual.html#14571)
+[Colladaデータ](jmanual.html#14593)
 
 **collada::float-vector-\>collada-string**
 
-[Colladaデータ](jmanual.html#14857)
+[Colladaデータ](jmanual.html#14879)
 
 **collada::joint-description-\>collada-instance-joint**
 
-[Colladaデータ](jmanual.html#14670)
+[Colladaデータ](jmanual.html#14692)
 
 **collada::joint-description-\>collada-joint**
 
-[Colladaデータ](jmanual.html#14714)
+[Colladaデータ](jmanual.html#14736)
 
 **collada::joints-description-\>collada-instance-joints**
 
-[Colladaデータ](jmanual.html#14659)
+[Colladaデータ](jmanual.html#14681)
 
 **collada::joints-description-\>collada-joints**
 
-[Colladaデータ](jmanual.html#14692)
+[Colladaデータ](jmanual.html#14714)
 
 **collada::linear-joint-description-\>collada-joint**
 
-[Colladaデータ](jmanual.html#14725)
+[Colladaデータ](jmanual.html#14747)
 
 **collada::link-description-\>collada-bind-material**
 
-[Colladaデータ](jmanual.html#14505)
+[Colladaデータ](jmanual.html#14527)
 
 **collada::link-description-\>collada-effects**
 
-[Colladaデータ](jmanual.html#14417)
+[Colladaデータ](jmanual.html#14439)
 
 **collada::link-description-\>collada-geometry**
 
-[Colladaデータ](jmanual.html#14813)
+[Colladaデータ](jmanual.html#14835)
 
 **collada::link-description-\>collada-materials**
 
-[Colladaデータ](jmanual.html#14384)
+[Colladaデータ](jmanual.html#14406)
 
 **collada::links-description-\>collada-geometries**
 
-[Colladaデータ](jmanual.html#14791)
+[Colladaデータ](jmanual.html#14813)
 
 **collada::links-description-\>collada-library-effects**
 
-[Colladaデータ](jmanual.html#14406)
+[Colladaデータ](jmanual.html#14428)
 
 **collada::links-description-\>collada-library-materials**
 
-[Colladaデータ](jmanual.html#14373)
+[Colladaデータ](jmanual.html#14395)
 
 **collada::make-attr**
 
-[Colladaデータ](jmanual.html#14153)
+[Colladaデータ](jmanual.html#14175)
 
 **collada::make-xml**
 
-[Colladaデータ](jmanual.html#14164)
+[Colladaデータ](jmanual.html#14186)
 
 **collada::matrix-\>collada-rotate-vector**
 
-[Colladaデータ](jmanual.html#14100)
+[Colladaデータ](jmanual.html#14122)
 
 **collada::matrix-\>collada-string**
 
-[Colladaデータ](jmanual.html#14439)
+[Colladaデータ](jmanual.html#14461)
 
 **collada::mesh-\>collada-indices**
 
-[Colladaデータ](jmanual.html#14824)
+[Colladaデータ](jmanual.html#14846)
 
 **collada::mesh-description-\>collada-effect**
 
-[Colladaデータ](jmanual.html#14428)
+[Colladaデータ](jmanual.html#14450)
 
 **collada::mesh-description-\>collada-material**
 
-[Colladaデータ](jmanual.html#14395)
+[Colladaデータ](jmanual.html#14417)
 
 **collada::mesh-description-\>instance-material**
 
-[Colladaデータ](jmanual.html#14494)
+[Colladaデータ](jmanual.html#14516)
 
 **collada::mesh-normals-\>collada-string**
 
-[Colladaデータ](jmanual.html#14846)
+[Colladaデータ](jmanual.html#14868)
 
 **collada::mesh-object-\>collada-mesh**
 
-[Colladaデータ](jmanual.html#14802)
+[Colladaデータ](jmanual.html#14824)
 
 **collada::mesh-vertices-\>collada-string**
 
-[Colladaデータ](jmanual.html#14835)
+[Colladaデータ](jmanual.html#14857)
 
 **collada::range2**
 
-[Colladaデータ](jmanual.html#14329)
+[Colladaデータ](jmanual.html#14351)
 
 **collada::remove-directory-name**
 
-[Colladaデータ](jmanual.html#14901)
+[Colladaデータ](jmanual.html#14923)
 
 **collada::rotational-joint-description-\>collada-joint**
 
-[Colladaデータ](jmanual.html#14736)
+[Colladaデータ](jmanual.html#14758)
 
 **collada::search-minimum-rotation-matrix**
 
-[Colladaデータ](jmanual.html#14879)
+[Colladaデータ](jmanual.html#14901)
 
 **collada::setup-collada-filesystem**
 
-[Colladaデータ](jmanual.html#14318)
+[Colladaデータ](jmanual.html#14340)
 
 **collada::string-append**
 
-[Colladaデータ](jmanual.html#14142)
+[Colladaデータ](jmanual.html#14164)
 
 **collada::sxml-\>xml**
 
-[Colladaデータ](jmanual.html#14175)
+[Colladaデータ](jmanual.html#14197)
 
 **collada::symbol-\>string**
 
-[Colladaデータ](jmanual.html#14120)
+[Colladaデータ](jmanual.html#14142)
 
 **collada::verificate-unique-strings**
 
-[Colladaデータ](jmanual.html#14219)
+[Colladaデータ](jmanual.html#14241)
 
 **collada::xml-output-to-string-stream**
 
-[Colladaデータ](jmanual.html#14186)
+[Colladaデータ](jmanual.html#14208)
 
 **color-category10**
 
-[ユーティリティ関数](jmanual.html#20533)
+[ユーティリティ関数](jmanual.html#20555)
 
 **color-category20**
 
-[ユーティリティ関数](jmanual.html#20543)
+[ユーティリティ関数](jmanual.html#20565)
 
 **combination**
 
-[ユーティリティ関数](jmanual.html#20441)
+[ユーティリティ関数](jmanual.html#20463)
 
 **concatenate-matrix-column**
 
-[数学関数](jmanual.html#21057)
+[数学関数](jmanual.html#21079)
 
 **concatenate-matrix-diagonal**
 
-[数学関数](jmanual.html#21077)
+[数学関数](jmanual.html#21099)
 
 **concatenate-matrix-row**
 
-[数学関数](jmanual.html#21067)
+[数学関数](jmanual.html#21089)
 
 **connect-server-until-success**
 
-[ユーティリティ関数](jmanual.html#20472)
+[ユーティリティ関数](jmanual.html#20494)
 
 **convert-irtmodel-to-collada**
 
-[Colladaデータ](jmanual.html#14110)
+[Colladaデータ](jmanual.html#14132)
 
 **costed-arc**
 
-[グラフ表現](jmanual.html#17358)
+[グラフ表現](jmanual.html#17380)
 
 **costed-graph**
 
-[グラフ表現](jmanual.html#17398)
+[グラフ表現](jmanual.html#17420)
 
 **depth-first-graph-search-solver**
 
-[グラフ表現](jmanual.html#17942)
+[グラフ表現](jmanual.html#17964)
 
 **diagonal**
 
-[数学関数](jmanual.html#20916)
+[数学関数](jmanual.html#20938)
 
 **directed-graph**
 
-[グラフ表現](jmanual.html#17197)
+[グラフ表現](jmanual.html#17219)
 
 **eigen-decompose**
 
-[数学関数](jmanual.html#21119)
+[数学関数](jmanual.html#21141)
 
 **eus-server**
 
-[ユーティリティ関数](jmanual.html#20462)
+[ユーティリティ関数](jmanual.html#20484)
 
 **eus2collada**
 
-[Colladaデータ](jmanual.html#14340)
+[Colladaデータ](jmanual.html#14362)
 
 **eusmodel-validity-check**
 
@@ -6244,31 +6250,31 @@ Index
 
 **extended-preview-controller**
 
-[動力学計算・歩行動作生成](jmanual.html#10770)
+[動力学計算・歩行動作生成](jmanual.html#10792)
 
 **find-extreams**
 
-[ユーティリティ関数](jmanual.html#20451)
+[ユーティリティ関数](jmanual.html#20473)
 
 **format-array**
 
-[ユーティリティ関数](jmanual.html#20483)
+[ユーティリティ関数](jmanual.html#20505)
 
 **forward-message-to**
 
-[ユーティリティ関数](jmanual.html#20563)
+[ユーティリティ関数](jmanual.html#20585)
 
 **forward-message-to-all**
 
-[ユーティリティ関数](jmanual.html#20574)
+[ユーティリティ関数](jmanual.html#20596)
 
 **gait-generator**
 
-[動力学計算・歩行動作生成](jmanual.html#10972)
+[動力学計算・歩行動作生成](jmanual.html#10994)
 
 **gaussian-random**
 
-[数学関数](jmanual.html#21047)
+[数学関数](jmanual.html#21069)
 
 **geometry::face-to-tessel-triangle**
 
@@ -6304,63 +6310,63 @@ Index
 
 **gl::\_dump-wrl-shape**
 
-[GL/X表示](jmanual.html#19609)
+[GL/X表示](jmanual.html#19631)
 
 **gl::delete-displaylist-id**
 
-[GL/X表示](jmanual.html#19576)
+[GL/X表示](jmanual.html#19598)
 
 **gl::draw-glbody**
 
-[GL/X表示](jmanual.html#19598)
+[GL/X表示](jmanual.html#19620)
 
 **gl::draw-globjects**
 
-[GL/X表示](jmanual.html#19587)
+[GL/X表示](jmanual.html#19609)
 
 **gl::find-color**
 
-[GL/X表示](jmanual.html#19504)
+[GL/X表示](jmanual.html#19526)
 
 **gl::glbody**
 
-[GL/X表示](jmanual.html#19454)
+[GL/X表示](jmanual.html#19476)
 
 **gl::glvertices**
 
-[GL/X表示](jmanual.html#19130)
+[GL/X表示](jmanual.html#19152)
 
 **gl::make-glvertices-from-faces**
 
-[GL/X表示](jmanual.html#19534)
+[GL/X表示](jmanual.html#19556)
 
 **gl::make-glvertices-from-faceset**
 
-[GL/X表示](jmanual.html#19524)
+[GL/X表示](jmanual.html#19546)
 
 **gl::reset-gl-attribute**
 
-[GL/X表示](jmanual.html#19565)
+[GL/X表示](jmanual.html#19587)
 
 **gl::set-stereo-gl-attribute**
 
-[GL/X表示](jmanual.html#19554)
+[GL/X表示](jmanual.html#19576)
 
 **gl::transparent**
 
-[GL/X表示](jmanual.html#19514)
+[GL/X表示](jmanual.html#19536)
 
 **gl::write-wrl-from-glvertices**
 
-[GL/X表示](jmanual.html#19544)
+[GL/X表示](jmanual.html#19566)
 
 **graph**
 
-[グラフ表現](jmanual.html#17449)
+[グラフ表現](jmanual.html#17471)
 
 **graph-search-solver**
 
-[グラフ表現](jmanual.html#17730)
+[グラフ表現](jmanual.html#17752)
 
 **height-of-cylinder**
 
@@ -6368,19 +6374,19 @@ Index
 
 **his2rgb**
 
-[ユーティリティ関数](jmanual.html#20493)
+[ユーティリティ関数](jmanual.html#20515)
 
 **hvs2rgb**
 
-[ユーティリティ関数](jmanual.html#20503)
+[ユーティリティ関数](jmanual.html#20525)
 
 **inverse-matrix**
 
-[数学関数](jmanual.html#20906)
+[数学関数](jmanual.html#20928)
 
 **irtviewer-dummy**
 
-[ロボットビューワ](jmanual.html#12057)
+[ロボットビューワ](jmanual.html#12079)
 
 **joint**
 
@@ -6400,39 +6406,39 @@ Index
 
 **lmeds**
 
-[数学関数](jmanual.html#21163)
+[数学関数](jmanual.html#21185)
 
 **lmeds-error**
 
-[数学関数](jmanual.html#21174)
+[数学関数](jmanual.html#21196)
 
 **lmeds-error-mat**
 
-[数学関数](jmanual.html#21185)
+[数学関数](jmanual.html#21207)
 
 **lms**
 
-[数学関数](jmanual.html#21130)
+[数学関数](jmanual.html#21152)
 
 **lms-error**
 
-[数学関数](jmanual.html#21152)
+[数学関数](jmanual.html#21174)
 
 **lms-estimate**
 
-[数学関数](jmanual.html#21141)
+[数学関数](jmanual.html#21163)
 
 **load-mcd**
 
-[BVHデータ](jmanual.html#13281)
+[BVHデータ](jmanual.html#13303)
 
 **make-bvh-robot-model**
 
-[BVHデータ](jmanual.html#13303)
+[BVHデータ](jmanual.html#13325)
 
 **make-camera-from-param**
 
-[センサモデル](jmanual.html#9922)
+[センサモデル](jmanual.html#9936)
 
 **make-default-robot-link**
 
@@ -6440,15 +6446,15 @@ Index
 
 **make-irtviewer**
 
-[ロボットビューワ](jmanual.html#12096)
+[ロボットビューワ](jmanual.html#12118)
 
 **make-irtviewer-dummy**
 
-[ロボットビューワ](jmanual.html#12139)
+[ロボットビューワ](jmanual.html#12161)
 
 **make-random-pointcloud**
 
-[ポイントクラウドデータ](jmanual.html#16302)
+[ポイントクラウドデータ](jmanual.html#16324)
 
 **make-ring**
 
@@ -6456,7 +6462,7 @@ Index
 
 **make-robot-model-from-name**
 
-[ユーティリティ関数](jmanual.html#20553)
+[ユーティリティ関数](jmanual.html#20575)
 
 **make-sphere**
 
@@ -6464,19 +6470,19 @@ Index
 
 **manipulability**
 
-[数学関数](jmanual.html#21027)
+[数学関数](jmanual.html#21049)
 
 **mapjoin**
 
-[ユーティリティ関数](jmanual.html#20585)
+[ユーティリティ関数](jmanual.html#20607)
 
 **matrix-exponent**
 
-[数学関数](jmanual.html#20987)
+[数学関数](jmanual.html#21009)
 
 **matrix-log**
 
-[数学関数](jmanual.html#20977)
+[数学関数](jmanual.html#20999)
 
 **matrix-to-euler-angle**
 
@@ -6484,7 +6490,7 @@ Index
 
 **matrix2quaternion**
 
-[数学関数](jmanual.html#20957)
+[数学関数](jmanual.html#20979)
 
 **midcoords**
 
@@ -6492,35 +6498,35 @@ Index
 
 **midrot**
 
-[数学関数](jmanual.html#20997)
+[数学関数](jmanual.html#21019)
 
 **minor-matrix**
 
-[数学関数](jmanual.html#20926)
+[数学関数](jmanual.html#20948)
 
 **motion-capture-data**
 
-[BVHデータ](jmanual.html#13091)
+[BVHデータ](jmanual.html#13113)
 
 **mtimer**
 
-[ユーティリティ関数](jmanual.html#20384)
+[ユーティリティ関数](jmanual.html#20406)
 
 **need-thread**
 
-[ユーティリティ関数](jmanual.html#20596)
+[ユーティリティ関数](jmanual.html#20618)
 
 **node**
 
-[グラフ表現](jmanual.html#17018)
+[グラフ表現](jmanual.html#17040)
 
 **normalize-vector**
 
-[数学関数](jmanual.html#21087)
+[数学関数](jmanual.html#21109)
 
 **objects**
 
-[ロボットビューワ](jmanual.html#12128)
+[ロボットビューワ](jmanual.html#12150)
 
 **omniwheel-joint**
 
@@ -6532,55 +6538,55 @@ Index
 
 **outer-product-matrix**
 
-[数学関数](jmanual.html#20946)
+[数学関数](jmanual.html#20968)
 
 **parse-bvh-sexp**
 
-[BVHデータ](jmanual.html#13292)
+[BVHデータ](jmanual.html#13314)
 
 **permutation**
 
-[ユーティリティ関数](jmanual.html#20431)
+[ユーティリティ関数](jmanual.html#20453)
 
 **piped-fork-returns-list**
 
-[ユーティリティ関数](jmanual.html#20607)
+[ユーティリティ関数](jmanual.html#20629)
 
 **pointcloud**
 
-[ポイントクラウドデータ](jmanual.html#15824)
+[ポイントクラウドデータ](jmanual.html#15846)
 
 **pqp-collision-check**
 
-[ロボット動作と干渉計算](jmanual.html#12479)
+[ロボット動作と干渉計算](jmanual.html#12501)
 
 **pqp-collision-check-objects**
 
-[ロボット動作と干渉計算](jmanual.html#12469)
+[ロボット動作と干渉計算](jmanual.html#12491)
 
 **pqp-collision-distance**
 
-[ロボット動作と干渉計算](jmanual.html#12490)
+[ロボット動作と干渉計算](jmanual.html#12512)
 
 **preview-control-cart-table-cog-trajectory-generator**
 
-[動力学計算・歩行動作生成](jmanual.html#10842)
+[動力学計算・歩行動作生成](jmanual.html#10864)
 
 **preview-controller**
 
-[動力学計算・歩行動作生成](jmanual.html#10628)
+[動力学計算・歩行動作生成](jmanual.html#10650)
 
 **pseudo-inverse**
 
-[数学関数](jmanual.html#21007)
+[数学関数](jmanual.html#21029)
 
 **pseudo-inverse-org**
 
-[数学関数](jmanual.html#21097)
+[数学関数](jmanual.html#21119)
 
 **quaternion2matrix**
 
-[数学関数](jmanual.html#20967)
+[数学関数](jmanual.html#20989)
 
 **radius-of-cylinder**
 
@@ -6592,35 +6598,35 @@ Index
 
 **random-gauss**
 
-[数学関数](jmanual.html#21037)
+[数学関数](jmanual.html#21059)
 
 **read-bvh**
 
-[BVHデータ](jmanual.html#13261)
+[BVHデータ](jmanual.html#13283)
 
 **read-image-file**
 
-[画像関数](jmanual.html#21451)
+[画像関数](jmanual.html#21473)
 
 **read-png-file**
 
-[画像関数](jmanual.html#21507)
+[画像関数](jmanual.html#21529)
 
 **rgb2his**
 
-[ユーティリティ関数](jmanual.html#20513)
+[ユーティリティ関数](jmanual.html#20535)
 
 **rgb2hvs**
 
-[ユーティリティ関数](jmanual.html#20523)
+[ユーティリティ関数](jmanual.html#20545)
 
 **riccati-equation**
 
-[動力学計算・歩行動作生成](jmanual.html#10588)
+[動力学計算・歩行動作生成](jmanual.html#10610)
 
 **rikiya-bvh-robot-model**
 
-[BVHデータ](jmanual.html#13175)
+[BVHデータ](jmanual.html#13197)
 
 **robot-model**
 
@@ -6632,19 +6638,19 @@ Index
 
 **scene-model**
 
-[環境モデル](jmanual.html#10241)
+[環境モデル](jmanual.html#10263)
 
 **sensor-model**
 
-[センサモデル](jmanual.html#9561)
+[センサモデル](jmanual.html#9564)
 
 **solver**
 
-[グラフ表現](jmanual.html#17679)
+[グラフ表現](jmanual.html#17701)
 
 **solver-node**
 
-[グラフ表現](jmanual.html#17584)
+[グラフ表現](jmanual.html#17606)
 
 **sphere-joint**
 
@@ -6652,11 +6658,11 @@ Index
 
 **sr-inverse**
 
-[数学関数](jmanual.html#21017)
+[数学関数](jmanual.html#21039)
 
 **sr-inverse-org**
 
-[数学関数](jmanual.html#21108)
+[数学関数](jmanual.html#21130)
 
 **transform-coords**
 
@@ -6664,11 +6670,11 @@ Index
 
 **tum-bvh-robot-model**
 
-[BVHデータ](jmanual.html#13204)
+[BVHデータ](jmanual.html#13226)
 
 **viewer-dummy**
 
-[ロボットビューワ](jmanual.html#12028)
+[ロボットビューワ](jmanual.html#12050)
 
 **wheel-joint**
 
@@ -6676,11 +6682,11 @@ Index
 
 **write-image-file**
 
-[画像関数](jmanual.html#21463)
+[画像関数](jmanual.html#21485)
 
 **write-png-file**
 
-[画像関数](jmanual.html#21518)
+[画像関数](jmanual.html#21540)
 
 **x-of-cube**
 
@@ -6688,35 +6694,35 @@ Index
 
 **x::draw-things**
 
-[ロボットビューワ](jmanual.html#12117)
+[ロボットビューワ](jmanual.html#12139)
 
 **x::event-far**
 
-[GL/X表示](jmanual.html#20173)
+[GL/X表示](jmanual.html#20195)
 
 **x::event-near**
 
-[GL/X表示](jmanual.html#20184)
+[GL/X表示](jmanual.html#20206)
 
 **x::irtviewer**
 
-[ロボットビューワ](jmanual.html#11801)
+[ロボットビューワ](jmanual.html#11823)
 
 **x::make-lr-ud-coords**
 
-[ロボットビューワ](jmanual.html#12106)
+[ロボットビューワ](jmanual.html#12128)
 
 **x::panel-tab-button-item**
 
-[GL/X表示](jmanual.html#20134)
+[GL/X表示](jmanual.html#20156)
 
 **x::tabbed-panel**
 
-[GL/X表示](jmanual.html#20050)
+[GL/X表示](jmanual.html#20072)
 
 **x::window-main-one**
 
-[GL/X表示](jmanual.html#20162)
+[GL/X表示](jmanual.html#20184)
 
 **y-of-cube**
 
@@ -6731,7 +6737,7 @@ About this document ...
 
 ****EusLisp** **EusLisp version 9.00/ irteus version 1.00**
 **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 +
-JSK-TR-10-03 October 15, 2015**
+JSK-TR-10-03 October 30, 2015**
 
 This document was generated using the
 [**LaTeX**2`HTML`](http://www.latex2html.org/) translator Version 2008
@@ -6745,8 +6751,8 @@ Macquarie University, Sydney.
 The command line arguments were: **latex2html**
 `-dir /tmp/html/ -local_icons -auto_prefix -iso_language JP jmanual -split 1 -no_navigation`
 
-The translation was initiated by on 2015-10-15
+The translation was initiated by on 2015-10-30
 
 * * * * *
 
-2015-10-15
+2015-10-30
