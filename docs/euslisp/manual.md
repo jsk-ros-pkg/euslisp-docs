@@ -1,9 +1,9 @@
-% EusLisp version 9.15 Reference Manual Featuring Multithread and XToolKit
+% EusLisp version 9.16 Reference Manual Featuring Multithread and XToolKit
   ETL-TR-95-2 January, 1995
 % 
 % 
 
-**EusLisp** **version 9.15** **Reference Manual** Featuring Multithread and XToolKit \
+**EusLisp** **version 9.16** **Reference Manual** Featuring Multithread and XToolKit \
  ETL-TR-95-2 January, 1995
 ======================================================================================
 
@@ -252,7 +252,9 @@ Revision History
     message) Version 9.15 is released, fix char comparison function
     (previous version retuns opossite result), support multiple argument
     at function /=, add url encode feature (escape-url function),
-    support microsecond add/subtract in interval-time class
+    support microsecond add/subtract in interval-time class Version 9.16
+    is released, added make-random-state, fixed bug in
+    lib/llib/unittest.l
 
 Installation
 ------------
@@ -17811,7 +17813,7 @@ Transformation](manual.html#27358)
 About this document ...
 =======================
 
-****EusLisp** **version 9.15** **Reference Manual** Featuring
+****EusLisp** **version 9.16** **Reference Manual** Featuring
 Multithread and XToolKit \
  ETL-TR-95-2 January, 1995**
 
@@ -17827,8 +17829,8 @@ Macquarie University, Sydney.
 The command line arguments were: **latex2html**
 `-dir /tmp/html/ -local_icons -auto_prefix -iso_language JP manual -split 1 -no_navigation`
 
-The translation was initiated by on 2015-10-21
+The translation was initiated by on 2015-10-31
 
 * * * * *
 
-2015-10-21
+2015-10-31
