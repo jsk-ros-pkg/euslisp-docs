@@ -351,6 +351,12 @@ Invoke RPC service <br>
 Set parameter <br>
 
 
+### ros::rospack-plugins ###
+
+
+- Returns plugins of ros packages <br>
+
+
 ### ros::publish ###
 
 
