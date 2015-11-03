@@ -160,6 +160,12 @@ Return value is a list of interpolatingp for all controllers, so (null (some #'i
 - :wait-until-update nil wait until joint_state is updated <br>
 
 
+#### :find-object
+&nbsp;&nbsp;&nbsp;*name-or-obj* 
+
+- Returns objects with given name or object of the same name. <br>
+
+
 #### :simulation-modep
 
 
