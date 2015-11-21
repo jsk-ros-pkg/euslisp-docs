@@ -1047,7 +1047,19 @@ Iteration
 
 While *test* is evaluated to non-nil, *form*s are evaluated repeatedly.
 **While** special form automatically establishes a block by name of nil
-around *form*s, and **return** can be used to exit from the loop.
+around *form*s, and **return** can be used to exit from the loop. To
+jump to next iteration, you can use following syntax with **tagbody**
+and **go** described below:
+
+    (setq cnt 0)
+    (while
+      (< cnt 10)
+      (tagbody while-top
+        (incf cnt)
+        (when (eq (mod cnt 3) 0)
+          (go while-top))  ;; jump to next iteraction
+        (print cnt)
+        )) ;; 1, 2, 4, 5, 7, 8, 10
 
 **tagbody** *{tag ![$\\vert$](manual-img6.png) statement}\**[special]
 
@@ -3823,7 +3835,7 @@ InterProcess Communication and Network
 
 EusLisp provides four kinds of IPC facilities, *shared memory,
 message-queue, FIFO* and *socket*.
-[^2^](manual-footnode.html#foot15589)Normally, efficiency decreases in
+[^2^](manual-footnode.html#foot15601)Normally, efficiency decreases in
 this order. If you are using multithread facility, synchronization
 functions described in the section [14](#mthread) are also used for
 communications. Availability of these facilities depends on the
@@ -9926,7 +9938,7 @@ Xwindow Interface
 
 The Xwindow interface on EusLisp becomes available when EusLisp is
 invoked by the name of `'eusx'`.
-[^3^](manual-footnode.html#foot41901)The "DISPLAY" environment variable
+[^3^](manual-footnode.html#foot41913)The "DISPLAY" environment variable
 should be properly set to your Xserver, since eusx tries to connect to
 Xserver referencing the "DISPLAY" environment variable when it starts
 up.
@@ -12191,239 +12203,239 @@ Index
 
 **\***
 
-[Generic Number Functions](manual.html#6168) |
-[Packages](manual.html#8104) | [Top-level
-Interaction](manual.html#18927)
+[Generic Number Functions](manual.html#6180) |
+[Packages](manual.html#8116) | [Top-level
+Interaction](manual.html#18939)
 
 **\*\***
 
-[Top-level Interaction](manual.html#18937)
+[Top-level Interaction](manual.html#18949)
 
 **\*\*\***
 
-[Top-level Interaction](manual.html#18947)
+[Top-level Interaction](manual.html#18959)
 
 **\*256to16\***
 
-[Look-Up Tables (LUT)](manual.html#38514)
+[Look-Up Tables (LUT)](manual.html#38526)
 
 **\*256to32\***
 
-[Look-Up Tables (LUT)](manual.html#38524)
+[Look-Up Tables (LUT)](manual.html#38536)
 
 **\*256to8\***
 
-[Look-Up Tables (LUT)](manual.html#38504)
+[Look-Up Tables (LUT)](manual.html#38516)
 
 **\*bisque1\***
 
-[Xlib global variables and](manual.html#42815)
+[Xlib global variables and](manual.html#42827)
 
 **\*bisque2\***
 
-[Xlib global variables and](manual.html#42826)
+[Xlib global variables and](manual.html#42838)
 
 **\*bisque3\***
 
-[Xlib global variables and](manual.html#42837)
+[Xlib global variables and](manual.html#42849)
 
 **\*blue-gc\***
 
-[Edge Finder](manual.html#39402)
+[Edge Finder](manual.html#39414)
 
 **\*cyan-gc\***
 
-[Edge Finder](manual.html#39432)
+[Edge Finder](manual.html#39444)
 
 **\*gray\***
 
-[Xlib global variables and](manual.html#42804)
+[Xlib global variables and](manual.html#42816)
 
 **\*gray-pixmap\***
 
-[Xlib global variables and](manual.html#42727)
+[Xlib global variables and](manual.html#42739)
 
 **\*gray25-gc\***
 
-[Xlib global variables and](manual.html#42771)
+[Xlib global variables and](manual.html#42783)
 
 **\*gray25-pixmap\***
 
-[Xlib global variables and](manual.html#42738)
+[Xlib global variables and](manual.html#42750)
 
 **\*gray32\***
 
-[Look-Up Tables (LUT)](manual.html#38534)
+[Look-Up Tables (LUT)](manual.html#38546)
 
 **\*gray50-gc\***
 
-[Xlib global variables and](manual.html#42782)
+[Xlib global variables and](manual.html#42794)
 
 **\*gray50-pixmap\***
 
-[Xlib global variables and](manual.html#42750)
+[Xlib global variables and](manual.html#42762)
 
 **\*gray75-gc\***
 
-[Xlib global variables and](manual.html#42793)
+[Xlib global variables and](manual.html#42805)
 
 **\*gray75-pixmap\***
 
-[Xlib global variables and](manual.html#42761)
+[Xlib global variables and](manual.html#42773)
 
 **\*green-gc\***
 
-[Edge Finder](manual.html#39412)
+[Edge Finder](manual.html#39424)
 
 **\*keyword-package\***
 
-[Packages](manual.html#8146)
+[Packages](manual.html#8158)
 
 **\*lightblue2\***
 
-[Xlib global variables and](manual.html#42848)
+[Xlib global variables and](manual.html#42860)
 
 **\*lightpink1\***
 
-[Xlib global variables and](manual.html#42859)
+[Xlib global variables and](manual.html#42871)
 
 **\*lisp-package\***
 
-[Packages](manual.html#8106)
+[Packages](manual.html#8118)
 
 **\*maroon\***
 
-[Xlib global variables and](manual.html#42870)
+[Xlib global variables and](manual.html#42882)
 
 **\*max-intensity\***
 
-[Xlib global variables and](manual.html#42881)
+[Xlib global variables and](manual.html#42893)
 
 **\*modules\***
 
-[Program Loading](manual.html#19222)
+[Program Loading](manual.html#19234)
 
 **\*optimize\***
 
-[Compilation](manual.html#19145)
+[Compilation](manual.html#19157)
 
 **\*program-name\***
 
-[Top-level Interaction](manual.html#18968)
+[Top-level Interaction](manual.html#18980)
 
 **\*prompt-string\***
 
-[Top-level Interaction](manual.html#18957)
+[Top-level Interaction](manual.html#18969)
 
 **\*rainbow32\***
 
-[Look-Up Tables (LUT)](manual.html#38547)
+[Look-Up Tables (LUT)](manual.html#38559)
 
 **\*red-gc\***
 
-[Edge Finder](manual.html#39392)
+[Edge Finder](manual.html#39404)
 
 **\*safety\***
 
-[Compilation](manual.html#19165)
+[Compilation](manual.html#19177)
 
 **\*system-package\***
 
-[Packages](manual.html#8136)
+[Packages](manual.html#8148)
 
 **\*top-selector\***
 
-[Top-level Interaction](manual.html#19041)
+[Top-level Interaction](manual.html#19053)
 
 **\*unix-package\***
 
-[Packages](manual.html#8126)
+[Packages](manual.html#8138)
 
 **\*user-package\***
 
-[Packages](manual.html#8116)
+[Packages](manual.html#8128)
 
 **\*verbose\***
 
-[Compilation](manual.html#19155)
+[Compilation](manual.html#19167)
 
 **\*x-color-lut\***
 
-[Look-Up Tables (LUT)](manual.html#38493)
+[Look-Up Tables (LUT)](manual.html#38505)
 
 **\*x-gray16-lut\***
 
-[Look-Up Tables (LUT)](manual.html#38482)
+[Look-Up Tables (LUT)](manual.html#38494)
 
 **\*x-gray32-lut\***
 
-[Look-Up Tables (LUT)](manual.html#38470)
+[Look-Up Tables (LUT)](manual.html#38482)
 
 **\*xy-plane\***
 
-[Primitive Body Creation](manual.html#32210)
+[Primitive Body Creation](manual.html#32222)
 
 **\*yellow-gc\***
 
-[Edge Finder](manual.html#39422)
+[Edge Finder](manual.html#39434)
 
 **\*yz-plane\***
 
-[Primitive Body Creation](manual.html#32221)
+[Primitive Body Creation](manual.html#32233)
 
 **\*zx-plane\***
 
-[Primitive Body Creation](manual.html#32232)
+[Primitive Body Creation](manual.html#32244)
 
 **+**
 
-[Generic Number Functions](manual.html#6144) | [Top-level
-Interaction](manual.html#18897)
+[Generic Number Functions](manual.html#6156) | [Top-level
+Interaction](manual.html#18909)
 
 **++**
 
-[Top-level Interaction](manual.html#18907)
+[Top-level Interaction](manual.html#18919)
 
 **+++**
 
-[Top-level Interaction](manual.html#18917)
+[Top-level Interaction](manual.html#18929)
 
 **-**
 
-[Generic Number Functions](manual.html#6155) | [Top-level
-Interaction](manual.html#18887)
+[Generic Number Functions](manual.html#6167) | [Top-level
+Interaction](manual.html#18899)
 
 **-2pi**
 
-[Arithmetic Constants](manual.html#5758)
+[Arithmetic Constants](manual.html#5770)
 
 **-pi**
 
-[Arithmetic Constants](manual.html#5748)
+[Arithmetic Constants](manual.html#5760)
 
 **-pi/2**
 
-[Arithmetic Constants](manual.html#5768)
+[Arithmetic Constants](manual.html#5780)
 
 **/**
 
-[Generic Number Functions](manual.html#6179)
+[Generic Number Functions](manual.html#6191)
 
 **/=**
 
-[Arithmetic Predicates](manual.html#5866)
+[Arithmetic Predicates](manual.html#5878)
 
 **1+**
 
-[Integer and Bit-Wise Operations](manual.html#5990)
+[Integer and Bit-Wise Operations](manual.html#6002)
 
 **1-**
 
-[Integer and Bit-Wise Operations](manual.html#5980)
+[Integer and Bit-Wise Operations](manual.html#5992)
 
 **2pi**
 
-[Arithmetic Constants](manual.html#5728)
+[Arithmetic Constants](manual.html#5740)
 
 **:**
 
@@ -12432,2166 +12444,2166 @@ Interaction](manual.html#18887)
 Specifier](manual.html#1247) | [Type Specifier](manual.html#1255) |
 [Type Specifier](manual.html#1259) | [Type Specifier](manual.html#1269)
 | [Type Specifier](manual.html#1273) | [Type
-Specifier](manual.html#1277) | [Evaluators](manual.html#18830) |
-[Evaluators](manual.html#18834)
+Specifier](manual.html#1277) | [Evaluators](manual.html#18842) |
+[Evaluators](manual.html#18846)
 
 **:4x4**
 
-[Coordinates](manual.html#27834)
+[Coordinates](manual.html#27846)
 
 **:add**
 
-[Date and Time](manual.html#14881) |
-[Synchronization](manual.html#25928)
+[Date and Time](manual.html#14893) |
+[Synchronization](manual.html#25940)
 
 **:adjust-viewport**
 
-[Viewer](manual.html#36107)
+[Viewer](manual.html#36119)
 
 **:advance**
 
-[Text Window](manual.html#48172)
+[Text Window](manual.html#48184)
 
 **:affix**
 
-[Multi-Joint Manipulators](manual.html#41442)
+[Multi-Joint Manipulators](manual.html#41454)
 
 **:all-edges**
 
-[Plane and Face](manual.html#31670)
+[Plane and Face](manual.html#31682)
 
 **:all-lines**
 
-[Text Window](manual.html#48350)
+[Text Window](manual.html#48362)
 
 **:all-method-names**
 
-[Basic Classes](manual.html#4428)
+[Basic Classes](manual.html#4440)
 
 **:all-methods**
 
-[Basic Classes](manual.html#4418)
+[Basic Classes](manual.html#4430)
 
 **:all-vertices**
 
-[Plane and Face](manual.html#31681)
+[Plane and Face](manual.html#31693)
 
 **:alloc**
 
-[Colors and Colormaps](manual.html#44155)
+[Colors and Colormaps](manual.html#44167)
 
 **:allocate-colors**
 
-[Colors and Colormaps](manual.html#44235)
+[Colors and Colormaps](manual.html#44247)
 
 **:allocate-private-colors**
 
-[Colors and Colormaps](manual.html#44224)
+[Colors and Colormaps](manual.html#44236)
 
 **:amplify**
 
-[Pixel-Image](manual.html#38800)
+[Pixel-Image](manual.html#38812)
 
 **:and**
 
-[Pixel-Image](manual.html#38908)
+[Pixel-Image](manual.html#38920)
 
 **:angle**
 
-[Line and Edge](manual.html#31257)
+[Line and Edge](manual.html#31269)
 
 **:angles**
 
-[Multi-Joint Manipulators](manual.html#41380)
+[Multi-Joint Manipulators](manual.html#41392)
 
 **:approximated-p**
 
-[Line and Edge](manual.html#31312)
+[Line and Edge](manual.html#31324)
 
 **:arc**
 
-[Xwindow](manual.html#43279)
+[Xwindow](manual.html#43291)
 
 **:area**
 
-[Plane and Face](manual.html#31628) | [Plane and
-Face](manual.html#31703)
+[Plane and Face](manual.html#31640) | [Plane and
+Face](manual.html#31715)
 
 **:armsolcoords**
 
-[Multi-Joint Manipulators](manual.html#41250)
+[Multi-Joint Manipulators](manual.html#41262)
 
 **:aspect**
 
-[Projection](manual.html#35758)
+[Projection](manual.html#35770)
 
 **:assoc**
 
-[CascadedCoords](manual.html#27913)
+[CascadedCoords](manual.html#27925)
 
 **:associate**
 
-[Xwindow](manual.html#43635)
+[Xwindow](manual.html#43647)
 
 **:attributes**
 
-[Xwindow](manual.html#43668)
+[Xwindow](manual.html#43680)
 
 **:average-pixel**
 
-[Pixel-Image](manual.html#38667)
+[Pixel-Image](manual.html#38679)
 
 **:background**
 
-[Xwindow](manual.html#43791) | [Graphic Context](manual.html#43953)
+[Xwindow](manual.html#43803) | [Graphic Context](manual.html#43965)
 
 **:background-pixmap**
 
-[Xwindow](manual.html#43806)
+[Xwindow](manual.html#43818)
 
 **:below**
 
-[Miscellaneous Geometric Functions](manual.html#30841)
+[Miscellaneous Geometric Functions](manual.html#30853)
 
 **:binormal**
 
-[Line and Edge](manual.html#31246)
+[Line and Edge](manual.html#31258)
 
 **:blue**
 
-[Color-Pixel-Image](manual.html#39013) | [Colors and
-Colormaps](manual.html#44439)
+[Color-Pixel-Image](manual.html#39025) | [Colors and
+Colormaps](manual.html#44451)
 
 **:body**
 
-[Miscellaneous Geometric Functions](manual.html#30854) | [Line and
-Edge](manual.html#31212)
+[Miscellaneous Geometric Functions](manual.html#30866) | [Line and
+Edge](manual.html#31224)
 
 **:body-type**
 
-[Plane and Face](manual.html#31780) | [Body](manual.html#32138)
+[Plane and Face](manual.html#31792) | [Body](manual.html#32150)
 
 **:border**
 
-[Xwindow](manual.html#43816)
+[Xwindow](manual.html#43828)
 
 **:box**
 
-[Miscellaneous Geometric Functions](manual.html#30742) | [Line and
-Edge](manual.html#30996) | [Plane and Face](manual.html#31476) |
-[Body](manual.html#31955)
+[Miscellaneous Geometric Functions](manual.html#30754) | [Line and
+Edge](manual.html#31008) | [Plane and Face](manual.html#31488) |
+[Body](manual.html#31967)
 
 **:boxtest**
 
-[Line and Edge](manual.html#31007) | [Plane and Face](manual.html#31486)
+[Line and Edge](manual.html#31019) | [Plane and Face](manual.html#31498)
 
 **:brightest-pixel**
 
-[Pixel-Image](manual.html#38647)
+[Pixel-Image](manual.html#38659)
 
 **:brightness-distribution**
 
-[Pixel-Image](manual.html#38855)
+[Pixel-Image](manual.html#38867)
 
 **:ButtonPress**
 
-[Panel](manual.html#47388) | [Panel Items](manual.html#47604) | [Panel
-Items](manual.html#47661) | [Panel Items](manual.html#47809)
+[Panel](manual.html#47400) | [Panel Items](manual.html#47616) | [Panel
+Items](manual.html#47673) | [Panel Items](manual.html#47821)
 
 **:ButtonRelease**
 
-[Panel](manual.html#47398) | [Panel Items](manual.html#47614) | [Panel
-Items](manual.html#47671) | [Panel Items](manual.html#47820) | [Text
-Window](manual.html#48535)
+[Panel](manual.html#47410) | [Panel Items](manual.html#47626) | [Panel
+Items](manual.html#47683) | [Panel Items](manual.html#47832) | [Text
+Window](manual.html#48547)
 
 **:centroid**
 
-[Plane and Face](manual.html#31713) | [Body](manual.html#31995)
+[Plane and Face](manual.html#31725) | [Body](manual.html#32007)
 
 **:change-attributes**
 
-[Graphic Context](manual.html#44079)
+[Graphic Context](manual.html#44091)
 
 **:changed**
 
-[CascadedCoords](manual.html#27935)
+[CascadedCoords](manual.html#27947)
 
 **:cid**
 
-[Basic Classes](manual.html#4460)
+[Basic Classes](manual.html#4472)
 
 **:clear**
 
-[Xwindow](manual.html#43403) | [Xwindow](manual.html#43837) | [Text
-Window](manual.html#48073)
+[Xwindow](manual.html#43415) | [Xwindow](manual.html#43849) | [Text
+Window](manual.html#48085)
 
 **:clear-area**
 
-[Xwindow](manual.html#43414) | [Xwindow](manual.html#43847)
+[Xwindow](manual.html#43426) | [Xwindow](manual.html#43859)
 
 **:clear-eol**
 
-[Text Window](manual.html#48083)
+[Text Window](manual.html#48095)
 
 **:clear-eos**
 
-[Text Window](manual.html#48106)
+[Text Window](manual.html#48118)
 
 **:clear-lines**
 
-[Text Window](manual.html#48095)
+[Text Window](manual.html#48107)
 
 **:close-fingers**
 
-[Multi-Joint Manipulators](manual.html#41370)
+[Multi-Joint Manipulators](manual.html#41382)
 
 **:collinear-line**
 
-[Line and Edge](manual.html#31102)
+[Line and Edge](manual.html#31114)
 
 **:collinear-point**
 
-[Line and Edge](manual.html#31074)
+[Line and Edge](manual.html#31086)
 
 **:color**
 
-[Xwindow](manual.html#43393)
+[Xwindow](manual.html#43405)
 
 **:colormap**
 
-[Xwindow](manual.html#43738)
+[Xwindow](manual.html#43750)
 
 **:common-box**
 
-[Body](manual.html#32016)
+[Body](manual.html#32028)
 
 **:common-perpendicular**
 
-[Line and Edge](manual.html#31051)
+[Line and Edge](manual.html#31063)
 
 **:compress-gray-scale**
 
-[Pixel-Image](manual.html#38811)
+[Pixel-Image](manual.html#38823)
 
 **:config**
 
-[Multi-Joint Manipulators](manual.html#41310)
+[Multi-Joint Manipulators](manual.html#41322)
 
 **:constraint**
 
-[Bodies in Contact](manual.html#34804)
+[Bodies in Contact](manual.html#34816)
 
 **:contourp**
 
-[Line and Edge](manual.html#31301)
+[Line and Edge](manual.html#31313)
 
 **:coords**
 
-[Coordinates](manual.html#27588)
+[Coordinates](manual.html#27600)
 
 **:coplanar**
 
-[Line and Edge](manual.html#31114)
+[Line and Edge](manual.html#31126)
 
 **:coplanar-line**
 
-[Plane and Face](manual.html#31396)
+[Plane and Face](manual.html#31408)
 
 **:coplanar-point**
 
-[Plane and Face](manual.html#31385)
+[Plane and Face](manual.html#31397)
 
 **:copy**
 
-[Graphic Context](manual.html#43931)
+[Graphic Context](manual.html#43943)
 
 **:copy-coords**
 
-[Coordinates](manual.html#27599)
+[Coordinates](manual.html#27611)
 
 **:copy-from**
 
-[Pixel-Image](manual.html#38746) | [Xwindow](manual.html#43228)
+[Pixel-Image](manual.html#38758) | [Xwindow](manual.html#43240)
 
 **:copy-worldcoords**
 
-[Coordinates](manual.html#27651)
+[Coordinates](manual.html#27663)
 
 **:corners**
 
-[Miscellaneous Geometric Functions](manual.html#30831)
+[Miscellaneous Geometric Functions](manual.html#30843)
 
 **:correlation**
 
-[Tracking](manual.html#39460)
+[Tracking](manual.html#39472)
 
 **:create**
 
-[Multi-Joint Manipulators](manual.html#41467) |
-[Xwindow](manual.html#43453) | [Xwindow](manual.html#43522) | [Graphic
-Context](manual.html#43899) | [Colors and Colormaps](manual.html#44400)
-| [Panel](manual.html#47268) | [Subpanels (menu-panel and
-menubar-panel)](manual.html#47470) | [Panel Items](manual.html#47550) |
-[Panel Items](manual.html#47593) | [Panel Items](manual.html#47648) |
-[Panel Items](manual.html#47714) | [Panel Items](manual.html#47770) |
-[Panel Items](manual.html#47857) | [Panel Items](manual.html#47907) |
-[Panel Items](manual.html#47962) | [Text Window](manual.html#48035) |
-[Text Window](manual.html#48447)
+[Multi-Joint Manipulators](manual.html#41479) |
+[Xwindow](manual.html#43465) | [Xwindow](manual.html#43534) | [Graphic
+Context](manual.html#43911) | [Colors and Colormaps](manual.html#44412)
+| [Panel](manual.html#47280) | [Subpanels (menu-panel and
+menubar-panel)](manual.html#47482) | [Panel Items](manual.html#47562) |
+[Panel Items](manual.html#47605) | [Panel Items](manual.html#47660) |
+[Panel Items](manual.html#47726) | [Panel Items](manual.html#47782) |
+[Panel Items](manual.html#47869) | [Panel Items](manual.html#47919) |
+[Panel Items](manual.html#47974) | [Text Window](manual.html#48047) |
+[Text Window](manual.html#48459)
 
 **:create-bitmap-from-file**
 
-[Panel Items](manual.html#47738)
+[Panel Items](manual.html#47750)
 
 **:create-from-bitmap-file**
 
-[Xwindow](manual.html#43466)
+[Xwindow](manual.html#43478)
 
 **:create-item**
 
-[Panel](manual.html#47315) | [Subpanels (menu-panel and
-menubar-panel)](manual.html#47481)
+[Panel](manual.html#47327) | [Subpanels (menu-panel and
+menubar-panel)](manual.html#47493)
 
 **:create-menubar**
 
-[Panel](manual.html#47345)
+[Panel](manual.html#47357)
 
 **:creation-form**
 
-[Body](manual.html#32128)
+[Body](manual.html#32140)
 
 **:csg**
 
-[Body](manual.html#32097)
+[Body](manual.html#32109)
 
 **:cursor**
 
-[Text Window](manual.html#48052)
+[Text Window](manual.html#48064)
 
 **:darkest-pixel**
 
-[Pixel-Image](manual.html#38657)
+[Pixel-Image](manual.html#38669)
 
 **:dash**
 
-[Graphic Context](manual.html#44033)
+[Graphic Context](manual.html#44045)
 
 **:day**
 
-[Date and Time](manual.html#14801)
+[Date and Time](manual.html#14813)
 
 **:define-gray-scale-LUT**
 
-[Colors and Colormaps](manual.html#44259)
+[Colors and Colormaps](manual.html#44271)
 
 **:define-hls-LUT**
 
-[Colors and Colormaps](manual.html#44285)
+[Colors and Colormaps](manual.html#44297)
 
 **:define-LUT**
 
-[Colors and Colormaps](manual.html#44246)
+[Colors and Colormaps](manual.html#44258)
 
 **:define-rainbow-LUT**
 
-[Colors and Colormaps](manual.html#44300)
+[Colors and Colormaps](manual.html#44312)
 
 **:define-rgb-LUT**
 
-[Colors and Colormaps](manual.html#44274)
+[Colors and Colormaps](manual.html#44286)
 
 **:delete**
 
-[Text Window](manual.html#48404)
+[Text Window](manual.html#48416)
 
 **:delete-items**
 
-[Panel](manual.html#47335)
+[Panel](manual.html#47347)
 
 **:depth**
 
-[Xwindow](manual.html#43718)
+[Xwindow](manual.html#43730)
 
 **:dequeue**
 
-[Queue](manual.html#11868)
+[Queue](manual.html#11880)
 
 **:destroy**
 
-[Xwindow](manual.html#43487) | [Xwindow](manual.html#43601) | [Colors
-and Colormaps](manual.html#44202)
+[Xwindow](manual.html#43499) | [Xwindow](manual.html#43613) | [Colors
+and Colormaps](manual.html#44214)
 
 **:difference**
 
-[Date and Time](manual.html#14871)
+[Date and Time](manual.html#14883)
 
 **:digitize**
 
-[Pixel-Image](manual.html#38895)
+[Pixel-Image](manual.html#38907)
 
 **:direction**
 
-[Line and Edge](manual.html#30966)
+[Line and Edge](manual.html#30978)
 
 **:display**
 
-[Pixel-Image](manual.html#38724) |
-[Color-Pixel-Image](manual.html#39109)
+[Pixel-Image](manual.html#38736) |
+[Color-Pixel-Image](manual.html#39121)
 
 **:display-lut**
 
-[Pixel-Image](manual.html#38713) |
-[Color-Pixel-Image](manual.html#39121)
+[Pixel-Image](manual.html#38725) |
+[Color-Pixel-Image](manual.html#39133)
 
 **:display-selection**
 
-[Text Window](manual.html#48468)
+[Text Window](manual.html#48480)
 
 **:display-string**
 
-[Text Window](manual.html#48501)
+[Text Window](manual.html#48513)
 
 **:dissoc**
 
-[CascadedCoords](manual.html#27924)
+[CascadedCoords](manual.html#27936)
 
 **:dissociate**
 
-[Xwindow](manual.html#43646)
+[Xwindow](manual.html#43658)
 
 **:distance**
 
-[Line and Edge](manual.html#31028) | [Plane and Face](manual.html#31374)
-| [Body](manual.html#32084)
+[Line and Edge](manual.html#31040) | [Plane and Face](manual.html#31386)
+| [Body](manual.html#32096)
 
 **:draw**
 
-[Viewer](manual.html#36335)
+[Viewer](manual.html#36347)
 
 **:draw-active-button**
 
-[Panel Items](manual.html#47799)
+[Panel Items](manual.html#47811)
 
 **:draw-arc-ndc**
 
-[Viewer](manual.html#36169)
+[Viewer](manual.html#36181)
 
 **:draw-arrow**
 
-[Viewer](manual.html#36268)
+[Viewer](manual.html#36280)
 
 **:draw-axis**
 
-[Viewer](manual.html#36324)
+[Viewer](manual.html#36336)
 
 **:draw-body**
 
-[Viewer](manual.html#36313)
+[Viewer](manual.html#36325)
 
 **:draw-box**
 
-[Viewer](manual.html#36257)
+[Viewer](manual.html#36269)
 
 **:draw-box-ndc**
 
-[Viewer](manual.html#36159)
+[Viewer](manual.html#36171)
 
 **:draw-edge**
 
-[Viewer](manual.html#36280)
+[Viewer](manual.html#36292)
 
 **:draw-edge-image**
 
-[Viewer](manual.html#36291)
+[Viewer](manual.html#36303)
 
 **:draw-faces**
 
-[Viewer](manual.html#36302)
+[Viewer](manual.html#36314)
 
 **:draw-fill-arc-ndc**
 
-[Viewer](manual.html#36180)
+[Viewer](manual.html#36192)
 
 **:draw-fill-rectangle-ndc**
 
-[Viewer](manual.html#36224)
+[Viewer](manual.html#36236)
 
 **:draw-image-string-ndc**
 
-[Viewer](manual.html#36202)
+[Viewer](manual.html#36214)
 
 **:draw-label**
 
-[Panel Items](manual.html#47583) | [Panel Items](manual.html#47704) |
-[Panel Items](manual.html#47728)
+[Panel Items](manual.html#47595) | [Panel Items](manual.html#47716) |
+[Panel Items](manual.html#47740)
 
 **:draw-line**
 
-[Viewer](manual.html#36235) | [Xwindow](manual.html#43360)
+[Viewer](manual.html#36247) | [Xwindow](manual.html#43372)
 
 **:draw-line-ndc**
 
-[Viewer](manual.html#36128)
+[Viewer](manual.html#36140)
 
 **:draw-polyline-ndc**
 
-[Viewer](manual.html#36139)
+[Viewer](manual.html#36151)
 
 **:draw-rectangle-ndc**
 
-[Viewer](manual.html#36213)
+[Viewer](manual.html#36225)
 
 **:draw-star**
 
-[Viewer](manual.html#36246)
+[Viewer](manual.html#36258)
 
 **:draw-star-ndc**
 
-[Viewer](manual.html#36149)
+[Viewer](manual.html#36161)
 
 **:draw-string-ndc**
 
-[Viewer](manual.html#36190)
+[Viewer](manual.html#36202)
 
 **:drawable**
 
-[Xwindow](manual.html#43131)
+[Xwindow](manual.html#43143)
 
 **:duplicate**
 
-[Pixel-Image](manual.html#38736)
+[Pixel-Image](manual.html#38748)
 
 **:edge**
 
-[Plane and Face](manual.html#31507)
+[Plane and Face](manual.html#31519)
 
 **:edge1**
 
-[Pixel-Image](manual.html#38933) |
-[Color-Pixel-Image](manual.html#39134)
+[Pixel-Image](manual.html#38945) |
+[Color-Pixel-Image](manual.html#39146)
 
 **:edges**
 
-[Plane and Face](manual.html#31497) | [Body](manual.html#31935)
+[Plane and Face](manual.html#31509) | [Body](manual.html#31947)
 
 **:empty?**
 
-[Queue](manual.html#11878)
+[Queue](manual.html#11890)
 
 **:end-point**
 
-[Line and Edge](manual.html#30978)
+[Line and Edge](manual.html#30990)
 
 **:enqueue**
 
-[Queue](manual.html#11858)
+[Queue](manual.html#11870)
 
 **:enter-face**
 
-[Plane and Face](manual.html#31830)
+[Plane and Face](manual.html#31842)
 
 **:enter-hole**
 
-[Plane and Face](manual.html#31735)
+[Plane and Face](manual.html#31747)
 
 **:EnterNotify**
 
-[Panel](manual.html#47418)
+[Panel](manual.html#47430)
 
 **:erase**
 
-[Viewer](manual.html#36353)
+[Viewer](manual.html#36365)
 
 **:Euler**
 
-[Coordinates](manual.html#27808) | [Body](manual.html#31965)
+[Coordinates](manual.html#27820) | [Body](manual.html#31977)
 
 **:event-col**
 
-[Text Window](manual.html#48247)
+[Text Window](manual.html#48259)
 
 **:event-row**
 
-[Text Window](manual.html#48237)
+[Text Window](manual.html#48249)
 
 **:evert**
 
-[Body](manual.html#32062)
+[Body](manual.html#32074)
 
 **:exec**
 
-[PostgreSQL](manual.html#50330)
+[PostgreSQL](manual.html#50342)
 
 **:extreme-point**
 
-[Miscellaneous Geometric Functions](manual.html#30820)
+[Miscellaneous Geometric Functions](manual.html#30832)
 
 **:face**
 
-[Plane and Face](manual.html#31820)
+[Plane and Face](manual.html#31832)
 
 **:face-id**
 
-[Plane and Face](manual.html#31767)
+[Plane and Face](manual.html#31779)
 
 **:faces**
 
-[Body](manual.html#31945)
+[Body](manual.html#31957)
 
 **:faces-intersect-with-point-vector**
 
-[Body](manual.html#32072)
+[Body](manual.html#32084)
 
 **:fill-arc**
 
-[Xwindow](manual.html#43302)
+[Xwindow](manual.html#43314)
 
 **:fill-rectangle**
 
-[Xwindow](manual.html#43292)
+[Xwindow](manual.html#43304)
 
 **:flush**
 
-[Xwindow](manual.html#43141) | [Text Window](manual.html#48289)
+[Xwindow](manual.html#43153) | [Text Window](manual.html#48301)
 
 **:font**
 
-[Graphic Context](manual.html#43997)
+[Graphic Context](manual.html#44009)
 
 **:foot**
 
-[Line and Edge](manual.html#31040) | [Plane and Face](manual.html#31430)
+[Line and Edge](manual.html#31052) | [Plane and Face](manual.html#31442)
 
 **:foreback**
 
-[Graphic Context](manual.html#43965)
+[Graphic Context](manual.html#43977)
 
 **:foreground**
 
-[Graphic Context](manual.html#43941)
+[Graphic Context](manual.html#43953)
 
 **:free**
 
-[Graphic Context](manual.html#43921) | [Colors and
-Colormaps](manual.html#44380)
+[Graphic Context](manual.html#43933) | [Colors and
+Colormaps](manual.html#44392)
 
 **:function**
 
-[Graphic Context](manual.html#43985)
+[Graphic Context](manual.html#43997)
 
 **:gc**
 
-[Xwindow](manual.html#43183) | [Graphic Context](manual.html#43911)
+[Xwindow](manual.html#43195) | [Graphic Context](manual.html#43923)
 
 **:geometry**
 
-[Xwindow](manual.html#43151)
+[Xwindow](manual.html#43163)
 
 **:get**
 
-[Basic Classes](manual.html#4248)
+[Basic Classes](manual.html#4260)
 
 **:get-affix**
 
-[Multi-Joint Manipulators](manual.html#41432)
+[Multi-Joint Manipulators](manual.html#41444)
 
 **:get-approach**
 
-[Multi-Joint Manipulators](manual.html#41390)
+[Multi-Joint Manipulators](manual.html#41402)
 
 **:get-attribute**
 
-[Graphic Context](manual.html#44067)
+[Graphic Context](manual.html#44079)
 
 **:get-face**
 
-[Body](manual.html#32158)
+[Body](manual.html#32170)
 
 **:get-grasp**
 
-[Multi-Joint Manipulators](manual.html#41411)
+[Multi-Joint Manipulators](manual.html#41423)
 
 **:get-val**
 
-[Basic Classes](manual.html#4325)
+[Basic Classes](manual.html#4337)
 
 **:getimage**
 
-[Xwindow](manual.html#43335)
+[Xwindow](manual.html#43347)
 
 **:getstring**
 
-[Panel Items](manual.html#47974)
+[Panel Items](manual.html#47986)
 
 **:goback**
 
-[Text Window](manual.html#48162)
+[Text Window](manual.html#48174)
 
 **:goto**
 
-[Text Window](manual.html#48150)
+[Text Window](manual.html#48162)
 
 **:grab**
 
-[Tracking](manual.html#39470)
+[Tracking](manual.html#39482)
 
 **:green**
 
-[Color-Pixel-Image](manual.html#39003) | [Colors and
-Colormaps](manual.html#44449)
+[Color-Pixel-Image](manual.html#39015) | [Colors and
+Colormaps](manual.html#44461)
 
 **:grin1**
 
-[Pixel-Image](manual.html#38778)
+[Pixel-Image](manual.html#38790)
 
 **:grow**
 
-[Miscellaneous Geometric Functions](manual.html#30762)
+[Miscellaneous Geometric Functions](manual.html#30774)
 
 **:halve**
 
-[Pixel-Image](manual.html#38677) |
-[Color-Pixel-Image](manual.html#39099)
+[Pixel-Image](manual.html#38689) |
+[Color-Pixel-Image](manual.html#39111)
 
 **:hand**
 
-[Multi-Joint Manipulators](manual.html#41330)
+[Multi-Joint Manipulators](manual.html#41342)
 
 **:handcoords**
 
-[Multi-Joint Manipulators](manual.html#41340)
+[Multi-Joint Manipulators](manual.html#41352)
 
 **:hash-function**
 
-[Hash Tables](manual.html#11816)
+[Hash Tables](manual.html#11828)
 
 **:height**
 
-[Viewport](manual.html#35997) | [Pixel-Image](manual.html#38593) |
-[Color-Pixel-Image](manual.html#38973) | [Xwindow](manual.html#43163)
+[Viewport](manual.html#36009) | [Pixel-Image](manual.html#38605) |
+[Color-Pixel-Image](manual.html#38985) | [Xwindow](manual.html#43175)
 
 **:hex**
 
-[Pixel-Image](manual.html#38758) |
-[Color-Pixel-Image](manual.html#39145)
+[Pixel-Image](manual.html#38770) |
+[Color-Pixel-Image](manual.html#39157)
 
 **:hex1**
 
-[Pixel-Image](manual.html#38768) |
-[Color-Pixel-Image](manual.html#39155)
+[Pixel-Image](manual.html#38780) |
+[Color-Pixel-Image](manual.html#39167)
 
 **:hierarchy**
 
-[Basic Classes](manual.html#4480)
+[Basic Classes](manual.html#4492)
 
 **:histogram**
 
-[Pixel-Image](manual.html#38845)
+[Pixel-Image](manual.html#38857)
 
 **:hither**
 
-[Projection](manual.html#35738)
+[Projection](manual.html#35750)
 
 **:HLS**
 
-[Color-Pixel-Image](manual.html#39077)
+[Color-Pixel-Image](manual.html#39089)
 
 **:horizontal-scroll**
 
-[Text Window](manual.html#48194) | [Text Window](manual.html#48524)
+[Text Window](manual.html#48206) | [Text Window](manual.html#48536)
 
 **:hour**
 
-[Date and Time](manual.html#14821)
+[Date and Time](manual.html#14833)
 
 **:hue**
 
-[Color-Pixel-Image](manual.html#39023)
+[Color-Pixel-Image](manual.html#39035)
 
 **:id**
 
-[Plane and Face](manual.html#31755) | [Colors and
-Colormaps](manual.html#44135)
+[Plane and Face](manual.html#31767) | [Colors and
+Colormaps](manual.html#44147)
 
 **:image-string**
 
-[Xwindow](manual.html#43324)
+[Xwindow](manual.html#43336)
 
 **:inheritance**
 
-[CascadedCoords](manual.html#27898)
+[CascadedCoords](manual.html#27910)
 
 **:init**
 
-[Queue](manual.html#11848) | [Date and Time](manual.html#14760) |
-[Synchronization](manual.html#25918) |
-[Synchronization](manual.html#26003) | [Coordinates](manual.html#27846)
-| [Miscellaneous Geometric Functions](manual.html#30864) | [Line and
-Edge](manual.html#31335) | [Plane and Face](manual.html#31441) | [Plane
-and Face](manual.html#31638) | [Plane and Face](manual.html#31790) |
-[Plane and Face](manual.html#31841) | [Body](manual.html#32182) |
-[Viewing](manual.html#35635) | [Projection](manual.html#35771) |
-[Projection](manual.html#35914) | [Viewport](manual.html#36043) |
-[Viewer](manual.html#36364) | [Pixel-Image](manual.html#38788) |
-[Color-Pixel-Image](manual.html#39175) | [Tracking](manual.html#39593) |
-[Xwindow](manual.html#43118) | [Xwindow](manual.html#43443) | [Colors
-and Colormaps](manual.html#44390) | [Colors and
-Colormaps](manual.html#44469) | [Text Window](manual.html#48024) |
-[PostgreSQL](manual.html#50310)
+[Queue](manual.html#11860) | [Date and Time](manual.html#14772) |
+[Synchronization](manual.html#25930) |
+[Synchronization](manual.html#26015) | [Coordinates](manual.html#27858)
+| [Miscellaneous Geometric Functions](manual.html#30876) | [Line and
+Edge](manual.html#31347) | [Plane and Face](manual.html#31453) | [Plane
+and Face](manual.html#31650) | [Plane and Face](manual.html#31802) |
+[Plane and Face](manual.html#31853) | [Body](manual.html#32194) |
+[Viewing](manual.html#35647) | [Projection](manual.html#35783) |
+[Projection](manual.html#35926) | [Viewport](manual.html#36055) |
+[Viewer](manual.html#36376) | [Pixel-Image](manual.html#38800) |
+[Color-Pixel-Image](manual.html#39187) | [Tracking](manual.html#39605) |
+[Xwindow](manual.html#43130) | [Xwindow](manual.html#43455) | [Colors
+and Colormaps](manual.html#44402) | [Colors and
+Colormaps](manual.html#44481) | [Text Window](manual.html#48036) |
+[PostgreSQL](manual.html#50322)
 
 **:inner**
 
-[Miscellaneous Geometric Functions](manual.html#30774)
+[Miscellaneous Geometric Functions](manual.html#30786)
 
 **:insert**
 
-[Text Window](manual.html#48394)
+[Text Window](manual.html#48406)
 
 **:insert-string**
 
-[Text Window](manual.html#48383)
+[Text Window](manual.html#48395)
 
 **:insidep**
 
-[Plane and Face](manual.html#31539) | [Plane and
-Face](manual.html#31693) | [Body](manual.html#32026) |
-[Tracking](manual.html#39561)
+[Plane and Face](manual.html#31551) | [Plane and
+Face](manual.html#31705) | [Body](manual.html#32038) |
+[Tracking](manual.html#39573)
 
 **:intersect-edge**
 
-[Plane and Face](manual.html#31574)
+[Plane and Face](manual.html#31586)
 
 **:intersect-face**
 
-[Plane and Face](manual.html#31585) | [Body](manual.html#32041)
+[Plane and Face](manual.html#31597) | [Body](manual.html#32053)
 
 **:intersect-line**
 
-[Line and Edge](manual.html#31139) | [Plane and Face](manual.html#31562)
+[Line and Edge](manual.html#31151) | [Plane and Face](manual.html#31574)
 
 **:intersect-point-vector**
 
-[Plane and Face](manual.html#31550)
+[Plane and Face](manual.html#31562)
 
 **:intersection**
 
-[Miscellaneous Geometric Functions](manual.html#30785) | [Line and
-Edge](manual.html#31127) | [Plane and Face](manual.html#31407)
+[Miscellaneous Geometric Functions](manual.html#30797) | [Line and
+Edge](manual.html#31139) | [Plane and Face](manual.html#31419)
 
 **:intersection-edge**
 
-[Plane and Face](manual.html#31420)
+[Plane and Face](manual.html#31432)
 
 **:intersectionp**
 
-[Miscellaneous Geometric Functions](manual.html#30808)
+[Miscellaneous Geometric Functions](manual.html#30820)
 
 **:intersectp**
 
-[Body](manual.html#32052)
+[Body](manual.html#32064)
 
 **:inverse-transform-vector**
 
-[Coordinates](manual.html#27681) | [CascadedCoords](manual.html#27997)
+[Coordinates](manual.html#27693) | [CascadedCoords](manual.html#28009)
 
 **:inverse-transformation**
 
-[Coordinates](manual.html#27784) | [CascadedCoords](manual.html#28008)
+[Coordinates](manual.html#27796) | [CascadedCoords](manual.html#28020)
 
 **:invert**
 
-[Line and Edge](manual.html#31277) | [Plane and Face](manual.html#31617)
-| [Plane and Face](manual.html#31725)
+[Line and Edge](manual.html#31289) | [Plane and Face](manual.html#31629)
+| [Plane and Face](manual.html#31737)
 
 **:items**
 
-[Panel](manual.html#47284)
+[Panel](manual.html#47296)
 
 **:KeyPress**
 
-[Panel](manual.html#47368) | [Text Window](manual.html#48258)
+[Panel](manual.html#47380) | [Text Window](manual.html#48270)
 
 **:KeyRelease**
 
-[Panel](manual.html#47378)
+[Panel](manual.html#47390)
 
 **:LeaveNotify**
 
-[Panel](manual.html#47428)
+[Panel](manual.html#47440)
 
 **:length**
 
-[Queue](manual.html#11888) | [Line and Edge](manual.html#31018)
+[Queue](manual.html#11900) | [Line and Edge](manual.html#31030)
 
 **:lightness**
 
-[Color-Pixel-Image](manual.html#39033)
+[Color-Pixel-Image](manual.html#39045)
 
 **:line**
 
-[Xwindow](manual.html#43251) | [Text Window](manual.html#48329)
+[Xwindow](manual.html#43263) | [Text Window](manual.html#48341)
 
 **:line-style**
 
-[Xwindow](manual.html#43382) | [Graphic Context](manual.html#44023)
+[Xwindow](manual.html#43394) | [Graphic Context](manual.html#44035)
 
 **:line-width**
 
-[Xwindow](manual.html#43371) | [Graphic Context](manual.html#44013)
+[Xwindow](manual.html#43383) | [Graphic Context](manual.html#44025)
 
 **:locate**
 
-[Coordinates](manual.html#27725) | [CascadedCoords](manual.html#28040) |
-[Text Window](manual.html#48457)
+[Coordinates](manual.html#27737) | [CascadedCoords](manual.html#28052) |
+[Text Window](manual.html#48469)
 
 **:locate-item**
 
-[Panel](manual.html#47294)
+[Panel](manual.html#47306)
 
 **:location**
 
-[Xwindow](manual.html#43708)
+[Xwindow](manual.html#43720)
 
 **:look**
 
-[Viewing](manual.html#35622)
+[Viewing](manual.html#35634)
 
 **:look-body**
 
-[Projection](manual.html#35903)
+[Projection](manual.html#35915)
 
 **:lookaround**
 
-[Projection](manual.html#35890)
+[Projection](manual.html#35902)
 
 **:lower**
 
-[Xwindow](manual.html#43781)
+[Xwindow](manual.html#43793)
 
 **:lut**
 
-[Pixel-Image](manual.html#38822) | [Colors and
-Colormaps](manual.html#44336)
+[Pixel-Image](manual.html#38834) | [Colors and
+Colormaps](manual.html#44348)
 
 **:LUT-list**
 
-[Colors and Colormaps](manual.html#44316)
+[Colors and Colormaps](manual.html#44328)
 
 **:LUT-names**
 
-[Colors and Colormaps](manual.html#44326)
+[Colors and Colormaps](manual.html#44338)
 
 **:lut2**
 
-[Pixel-Image](manual.html#38833)
+[Pixel-Image](manual.html#38845)
 
 **:magnify**
 
-[Body](manual.html#31870)
+[Body](manual.html#31882)
 
 **:make**
 
-[Date and Time](manual.html#14771)
+[Date and Time](manual.html#14783)
 
 **:make-projection**
 
-[Projection](manual.html#35802) | [Projection](manual.html#35831)
+[Projection](manual.html#35814) | [Projection](manual.html#35843)
 
 **:map**
 
-[Pixel-Image](manual.html#38635) | [Xwindow](manual.html#43569)
+[Pixel-Image](manual.html#38647) | [Xwindow](manual.html#43581)
 
 **:map-picture**
 
-[Pixel-Image](manual.html#38623)
+[Pixel-Image](manual.html#38635)
 
 **:method**
 
-[Basic Classes](manual.html#4396)
+[Basic Classes](manual.html#4408)
 
 **:method-names**
 
-[Basic Classes](manual.html#4407)
+[Basic Classes](manual.html#4419)
 
 **:methods**
 
-[Basic Classes](manual.html#4315) | [Basic Classes](manual.html#4386)
+[Basic Classes](manual.html#4327) | [Basic Classes](manual.html#4398)
 
 **:minute**
 
-[Date and Time](manual.html#14831)
+[Date and Time](manual.html#14843)
 
 **:monochromize**
 
-[Color-Pixel-Image](manual.html#39065)
+[Color-Pixel-Image](manual.html#39077)
 
 **:month**
 
-[Date and Time](manual.html#14791)
+[Date and Time](manual.html#14803)
 
 **:MotionNotify**
 
-[Panel](manual.html#47408)
+[Panel](manual.html#47420)
 
 **:move**
 
-[Tracking](manual.html#39500) | [Xwindow](manual.html#43748)
+[Tracking](manual.html#39512) | [Xwindow](manual.html#43760)
 
 **:move-to**
 
-[Coordinates](manual.html#27705)
+[Coordinates](manual.html#27717)
 
 **:name**
 
-[Basic Classes](manual.html#4283) | [Basic Classes](manual.html#4450)
+[Basic Classes](manual.html#4295) | [Basic Classes](manual.html#4462)
 
 **:ndc-line-to-screen**
 
-[Viewport](manual.html#36030)
+[Viewport](manual.html#36042)
 
 **:ndc-point-to-screen**
 
-[Viewport](manual.html#36019)
+[Viewport](manual.html#36031)
 
 **:new**
 
-[Basic Classes](manual.html#4366)
+[Basic Classes](manual.html#4378)
 
 **:newcoords**
 
-[Coordinates](manual.html#27568) | [Body](manual.html#31915) |
-[Multi-Joint Manipulators](manual.html#41240)
+[Coordinates](manual.html#27580) | [Body](manual.html#31927) |
+[Multi-Joint Manipulators](manual.html#41252)
 
 **:newline**
 
-[Text Window](manual.html#48205)
+[Text Window](manual.html#48217)
 
 **:nface**
 
-[Line and Edge](manual.html#31234)
+[Line and Edge](manual.html#31246)
 
 **:nlines**
 
-[Text Window](manual.html#48340)
+[Text Window](manual.html#48352)
 
 **:normal**
 
-[Plane and Face](manual.html#31364)
+[Plane and Face](manual.html#31376)
 
 **:notify**
 
-[Panel Items](manual.html#47535)
+[Panel Items](manual.html#47547)
 
 **:now**
 
-[Date and Time](manual.html#14750)
+[Date and Time](manual.html#14762)
 
 **:nvertex**
 
-[Line and Edge](manual.html#31201)
+[Line and Edge](manual.html#31213)
 
 **:on-line-point**
 
-[Line and Edge](manual.html#31088)
+[Line and Edge](manual.html#31100)
 
 **:open-fingers**
 
-[Multi-Joint Manipulators](manual.html#41360)
+[Multi-Joint Manipulators](manual.html#41372)
 
 **:optimum-threshold**
 
-[Pixel-Image](manual.html#38865)
+[Pixel-Image](manual.html#38877)
 
 **:orient**
 
-[Coordinates](manual.html#27773) | [CascadedCoords](manual.html#28062)
+[Coordinates](manual.html#27785) | [CascadedCoords](manual.html#28074)
 
 **:parameter**
 
-[Line and Edge](manual.html#30954)
+[Line and Edge](manual.html#30966)
 
 **:parent**
 
-[Xwindow](manual.html#43615)
+[Xwindow](manual.html#43627)
 
 **:park**
 
-[Multi-Joint Manipulators](manual.html#41320)
+[Multi-Joint Manipulators](manual.html#41332)
 
 **:perimeter**
 
-[Body](manual.html#31975)
+[Body](manual.html#31987)
 
 **:pface**
 
-[Line and Edge](manual.html#31222)
+[Line and Edge](manual.html#31234)
 
 **:pixel**
 
-[Color-Pixel-Image](manual.html#39053) | [Colors and
-Colormaps](manual.html#44212)
+[Color-Pixel-Image](manual.html#39065) | [Colors and
+Colormaps](manual.html#44224)
 
 **:planemask**
 
-[Graphic Context](manual.html#43975)
+[Graphic Context](manual.html#43987)
 
 **:planes**
 
-[Colors and Colormaps](manual.html#44358)
+[Colors and Colormaps](manual.html#44370)
 
 **:plist**
 
-[Basic Classes](manual.html#4235)
+[Basic Classes](manual.html#4247)
 
 **:plot**
 
-[Pixel-Image](manual.html#38919)
+[Pixel-Image](manual.html#38931)
 
 **:point**
 
-[Line and Edge](manual.html#30943) | [Xwindow](manual.html#43240)
+[Line and Edge](manual.html#30955) | [Xwindow](manual.html#43252)
 
 **:pos**
 
-[Coordinates](manual.html#27558) | [Tracking](manual.html#39541) |
-[Xwindow](manual.html#43196)
+[Coordinates](manual.html#27570) | [Tracking](manual.html#39553) |
+[Xwindow](manual.html#43208)
 
 **:possibly-interfering-faces**
 
-[Body](manual.html#32005)
+[Body](manual.html#32017)
 
 **:primitive-body**
 
-[Plane and Face](manual.html#31745) | [Body](manual.html#32107)
+[Plane and Face](manual.html#31757) | [Body](manual.html#32119)
 
 **:primitive-body-p**
 
-[Body](manual.html#32117)
+[Body](manual.html#32129)
 
 **:primitive-groups**
 
-[Body](manual.html#32148)
+[Body](manual.html#32160)
 
 **:prin1**
 
-[Basic Classes](manual.html#4191) | [Basic Classes](manual.html#4294) |
-[Color-Pixel-Image](manual.html#39165) | [Tracking](manual.html#39583)
+[Basic Classes](manual.html#4203) | [Basic Classes](manual.html#4306) |
+[Color-Pixel-Image](manual.html#39177) | [Tracking](manual.html#39595)
 
 **:project**
 
-[Line and Edge](manual.html#31062) | [Projection](manual.html#35693)
+[Line and Edge](manual.html#31074) | [Projection](manual.html#35705)
 
 **:project-x**
 
-[Pixel-Image](manual.html#38875)
+[Pixel-Image](manual.html#38887)
 
 **:project-y**
 
-[Pixel-Image](manual.html#38885)
+[Pixel-Image](manual.html#38897)
 
 **:project3**
 
-[Projection](manual.html#35705)
+[Projection](manual.html#35717)
 
 **:projection**
 
-[Projection](manual.html#35680)
+[Projection](manual.html#35692)
 
 **:put**
 
-[Basic Classes](manual.html#4259)
+[Basic Classes](manual.html#4271)
 
 **:putch**
 
-[Text Window](manual.html#48215)
+[Text Window](manual.html#48227)
 
 **:putimage**
 
-[Xwindow](manual.html#43348)
+[Xwindow](manual.html#43360)
 
 **:putstring**
 
-[Text Window](manual.html#48226)
+[Text Window](manual.html#48238)
 
 **:pvertex**
 
-[Line and Edge](manual.html#31190)
+[Line and Edge](manual.html#31202)
 
 **:query**
 
-[Colors and Colormaps](manual.html#44145)
+[Colors and Colormaps](manual.html#44157)
 
 **:quit**
 
-[Panel](manual.html#47357)
+[Panel](manual.html#47369)
 
 **:raise**
 
-[Xwindow](manual.html#43771)
+[Xwindow](manual.html#43783)
 
 **:ray**
 
-[Projection](manual.html#35842)
+[Projection](manual.html#35854)
 
 **:read**
 
-[Synchronization](manual.html#25982)
+[Synchronization](manual.html#25994)
 
 **:read-file**
 
-[Text Window](manual.html#48489)
+[Text Window](manual.html#48501)
 
 **:rectangle**
 
-[Tracking](manual.html#39490) | [Xwindow](manual.html#43266)
+[Tracking](manual.html#39502) | [Xwindow](manual.html#43278)
 
 **:red**
 
-[Color-Pixel-Image](manual.html#38993) | [Colors and
-Colormaps](manual.html#44429)
+[Color-Pixel-Image](manual.html#39005) | [Colors and
+Colormaps](manual.html#44441)
 
 **:refresh**
 
-[Text Window](manual.html#48372)
+[Text Window](manual.html#48384)
 
 **:refresh-line**
 
-[Text Window](manual.html#48360)
+[Text Window](manual.html#48372)
 
 **:remove**
 
-[Synchronization](manual.html#25940)
+[Synchronization](manual.html#25952)
 
 **:remprop**
 
-[Basic Classes](manual.html#4271)
+[Basic Classes](manual.html#4283)
 
 **:replace-coords**
 
-[Coordinates](manual.html#27578)
+[Coordinates](manual.html#27590)
 
 **:reset-coords**
 
-[Coordinates](manual.html#27609)
+[Coordinates](manual.html#27621)
 
 **:reset-model-vertices**
 
-[Body](manual.html#31904)
+[Body](manual.html#31916)
 
 **:reset-normal**
 
-[Plane and Face](manual.html#31606)
+[Plane and Face](manual.html#31618)
 
 **:reset-tool**
 
-[Multi-Joint Manipulators](manual.html#41280)
+[Multi-Joint Manipulators](manual.html#41292)
 
 **:resize**
 
-[Viewer](manual.html#36118) | [Xwindow](manual.html#43759) | [Text
-Window](manual.html#48547)
+[Viewer](manual.html#36130) | [Xwindow](manual.html#43771) | [Text
+Window](manual.html#48559)
 
 **:RGB**
 
-[Color-Pixel-Image](manual.html#39088) | [Colors and
-Colormaps](manual.html#44459)
+[Color-Pixel-Image](manual.html#39100) | [Colors and
+Colormaps](manual.html#44471)
 
 **:roll-pitch-yaw**
 
-[Coordinates](manual.html#27821)
+[Coordinates](manual.html#27833)
 
 **:root**
 
-[Xwindow](manual.html#43698)
+[Xwindow](manual.html#43710)
 
 **:rot**
 
-[Coordinates](manual.html#27548)
+[Coordinates](manual.html#27560)
 
 **:rotate**
 
-[Coordinates](manual.html#27739) | [CascadedCoords](manual.html#28051)
+[Coordinates](manual.html#27751) | [CascadedCoords](manual.html#28063)
 
 **:rotate-vector**
 
-[Coordinates](manual.html#27661)
+[Coordinates](manual.html#27673)
 
 **:rotate-vertices**
 
-[Body](manual.html#31892)
+[Body](manual.html#31904)
 
 **:saturation**
 
-[Color-Pixel-Image](manual.html#39043)
+[Color-Pixel-Image](manual.html#39055)
 
 **:screen**
 
-[Projection](manual.html#35728) | [Xwindow](manual.html#43688)
+[Projection](manual.html#35740) | [Xwindow](manual.html#43700)
 
 **:screen-point-to-ndc**
 
-[Viewport](manual.html#36007)
+[Viewport](manual.html#36019)
 
 **:scroll**
 
-[Text Window](manual.html#48183) | [Text Window](manual.html#48513)
+[Text Window](manual.html#48195) | [Text Window](manual.html#48525)
 
 **:search**
 
-[Tracking](manual.html#39521)
+[Tracking](manual.html#39533)
 
 **:second**
 
-[Date and Time](manual.html#14841)
+[Date and Time](manual.html#14853)
 
 **:seconds**
 
-[Date and Time](manual.html#14851)
+[Date and Time](manual.html#14863)
 
 **:selectinput**
 
-[Xwindow](manual.html#43589)
+[Xwindow](manual.html#43601)
 
 **:selection**
 
-[Text Window](manual.html#48479)
+[Text Window](manual.html#48491)
 
 **:set-angle**
 
-[Line and Edge](manual.html#31267)
+[Line and Edge](manual.html#31279)
 
 **:set-approach**
 
-[Multi-Joint Manipulators](manual.html#41400)
+[Multi-Joint Manipulators](manual.html#41412)
 
 **:set-approximated-flag**
 
-[Line and Edge](manual.html#31322)
+[Line and Edge](manual.html#31334)
 
 **:set-colormap**
 
-[Xwindow](manual.html#43827)
+[Xwindow](manual.html#43839)
 
 **:set-coords**
 
-[Multi-Joint Manipulators](manual.html#41300)
+[Multi-Joint Manipulators](manual.html#41312)
 
 **:set-face**
 
-[Line and Edge](manual.html#31288)
+[Line and Edge](manual.html#31300)
 
 **:set-grasp**
 
-[Multi-Joint Manipulators](manual.html#41421)
+[Multi-Joint Manipulators](manual.html#41433)
 
 **:set-tool**
 
-[Multi-Joint Manipulators](manual.html#41270)
+[Multi-Joint Manipulators](manual.html#41282)
 
 **:set-val**
 
-[Basic Classes](manual.html#4336)
+[Basic Classes](manual.html#4348)
 
 **:set-window**
 
-[Colors and Colormaps](manual.html#44368)
+[Colors and Colormaps](manual.html#44380)
 
 **:size**
 
-[Viewport](manual.html#35977) | [Pixel-Image](manual.html#38603) |
-[Color-Pixel-Image](manual.html#38983) | [Xwindow](manual.html#43728) |
-[Colors and Colormaps](manual.html#44347)
+[Viewport](manual.html#35989) | [Pixel-Image](manual.html#38615) |
+[Color-Pixel-Image](manual.html#38995) | [Xwindow](manual.html#43740) |
+[Colors and Colormaps](manual.html#44359)
 
 **:slots**
 
-[Basic Classes](manual.html#4206) | [Basic Classes](manual.html#4305) |
-[Basic Classes](manual.html#4440)
+[Basic Classes](manual.html#4218) | [Basic Classes](manual.html#4317) |
+[Basic Classes](manual.html#4452)
 
 **:span**
 
-[Multi-Joint Manipulators](manual.html#41350)
+[Multi-Joint Manipulators](manual.html#41362)
 
 **:stipple**
 
-[Graphic Context](manual.html#44056)
+[Graphic Context](manual.html#44068)
 
 **:store**
 
-[Colors and Colormaps](manual.html#44166) | [Colors and
-Colormaps](manual.html#44177)
+[Colors and Colormaps](manual.html#44178) | [Colors and
+Colormaps](manual.html#44189)
 
 **:store-hls**
 
-[Colors and Colormaps](manual.html#44189)
+[Colors and Colormaps](manual.html#44201)
 
 **:string**
 
-[Xwindow](manual.html#43312)
+[Xwindow](manual.html#43324)
 
 **:subclasses**
 
-[Basic Classes](manual.html#4470)
+[Basic Classes](manual.html#4482)
 
 **:subimage**
 
-[Pixel-Image](manual.html#38687)
+[Pixel-Image](manual.html#38699)
 
 **:subwindows**
 
-[Xwindow](manual.html#43625)
+[Xwindow](manual.html#43637)
 
 **:super**
 
-[Basic Classes](manual.html#4376)
+[Basic Classes](manual.html#4388)
 
 **:tile**
 
-[Graphic Context](manual.html#44045)
+[Graphic Context](manual.html#44057)
 
 **:title**
 
-[Xwindow](manual.html#43658)
+[Xwindow](manual.html#43670)
 
 **:tool**
 
-[Multi-Joint Manipulators](manual.html#41260)
+[Multi-Joint Manipulators](manual.html#41272)
 
 **:track**
 
-[Tracking](manual.html#39511)
+[Tracking](manual.html#39523)
 
 **:track-and-search**
 
-[Tracking](manual.html#39531)
+[Tracking](manual.html#39543)
 
 **:transform**
 
-[Coordinates](manual.html#27691) | [CascadedCoords](manual.html#28018)
+[Coordinates](manual.html#27703) | [CascadedCoords](manual.html#28030)
 
 **:transform-normal**
 
-[Plane and Face](manual.html#31595)
+[Plane and Face](manual.html#31607)
 
 **:transform-vector**
 
-[Coordinates](manual.html#27671) | [CascadedCoords](manual.html#27986)
+[Coordinates](manual.html#27683) | [CascadedCoords](manual.html#27998)
 
 **:transformation**
 
-[Coordinates](manual.html#27794)
+[Coordinates](manual.html#27806)
 
 **:translate**
 
-[Coordinates](manual.html#27715) | [CascadedCoords](manual.html#28029)
+[Coordinates](manual.html#27727) | [CascadedCoords](manual.html#28041)
 
 **:translate-vertices**
 
-[Body](manual.html#31881)
+[Body](manual.html#31893)
 
 **:transpose**
 
-[Pixel-Image](manual.html#38613)
+[Pixel-Image](manual.html#38625)
 
 **:type-conversion**
 
-[PostgreSQL](manual.html#50320)
+[PostgreSQL](manual.html#50332)
 
 **:unfix**
 
-[Multi-Joint Manipulators](manual.html#41455)
+[Multi-Joint Manipulators](manual.html#41467)
 
 **:union**
 
-[Miscellaneous Geometric Functions](manual.html#30797)
+[Miscellaneous Geometric Functions](manual.html#30809)
 
 **:unmap**
 
-[Xwindow](manual.html#43579)
+[Xwindow](manual.html#43591)
 
 **:update**
 
-[CascadedCoords](manual.html#27945) | [Tracking](manual.html#39572)
+[CascadedCoords](manual.html#27957) | [Tracking](manual.html#39584)
 
 **:value**
 
-[Panel Items](manual.html#47784) | [Panel Items](manual.html#47872) |
-[Panel Items](manual.html#47920)
+[Panel Items](manual.html#47796) | [Panel Items](manual.html#47884) |
+[Panel Items](manual.html#47932)
 
 **:vel**
 
-[Tracking](manual.html#39551)
+[Tracking](manual.html#39563)
 
 **:vertex**
 
-[Plane and Face](manual.html#31528)
+[Plane and Face](manual.html#31540)
 
 **:vertices**
 
-[Line and Edge](manual.html#30931) | [Plane and Face](manual.html#31518)
-| [Body](manual.html#31925)
+[Line and Edge](manual.html#30943) | [Plane and Face](manual.html#31530)
+| [Body](manual.html#31937)
 
 **:view**
 
-[Projection](manual.html#35717)
+[Projection](manual.html#35729)
 
 **:view-angle**
 
-[Projection](manual.html#35864)
+[Projection](manual.html#35876)
 
 **:view-direction**
 
-[Viewing](manual.html#35592)
+[Viewing](manual.html#35604)
 
 **:view-right**
 
-[Viewing](manual.html#35612)
+[Viewing](manual.html#35624)
 
 **:view-up**
 
-[Viewing](manual.html#35602)
+[Viewing](manual.html#35614)
 
 **:viewdistance**
 
-[Projection](manual.html#35852)
+[Projection](manual.html#35864)
 
 **:viewing**
 
-[Viewer](manual.html#36071)
+[Viewer](manual.html#36083)
 
 **:viewpoint**
 
-[Viewing](manual.html#35582)
+[Viewing](manual.html#35594)
 
 **:viewport**
 
-[Viewer](manual.html#36083)
+[Viewer](manual.html#36095)
 
 **:viewsurface**
 
-[Viewer](manual.html#36095)
+[Viewer](manual.html#36107)
 
 **:visual**
 
-[Xwindow](manual.html#43678)
+[Xwindow](manual.html#43690)
 
 **:volume**
 
-[Miscellaneous Geometric Functions](manual.html#30752) |
-[Body](manual.html#31985)
+[Miscellaneous Geometric Functions](manual.html#30764) |
+[Body](manual.html#31997)
 
 **:wait**
 
-[Synchronization](manual.html#25952)
+[Synchronization](manual.html#25964)
 
 **:weekday**
 
-[Date and Time](manual.html#14811)
+[Date and Time](manual.html#14823)
 
 **:width**
 
-[Viewport](manual.html#35987) | [Pixel-Image](manual.html#38583) |
-[Color-Pixel-Image](manual.html#38963) | [Xwindow](manual.html#43173)
+[Viewport](manual.html#35999) | [Pixel-Image](manual.html#38595) |
+[Color-Pixel-Image](manual.html#38975) | [Xwindow](manual.html#43185)
 
 **:win-col-max**
 
-[Text Window](manual.html#48128)
+[Text Window](manual.html#48140)
 
 **:win-row-max**
 
-[Text Window](manual.html#48118)
+[Text Window](manual.html#48130)
 
 **:window-rectangle**
 
-[Tracking](manual.html#39480)
+[Tracking](manual.html#39492)
 
 **:worldcoords**
 
-[Coordinates](manual.html#27641) | [CascadedCoords](manual.html#27956)
+[Coordinates](manual.html#27653) | [CascadedCoords](manual.html#27968)
 
 **:worldcoords**
 
-[Multi-Joint Manipulators](manual.html#41290)
+[Multi-Joint Manipulators](manual.html#41302)
 
 **:worldpos**
 
-[Coordinates](manual.html#27619) | [CascadedCoords](manual.html#27966)
+[Coordinates](manual.html#27631) | [CascadedCoords](manual.html#27978)
 
 **:worldrot**
 
-[Coordinates](manual.html#27630) | [CascadedCoords](manual.html#27976)
+[Coordinates](manual.html#27642) | [CascadedCoords](manual.html#27988)
 
 **:write**
 
-[Synchronization](manual.html#25992)
+[Synchronization](manual.html#26004)
 
 **:write-to-bitmap-file**
 
-[Xwindow](manual.html#43476)
+[Xwindow](manual.html#43488)
 
 **:x**
 
-[Xwindow](manual.html#43206)
+[Xwindow](manual.html#43218)
 
 **:xcenter**
 
-[Viewport](manual.html#35957)
+[Viewport](manual.html#35969)
 
 **:xpicture**
 
-[Pixel-Image](manual.html#38701)
+[Pixel-Image](manual.html#38713)
 
 **:xy**
 
-[Text Window](manual.html#48138)
+[Text Window](manual.html#48150)
 
 **:y**
 
-[Xwindow](manual.html#43217)
+[Xwindow](manual.html#43229)
 
 **:ycenter**
 
-[Viewport](manual.html#35967)
+[Viewport](manual.html#35979)
 
 **:year**
 
-[Date and Time](manual.html#14781)
+[Date and Time](manual.html#14793)
 
 **:year-day**
 
-[Date and Time](manual.html#14861)
+[Date and Time](manual.html#14873)
 
 **:yon**
 
-[Projection](manual.html#35748)
+[Projection](manual.html#35760)
 
 **:zoom**
 
-[Projection](manual.html#35876)
+[Projection](manual.html#35888)
 
 **![$\>$](manual-img15.png)**
 
-[Arithmetic Predicates](manual.html#5895)
+[Arithmetic Predicates](manual.html#5907)
 
 **![$<$](manual-img8.png)**
 
-[Arithmetic Predicates](manual.html#5913)
+[Arithmetic Predicates](manual.html#5925)
 
 **![$\>=$](manual-img16.png)**
 
-[Arithmetic Predicates](manual.html#5931)
+[Arithmetic Predicates](manual.html#5943)
 
 **![$<=$](manual-img17.png)**
 
-[Arithmetic Predicates](manual.html#5949)
+[Arithmetic Predicates](manual.html#5961)
 
 **=**
 
-[Arithmetic Predicates](manual.html#5879)
+[Arithmetic Predicates](manual.html#5891)
 
 **abs**
 
-[Generic Number Functions](manual.html#6192)
+[Generic Number Functions](manual.html#6204)
 
 **acons**
 
-[Lists](manual.html#10895)
+[Lists](manual.html#10907)
 
 **acos**
 
-[Trigonometric and Related Functions](manual.html#6453)
+[Trigonometric and Related Functions](manual.html#6465)
 
 **acosh**
 
-[Trigonometric and Related Functions](manual.html#6485)
+[Trigonometric and Related Functions](manual.html#6497)
 
 **adjoin**
 
-[Lists](manual.html#10998)
+[Lists](manual.html#11010)
 
 **alpha-char-p**
 
-[Characters and Strings](manual.html#11419)
+[Characters and Strings](manual.html#11431)
 
 **alphanumeric-p**
 
-[Characters and Strings](manual.html#11452)
+[Characters and Strings](manual.html#11464)
 
 **and**
 
-[Conditionals](manual.html#2190)
+[Conditionals](manual.html#2194)
 
 **animation**
 
-[Demonstrations](manual.html#598) | [Animation](manual.html#35463)
+[Demonstrations](manual.html#598) | [Animation](manual.html#35475)
 
 **append**
 
-[Lists](manual.html#10908)
+[Lists](manual.html#10920)
 
 **apply**
 
-[Evaluators](manual.html#18673)
+[Evaluators](manual.html#18685)
 
 **apropos**
 
-[Debugging Aid](manual.html#19362)
+[Debugging Aid](manual.html#19374)
 
 **apropos-list**
 
-[Debugging Aid](manual.html#19374)
+[Debugging Aid](manual.html#19386)
 
 **aref**
 
-[Vectors and Arrays](manual.html#11209)
+[Vectors and Arrays](manual.html#11221)
 
 **array-dimension**
 
-[Vectors and Arrays](manual.html#11303)
+[Vectors and Arrays](manual.html#11315)
 
 **array-dimension-limit**
 
-[Vectors and Arrays](manual.html#11152)
+[Vectors and Arrays](manual.html#11164)
 
 **array-dimensions**
 
-[Vectors and Arrays](manual.html#11293)
+[Vectors and Arrays](manual.html#11305)
 
 **array-entity**
 
-[Foreign Language Interface](manual.html#23403)
+[Foreign Language Interface](manual.html#23415)
 
 **array-rank**
 
-[Vectors and Arrays](manual.html#11282)
+[Vectors and Arrays](manual.html#11294)
 
 **array-rank-limit**
 
-[Vectors and Arrays](manual.html#11142)
+[Vectors and Arrays](manual.html#11154)
 
 **array-total-size**
 
-[Vectors and Arrays](manual.html#11260)
+[Vectors and Arrays](manual.html#11272)
 
 **arrayp**
 
-[Vectors and Arrays](manual.html#11249)
+[Vectors and Arrays](manual.html#11261)
 
 **ash**
 
-[Integer and Bit-Wise Operations](manual.html#6100)
+[Integer and Bit-Wise Operations](manual.html#6112)
 
 **asin**
 
-[Trigonometric and Related Functions](manual.html#6442)
+[Trigonometric and Related Functions](manual.html#6454)
 
 **asinh**
 
-[Trigonometric and Related Functions](manual.html#6475)
+[Trigonometric and Related Functions](manual.html#6487)
 
 **assoc**
 
-[Lists](manual.html#10853)
+[Lists](manual.html#10865)
 
 **assq**
 
-[Lists](manual.html#10842)
+[Lists](manual.html#10854)
 
 **atan**
 
-[Trigonometric and Related Functions](manual.html#6464)
+[Trigonometric and Related Functions](manual.html#6476)
 
 **atanh**
 
-[Trigonometric and Related Functions](manual.html#6495)
+[Trigonometric and Related Functions](manual.html#6507)
 
 **atom**
 
-[Predicates](manual.html#2700)
+[Predicates](manual.html#2706)
 
 **b**
 
 [Type Specifier](manual.html#1261) | [Type Specifier](manual.html#1275)
-| [Geometric Modeling](manual.html#30386)
+| [Geometric Modeling](manual.html#30398)
 
 **base64decode**
 
-[Base64 encoding](manual.html#14374)
+[Base64 encoding](manual.html#14386)
 
 **base64encode**
 
-[Base64 encoding](manual.html#14363)
+[Base64 encoding](manual.html#14375)
 
 **become**
 
-[Instance Management](manual.html#4101)
+[Instance Management](manual.html#4113)
 
 **bit**
 
-[Vectors and Arrays](manual.html#11316)
+[Vectors and Arrays](manual.html#11328)
 
 **bit-and**
 
-[Vectors and Arrays](manual.html#11330)
+[Vectors and Arrays](manual.html#11342)
 
 **bit-eqv**
 
-[Vectors and Arrays](manual.html#11363)
+[Vectors and Arrays](manual.html#11375)
 
 **bit-ior**
 
-[Vectors and Arrays](manual.html#11341)
+[Vectors and Arrays](manual.html#11353)
 
 **bit-nand**
 
-[Vectors and Arrays](manual.html#11374)
+[Vectors and Arrays](manual.html#11386)
 
 **bit-nor**
 
-[Vectors and Arrays](manual.html#11385)
+[Vectors and Arrays](manual.html#11397)
 
 **bit-not**
 
-[Vectors and Arrays](manual.html#11396)
+[Vectors and Arrays](manual.html#11408)
 
 **bit-xor**
 
-[Vectors and Arrays](manual.html#11352)
+[Vectors and Arrays](manual.html#11364)
 
 **bitmap-button-item**
 
-[Panel Items](manual.html#47683)
+[Panel Items](manual.html#47695)
 
 **block**
 
-[Blocks and Exits](manual.html#2385)
+[Blocks and Exits](manual.html#2389)
 
 **body**
 
-[Body](manual.html#31853) | [Bodies in Contact](manual.html#34787)
+[Body](manual.html#31865) | [Bodies in Contact](manual.html#34799)
 
 **body\***
 
-[Body Composition](manual.html#32448)
+[Body Composition](manual.html#32460)
 
 **body+**
 
-[Body Composition](manual.html#32426)
+[Body Composition](manual.html#32438)
 
 **body-**
 
-[Body Composition](manual.html#32437)
+[Body Composition](manual.html#32449)
 
 **body-interference**
 
-[Body Composition](manual.html#32473)
+[Body Composition](manual.html#32485)
 
 **body/**
 
-[Body Composition](manual.html#32462)
+[Body Composition](manual.html#32474)
 
 **boundary**
 
-[Edge Finder](manual.html#39254)
+[Edge Finder](manual.html#39266)
 
 **bounding-box**
 
-[Miscellaneous Geometric Functions](manual.html#30724)
+[Miscellaneous Geometric Functions](manual.html#30736)
 
 **bounding-box-intersection**
 
-[Miscellaneous Geometric Functions](manual.html#30899)
+[Miscellaneous Geometric Functions](manual.html#30911)
 
 **bounding-box-union**
 
-[Miscellaneous Geometric Functions](manual.html#30887)
+[Miscellaneous Geometric Functions](manual.html#30899)
 
 **boundp**
 
-[Symbols](manual.html#7872)
+[Symbols](manual.html#7884)
 
 **break**
 
-[Debugging Aid](manual.html#19337)
+[Debugging Aid](manual.html#19349)
 
 **btrace**
 
-[Debugging Aid](manual.html#19418)
+[Debugging Aid](manual.html#19430)
 
 **BufferTextWindow**
 
-[Text Window](manual.html#48311)
+[Text Window](manual.html#48323)
 
 **butlast**
 
-[Lists](manual.html#10720)
+[Lists](manual.html#10732)
 
 **button-item**
 
-[Panel Items](manual.html#47563)
+[Panel Items](manual.html#47575)
 
 **c**
 
 [Type Specifier](manual.html#1257) | [Type Specifier](manual.html#1271)
-| [CascadedCoords](manual.html#27896)
+| [CascadedCoords](manual.html#27908)
 
 **caaar**
 
-[Lists](manual.html#10591)
+[Lists](manual.html#10603)
 
 **caadr**
 
-[Lists](manual.html#10580)
+[Lists](manual.html#10592)
 
 **caar**
 
-[Lists](manual.html#10558)
+[Lists](manual.html#10570)
 
 **caddr**
 
-[Lists](manual.html#10569)
+[Lists](manual.html#10581)
 
 **cadr**
 
-[Lists](manual.html#10525)
+[Lists](manual.html#10537)
 
 **canvas**
 
-[Canvas](manual.html#47985)
+[Canvas](manual.html#47997)
 
 **car**
 
-[Lists](manual.html#10499)
+[Lists](manual.html#10511)
 
 **cascaded-coords**
 
-[CascadedCoords](manual.html#27877)
+[CascadedCoords](manual.html#27889)
 
 **cascoords**
 
-[CascadedCoords](manual.html#28106)
+[CascadedCoords](manual.html#28118)
 
 **case**
 
-[Conditionals](manual.html#2277)
+[Conditionals](manual.html#2281)
 
 **catch**
 
-[Blocks and Exits](manual.html#2423)
+[Blocks and Exits](manual.html#2427)
 
 **cd**
 
-[Unix Processes](manual.html#23252)
+[Unix Processes](manual.html#23264)
 
 **cdaar**
 
-[Lists](manual.html#10624)
+[Lists](manual.html#10636)
 
 **cdadr**
 
-[Lists](manual.html#10602) | [Lists](manual.html#10613)
+[Lists](manual.html#10614) | [Lists](manual.html#10625)
 
 **cdar**
 
-[Lists](manual.html#10547)
+[Lists](manual.html#10559)
 
 **cddar**
 
-[Lists](manual.html#10657)
+[Lists](manual.html#10669)
 
 **cdddr**
 
-[Lists](manual.html#10635) | [Lists](manual.html#10646)
+[Lists](manual.html#10647) | [Lists](manual.html#10658)
 
 **cddr**
 
-[Lists](manual.html#10536)
+[Lists](manual.html#10548)
 
 **cdr**
 
-[Lists](manual.html#10512)
+[Lists](manual.html#10524)
 
 **ceiling**
 
-[Generic Number Functions](manual.html#6224)
+[Generic Number Functions](manual.html#6236)
 
 **char**
 
-[Characters and Strings](manual.html#11485)
+[Characters and Strings](manual.html#11497)
 
 **char-downcase**
 
-[Characters and Strings](manual.html#11474)
+[Characters and Strings](manual.html#11486)
 
 **char-upcase**
 
-[Characters and Strings](manual.html#11463)
+[Characters and Strings](manual.html#11475)
 
 **choice-item**
 
-[Panel Items](manual.html#47751)
+[Panel Items](manual.html#47763)
 
 **class**
 
-[Instance Management](manual.html#4123)
+[Instance Management](manual.html#4135)
 
 **class-hierarchy**
 
-[Classes and Methods](manual.html#3927)
+[Classes and Methods](manual.html#3939)
 
 **classp**
 
-[Classes and Methods](manual.html#3881)
+[Classes and Methods](manual.html#3893)
 
 **close**
 
-[Streams](manual.html#15730)
+[Streams](manual.html#15742)
 
 **coerce**
 
-[General Sequences](manual.html#10093)
+[General Sequences](manual.html#10105)
 
 **collinear-p**
 
-[Miscellaneous Geometric Functions](manual.html#30554)
+[Miscellaneous Geometric Functions](manual.html#30566)
 
 **color-pixel-image**
 
-[Color-Pixel-Image](manual.html#38945)
+[Color-Pixel-Image](manual.html#38957)
 
 **colormap**
 
-[Colors and Colormaps](manual.html#44118)
+[Colors and Colormaps](manual.html#44130)
 
 **compcrypt**
 
-[DES cryptography](manual.html#14425)
+[DES cryptography](manual.html#14437)
 
 **compile**
 
-[Compilation](manual.html#19121)
+[Compilation](manual.html#19133)
 
 **compile-file**
 
-[Compilation](manual.html#19100)
+[Compilation](manual.html#19112)
 
 **compile-file-if-src-newer**
 
-[Compilation](manual.html#19134)
+[Compilation](manual.html#19146)
 
 **compiled-function-p**
 
-[Predicates](manual.html#2759)
+[Predicates](manual.html#2765)
 
 **concatenate**
 
-[General Sequences](manual.html#10078)
+[General Sequences](manual.html#10090)
 
 **concatenate-lut**
 
-[Look-Up Tables (LUT)](manual.html#38456)
+[Look-Up Tables (LUT)](manual.html#38468)
 
 **cond**
 
-[Conditionals](manual.html#2259)
+[Conditionals](manual.html#2263)
 
 **connect-server**
 
-[Sockets](manual.html#16272)
+[Sockets](manual.html#16284)
 
 **cons**
 
-[Lists](manual.html#10731)
+[Lists](manual.html#10743)
 
 **consp**
 
-[Lists](manual.html#10489)
+[Lists](manual.html#10501)
 
 **constantp**
 
-[Symbols](manual.html#8052)
+[Symbols](manual.html#8064)
 
 **constants**
 
-[Debugging Aid](manual.html#19385)
+[Debugging Aid](manual.html#19397)
 
 **constrained-force**
 
-[Bodies in Contact](manual.html#34826)
+[Bodies in Contact](manual.html#34838)
 
 **constrained-motion**
 
-[Bodies in Contact](manual.html#34815)
+[Bodies in Contact](manual.html#34827)
 
 **convex-hull-3d**
 
-[Primitive Body Creation](manual.html#32370)
+[Primitive Body Creation](manual.html#32382)
 
 **coordinates**
 
-[Coordinates](manual.html#27521)
+[Coordinates](manual.html#27533)
 
 **coordinates-axes**
 
-[Coordinates-axes](manual.html#32485)
+[Coordinates-axes](manual.html#32497)
 
 **coordinates-p**
 
-[Coordinates](manual.html#27538)
+[Coordinates](manual.html#27550)
 
 **coords**
 
-[CascadedCoords](manual.html#28095)
+[CascadedCoords](manual.html#28107)
 
 **copy-matrix**
 
-[Matrix and Transformation](manual.html#27335)
+[Matrix and Transformation](manual.html#27347)
 
 **copy-object**
 
-[Instance Management](manual.html#4085)
+[Instance Management](manual.html#4097)
 
 **copy-readtable**
 
-[Reader](manual.html#15903)
+[Reader](manual.html#15915)
 
 **copy-seq**
 
-[General Sequences](manual.html#10038)
+[General Sequences](manual.html#10050)
 
 **copy-tree**
 
-[Lists](manual.html#11085)
+[Lists](manual.html#11097)
 
 **cos**
 
-[Trigonometric and Related Functions](manual.html#6376)
+[Trigonometric and Related Functions](manual.html#6388)
 
 **cosh**
 
-[Trigonometric and Related Functions](manual.html#6412)
+[Trigonometric and Related Functions](manual.html#6424)
 
 **count**
 
-[General Sequences](manual.html#10279)
+[General Sequences](manual.html#10291)
 
 **count-if**
 
-[General Sequences](manual.html#10293)
+[General Sequences](manual.html#10305)
 
 **count-if-not**
 
-[General Sequences](manual.html#10305)
+[General Sequences](manual.html#10317)
 
 **crypt**
 
-[DES cryptography](manual.html#14385)
+[DES cryptography](manual.html#14397)
 
 **curved-edge-segment**
 
-[Edge Finder](manual.html#39308)
+[Edge Finder](manual.html#39320)
 
 **cut-body**
 
-[Body Composition](manual.html#32415)
+[Body Composition](manual.html#32427)
 
 **d**
 
@@ -14599,227 +14611,227 @@ Colormaps](manual.html#44177)
 
 **dated-file-name**
 
-[File-name generation](manual.html#16478)
+[File-name generation](manual.html#16490)
 
 **dbm-fetch**
 
-[Keyed Indexed Files](manual.html#23240)
+[Keyed Indexed Files](manual.html#23252)
 
 **dbm-open**
 
-[Keyed Indexed Files](manual.html#23206)
+[Keyed Indexed Files](manual.html#23218)
 
 **dbm-store**
 
-[Keyed Indexed Files](manual.html#23225)
+[Keyed Indexed Files](manual.html#23237)
 
 **decf**
 
-[Generic Number Functions](manual.html#6318)
+[Generic Number Functions](manual.html#6330)
 
 **declare**
 
-[Evaluators](manual.html#18795)
+[Evaluators](manual.html#18807)
 
 **def-async**
 
-[Asynchronous Input/Output](manual.html#16299)
+[Asynchronous Input/Output](manual.html#16311)
 
 **defclass**
 
-[Classes and Methods](manual.html#3847)
+[Classes and Methods](manual.html#3859)
 
 **defclassmethod**
 
-[Classes and Methods](manual.html#3870)
+[Classes and Methods](manual.html#3882)
 
 **defconstant**
 
-[Symbols](manual.html#8023)
+[Symbols](manual.html#8035)
 
 **defforeign**
 
-[Foreign Language Interface](manual.html#23337)
+[Foreign Language Interface](manual.html#23349)
 
 **defmacro**
 
-[Symbols](manual.html#7985)
+[Symbols](manual.html#7997)
 
 **defmethod**
 
-[Classes and Methods](manual.html#3858)
+[Classes and Methods](manual.html#3870)
 
 **defparameter**
 
-[Symbols](manual.html#8009)
+[Symbols](manual.html#8021)
 
 **defun**
 
-[Symbols](manual.html#7971)
+[Symbols](manual.html#7983)
 
 **defun-c-callable**
 
-[Foreign Language Interface](manual.html#23365)
+[Foreign Language Interface](manual.html#23377)
 
 **defvar**
 
-[Symbols](manual.html#7995)
+[Symbols](manual.html#8007)
 
 **deg2rad**
 
-[Generic Number Functions](manual.html#6355)
+[Generic Number Functions](manual.html#6367)
 
 **delete**
 
-[General Sequences](manual.html#10366)
+[General Sequences](manual.html#10378)
 
 **delete-if**
 
-[General Sequences](manual.html#10381)
+[General Sequences](manual.html#10393)
 
 **delete-if-not**
 
-[General Sequences](manual.html#10392)
+[General Sequences](manual.html#10404)
 
 **delete-method**
 
-[Classes and Methods](manual.html#3917)
+[Classes and Methods](manual.html#3929)
 
 **derivedp**
 
-[Instance Management](manual.html#4134)
+[Instance Management](manual.html#4146)
 
 **describe**
 
-[Debugging Aid](manual.html#19290)
+[Debugging Aid](manual.html#19302)
 
 **describe-list**
 
-[Debugging Aid](manual.html#19301)
+[Debugging Aid](manual.html#19313)
 
 **digit-char-p**
 
-[Characters and Strings](manual.html#11408)
+[Characters and Strings](manual.html#11420)
 
 **digits-string**
 
-[File-name generation](manual.html#16447)
+[File-name generation](manual.html#16459)
 
 **dir**
 
-[File System Interface](manual.html#16580)
+[File System Interface](manual.html#16592)
 
 **directory**
 
-[File System Interface](manual.html#16569)
+[File System Interface](manual.html#16581)
 
 **directory-p**
 
-[File System Interface](manual.html#16510)
+[File System Interface](manual.html#16522)
 
 **display-events**
 
-[X Event](manual.html#47211)
+[X Event](manual.html#47223)
 
 **distance**
 
-[Float-vectors](manual.html#27142)
+[Float-vectors](manual.html#27154)
 
 **distance2**
 
-[Float-vectors](manual.html#27152)
+[Float-vectors](manual.html#27164)
 
 **do**
 
-[Iteration](manual.html#2532)
+[Iteration](manual.html#2538)
 
 **do\***
 
-[Iteration](manual.html#2552)
+[Iteration](manual.html#2558)
 
 **do-all-symbols**
 
-[Packages](manual.html#8402)
+[Packages](manual.html#8414)
 
 **do-external-symbols**
 
-[Packages](manual.html#8390)
+[Packages](manual.html#8402)
 
 **do-symbols**
 
-[Packages](manual.html#8378)
+[Packages](manual.html#8390)
 
 **documentation**
 
-[Symbols](manual.html#8062)
+[Symbols](manual.html#8074)
 
 **dolist**
 
-[Iteration](manual.html#2582)
+[Iteration](manual.html#2588)
 
 **dotimes**
 
-[Iteration](manual.html#2567)
+[Iteration](manual.html#2573)
 
 **double2float**
 
-[Foreign Language Interface](manual.html#23423)
+[Foreign Language Interface](manual.html#23435)
 
 **dpb**
 
-[Integer and Bit-Wise Operations](manual.html#6130)
+[Integer and Bit-Wise Operations](manual.html#6142)
 
 **draw**
 
-[Drawings](manual.html#36389)
+[Drawings](manual.html#36401)
 
 **draw-arrow**
 
-[Drawings](manual.html#36418)
+[Drawings](manual.html#36430)
 
 **draw-axis**
 
-[Drawings](manual.html#36404)
+[Drawings](manual.html#36416)
 
 **draw-boundaries**
 
-[Edge Finder](manual.html#39379)
+[Edge Finder](manual.html#39391)
 
 **draw-boundary**
 
-[Edge Finder](manual.html#39366)
+[Edge Finder](manual.html#39378)
 
 **draw-constraint**
 
-[Bodies in Contact](manual.html#34836)
+[Bodies in Contact](manual.html#34848)
 
 **draw-ellipse-segment**
 
-[Edge Finder](manual.html#39325)
+[Edge Finder](manual.html#39337)
 
 **draw-line-segment**
 
-[Edge Finder](manual.html#39339)
+[Edge Finder](manual.html#39351)
 
 **draw-motion**
 
-[Bodies in Contact](manual.html#34847)
+[Bodies in Contact](manual.html#34859)
 
 **draw-segments**
 
-[Edge Finder](manual.html#39352)
+[Edge Finder](manual.html#39364)
 
 **dump-loadable-structure**
 
-[Dump Objects](manual.html#19561)
+[Dump Objects](manual.html#19573)
 
 **dump-object**
 
-[Dump Objects](manual.html#19539)
+[Dump Objects](manual.html#19551)
 
 **dump-structure**
 
-[Dump Objects](manual.html#19550)
+[Dump Objects](manual.html#19562)
 
 **e**
 
@@ -14827,1491 +14839,1491 @@ Colormaps](manual.html#44177)
 
 **edge**
 
-[Line and Edge](manual.html#31153)
+[Line and Edge](manual.html#31165)
 
 **edge-segment**
 
-[Edge Finder](manual.html#39272)
+[Edge Finder](manual.html#39284)
 
 **edge1**
 
-[Edge Finder](manual.html#39186)
+[Edge Finder](manual.html#39198)
 
 **edge2**
 
-[Edge Finder](manual.html#39223)
+[Edge Finder](manual.html#39235)
 
 **elt**
 
-[General Sequences](manual.html#9987)
+[General Sequences](manual.html#9999)
 
 **eps![$<$](manual-img8.png)**
 
-[Miscellaneous Geometric Functions](manual.html#30683)
+[Miscellaneous Geometric Functions](manual.html#30695)
 
 **eps![$<=$](manual-img17.png)**
 
-[Miscellaneous Geometric Functions](manual.html#30693)
+[Miscellaneous Geometric Functions](manual.html#30705)
 
 **eps![$\>$](manual-img15.png)**
 
-[Miscellaneous Geometric Functions](manual.html#30703)
+[Miscellaneous Geometric Functions](manual.html#30715)
 
 **eps![$\>=$](manual-img16.png)**
 
-[Miscellaneous Geometric Functions](manual.html#30713)
+[Miscellaneous Geometric Functions](manual.html#30725)
 
 **eps=**
 
-[Miscellaneous Geometric Functions](manual.html#30670)
+[Miscellaneous Geometric Functions](manual.html#30682)
 
 **eq**
 
-[Predicates](manual.html#2623)
+[Predicates](manual.html#2629)
 
 **eql**
 
-[Predicates](manual.html#2639)
+[Predicates](manual.html#2645)
 
 **equal**
 
-[Predicates](manual.html#2651)
+[Predicates](manual.html#2657)
 
 **error**
 
-[Evaluators](manual.html#18862)
+[Evaluators](manual.html#18874)
 
 **escape-url**
 
-[HTTP Client](manual.html#50682)
+[HTTP Client](manual.html#50694)
 
 **escaped-url-string-from-namestring**
 
-[HTTP Client](manual.html#50700)
+[HTTP Client](manual.html#50712)
 
 **euc2sjis**
 
-[Japanese Text](manual.html#14279)
+[Japanese Text](manual.html#14291)
 
 **Euler-angle**
 
-[Matrix and Transformation](manual.html#27444)
+[Matrix and Transformation](manual.html#27456)
 
 **Euler-matrix**
 
-[Matrix and Transformation](manual.html#27431)
+[Matrix and Transformation](manual.html#27443)
 
 **euscomp**
 
-[Compilation](manual.html#19090)
+[Compilation](manual.html#19102)
 
 **euserror**
 
-[Top-level Interaction](manual.html#19009)
+[Top-level Interaction](manual.html#19021)
 
 **eussig**
 
-[Top-level Interaction](manual.html#18988)
+[Top-level Interaction](manual.html#19000)
 
 **eustop**
 
-[Top-level Interaction](manual.html#18978)
+[Top-level Interaction](manual.html#18990)
 
 **eval**
 
-[Evaluators](manual.html#18661)
+[Evaluators](manual.html#18673)
 
 **eval-dynamic**
 
-[Evaluators](manual.html#18738)
+[Evaluators](manual.html#18750)
 
 **eval-when**
 
-[Evaluators](manual.html#18761)
+[Evaluators](manual.html#18773)
 
 **evalhook**
 
-[Evaluators](manual.html#18725)
+[Evaluators](manual.html#18737)
 
 **evenp**
 
-[Arithmetic Predicates](manual.html#5855)
+[Arithmetic Predicates](manual.html#5867)
 
 **event**
 
-[X Event](manual.html#47074)
+[X Event](manual.html#47086)
 
 **event-height**
 
-[X Event](manual.html#47186)
+[X Event](manual.html#47198)
 
 **event-state**
 
-[X Event](manual.html#47198)
+[X Event](manual.html#47210)
 
 **event-type**
 
-[X Event](manual.html#47095)
+[X Event](manual.html#47107)
 
 **event-width**
 
-[X Event](manual.html#47174)
+[X Event](manual.html#47186)
 
 **event-window**
 
-[X Event](manual.html#47139)
+[X Event](manual.html#47151)
 
 **event-x**
 
-[X Event](manual.html#47150)
+[X Event](manual.html#47162)
 
 **event-y**
 
-[X Event](manual.html#47162)
+[X Event](manual.html#47174)
 
 **every**
 
-[Predicates](manual.html#2712)
+[Predicates](manual.html#2718)
 
 **exit**
 
-[Top-level Interaction](manual.html#19030)
+[Top-level Interaction](manual.html#19042)
 
 **exp**
 
-[Trigonometric and Related Functions](manual.html#6527)
+[Trigonometric and Related Functions](manual.html#6539)
 
 **expand-tab**
 
-[Text Window](manual.html#48415)
+[Text Window](manual.html#48427)
 
 **export**
 
-[Packages](manual.html#8332)
+[Packages](manual.html#8344)
 
 **expt**
 
-[Trigonometric and Related Functions](manual.html#6538)
+[Trigonometric and Related Functions](manual.html#6550)
 
 **extract-html**
 
-[HTTP Client](manual.html#50744)
+[HTTP Client](manual.html#50756)
 
 **ez**
 
-[Unix Processes](manual.html#23262)
+[Unix Processes](manual.html#23274)
 
 **f**
 
 [Type Specifier](manual.html#1243) | [Type Specifier](manual.html#1249)
-| [Shared Memory](manual.html#16196) | [Evaluators](manual.html#18832) |
-[Evaluators](manual.html#18836) | [Foreign Language
-Interface](manual.html#23389)
+| [Shared Memory](manual.html#16208) | [Evaluators](manual.html#18844) |
+[Evaluators](manual.html#18848) | [Foreign Language
+Interface](manual.html#23401)
 
 **face**
 
-[Plane and Face](manual.html#31650)
+[Plane and Face](manual.html#31662)
 
 **face\***
 
-[Body Composition](manual.html#32401)
+[Body Composition](manual.html#32413)
 
 **face+**
 
-[Body Composition](manual.html#32390)
+[Body Composition](manual.html#32402)
 
 **face-normal-vector**
 
-[Miscellaneous Geometric Functions](manual.html#30464)
+[Miscellaneous Geometric Functions](manual.html#30476)
 
 **farthest**
 
-[Miscellaneous Geometric Functions](manual.html#30474)
+[Miscellaneous Geometric Functions](manual.html#30486)
 
 **farthest-pair**
 
-[Miscellaneous Geometric Functions](manual.html#30486)
+[Miscellaneous Geometric Functions](manual.html#30498)
 
 **fboundp**
 
-[Symbols](manual.html#7884)
+[Symbols](manual.html#7896)
 
 **fcgi-connection**
 
-[Fast-CGI](manual.html#50835)
+[Fast-CGI](manual.html#50847)
 
 **fcgi-loop**
 
-[Fast-CGI](manual.html#50852)
+[Fast-CGI](manual.html#50864)
 
 **file-newer**
 
-[File System Interface](manual.html#16547)
+[File System Interface](manual.html#16559)
 
 **file-size**
 
-[File System Interface](manual.html#16499)
+[File System Interface](manual.html#16511)
 
 **file-write-date**
 
-[File System Interface](manual.html#16534)
+[File System Interface](manual.html#16546)
 
 **fill**
 
-[General Sequences](manual.html#10125)
+[General Sequences](manual.html#10137)
 
 **fill-pointer**
 
-[Vectors and Arrays](manual.html#11271)
+[Vectors and Arrays](manual.html#11283)
 
 **find**
 
-[General Sequences](manual.html#10238)
+[General Sequences](manual.html#10250)
 
 **find-connecting-edge**
 
-[Miscellaneous Geometric Functions](manual.html#30582)
+[Miscellaneous Geometric Functions](manual.html#30594)
 
 **find-coplanar-vertices**
 
-[Miscellaneous Geometric Functions](manual.html#30569)
+[Miscellaneous Geometric Functions](manual.html#30581)
 
 **find-executable**
 
-[File System Interface](manual.html#16522)
+[File System Interface](manual.html#16534)
 
 **find-if**
 
-[General Sequences](manual.html#10255)
+[General Sequences](manual.html#10267)
 
 **find-if-not**
 
-[General Sequences](manual.html#10268)
+[General Sequences](manual.html#10280)
 
 **find-method**
 
-[Basic Classes](manual.html#4491)
+[Basic Classes](manual.html#4503)
 
 **find-package**
 
-[Packages](manual.html#8202)
+[Packages](manual.html#8214)
 
 **find-symbol**
 
-[Packages](manual.html#8156)
+[Packages](manual.html#8168)
 
 **find-visual**
 
-[Colors and Colormaps](manual.html#44479)
+[Colors and Colormaps](manual.html#44491)
 
 **find-xwindow**
 
-[Xlib global variables and](manual.html#43069)
+[Xlib global variables and](manual.html#43081)
 
 **finish-output**
 
-[Printer](manual.html#16027)
+[Printer](manual.html#16039)
 
 **first**
 
-[Lists](manual.html#10668)
+[Lists](manual.html#10680)
 
 **flatten**
 
-[Lists](manual.html#10945)
+[Lists](manual.html#10957)
 
 **flet**
 
-[Local Functions](manual.html#2361)
+[Local Functions](manual.html#2365)
 
 **float**
 
-[Generic Number Functions](manual.html#6246)
+[Generic Number Functions](manual.html#6258)
 
 **float-vector**
 
-[Float-vectors](manual.html#26968)
+[Float-vectors](manual.html#26980)
 
 **float-vector-p**
 
-[Float-vectors](manual.html#26981)
+[Float-vectors](manual.html#26993)
 
 **float2double**
 
-[Foreign Language Interface](manual.html#23413)
+[Foreign Language Interface](manual.html#23425)
 
 **floatp**
 
-[Arithmetic Predicates](manual.html#5802)
+[Arithmetic Predicates](manual.html#5814)
 
 **floor**
 
-[Generic Number Functions](manual.html#6213)
+[Generic Number Functions](manual.html#6225)
 
 **font-a14**
 
-[Xlib global variables and](manual.html#43023)
+[Xlib global variables and](manual.html#43035)
 
 **font-cour10**
 
-[Xlib global variables and](manual.html#42902)
+[Xlib global variables and](manual.html#42914)
 
 **font-cour12**
 
-[Xlib global variables and](manual.html#42913)
+[Xlib global variables and](manual.html#42925)
 
 **font-cour14**
 
-[Xlib global variables and](manual.html#42924)
+[Xlib global variables and](manual.html#42936)
 
 **font-cour18**
 
-[Xlib global variables and](manual.html#42935)
+[Xlib global variables and](manual.html#42947)
 
 **font-cour8**
 
-[Xlib global variables and](manual.html#42891)
+[Xlib global variables and](manual.html#42903)
 
 **font-courb12**
 
-[Xlib global variables and](manual.html#42946)
+[Xlib global variables and](manual.html#42958)
 
 **font-courb14**
 
-[Xlib global variables and](manual.html#42957)
+[Xlib global variables and](manual.html#42969)
 
 **font-courb18**
 
-[Xlib global variables and](manual.html#42968)
+[Xlib global variables and](manual.html#42980)
 
 **font-helvetica-12**
 
-[Xlib global variables and](manual.html#42979)
+[Xlib global variables and](manual.html#42991)
 
 **font-helvetica-bold-12**
 
-[Xlib global variables and](manual.html#43012)
+[Xlib global variables and](manual.html#43024)
 
 **font-id**
 
-[Graphic Context](manual.html#44090)
+[Graphic Context](manual.html#44102)
 
 **font-lucidasans-bold-12**
 
-[Xlib global variables and](manual.html#42990)
+[Xlib global variables and](manual.html#43002)
 
 **font-lucidasans-bold-14**
 
-[Xlib global variables and](manual.html#43001)
+[Xlib global variables and](manual.html#43013)
 
 **format**
 
-[Printer](manual.html#16058)
+[Printer](manual.html#16070)
 
 **funcall**
 
-[Evaluators](manual.html#18689)
+[Evaluators](manual.html#18701)
 
 **function**
 
-[Evaluators](manual.html#18714)
+[Evaluators](manual.html#18726)
 
 **functionp**
 
-[Predicates](manual.html#2742)
+[Predicates](manual.html#2748)
 
 **functions**
 
-[Debugging Aid](manual.html#19407)
+[Debugging Aid](manual.html#19419)
 
 **gcontext**
 
-[Graphic Context](manual.html#43882)
+[Graphic Context](manual.html#43894)
 
 **gen**
 
-[HTTP CGI Programming](manual.html#50764)
+[HTTP CGI Programming](manual.html#50776)
 
 **gensym**
 
-[Symbols](manual.html#8073)
+[Symbols](manual.html#8085)
 
 **gentemp**
 
-[Symbols](manual.html#8085)
+[Symbols](manual.html#8097)
 
 **get**
 
-[Symbols](manual.html#7907)
+[Symbols](manual.html#7919)
 
 **get-cgi-query**
 
-[HTTP CGI Programming](manual.html#50794)
+[HTTP CGI Programming](manual.html#50806)
 
 **get-dispatch-macro-character**
 
-[Reader](manual.html#15966)
+[Reader](manual.html#15978)
 
 **get-macro-character**
 
-[Reader](manual.html#15942)
+[Reader](manual.html#15954)
 
 **get-output-stream-string**
 
-[Streams](manual.html#15763)
+[Streams](manual.html#15775)
 
 **gethash**
 
-[Hash Tables](manual.html#11736)
+[Hash Tables](manual.html#11748)
 
 **go**
 
-[Iteration](manual.html#2498)
+[Iteration](manual.html#2504)
 
 **grahamhull**
 
-[Primitive Body Creation](manual.html#32350)
+[Primitive Body Creation](manual.html#32362)
 
 **h**
 
-[Top-level Interaction](manual.html#19051)
+[Top-level Interaction](manual.html#19063)
 
 **hash-table**
 
-[Hash Tables](manual.html#11786)
+[Hash Tables](manual.html#11798)
 
 **hash-table-p**
 
-[Hash Tables](manual.html#11774)
+[Hash Tables](manual.html#11786)
 
 **help**
 
-[Debugging Aid](manual.html#19347)
+[Debugging Aid](manual.html#19359)
 
 **hid**
 
-[Drawings](manual.html#36429)
+[Drawings](manual.html#36441)
 
 **hid-lines-animation**
 
-[Animation](manual.html#36621)
+[Animation](manual.html#36633)
 
 **hid2**
 
-[Drawings](manual.html#36453)
+[Drawings](manual.html#36465)
 
 **hidd**
 
-[Drawings](manual.html#36441)
+[Drawings](manual.html#36453)
 
 **hira2kata**
 
-[Japanese Text](manual.html#14319)
+[Japanese Text](manual.html#14331)
 
 **hls2rgb**
 
-[Drawings](manual.html#36569)
+[Drawings](manual.html#36581)
 
 **hole**
 
-[Plane and Face](manual.html#31802)
+[Plane and Face](manual.html#31814)
 
 **homo-viewport-clip**
 
-[Viewport](manual.html#35925)
+[Viewport](manual.html#35937)
 
 **homo2normal**
 
-[Float-vectors](manual.html#27162)
+[Float-vectors](manual.html#27174)
 
 **homogenize**
 
-[Float-vectors](manual.html#27173)
+[Float-vectors](manual.html#27185)
 
 **html**
 
-[HTTP CGI Programming](manual.html#50774)
+[HTTP CGI Programming](manual.html#50786)
 
 **html-header**
 
-[HTTP CGI Programming](manual.html#50814)
+[HTTP CGI Programming](manual.html#50826)
 
 **html-table**
 
-[HTTP CGI Programming](manual.html#50784)
+[HTTP CGI Programming](manual.html#50796)
 
 **i**
 
-[Type Specifier](manual.html#1239) | [Packages](manual.html#8098) |
-[Streams](manual.html#15644) | [Evaluators](manual.html#18828)
+[Type Specifier](manual.html#1239) | [Packages](manual.html#8110) |
+[Streams](manual.html#15656) | [Evaluators](manual.html#18840)
 
 **iconv-open**
 
-[ICONV - Character Code](manual.html#14339)
+[ICONV - Character Code](manual.html#14351)
 
 **identity**
 
-[Evaluators](manual.html#18641)
+[Evaluators](manual.html#18653)
 
 **if**
 
-[Conditionals](manual.html#2212)
+[Conditionals](manual.html#2216)
 
 **image::read-raw-image**
 
-[Image File I/O](manual.html#39677)
+[Image File I/O](manual.html#39689)
 
 **image::write-raw-image**
 
-[Image File I/O](manual.html#39689)
+[Image File I/O](manual.html#39701)
 
 **import**
 
-[Packages](manual.html#8364)
+[Packages](manual.html#8376)
 
 **in-package**
 
-[Packages](manual.html#8225)
+[Packages](manual.html#8237)
 
 **incf**
 
-[Generic Number Functions](manual.html#6304)
+[Generic Number Functions](manual.html#6316)
 
 **init-xwindow**
 
-[Xwindow](manual.html#43867)
+[Xwindow](manual.html#43879)
 
 **input-stream-p**
 
-[Streams](manual.html#15646)
+[Streams](manual.html#15658)
 
 **inspect**
 
-[Debugging Aid](manual.html#19313)
+[Debugging Aid](manual.html#19325)
 
 **install-error-handler**
 
-[Evaluators](manual.html#18876)
+[Evaluators](manual.html#18888)
 
 **instance**
 
-[Instance Management](manual.html#4061)
+[Instance Management](manual.html#4073)
 
 **instantiate**
 
-[Instance Management](manual.html#4050)
+[Instance Management](manual.html#4062)
 
 **integerp**
 
-[Arithmetic Predicates](manual.html#5789)
+[Arithmetic Predicates](manual.html#5801)
 
 **intern**
 
-[Packages](manual.html#8179)
+[Packages](manual.html#8191)
 
 **intersection**
 
-[Lists](manual.html#11032)
+[Lists](manual.html#11044)
 
 **inverse-matrix**
 
-[LU decomposition](manual.html#27499)
+[LU decomposition](manual.html#27511)
 
 **io-stream-p**
 
-[Streams](manual.html#15668)
+[Streams](manual.html#15680)
 
 **jis2euc**
 
-[Japanese Text](manual.html#14289)
+[Japanese Text](manual.html#14301)
 
 **joystick-item**
 
-[Panel Items](manual.html#47888)
+[Panel Items](manual.html#47900)
 
 **kana-date**
 
-[Japanese Text](manual.html#14299) | [Japanese Text](manual.html#14309)
+[Japanese Text](manual.html#14311) | [Japanese Text](manual.html#14321)
 
 **kata2hira**
 
-[Japanese Text](manual.html#14329)
+[Japanese Text](manual.html#14341)
 
 **kdraw**
 
-[Drawings](manual.html#36507)
+[Drawings](manual.html#36519)
 
 **keywordp**
 
-[Symbols](manual.html#8040)
+[Symbols](manual.html#8052)
 
 **l**
 
-[General Sequences](manual.html#10021)
+[General Sequences](manual.html#10033)
 
 **labels**
 
-[Local Functions](manual.html#2371)
+[Local Functions](manual.html#2375)
 
 **last**
 
-[Lists](manual.html#10710)
+[Lists](manual.html#10722)
 
 **ldb**
 
-[Integer and Bit-Wise Operations](manual.html#6114)
+[Integer and Bit-Wise Operations](manual.html#6126)
 
 **left-most-point**
 
-[Miscellaneous Geometric Functions](manual.html#30638)
+[Miscellaneous Geometric Functions](manual.html#30650)
 
 **left-points**
 
-[Miscellaneous Geometric Functions](manual.html#30606)
+[Miscellaneous Geometric Functions](manual.html#30618)
 
 **length**
 
-[General Sequences](manual.html#10003)
+[General Sequences](manual.html#10015)
 
 **let**
 
-[Sequencing and Lets](manual.html#2335)
+[Sequencing and Lets](manual.html#2339)
 
 **let\***
 
-[Sequencing and Lets](manual.html#2348)
+[Sequencing and Lets](manual.html#2352)
 
 **line**
 
-[Line and Edge](manual.html#30912)
+[Line and Edge](manual.html#30924)
 
 **line-edge-segment**
 
-[Edge Finder](manual.html#39290)
+[Edge Finder](manual.html#39302)
 
 **line-intersection**
 
-[Miscellaneous Geometric Functions](manual.html#30537)
+[Miscellaneous Geometric Functions](manual.html#30549)
 
 **lisp-implementation-type**
 
-[Miscelaneous Functions](manual.html#19588)
+[Miscelaneous Functions](manual.html#19600)
 
 **lisp-implementation-version**
 
-[Miscelaneous Functions](manual.html#19599)
+[Miscelaneous Functions](manual.html#19611)
 
 **list**
 
-[Lists](manual.html#10743)
+[Lists](manual.html#10755)
 
 **list\***
 
-[Lists](manual.html#10754)
+[Lists](manual.html#10766)
 
 **list-all-packages**
 
-[Packages](manual.html#8192)
+[Packages](manual.html#8204)
 
 **list-insert**
 
-[Lists](manual.html#11068)
+[Lists](manual.html#11080)
 
 **list-length**
 
-[Lists](manual.html#10766)
+[Lists](manual.html#10778)
 
 **list-visible-segments**
 
-[Animation](manual.html#36649)
+[Animation](manual.html#36661)
 
 **listp**
 
-[Lists](manual.html#10479)
+[Lists](manual.html#10491)
 
 **load**
 
-[Program Loading](manual.html#19175)
+[Program Loading](manual.html#19187)
 
 **load-files**
 
-[Program Loading](manual.html#19210)
+[Program Loading](manual.html#19222)
 
 **load-foreign**
 
-[Foreign Language Interface](manual.html#23302)
+[Foreign Language Interface](manual.html#23314)
 
 **log**
 
-[Trigonometric and Related Functions](manual.html#6516)
+[Trigonometric and Related Functions](manual.html#6528)
 
 **logand**
 
-[Integer and Bit-Wise Operations](manual.html#6000)
+[Integer and Bit-Wise Operations](manual.html#6012)
 
 **logbitp**
 
-[Integer and Bit-Wise Operations](manual.html#6088)
+[Integer and Bit-Wise Operations](manual.html#6100)
 
 **logeqv**
 
-[Integer and Bit-Wise Operations](manual.html#6033)
+[Integer and Bit-Wise Operations](manual.html#6045)
 
 **logior**
 
-[Integer and Bit-Wise Operations](manual.html#6011)
+[Integer and Bit-Wise Operations](manual.html#6023)
 
 **lognand**
 
-[Integer and Bit-Wise Operations](manual.html#6044)
+[Integer and Bit-Wise Operations](manual.html#6056)
 
 **lognor**
 
-[Integer and Bit-Wise Operations](manual.html#6055)
+[Integer and Bit-Wise Operations](manual.html#6067)
 
 **lognot**
 
-[Integer and Bit-Wise Operations](manual.html#6066)
+[Integer and Bit-Wise Operations](manual.html#6078)
 
 **logtest**
 
-[Integer and Bit-Wise Operations](manual.html#6077)
+[Integer and Bit-Wise Operations](manual.html#6089)
 
 **logxor**
 
-[Integer and Bit-Wise Operations](manual.html#6022)
+[Integer and Bit-Wise Operations](manual.html#6034)
 
 **long-float-epsilon**
 
-[Arithmetic Constants](manual.html#5706)
+[Arithmetic Constants](manual.html#5718)
 
 **look-up**
 
-[Look-Up Tables (LUT)](manual.html#38408)
+[Look-Up Tables (LUT)](manual.html#38420)
 
 **look-up\***
 
-[Look-Up Tables (LUT)](manual.html#38442)
+[Look-Up Tables (LUT)](manual.html#38454)
 
 **look-up2**
 
-[Look-Up Tables (LUT)](manual.html#38425)
+[Look-Up Tables (LUT)](manual.html#38437)
 
 **loop**
 
-[Iteration](manual.html#2609)
+[Iteration](manual.html#2615)
 
 **lower-case-p**
 
-[Characters and Strings](manual.html#11441)
+[Characters and Strings](manual.html#11453)
 
 **lu-decompose**
 
-[LU decomposition](manual.html#27454)
+[LU decomposition](manual.html#27466)
 
 **lu-determinant**
 
-[LU decomposition](manual.html#27477)
+[LU decomposition](manual.html#27489)
 
 **lu-solve**
 
-[LU decomposition](manual.html#27465)
+[LU decomposition](manual.html#27477)
 
 **m**
 
-[Type Specifier](manual.html#1253) | [Reader](manual.html#15840)
+[Type Specifier](manual.html#1253) | [Reader](manual.html#15852)
 
 **m\***
 
-[Matrix and Transformation](manual.html#27276)
+[Matrix and Transformation](manual.html#27288)
 
 **macroexpand**
 
-[Evaluators](manual.html#18749)
+[Evaluators](manual.html#18761)
 
 **make-array**
 
-[Vectors and Arrays](manual.html#11183)
+[Vectors and Arrays](manual.html#11195)
 
 **make-body-from-vertices**
 
-[Primitive Body Creation](manual.html#32380)
+[Primitive Body Creation](manual.html#32392)
 
 **make-bounding-box**
 
-[Miscellaneous Geometric Functions](manual.html#30875)
+[Miscellaneous Geometric Functions](manual.html#30887)
 
 **make-broadcast-stream**
 
-[Streams](manual.html#15774)
+[Streams](manual.html#15786)
 
 **make-cascoords**
 
-[CascadedCoords](manual.html#28084)
+[CascadedCoords](manual.html#28096)
 
 **make-client-socket-stream**
 
-[Sockets](manual.html#16250)
+[Sockets](manual.html#16262)
 
 **make-cone**
 
-[Primitive Body Creation](manual.html#32280)
+[Primitive Body Creation](manual.html#32292)
 
 **make-coords**
 
-[CascadedCoords](manual.html#28073)
+[CascadedCoords](manual.html#28085)
 
 **make-cube**
 
-[Primitive Body Creation](manual.html#32243)
+[Primitive Body Creation](manual.html#32255)
 
 **make-cylinder**
 
-[Primitive Body Creation](manual.html#32268)
+[Primitive Body Creation](manual.html#32280)
 
 **make-dodecahedron**
 
-[Primitive Body Creation](manual.html#32330)
+[Primitive Body Creation](manual.html#32342)
 
 **make-equilevel-lut**
 
-[Look-Up Tables (LUT)](manual.html#38394)
+[Look-Up Tables (LUT)](manual.html#38406)
 
 **make-foreign-string**
 
-[Foreign Strings](manual.html#11700)
+[Foreign Strings](manual.html#11712)
 
 **make-gdome**
 
-[Primitive Body Creation](manual.html#32340)
+[Primitive Body Creation](manual.html#32352)
 
 **make-hash-table**
 
-[Hash Tables](manual.html#11726)
+[Hash Tables](manual.html#11738)
 
 **make-icosahedron**
 
-[Primitive Body Creation](manual.html#32320)
+[Primitive Body Creation](manual.html#32332)
 
 **make-instance**
 
-[Instance Management](manual.html#4071)
+[Instance Management](manual.html#4083)
 
 **make-light-source**
 
-[Drawings](manual.html#36483)
+[Drawings](manual.html#36495)
 
 **make-line**
 
-[Line and Edge](manual.html#31177)
+[Line and Edge](manual.html#31189)
 
 **make-list**
 
-[Lists](manual.html#10778)
+[Lists](manual.html#10790)
 
 **make-matrix**
 
-[Matrix and Transformation](manual.html#27228)
+[Matrix and Transformation](manual.html#27240)
 
 **make-msgq-input-stream**
 
-[Message Queues and FIFOs](manual.html#16198)
+[Message Queues and FIFOs](manual.html#16210)
 
 **make-msgq-output-stream**
 
-[Message Queues and FIFOs](manual.html#16209)
+[Message Queues and FIFOs](manual.html#16221)
 
 **make-package**
 
-[Packages](manual.html#8213)
+[Packages](manual.html#8225)
 
 **make-pathname**
 
-[Pathnames](manual.html#16377)
+[Pathnames](manual.html#16389)
 
 **make-plane**
 
-[Primitive Body Creation](manual.html#32196)
+[Primitive Body Creation](manual.html#32208)
 
 **make-prism**
 
-[Primitive Body Creation](manual.html#32255)
+[Primitive Body Creation](manual.html#32267)
 
 **make-random-state**
 
-[Generic Number Functions](manual.html#6279)
+[Generic Number Functions](manual.html#6291)
 
 **make-server-socket-stream**
 
-[Sockets](manual.html#16240)
+[Sockets](manual.html#16252)
 
 **make-socket-address**
 
-[Sockets](manual.html#16220)
+[Sockets](manual.html#16232)
 
 **make-socket-port**
 
-[Sockets](manual.html#16230)
+[Sockets](manual.html#16242)
 
 **make-solid-of-revolution**
 
-[Primitive Body Creation](manual.html#32294)
+[Primitive Body Creation](manual.html#32306)
 
 **make-string-input-stream**
 
-[Streams](manual.html#15741)
+[Streams](manual.html#15753)
 
 **make-string-output-stream**
 
-[Streams](manual.html#15751)
+[Streams](manual.html#15763)
 
 **make-symbol**
 
-[Packages](manual.html#8168)
+[Packages](manual.html#8180)
 
 **make-text-window-stream**
 
-[Text Window](manual.html#48300)
+[Text Window](manual.html#48312)
 
 **make-torus**
 
-[Primitive Body Creation](manual.html#32309)
+[Primitive Body Creation](manual.html#32321)
 
 **make-vertex-edge-htab**
 
-[Miscellaneous Geometric Functions](manual.html#30594)
+[Miscellaneous Geometric Functions](manual.html#30606)
 
 **make-xwindow**
 
-[Xwindow](manual.html#43857)
+[Xwindow](manual.html#43869)
 
 **makunbound**
 
-[Symbols](manual.html#7895)
+[Symbols](manual.html#7907)
 
 **manipulator**
 
-[Multi-Joint Manipulators](manual.html#41223)
+[Multi-Joint Manipulators](manual.html#41235)
 
 **map**
 
-[General Sequences](manual.html#10111)
+[General Sequences](manual.html#10123)
 
 **map-file**
 
-[Shared Memory](manual.html#16179)
+[Shared Memory](manual.html#16191)
 
 **mapc**
 
-[Lists](manual.html#11099)
+[Lists](manual.html#11111)
 
 **mapcan**
 
-[Lists](manual.html#11127)
+[Lists](manual.html#11139)
 
 **mapcar**
 
-[Lists](manual.html#11113)
+[Lists](manual.html#11125)
 
 **maphash**
 
-[Hash Tables](manual.html#11762)
+[Hash Tables](manual.html#11774)
 
 **matrix**
 
-[Matrix and Transformation](manual.html#27216)
+[Matrix and Transformation](manual.html#27228)
 
 **matrix-column**
 
-[Matrix and Transformation](manual.html#27263)
+[Matrix and Transformation](manual.html#27275)
 
 **matrix-row**
 
-[Matrix and Transformation](manual.html#27250)
+[Matrix and Transformation](manual.html#27262)
 
 **matrixp**
 
-[Matrix and Transformation](manual.html#27238)
+[Matrix and Transformation](manual.html#27250)
 
 **max**
 
-[Generic Number Functions](manual.html#6257)
+[Generic Number Functions](manual.html#6269)
 
 **maxindex**
 
-[Miscellaneous Geometric Functions](manual.html#30497)
+[Miscellaneous Geometric Functions](manual.html#30509)
 
 **member**
 
-[Lists](manual.html#10828)
+[Lists](manual.html#10840)
 
 **memq**
 
-[Lists](manual.html#10816)
+[Lists](manual.html#10828)
 
 **menu-button-item**
 
-[Panel Items](manual.html#47626)
+[Panel Items](manual.html#47638)
 
 **menu-panel**
 
-[Subpanels (menu-panel and menubar-panel)](manual.html#47439)
+[Subpanels (menu-panel and menubar-panel)](manual.html#47451)
 
 **menubar-panel**
 
-[Subpanels (menu-panel and menubar-panel)](manual.html#47494)
+[Subpanels (menu-panel and menubar-panel)](manual.html#47506)
 
 **merge**
 
-[General Sequences](manual.html#10172)
+[General Sequences](manual.html#10184)
 
 **merge-list**
 
-[General Sequences](manual.html#10186)
+[General Sequences](manual.html#10198)
 
 **merge-pathnames**
 
-[Pathnames](manual.html#16390)
+[Pathnames](manual.html#16402)
 
 **metaclass**
 
-[Basic Classes](manual.html#4348)
+[Basic Classes](manual.html#4360)
 
 **midpoint**
 
-[Float-vectors](manual.html#27184)
+[Float-vectors](manual.html#27196)
 
 **min**
 
-[Generic Number Functions](manual.html#6268)
+[Generic Number Functions](manual.html#6280)
 
 **minimal-box**
 
-[Float-vectors](manual.html#27086)
+[Float-vectors](manual.html#27098)
 
 **minusp**
 
-[Arithmetic Predicates](manual.html#5834)
+[Arithmetic Predicates](manual.html#5846)
 
 **mod**
 
-[Integer and Bit-Wise Operations](manual.html#5967)
+[Integer and Bit-Wise Operations](manual.html#5979)
 
 **more**
 
-[Debugging Aid](manual.html#19325)
+[Debugging Aid](manual.html#19337)
 
 **most-negative-fixnum**
 
-[Arithmetic Constants](manual.html#5672)
+[Arithmetic Constants](manual.html#5684)
 
 **most-positive-fixnum**
 
-[Arithmetic Constants](manual.html#5662)
+[Arithmetic Constants](manual.html#5674)
 
 **namestring**
 
-[Pathnames](manual.html#16401)
+[Pathnames](manual.html#16413)
 
 **nconc**
 
-[Lists](manual.html#10920)
+[Lists](manual.html#10932)
 
 **new-history**
 
-[Top-level Interaction](manual.html#19076)
+[Top-level Interaction](manual.html#19088)
 
 **next-event**
 
-[X Event](manual.html#47084)
+[X Event](manual.html#47096)
 
 **norm**
 
-[Float-vectors](manual.html#27110)
+[Float-vectors](manual.html#27122)
 
 **norm2**
 
-[Float-vectors](manual.html#27120)
+[Float-vectors](manual.html#27132)
 
 **normalize-vector**
 
-[Float-vectors](manual.html#27131)
+[Float-vectors](manual.html#27143)
 
 **not**
 
-[Predicates](manual.html#2688)
+[Predicates](manual.html#2694)
 
 **nreverse**
 
-[General Sequences](manual.html#10064)
+[General Sequences](manual.html#10076)
 
 **nstring-downcase**
 
-[Characters and Strings](manual.html#11554)
+[Characters and Strings](manual.html#11566)
 
 **nstring-upcase**
 
-[Characters and Strings](manual.html#11543)
+[Characters and Strings](manual.html#11555)
 
 **nsubstitute**
 
-[General Sequences](manual.html#10442)
+[General Sequences](manual.html#10454)
 
 **nsubstitute-if**
 
-[General Sequences](manual.html#10457)
+[General Sequences](manual.html#10469)
 
 **nsubstitute-if-not**
 
-[General Sequences](manual.html#10468)
+[General Sequences](manual.html#10480)
 
 **nth**
 
-[Lists](manual.html#10682)
+[Lists](manual.html#10694)
 
 **nthcdr**
 
-[Lists](manual.html#10697)
+[Lists](manual.html#10709)
 
 **null**
 
-[Predicates](manual.html#2676)
+[Predicates](manual.html#2682)
 
 **numberp**
 
-[Arithmetic Predicates](manual.html#5778)
+[Arithmetic Predicates](manual.html#5790)
 
 **object**
 
-[Basic Classes](manual.html#4173)
+[Basic Classes](manual.html#4185)
 
 **object-file-p**
 
-[File System Interface](manual.html#16558)
+[File System Interface](manual.html#16570)
 
 **oddp**
 
-[Arithmetic Predicates](manual.html#5844)
+[Arithmetic Predicates](manual.html#5856)
 
 **open**
 
-[Streams](manual.html#15679)
+[Streams](manual.html#15691)
 
 **open-server**
 
-[Sockets](manual.html#16260)
+[Sockets](manual.html#16272)
 
 **or**
 
-[Conditionals](manual.html#2201)
+[Conditionals](manual.html#2205)
 
 **output-stream-p**
 
-[Streams](manual.html#15657)
+[Streams](manual.html#15669)
 
 **overlay-edge**
 
-[Edge Finder](manual.html#39210)
+[Edge Finder](manual.html#39222)
 
 **package-name**
 
-[Packages](manual.html#8237)
+[Packages](manual.html#8249)
 
 **package-nicknames**
 
-[Packages](manual.html#8248)
+[Packages](manual.html#8260)
 
 **package-use-list**
 
-[Packages](manual.html#8272)
+[Packages](manual.html#8284)
 
 **packagep**
 
-[Packages](manual.html#8283)
+[Packages](manual.html#8295)
 
 **pairlis**
 
-[Lists](manual.html#10880)
+[Lists](manual.html#10892)
 
 **panel**
 
-[Panel](manual.html#47250)
+[Panel](manual.html#47262)
 
 **panel-item**
 
-[Panel Items](manual.html#47515)
+[Panel Items](manual.html#47527)
 
 **parallel-viewing**
 
-[Projection](manual.html#35784)
+[Projection](manual.html#35796)
 
 **parse-http-query**
 
-[HTTP CGI Programming](manual.html#50804)
+[HTTP CGI Programming](manual.html#50816)
 
 **parse-namestring**
 
-[Pathnames](manual.html#16412)
+[Pathnames](manual.html#16424)
 
 **pathname**
 
-[Pathnames](manual.html#16328)
+[Pathnames](manual.html#16340)
 
 **pathname-directory**
 
-[Pathnames](manual.html#16341)
+[Pathnames](manual.html#16353)
 
 **pathname-name**
 
-[Pathnames](manual.html#16353)
+[Pathnames](manual.html#16365)
 
 **pathname-type**
 
-[Pathnames](manual.html#16365)
+[Pathnames](manual.html#16377)
 
 **pathnamep**
 
-[Pathnames](manual.html#16317)
+[Pathnames](manual.html#16329)
 
 **peek-char**
 
-[Reader](manual.html#15854)
+[Reader](manual.html#15866)
 
 **perspective-viewing**
 
-[Projection](manual.html#35814)
+[Projection](manual.html#35826)
 
 **pf**
 
-[Printer](manual.html#16136)
+[Printer](manual.html#16148)
 
 **pgsql**
 
-[PostgreSQL](manual.html#50293)
+[PostgreSQL](manual.html#50305)
 
 **pi**
 
-[Arithmetic Constants](manual.html#5718)
+[Arithmetic Constants](manual.html#5730)
 
 **pi/2**
 
-[Arithmetic Constants](manual.html#5738)
+[Arithmetic Constants](manual.html#5750)
 
 **pictdraw**
 
-[Drawings](manual.html#36535) | [Drawings](manual.html#36546)
+[Drawings](manual.html#36547) | [Drawings](manual.html#36558)
 
 **piped-fork**
 
-[Unix Processes](manual.html#23272)
+[Unix Processes](manual.html#23284)
 
 **pixel-image**
 
-[Pixel-Image](manual.html#38560)
+[Pixel-Image](manual.html#38572)
 
 **pixmap-animation**
 
-[Animation](manual.html#36595)
+[Animation](manual.html#36607)
 
 **plane**
 
-[Plane and Face](manual.html#31347)
+[Plane and Face](manual.html#31359)
 
 **playback-hid-lines**
 
-[Animation](manual.html#36637)
+[Animation](manual.html#36649)
 
 **playback-pixmaps**
 
-[Animation](manual.html#36609)
+[Animation](manual.html#36621)
 
 **plusp**
 
-[Arithmetic Predicates](manual.html#5824)
+[Arithmetic Predicates](manual.html#5836)
 
 **pod-address**
 
-[Foreign Language Interface](manual.html#23391)
+[Foreign Language Interface](manual.html#23403)
 
 **polygon**
 
-[Plane and Face](manual.html#31455)
+[Plane and Face](manual.html#31467)
 
 **pop**
 
-[Lists](manual.html#10969)
+[Lists](manual.html#10981)
 
 **position**
 
-[General Sequences](manual.html#10199)
+[General Sequences](manual.html#10211)
 
 **position-if**
 
-[General Sequences](manual.html#10216)
+[General Sequences](manual.html#10228)
 
 **position-if-not**
 
-[General Sequences](manual.html#10227)
+[General Sequences](manual.html#10239)
 
 **pp-method**
 
-[Printer](manual.html#16146)
+[Printer](manual.html#16158)
 
 **pprint**
 
-[Printer](manual.html#16069)
+[Printer](manual.html#16081)
 
 **pq:delimit-list**
 
-[PostgreSQL](manual.html#50383)
+[PostgreSQL](manual.html#50395)
 
 **pq:query**
 
-[PostgreSQL](manual.html#50361)
+[PostgreSQL](manual.html#50373)
 
 **pq:record-count**
 
-[PostgreSQL](manual.html#50404)
+[PostgreSQL](manual.html#50416)
 
 **pq:select**
 
-[PostgreSQL](manual.html#50394)
+[PostgreSQL](manual.html#50406)
 
 **pq:table-attributes**
 
-[PostgreSQL](manual.html#50351)
+[PostgreSQL](manual.html#50363)
 
 **pq:table-fields**
 
-[PostgreSQL](manual.html#50340)
+[PostgreSQL](manual.html#50352)
 
 **pq:tables**
 
-[PostgreSQL](manual.html#50373)
+[PostgreSQL](manual.html#50385)
 
 **prin1**
 
-[Printer](manual.html#15990)
+[Printer](manual.html#16002)
 
 **prin1-to-string**
 
-[Printer](manual.html#16048)
+[Printer](manual.html#16060)
 
 **princ**
 
-[Printer](manual.html#16001)
+[Printer](manual.html#16013)
 
 **princ-to-string**
 
-[Printer](manual.html#16037)
+[Printer](manual.html#16049)
 
 **print**
 
-[Printer](manual.html#15978)
+[Printer](manual.html#15990)
 
 **print-functions**
 
-[Printer](manual.html#16080)
+[Printer](manual.html#16092)
 
 **print-size**
 
-[Printer](manual.html#16169)
+[Printer](manual.html#16181)
 
 **probe-file**
 
-[File System Interface](manual.html#16488)
+[File System Interface](manual.html#16500)
 
 **proclaim**
 
-[Evaluators](manual.html#18838)
+[Evaluators](manual.html#18850)
 
 **prog**
 
-[Iteration](manual.html#2512)
+[Iteration](manual.html#2518)
 
 **prog1**
 
-[Sequencing and Lets](manual.html#2295)
+[Sequencing and Lets](manual.html#2299)
 
 **progn**
 
-[Sequencing and Lets](manual.html#2309)
+[Sequencing and Lets](manual.html#2313)
 
 **projection**
 
-[Projection](manual.html#35663)
+[Projection](manual.html#35675)
 
 **propertied-object**
 
-[Basic Classes](manual.html#4218)
+[Basic Classes](manual.html#4230)
 
 **provide**
 
-[Program Loading](manual.html#19232)
+[Program Loading](manual.html#19244)
 
 **pseudo-inverse**
 
-[LU decomposition](manual.html#27510)
+[LU decomposition](manual.html#27522)
 
 **push**
 
-[Lists](manual.html#10958)
+[Lists](manual.html#10970)
 
 **pushnew**
 
-[Lists](manual.html#10981)
+[Lists](manual.html#10993)
 
 **putprop**
 
-[Symbols](manual.html#7922)
+[Symbols](manual.html#7934)
 
 **pv**
 
-[Voronoi Diagram of Polygons](manual.html#35005)
+[Voronoi Diagram of Polygons](manual.html#35017)
 
 **queue**
 
-[Queue](manual.html#11831)
+[Queue](manual.html#11843)
 
 **quickhull**
 
-[Primitive Body Creation](manual.html#32360)
+[Primitive Body Creation](manual.html#32372)
 
 **quote**
 
-[Evaluators](manual.html#18703)
+[Evaluators](manual.html#18715)
 
 **qval**
 
-[HTTP CGI Programming](manual.html#50824)
+[HTTP CGI Programming](manual.html#50836)
 
 **rad2deg**
 
-[Generic Number Functions](manual.html#6345)
+[Generic Number Functions](manual.html#6357)
 
 **random**
 
-[Generic Number Functions](manual.html#6291)
+[Generic Number Functions](manual.html#6303)
 
 **random-normalized-vector**
 
-[Miscellaneous Geometric Functions](manual.html#30517)
+[Miscellaneous Geometric Functions](manual.html#30529)
 
 **random-string**
 
-[DES cryptography](manual.html#14412)
+[DES cryptography](manual.html#14424)
 
 **random-vector**
 
-[Miscellaneous Geometric Functions](manual.html#30507)
+[Miscellaneous Geometric Functions](manual.html#30519)
 
 **random-vectors**
 
-[Miscellaneous Geometric Functions](manual.html#30527)
+[Miscellaneous Geometric Functions](manual.html#30539)
 
 **rassoc**
 
-[Lists](manual.html#10868)
+[Lists](manual.html#10880)
 
 **ray-tracing**
 
@@ -16319,1496 +16331,1496 @@ Interface](manual.html#23389)
 
 **rcrypt**
 
-[DES cryptography](manual.html#14400)
+[DES cryptography](manual.html#14412)
 
 **read**
 
-[Reader](manual.html#15785)
+[Reader](manual.html#15797)
 
 **read-char**
 
-[Reader](manual.html#15818)
+[Reader](manual.html#15830)
 
 **read-delimited-list**
 
-[Reader](manual.html#15795)
+[Reader](manual.html#15807)
 
 **read-from-string**
 
-[Reader](manual.html#15828)
+[Reader](manual.html#15840)
 
 **read-http**
 
-[HTTP Client](manual.html#50734)
+[HTTP Client](manual.html#50746)
 
 **read-line**
 
-[Reader](manual.html#15807)
+[Reader](manual.html#15819)
 
 **read-pnm**
 
-[Image File I/O](manual.html#39603)
+[Image File I/O](manual.html#39615)
 
 **read-pnm-file**
 
-[Image File I/O](manual.html#39614)
+[Image File I/O](manual.html#39626)
 
 **readtable-p**
 
-[Reader](manual.html#15892)
+[Reader](manual.html#15904)
 
 **reduce**
 
-[Generic Number Functions](manual.html#6332)
+[Generic Number Functions](manual.html#6344)
 
 **region**
 
-[Edge Finder](manual.html#39236)
+[Edge Finder](manual.html#39248)
 
 **regmatch**
 
-[Regular Expression](manual.html#14351)
+[Regular Expression](manual.html#14363)
 
 **remhash**
 
-[Hash Tables](manual.html#11750)
+[Hash Tables](manual.html#11762)
 
 **remove**
 
-[General Sequences](manual.html#10316)
+[General Sequences](manual.html#10328)
 
 **remove-duplicates**
 
-[General Sequences](manual.html#10355)
+[General Sequences](manual.html#10367)
 
 **remove-html-tags**
 
-[HTTP Client](manual.html#50754)
+[HTTP Client](manual.html#50766)
 
 **remove-if**
 
-[General Sequences](manual.html#10333)
+[General Sequences](manual.html#10345)
 
 **remove-if-not**
 
-[General Sequences](manual.html#10344)
+[General Sequences](manual.html#10356)
 
 **remprop**
 
-[Symbols](manual.html#7934)
+[Symbols](manual.html#7946)
 
 **rename-package**
 
-[Packages](manual.html#8259)
+[Packages](manual.html#8271)
 
 **render**
 
-[Drawings](manual.html#36464)
+[Drawings](manual.html#36476)
 
 **replace**
 
-[General Sequences](manual.html#10139)
+[General Sequences](manual.html#10151)
 
 **replace-matrix**
 
-[Matrix and Transformation](manual.html#27313)
+[Matrix and Transformation](manual.html#27325)
 
 **replace-object**
 
-[Instance Management](manual.html#4113)
+[Instance Management](manual.html#4125)
 
 **require**
 
-[Program Loading](manual.html#19246)
+[Program Loading](manual.html#19258)
 
 **reset**
 
-[Top-level Interaction](manual.html#19020)
+[Top-level Interaction](manual.html#19032)
 
 **return**
 
-[Blocks and Exits](manual.html#2409)
+[Blocks and Exits](manual.html#2413)
 
 **return-from**
 
-[Blocks and Exits](manual.html#2397)
+[Blocks and Exits](manual.html#2401)
 
 **reverse**
 
-[General Sequences](manual.html#10052)
+[General Sequences](manual.html#10064)
 
 **rgb2hls**
 
-[Drawings](manual.html#36585)
+[Drawings](manual.html#36597)
 
 **right-most-point**
 
-[Miscellaneous Geometric Functions](manual.html#30654)
+[Miscellaneous Geometric Functions](manual.html#30666)
 
 **right-points**
 
-[Miscellaneous Geometric Functions](manual.html#30622)
+[Miscellaneous Geometric Functions](manual.html#30634)
 
 **romanji**
 
-[Japanese Text](manual.html#14259)
+[Japanese Text](manual.html#14271)
 
 **romkan**
 
-[Japanese Text](manual.html#14249)
+[Japanese Text](manual.html#14261)
 
 **rotate-matrix**
 
-[Matrix and Transformation](manual.html#27370)
+[Matrix and Transformation](manual.html#27382)
 
 **rotate-vector**
 
-[Float-vectors](manual.html#27198)
+[Float-vectors](manual.html#27210)
 
 **rotation-angle**
 
-[Matrix and Transformation](manual.html#27397)
+[Matrix and Transformation](manual.html#27409)
 
 **rotation-matrix**
 
-[Matrix and Transformation](manual.html#27386)
+[Matrix and Transformation](manual.html#27398)
 
 **rotational-joint**
 
-[Multi-Joint Manipulators](manual.html#41205)
+[Multi-Joint Manipulators](manual.html#41217)
 
 **round**
 
-[Generic Number Functions](manual.html#6202)
+[Generic Number Functions](manual.html#6214)
 
 **rplaca**
 
-[Lists](manual.html#10790)
+[Lists](manual.html#10802)
 
 **rplacd**
 
-[Lists](manual.html#10803)
+[Lists](manual.html#10815)
 
 **rpy-angle**
 
-[Matrix and Transformation](manual.html#27420)
+[Matrix and Transformation](manual.html#27432)
 
 **rpy-matrix**
 
-[Matrix and Transformation](manual.html#27410)
+[Matrix and Transformation](manual.html#27422)
 
 **rusage**
 
-[Unix Processes](manual.html#23292)
+[Unix Processes](manual.html#23304)
 
 **s**
 
 [Type Specifier](manual.html#1265) | [Type Specifier](manual.html#1267)
-| [Type Specifier](manual.html#1279) | [Packages](manual.html#8102) |
-[Lists](manual.html#10680) | [Streams](manual.html#15642)
+| [Type Specifier](manual.html#1279) | [Packages](manual.html#8114) |
+[Lists](manual.html#10692) | [Streams](manual.html#15654)
 
 **save**
 
-[Process Image Saving](manual.html#19572) | [Customization of
-Toplevel](manual.html#18556)
+[Process Image Saving](manual.html#19584) | [Customization of
+Toplevel](manual.html#18568)
 
 **scale**
 
-[Float-vectors](manual.html#27099)
+[Float-vectors](manual.html#27111)
 
 **scale-matrix**
 
-[Matrix and Transformation](manual.html#27323)
+[Matrix and Transformation](manual.html#27335)
 
 **schar**
 
-[Characters and Strings](manual.html#11497)
+[Characters and Strings](manual.html#11509)
 
 **ScrollTextWindow**
 
-[Text Window](manual.html#48427)
+[Text Window](manual.html#48439)
 
 **select-stream**
 
-[Asynchronous Input/Output](manual.html#16284)
+[Asynchronous Input/Output](manual.html#16296)
 
 **send**
 
-[Message Sending](manual.html#3973)
+[Message Sending](manual.html#3985)
 
 **send\***
 
-[Message Sending](manual.html#3999)
+[Message Sending](manual.html#4011)
 
 **send-all**
 
-[Message Sending](manual.html#4017)
+[Message Sending](manual.html#4029)
 
 **send-message**
 
-[Message Sending](manual.html#3988)
+[Message Sending](manual.html#4000)
 
 **send-super**
 
-[Message Sending](manual.html#4027)
+[Message Sending](manual.html#4039)
 
 **send-super\***
 
-[Message Sending](manual.html#4039)
+[Message Sending](manual.html#4051)
 
 **sequential-file-name**
 
-[File-name generation](manual.html#16458)
+[File-name generation](manual.html#16470)
 
 **set**
 
-[Symbols](manual.html#7958)
+[Symbols](manual.html#7970)
 
 **set-difference**
 
-[Lists](manual.html#11044)
+[Lists](manual.html#11056)
 
 **set-dispatch-macro-character**
 
-[Reader](manual.html#15953)
+[Reader](manual.html#15965)
 
 **set-exclusive-or**
 
-[Lists](manual.html#11056)
+[Lists](manual.html#11068)
 
 **set-macro-character**
 
-[Reader](manual.html#15930)
+[Reader](manual.html#15942)
 
 **set-syntax-from-char**
 
-[Reader](manual.html#15916)
+[Reader](manual.html#15928)
 
 **setf**
 
-[Sequencing and Lets](manual.html#2323)
+[Sequencing and Lets](manual.html#2327)
 
 **setq**
 
-[Symbols](manual.html#7945)
+[Symbols](manual.html#7957)
 
 **setslot**
 
-[Instance Management](manual.html#4159)
+[Instance Management](manual.html#4171)
 
 **shadow**
 
-[Packages](manual.html#8320)
+[Packages](manual.html#8332)
 
 **short-float-epsilon**
 
-[Arithmetic Constants](manual.html#5682)
+[Arithmetic Constants](manual.html#5694)
 
 **sigint-handler**
 
-[Top-level Interaction](manual.html#18999)
+[Top-level Interaction](manual.html#19011)
 
 **simultaneous-equation**
 
-[LU decomposition](manual.html#27487)
+[LU decomposition](manual.html#27499)
 
 **sin**
 
-[Trigonometric and Related Functions](manual.html#6365)
+[Trigonometric and Related Functions](manual.html#6377)
 
 **single-float-epsilon**
 
-[Arithmetic Constants](manual.html#5694)
+[Arithmetic Constants](manual.html#5706)
 
 **sinh**
 
-[Trigonometric and Related Functions](manual.html#6398)
+[Trigonometric and Related Functions](manual.html#6410)
 
 **sjis2euc**
 
-[Japanese Text](manual.html#14269)
+[Japanese Text](manual.html#14281)
 
 **slider-item**
 
-[Panel Items](manual.html#47834)
+[Panel Items](manual.html#47846)
 
 **slot**
 
-[Instance Management](manual.html#4149)
+[Instance Management](manual.html#4161)
 
 **some**
 
-[Predicates](manual.html#2727)
+[Predicates](manual.html#2733)
 
 **sort**
 
-[General Sequences](manual.html#10159)
+[General Sequences](manual.html#10171)
 
 **spaces**
 
-[Printer](manual.html#16125)
+[Printer](manual.html#16137)
 
 **sqrt**
 
-[Trigonometric and Related Functions](manual.html#6505)
+[Trigonometric and Related Functions](manual.html#6517)
 
 **step**
 
-[Debugging Aid](manual.html#19440)
+[Debugging Aid](manual.html#19452)
 
 **step-hook**
 
-[Debugging Aid](manual.html#19429)
+[Debugging Aid](manual.html#19441)
 
 **streamp**
 
-[Streams](manual.html#15630)
+[Streams](manual.html#15642)
 
 **string**
 
-[Characters and Strings](manual.html#11591)
+[Characters and Strings](manual.html#11603)
 
 **string-downcase**
 
-[Characters and Strings](manual.html#11532)
+[Characters and Strings](manual.html#11544)
 
 **string-equal**
 
-[Characters and Strings](manual.html#11578)
+[Characters and Strings](manual.html#11590)
 
 **string-left-trim**
 
-[Characters and Strings](manual.html#11650)
+[Characters and Strings](manual.html#11662)
 
 **string-right-trim**
 
-[Characters and Strings](manual.html#11661)
+[Characters and Strings](manual.html#11673)
 
 **string-trim**
 
-[Characters and Strings](manual.html#11675)
+[Characters and Strings](manual.html#11687)
 
 **string-upcase**
 
-[Characters and Strings](manual.html#11521)
+[Characters and Strings](manual.html#11533)
 
 **string![$<$](manual-img8.png)**
 
-[Characters and Strings](manual.html#11606)
+[Characters and Strings](manual.html#11618)
 
 **string![$<=$](manual-img17.png)**
 
-[Characters and Strings](manual.html#11617)
+[Characters and Strings](manual.html#11629)
 
 **string![$\>$](manual-img15.png)**
 
-[Characters and Strings](manual.html#11628)
+[Characters and Strings](manual.html#11640)
 
 **string![$\>=$](manual-img16.png)**
 
-[Characters and Strings](manual.html#11639)
+[Characters and Strings](manual.html#11651)
 
 **string=**
 
-[Characters and Strings](manual.html#11565)
+[Characters and Strings](manual.html#11577)
 
 **stringp**
 
-[Characters and Strings](manual.html#11510)
+[Characters and Strings](manual.html#11522)
 
 **subclassp**
 
-[Classes and Methods](manual.html#3893)
+[Classes and Methods](manual.html#3905)
 
 **subseq**
 
-[General Sequences](manual.html#10023)
+[General Sequences](manual.html#10035)
 
 **subsetp**
 
-[Lists](manual.html#11018)
+[Lists](manual.html#11030)
 
 **subst**
 
-[Lists](manual.html#10932)
+[Lists](manual.html#10944)
 
 **substitute**
 
-[General Sequences](manual.html#10405)
+[General Sequences](manual.html#10417)
 
 **substitute-if**
 
-[General Sequences](manual.html#10420)
+[General Sequences](manual.html#10432)
 
 **substitute-if-not**
 
-[General Sequences](manual.html#10431)
+[General Sequences](manual.html#10443)
 
 **substringp**
 
-[Characters and Strings](manual.html#11688)
+[Characters and Strings](manual.html#11700)
 
 **superequal**
 
-[Predicates](manual.html#2664)
+[Predicates](manual.html#2670)
 
 **svref**
 
-[Vectors and Arrays](manual.html#11196)
+[Vectors and Arrays](manual.html#11208)
 
 **sxhash**
 
-[Hash Tables](manual.html#11713)
+[Hash Tables](manual.html#11725)
 
 **symbol-function**
 
-[Symbols](manual.html#7820)
+[Symbols](manual.html#7832)
 
 **symbol-name**
 
-[Symbols](manual.html#7842)
+[Symbols](manual.html#7854)
 
 **symbol-package**
 
-[Symbols](manual.html#7831)
+[Symbols](manual.html#7843)
 
 **symbol-plist**
 
-[Symbols](manual.html#7856)
+[Symbols](manual.html#7868)
 
 **symbol-value**
 
-[Symbols](manual.html#7809)
+[Symbols](manual.html#7821)
 
 **symbolp**
 
-[Symbols](manual.html#7798)
+[Symbols](manual.html#7810)
 
 **sys:\*exit-hook\***
 
-[Process](manual.html#22144)
+[Process](manual.html#22156)
 
 **sys:\*gc-hook\***
 
-[Memory Management](manual.html#21764)
+[Memory Management](manual.html#21776)
 
 **sys:\*gc-margin\***
 
-[Memory Management](manual.html#21817)
+[Memory Management](manual.html#21829)
 
 **sys:\*gc-merge\***
 
-[Memory Management](manual.html#21806)
+[Memory Management](manual.html#21818)
 
 **sys:\*threads\***
 
-[Thread creation](manual.html#25694)
+[Thread creation](manual.html#25706)
 
 **sys::free-threads**
 
-[Thread creation](manual.html#25705)
+[Thread creation](manual.html#25717)
 
 **sys:address**
 
-[Memory Management](manual.html#21882)
+[Memory Management](manual.html#21894)
 
 **sys:alloc**
 
-[Memory Management](manual.html#21784)
+[Memory Management](manual.html#21796)
 
 **sys:barrier-synch**
 
-[Synchronization](manual.html#25889)
+[Synchronization](manual.html#25901)
 
 **sys:btrace**
 
-[Memory Management](manual.html#21850)
+[Memory Management](manual.html#21862)
 
 **sys:cond-signal**
 
-[Synchronization](manual.html#25845)
+[Synchronization](manual.html#25857)
 
 **sys:cond-wait**
 
-[Synchronization](manual.html#25831)
+[Synchronization](manual.html#25843)
 
 **sys:gc**
 
-[Memory Management](manual.html#21754)
+[Memory Management](manual.html#21766)
 
 **sys:gctime**
 
-[Memory Management](manual.html#21774)
+[Memory Management](manual.html#21786)
 
 **sys:list-all-bindings**
 
-[Debugging Aid](manual.html#19519)
+[Debugging Aid](manual.html#19531)
 
 **sys:list-all-catchers**
 
-[Debugging Aid](manual.html#19495)
+[Debugging Aid](manual.html#19507)
 
 **sys:list-all-chunks**
 
-[Memory Management](manual.html#21928)
+[Memory Management](manual.html#21940)
 
 **sys:list-all-instances**
 
-[Debugging Aid](manual.html#19506)
+[Debugging Aid](manual.html#19518)
 
 **sys:list-all-special-bindings**
 
-[Debugging Aid](manual.html#19529)
+[Debugging Aid](manual.html#19541)
 
 **sys:make-cond**
 
-[Synchronization](manual.html#25821)
+[Synchronization](manual.html#25833)
 
 **sys:make-mutex-lock**
 
-[Synchronization](manual.html#25772)
+[Synchronization](manual.html#25784)
 
 **sys:make-semaphore**
 
-[Synchronization](manual.html#25856)
+[Synchronization](manual.html#25868)
 
 **sys:make-thread**
 
-[Thread creation](manual.html#25679)
+[Thread creation](manual.html#25691)
 
 **sys:memory-report**
 
-[Memory Management](manual.html#21861)
+[Memory Management](manual.html#21873)
 
 **sys:mutex**
 
-[Synchronization](manual.html#25806)
+[Synchronization](manual.html#25818)
 
 **sys:mutex-lock**
 
-[Synchronization](manual.html#25782)
+[Synchronization](manual.html#25794)
 
 **sys:mutex-unlock**
 
-[Synchronization](manual.html#25795)
+[Synchronization](manual.html#25807)
 
 **sys:newstack**
 
-[Memory Management](manual.html#21795)
+[Memory Management](manual.html#21807)
 
 **sys:object-size**
 
-[Memory Management](manual.html#21938)
+[Memory Management](manual.html#21950)
 
 **sys:peek**
 
-[Memory Management](manual.html#21893)
+[Memory Management](manual.html#21905)
 
 **sys:plist**
 
-[Thread creation](manual.html#25759)
+[Thread creation](manual.html#25771)
 
 **sys:poke**
 
-[Memory Management](manual.html#21916)
+[Memory Management](manual.html#21928)
 
 **sys:reclaim**
 
-[Memory Management](manual.html#21828)
+[Memory Management](manual.html#21840)
 
 **sys:reclaim-tree**
 
-[Memory Management](manual.html#21839)
+[Memory Management](manual.html#21851)
 
 **sys:room**
 
-[Memory Management](manual.html#21872)
+[Memory Management](manual.html#21884)
 
 **sys:sema-post**
 
-[Synchronization](manual.html#25866)
+[Synchronization](manual.html#25878)
 
 **sys:sema-wait**
 
-[Synchronization](manual.html#25877)
+[Synchronization](manual.html#25889)
 
 **sys:synch-memory-port**
 
-[Synchronization](manual.html#25965)
+[Synchronization](manual.html#25977)
 
 **sys:thread**
 
-[Thread creation](manual.html#25716)
+[Thread creation](manual.html#25728)
 
 **sys:thread-no-wait**
 
-[Thread creation](manual.html#25734)
+[Thread creation](manual.html#25746)
 
 **sys:wait-thread**
 
-[Thread creation](manual.html#25745)
+[Thread creation](manual.html#25757)
 
 **system:binload**
 
-[Program Loading](manual.html#19268)
+[Program Loading](manual.html#19280)
 
 **system:find-method**
 
-[Classes and Methods](manual.html#3948)
+[Classes and Methods](manual.html#3960)
 
 **system:list-all-classes**
 
-[Classes and Methods](manual.html#3938)
+[Classes and Methods](manual.html#3950)
 
 **system:method-cache**
 
-[Classes and Methods](manual.html#3962)
+[Classes and Methods](manual.html#3974)
 
 **system:txtload**
 
-[Program Loading](manual.html#19279)
+[Program Loading](manual.html#19291)
 
 **t**
 
-[Xwindow](manual.html#43520)
+[Xwindow](manual.html#43532)
 
 **tagbody**
 
-[Iteration](manual.html#2484)
+[Iteration](manual.html#2490)
 
 **tan**
 
-[Trigonometric and Related Functions](manual.html#6387)
+[Trigonometric and Related Functions](manual.html#6399)
 
 **tanh**
 
-[Trigonometric and Related Functions](manual.html#6426)
+[Trigonometric and Related Functions](manual.html#6438)
 
 **tektro**
 
-[Drawings](manual.html#36496)
+[Drawings](manual.html#36508)
 
 **terpri**
 
-[Printer](manual.html#16016)
+[Printer](manual.html#16028)
 
 **text-item**
 
-[Panel Items](manual.html#47937)
+[Panel Items](manual.html#47949)
 
 **textdots**
 
-[Graphic Context](manual.html#44106)
+[Graphic Context](manual.html#44118)
 
 **textWindow**
 
-[Text Window](manual.html#48005)
+[Text Window](manual.html#48017)
 
 **textWindowStream**
 
-[Text Window](manual.html#48270)
+[Text Window](manual.html#48282)
 
 **the**
 
-[Evaluators](manual.html#18782)
+[Evaluators](manual.html#18794)
 
 **throw**
 
-[Blocks and Exits](manual.html#2436)
+[Blocks and Exits](manual.html#2440)
 
 **time**
 
-[Date and Time](manual.html#14733) | [Debugging Aid](manual.html#19484)
+[Date and Time](manual.html#14745) | [Debugging Aid](manual.html#19496)
 
 **timed-file-name**
 
-[File-name generation](manual.html#16468)
+[File-name generation](manual.html#16480)
 
 **timing**
 
-[Debugging Aid](manual.html#19473)
+[Debugging Aid](manual.html#19485)
 
 **tprint**
 
-[Printer](manual.html#16158)
+[Printer](manual.html#16170)
 
 **trace**
 
-[Debugging Aid](manual.html#19452)
+[Debugging Aid](manual.html#19464)
 
 **tracking-window**
 
-[Tracking](manual.html#39443)
+[Tracking](manual.html#39455)
 
 **transform**
 
-[Matrix and Transformation](manual.html#27346) | [Matrix and
-Transformation](manual.html#27358)
+[Matrix and Transformation](manual.html#27358) | [Matrix and
+Transformation](manual.html#27370)
 
 **transform-coords**
 
-[CascadedCoords](manual.html#28117)
+[CascadedCoords](manual.html#28129)
 
 **transform-coords\***
 
-[CascadedCoords](manual.html#28127)
+[CascadedCoords](manual.html#28139)
 
 **transpose**
 
-[Matrix and Transformation](manual.html#27288)
+[Matrix and Transformation](manual.html#27300)
 
 **triangle**
 
-[Miscellaneous Geometric Functions](manual.html#30412)
+[Miscellaneous Geometric Functions](manual.html#30424)
 
 **triangle-normal**
 
-[Miscellaneous Geometric Functions](manual.html#30436)
+[Miscellaneous Geometric Functions](manual.html#30448)
 
 **truename**
 
-[Pathnames](manual.html#16423)
+[Pathnames](manual.html#16435)
 
 **truncate**
 
-[Generic Number Functions](manual.html#6235)
+[Generic Number Functions](manual.html#6247)
 
 **u**
 
-[Packages](manual.html#8100)
+[Packages](manual.html#8112)
 
 **unescape-url**
 
-[HTTP Client](manual.html#50711)
+[HTTP Client](manual.html#50723)
 
 **unescaped-url-string-from-namestring**
 
-[HTTP Client](manual.html#50723)
+[HTTP Client](manual.html#50735)
 
 **unexport**
 
-[Packages](manual.html#8352)
+[Packages](manual.html#8364)
 
 **union**
 
-[Lists](manual.html#11008)
+[Lists](manual.html#11020)
 
 **unit-matrix**
 
-[Matrix and Transformation](manual.html#27301)
+[Matrix and Transformation](manual.html#27313)
 
 **unix:accept**
 
-[File Systems and I/O](manual.html#22600)
+[File Systems and I/O](manual.html#22612)
 
 **unix:access**
 
-[File Systems and I/O](manual.html#22441)
+[File Systems and I/O](manual.html#22453)
 
 **unix:alarm**
 
-[Signals](manual.html#22708)
+[Signals](manual.html#22720)
 
 **unix:asctime**
 
-[Times](manual.html#21980)
+[Times](manual.html#21992)
 
 **unix:bind**
 
-[File Systems and I/O](manual.html#22563)
+[File Systems and I/O](manual.html#22575)
 
 **unix:chdir**
 
-[File Systems and I/O](manual.html#22463)
+[File Systems and I/O](manual.html#22475)
 
 **unix:chmod**
 
-[File Systems and I/O](manual.html#22484)
+[File Systems and I/O](manual.html#22496)
 
 **unix:chown**
 
-[File Systems and I/O](manual.html#22495)
+[File Systems and I/O](manual.html#22507)
 
 **unix:close**
 
-[File Systems and I/O](manual.html#22353)
+[File Systems and I/O](manual.html#22365)
 
 **unix:connect**
 
-[File Systems and I/O](manual.html#22576)
+[File Systems and I/O](manual.html#22588)
 
 **unix:dup**
 
-[File Systems and I/O](manual.html#22364)
+[File Systems and I/O](manual.html#22376)
 
 **unix:exec**
 
-[Process](manual.html#22113)
+[Process](manual.html#22125)
 
 **unix:exit**
 
-[Process](manual.html#22133)
+[Process](manual.html#22145)
 
 **unix:fcntl**
 
-[File Systems and I/O](manual.html#22287)
+[File Systems and I/O](manual.html#22299)
 
 **unix:fionread**
 
-[IOCTL](manual.html#23023)
+[IOCTL](manual.html#23035)
 
 **unix:fork**
 
-[Process](manual.html#22091)
+[Process](manual.html#22103)
 
 **unix:free**
 
-[Low-Level Memory Management](manual.html#22885)
+[Low-Level Memory Management](manual.html#22897)
 
 **unix:getegid**
 
-[Process](manual.html#22061)
+[Process](manual.html#22073)
 
 **unix:getenv**
 
-[Process](manual.html#22205)
+[Process](manual.html#22217)
 
 **unix:geteuid**
 
-[Process](manual.html#22041)
+[Process](manual.html#22053)
 
 **unix:getgid**
 
-[Process](manual.html#22051)
+[Process](manual.html#22063)
 
 **unix:gethostbyname**
 
-[File Systems and I/O](manual.html#22652)
+[File Systems and I/O](manual.html#22664)
 
 **unix:getitimer**
 
-[Signals](manual.html#22734)
+[Signals](manual.html#22746)
 
 **unix:getpgrp**
 
-[Process](manual.html#22011)
+[Process](manual.html#22023)
 
 **unix:getpid**
 
-[Process](manual.html#21991)
+[Process](manual.html#22003)
 
 **unix:getppid**
 
-[Process](manual.html#22001)
+[Process](manual.html#22013)
 
 **unix:getpriority**
 
-[Process](manual.html#22154)
+[Process](manual.html#22166)
 
 **unix:getrusage**
 
-[Process](manual.html#22181)
+[Process](manual.html#22193)
 
 **unix:getservbyname**
 
-[File Systems and I/O](manual.html#22640)
+[File Systems and I/O](manual.html#22652)
 
 **unix:getuid**
 
-[Process](manual.html#22031)
+[Process](manual.html#22043)
 
 **unix:getwd**
 
-[File Systems and I/O](manual.html#22474)
+[File Systems and I/O](manual.html#22486)
 
 **unix:ioctl**
 
-[File Systems and I/O](manual.html#22298)
+[File Systems and I/O](manual.html#22310)
 
 **unix:ioctl\_**
 
-[File Systems and I/O](manual.html#22309)
+[File Systems and I/O](manual.html#22321)
 
 **unix:ioctl\_R**
 
-[File Systems and I/O](manual.html#22320)
+[File Systems and I/O](manual.html#22332)
 
 **unix:ioctl\_W**
 
-[File Systems and I/O](manual.html#22331)
+[File Systems and I/O](manual.html#22343)
 
 **unix:ioctl\_WR**
 
-[File Systems and I/O](manual.html#22342)
+[File Systems and I/O](manual.html#22354)
 
 **unix:isatty**
 
-[File Systems and I/O](manual.html#22506)
+[File Systems and I/O](manual.html#22518)
 
 **unix:kill**
 
-[Signals](manual.html#22687)
+[Signals](manual.html#22699)
 
 **unix:link**
 
-[File Systems and I/O](manual.html#22398)
+[File Systems and I/O](manual.html#22410)
 
 **unix:listen**
 
-[File Systems and I/O](manual.html#22588)
+[File Systems and I/O](manual.html#22600)
 
 **unix:localtime**
 
-[Times](manual.html#21970)
+[Times](manual.html#21982)
 
 **unix:lseek**
 
-[File Systems and I/O](manual.html#22385)
+[File Systems and I/O](manual.html#22397)
 
 **unix:malloc**
 
-[Low-Level Memory Management](manual.html#22875)
+[Low-Level Memory Management](manual.html#22887)
 
 **unix:mkdir**
 
-[File Systems and I/O](manual.html#22430)
+[File Systems and I/O](manual.html#22442)
 
 **unix:mknod**
 
-[File Systems and I/O](manual.html#22419)
+[File Systems and I/O](manual.html#22431)
 
 **unix:mmap**
 
-[Low-Level Memory Management](manual.html#22907)
+[Low-Level Memory Management](manual.html#22919)
 
 **unix:msgget**
 
-[File Systems and I/O](manual.html#22517)
+[File Systems and I/O](manual.html#22529)
 
 **unix:msgrcv**
 
-[File Systems and I/O](manual.html#22539)
+[File Systems and I/O](manual.html#22551)
 
 **unix:msgsnd**
 
-[File Systems and I/O](manual.html#22528)
+[File Systems and I/O](manual.html#22540)
 
 **unix:munmap**
 
-[Low-Level Memory Management](manual.html#22918)
+[Low-Level Memory Management](manual.html#22930)
 
 **unix:pause**
 
-[Signals](manual.html#22698)
+[Signals](manual.html#22710)
 
 **unix:pipe**
 
-[File Systems and I/O](manual.html#22375)
+[File Systems and I/O](manual.html#22387)
 
 **unix:ptimes**
 
-[Times](manual.html#21949)
+[Times](manual.html#21961)
 
 **unix:putenv**
 
-[Process](manual.html#22216)
+[Process](manual.html#22228)
 
 **unix:recvfrom**
 
-[File Systems and I/O](manual.html#22611)
+[File Systems and I/O](manual.html#22623)
 
 **unix:runtime**
 
-[Times](manual.html#21960)
+[Times](manual.html#21972)
 
 **unix:select**
 
-[Signals](manual.html#22769)
+[Signals](manual.html#22781)
 
 **unix:select-read-fd**
 
-[Signals](manual.html#22791)
+[Signals](manual.html#22803)
 
 **unix:sendto**
 
-[File Systems and I/O](manual.html#22626)
+[File Systems and I/O](manual.html#22638)
 
 **unix:setgid**
 
-[Process](manual.html#22081)
+[Process](manual.html#22093)
 
 **unix:setitimer**
 
-[Signals](manual.html#22748)
+[Signals](manual.html#22760)
 
 **unix:setpgrp**
 
-[Process](manual.html#22021)
+[Process](manual.html#22033)
 
 **unix:setpriority**
 
-[Process](manual.html#22165)
+[Process](manual.html#22177)
 
 **unix:setuid**
 
-[Process](manual.html#22071)
+[Process](manual.html#22083)
 
 **unix:signal**
 
-[Signals](manual.html#22674)
+[Signals](manual.html#22686)
 
 **unix:sleep**
 
-[Process](manual.html#22229)
+[Process](manual.html#22241)
 
 **unix:socket**
 
-[File Systems and I/O](manual.html#22550)
+[File Systems and I/O](manual.html#22562)
 
 **unix:stat**
 
-[File Systems and I/O](manual.html#22452)
+[File Systems and I/O](manual.html#22464)
 
 **unix:syserrlist**
 
-[File Systems and I/O](manual.html#22663)
+[File Systems and I/O](manual.html#22675)
 
 **unix:system**
 
-[Process](manual.html#22193)
+[Process](manual.html#22205)
 
 **unix:tcgeta**
 
-[IOCTL](manual.html#23162)
+[IOCTL](manual.html#23174)
 
 **unix:tcgetattr**
 
-[IOCTL](manual.html#23184)
+[IOCTL](manual.html#23196)
 
 **unix:tcgets**
 
-[IOCTL](manual.html#23173)
+[IOCTL](manual.html#23185)
 
 **unix:tcseta**
 
-[IOCTL](manual.html#23089)
+[IOCTL](manual.html#23101)
 
 **unix:tcsetaf**
 
-[IOCTL](manual.html#23140)
+[IOCTL](manual.html#23152)
 
 **unix:tcsetattr**
 
-[IOCTL](manual.html#23195)
+[IOCTL](manual.html#23207)
 
 **unix:tcsetaw**
 
-[IOCTL](manual.html#23151)
+[IOCTL](manual.html#23163)
 
 **unix:tcsets**
 
-[IOCTL](manual.html#23099)
+[IOCTL](manual.html#23111)
 
 **unix:tcsetsf**
 
-[IOCTL](manual.html#23119)
+[IOCTL](manual.html#23131)
 
 **unix:tcsetsw**
 
-[IOCTL](manual.html#23109)
+[IOCTL](manual.html#23121)
 
 **unix:thr-create**
 
-[Multithread](manual.html#22861)
+[Multithread](manual.html#22873)
 
 **unix:thr-getconcurrency**
 
-[Multithread](manual.html#22839)
+[Multithread](manual.html#22851)
 
 **unix:thr-getprio**
 
-[Multithread](manual.html#22814)
+[Multithread](manual.html#22826)
 
 **unix:thr-self**
 
-[Multithread](manual.html#22804)
+[Multithread](manual.html#22816)
 
 **unix:thr-setconcurrency**
 
-[Multithread](manual.html#22849)
+[Multithread](manual.html#22861)
 
 **unix:thr-setprio**
 
-[Multithread](manual.html#22825)
+[Multithread](manual.html#22837)
 
 **unix:tiocflush**
 
-[IOCTL](manual.html#22982)
+[IOCTL](manual.html#22994)
 
 **unix:tiocgetd**
 
-[IOCTL](manual.html#22971)
+[IOCTL](manual.html#22983)
 
 **unix:tiocgetp**
 
-[IOCTL](manual.html#22940)
+[IOCTL](manual.html#22952)
 
 **unix:tiocgpgrp**
 
-[IOCTL](manual.html#22992)
+[IOCTL](manual.html#23004)
 
 **unix:tioclbic**
 
-[IOCTL](manual.html#23056)
+[IOCTL](manual.html#23068)
 
 **unix:tioclbis**
 
-[IOCTL](manual.html#23045)
+[IOCTL](manual.html#23057)
 
 **unix:tioclget**
 
-[IOCTL](manual.html#23078)
+[IOCTL](manual.html#23090)
 
 **unix:tioclset**
 
-[IOCTL](manual.html#23067)
+[IOCTL](manual.html#23079)
 
 **unix:tiocoutq**
 
-[IOCTL](manual.html#23012)
+[IOCTL](manual.html#23024)
 
 **unix:tiocsetc**
 
-[IOCTL](manual.html#23034) | [IOCTL](manual.html#23129)
+[IOCTL](manual.html#23046) | [IOCTL](manual.html#23141)
 
 **unix:tiocsetn**
 
-[IOCTL](manual.html#22960)
+[IOCTL](manual.html#22972)
 
 **unix:tiocsetp**
 
-[IOCTL](manual.html#22950)
+[IOCTL](manual.html#22962)
 
 **unix:tiocspgrp**
 
-[IOCTL](manual.html#23002)
+[IOCTL](manual.html#23014)
 
 **unix:ualarm**
 
-[Signals](manual.html#22721)
+[Signals](manual.html#22733)
 
 **unix:unlink**
 
-[File Systems and I/O](manual.html#22408)
+[File Systems and I/O](manual.html#22420)
 
 **unix:uread**
 
-[File Systems and I/O](manual.html#22253)
+[File Systems and I/O](manual.html#22265)
 
 **unix:usleep**
 
-[Process](manual.html#22240)
+[Process](manual.html#22252)
 
 **unix:vadvise**
 
-[Low-Level Memory Management](manual.html#22929)
+[Low-Level Memory Management](manual.html#22941)
 
 **unix:valloc**
 
-[Low-Level Memory Management](manual.html#22896)
+[Low-Level Memory Management](manual.html#22908)
 
 **unix:vfork**
 
-[Process](manual.html#22103)
+[Process](manual.html#22115)
 
 **unix:wait**
 
-[Process](manual.html#22123)
+[Process](manual.html#22135)
 
 **unix:write**
 
-[File Systems and I/O](manual.html#22272)
+[File Systems and I/O](manual.html#22284)
 
 **unless**
 
-[Conditionals](manual.html#2246)
+[Conditionals](manual.html#2250)
 
 **unread-char**
 
-[Reader](manual.html#15842)
+[Reader](manual.html#15854)
 
 **until**
 
-[Iteration](manual.html#2598)
+[Iteration](manual.html#2604)
 
 **untrace**
 
-[Debugging Aid](manual.html#19463)
+[Debugging Aid](manual.html#19475)
 
 **unuse-package**
 
-[Packages](manual.html#8308)
+[Packages](manual.html#8320)
 
 **unwind-protect**
 
-[Blocks and Exits](manual.html#2449)
+[Blocks and Exits](manual.html#2453)
 
 **upper-case-p**
 
-[Characters and Strings](manual.html#11430)
+[Characters and Strings](manual.html#11442)
 
 **url-pathname**
 
-[URL-Pathnames](manual.html#16434) | [HTTP Client](manual.html#50655) |
-[HTTP Client](manual.html#50672)
+[URL-Pathnames](manual.html#16446) | [HTTP Client](manual.html#50667) |
+[HTTP Client](manual.html#50684)
 
 **use-package**
 
-[Packages](manual.html#8294)
+[Packages](manual.html#8306)
 
 **v\***
 
-[Float-vectors](manual.html#27022)
+[Float-vectors](manual.html#27034)
 
 **v+**
 
-[Float-vectors](manual.html#26992)
+[Float-vectors](manual.html#27004)
 
 **v-**
 
-[Float-vectors](manual.html#27002)
+[Float-vectors](manual.html#27014)
 
 **v.**
 
-[Float-vectors](manual.html#27012)
+[Float-vectors](manual.html#27024)
 
 **v.\***
 
-[Float-vectors](manual.html#27032)
+[Float-vectors](manual.html#27044)
 
 **v![$<$](manual-img8.png)**
 
-[Float-vectors](manual.html#27042)
+[Float-vectors](manual.html#27054)
 
 **v![$\>$](manual-img15.png)**
 
-[Float-vectors](manual.html#27052)
+[Float-vectors](manual.html#27064)
 
 **variables**
 
-[Debugging Aid](manual.html#19396)
+[Debugging Aid](manual.html#19408)
 
 **vector**
 
-[Vectors and Arrays](manual.html#11172)
+[Vectors and Arrays](manual.html#11184)
 
 **vector-angle**
 
-[Miscellaneous Geometric Functions](manual.html#30448)
+[Miscellaneous Geometric Functions](manual.html#30460)
 
 **vector-class-p**
 
-[Classes and Methods](manual.html#3905)
+[Classes and Methods](manual.html#3917)
 
 **vector-mean**
 
-[Miscellaneous Geometric Functions](manual.html#30401)
+[Miscellaneous Geometric Functions](manual.html#30413)
 
 **vector-push**
 
-[Vectors and Arrays](manual.html#11222)
+[Vectors and Arrays](manual.html#11234)
 
 **vector-push-extend**
 
-[Vectors and Arrays](manual.html#11237)
+[Vectors and Arrays](manual.html#11249)
 
 **vectorp**
 
-[Vectors and Arrays](manual.html#11162)
+[Vectors and Arrays](manual.html#11174)
 
 **view**
 
-[Viewer](manual.html#36378)
+[Viewer](manual.html#36390)
 
 **viewer**
 
-[Viewer](manual.html#36054)
+[Viewer](manual.html#36066)
 
 **viewing**
 
-[Viewing](manual.html#35565)
+[Viewing](manual.html#35577)
 
 **viewport**
 
-[Viewport](manual.html#35938)
+[Viewport](manual.html#35950)
 
 **vmax**
 
-[Float-vectors](manual.html#27075)
+[Float-vectors](manual.html#27087)
 
 **vmin**
 
-[Float-vectors](manual.html#27062)
+[Float-vectors](manual.html#27074)
 
 **vplus**
 
-[Miscellaneous Geometric Functions](manual.html#30388)
+[Miscellaneous Geometric Functions](manual.html#30400)
 
 **w**
 
-[Xwindow](manual.html#43567)
+[Xwindow](manual.html#43579)
 
 **warn**
 
-[Evaluators](manual.html#18850)
+[Evaluators](manual.html#18862)
 
 **when**
 
-[Conditionals](manual.html#2228)
+[Conditionals](manual.html#2232)
 
 **while**
 
-[Iteration](manual.html#2469)
+[Iteration](manual.html#2473)
 
 **window-main-loop**
 
-[X Event](manual.html#47222)
+[X Event](manual.html#47234)
 
 **window-main-thread**
 
-[X Event](manual.html#47236)
+[X Event](manual.html#47248)
 
 **with-open-file**
 
-[Streams](manual.html#15710)
+[Streams](manual.html#15722)
 
 **write-byte**
 
-[Printer](manual.html#16092)
+[Printer](manual.html#16104)
 
 **write-long**
 
-[Printer](manual.html#16114)
+[Printer](manual.html#16126)
 
 **write-pgm**
 
-[Image File I/O](manual.html#39625)
+[Image File I/O](manual.html#39637)
 
 **write-pnm**
 
-[Image File I/O](manual.html#39649)
+[Image File I/O](manual.html#39661)
 
 **write-pnm-file**
 
-[Image File I/O](manual.html#39665)
+[Image File I/O](manual.html#39677)
 
 **write-ppm**
 
-[Image File I/O](manual.html#39637)
+[Image File I/O](manual.html#39649)
 
 **write-word**
 
-[Printer](manual.html#16103)
+[Printer](manual.html#16115)
 
 **wrt**
 
-[CascadedCoords](manual.html#28138)
+[CascadedCoords](manual.html#28150)
 
 **x:\*bg-pixel\***
 
-[Xlib global variables and](manual.html#42676)
+[Xlib global variables and](manual.html#42688)
 
 **x:\*blackgc\***
 
-[Xlib global variables and](manual.html#42717)
+[Xlib global variables and](manual.html#42729)
 
 **x:\*blackpixel\***
 
-[Xlib global variables and](manual.html#42645)
+[Xlib global variables and](manual.html#42657)
 
 **x:\*color-map\***
 
-[Xlib global variables and](manual.html#42687)
+[Xlib global variables and](manual.html#42699)
 
 **x:\*defaultGC\***
 
-[Xlib global variables and](manual.html#42697)
+[Xlib global variables and](manual.html#42709)
 
 **x:\*display\***
 
-[Xlib global variables and](manual.html#42605)
+[Xlib global variables and](manual.html#42617)
 
 **x:\*fg-pixel\***
 
-[Xlib global variables and](manual.html#42665)
+[Xlib global variables and](manual.html#42677)
 
 **x:\*root\***
 
-[Xlib global variables and](manual.html#42615)
+[Xlib global variables and](manual.html#42627)
 
 **x:\*screen\***
 
-[Xlib global variables and](manual.html#42625)
+[Xlib global variables and](manual.html#42637)
 
 **x:\*visual\***
 
-[Xlib global variables and](manual.html#42635)
+[Xlib global variables and](manual.html#42647)
 
 **x:\*whitegc\***
 
-[Xlib global variables and](manual.html#42707)
+[Xlib global variables and](manual.html#42719)
 
 **x:\*whitepixel\***
 
-[Xlib global variables and](manual.html#42655)
+[Xlib global variables and](manual.html#42667)
 
 **x:\*xwindow-hash-tab\***
 
-[Xlib global variables and](manual.html#43044)
+[Xlib global variables and](manual.html#43056)
 
 **x:\*xwindows\***
 
-[Xlib global variables and](manual.html#43034)
+[Xlib global variables and](manual.html#43046)
 
 **XColor**
 
-[Colors and Colormaps](manual.html#44411)
+[Colors and Colormaps](manual.html#44423)
 
 **Xdrawable**
 
-[Xwindow](manual.html#43098)
+[Xwindow](manual.html#43110)
 
 **xflush**
 
-[Xlib global variables and](manual.html#43057)
+[Xlib global variables and](manual.html#43069)
 
 **xfork**
 
-[Unix Processes](manual.html#23282)
+[Unix Processes](manual.html#23294)
 
 **Xobject**
 
-[Xwindow](manual.html#43080)
+[Xwindow](manual.html#43092)
 
 **Xpixmap**
 
-[Xwindow](manual.html#43426)
+[Xwindow](manual.html#43438)
 
 **Xwindow**
 
-[Xwindow](manual.html#43498)
+[Xwindow](manual.html#43510)
 
 **y-or-n-p**
 
-[Reader](manual.html#15868)
+[Reader](manual.html#15880)
 
 **yes-or-no-p**
 
-[Reader](manual.html#15880)
+[Reader](manual.html#15892)
 
 **zerop**
 
-[Arithmetic Predicates](manual.html#5814)
+[Arithmetic Predicates](manual.html#5826)
 
 About this document ...
 =======================
@@ -17829,8 +17841,8 @@ Macquarie University, Sydney.
 The command line arguments were: **latex2html**
 `-dir /tmp/html/ -local_icons -auto_prefix -iso_language JP manual -split 1 -no_navigation`
 
-The translation was initiated by on 2015-10-31
+The translation was initiated by on 2015-11-21
 
 * * * * *
 
-2015-10-31
+2015-11-21
