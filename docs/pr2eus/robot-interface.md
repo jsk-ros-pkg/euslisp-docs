@@ -19,7 +19,7 @@
 
 ### robot-interface
 - :super **propertied-object**
-- :slots robot objects robot-state joint-action-enable warningp controller-type controller-actions controller-timeout namespace controller-table visualization-topic joint-states-topic pub-joint-states-topic viewer groupname 
+- :slots robot objects robot-state joint-action-enable warningp controller-type controller-actions controller-timeout namespace controller-table visualization-topic simulation-default-look-all-p joint-states-topic pub-joint-states-topic viewer groupname 
 
 robot-interface is object for interacting real robot thorugh JointTrajectoryAction servers and JointState topics, this function uses old nervous-style interface for histrical reason. If JointTrajectoryAcion serve is not found, this instance runs as simulation mode, see "Kinematics Simulator" view as simulatied robot, <br>
  <br>
@@ -31,7 +31,7 @@ robot-interface is object for interacting real robot thorugh JointTrajectoryActi
 
 
 #### :init
-&nbsp;&nbsp;&nbsp;*&rest* *args* *&key* *((:robot r))* <br>&nbsp;&nbsp;&nbsp;*((:objects objs))* <br>&nbsp;&nbsp;&nbsp;*(type :default-controller)* <br>&nbsp;&nbsp;&nbsp;*(use-tf2)* <br>&nbsp;&nbsp;&nbsp;*((:groupname nh) robot_multi_queue)* <br>&nbsp;&nbsp;&nbsp;*((:namespace ns))* <br>&nbsp;&nbsp;&nbsp;*((:joint-states-topic jst) joint_states)* <br>&nbsp;&nbsp;&nbsp;*((:publish-joint-states-topic pjst) nil)* <br>&nbsp;&nbsp;&nbsp;*((:controller-timeout ct) 3)* <br>&nbsp;&nbsp;&nbsp;*((:visuzlization-marker-topic vmt) robot_interface_marker_array)* <br>&nbsp;&nbsp;&nbsp;*&allow-other-keys* 
+&nbsp;&nbsp;&nbsp;*&rest* *args* *&key* *((:robot r))* <br>&nbsp;&nbsp;&nbsp;*((:objects objs))* <br>&nbsp;&nbsp;&nbsp;*(type :default-controller)* <br>&nbsp;&nbsp;&nbsp;*(use-tf2)* <br>&nbsp;&nbsp;&nbsp;*((:groupname nh) robot_multi_queue)* <br>&nbsp;&nbsp;&nbsp;*((:namespace ns))* <br>&nbsp;&nbsp;&nbsp;*((:joint-states-topic jst) joint_states)* <br>&nbsp;&nbsp;&nbsp;*((:publish-joint-states-topic pjst) nil)* <br>&nbsp;&nbsp;&nbsp;*((:controller-timeout ct) 3)* <br>&nbsp;&nbsp;&nbsp;*((:visuzlization-marker-topic vmt) robot_interface_marker_array)* <br>&nbsp;&nbsp;&nbsp;*((:simulation-look-all sim-look-all) t)* <br>&nbsp;&nbsp;&nbsp;*&allow-other-keys* 
 
 - Create robot interface <br>
 - robot : class name of robot <br>
@@ -261,7 +261,9 @@ Return value is a list of interpolatingp for all controllers, so (null (some #'i
 
 :objects *&optional* *objs* 
 
-:draw-objects 
+:set-simulation-default-look-at *look-at-p* 
+
+:draw-objects *&key* *look-all* 
 
 :joint-action-enable *&optional* *(e :dummy)* 
 
