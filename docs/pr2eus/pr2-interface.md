@@ -56,9 +56,13 @@ send-action [ send message to action server, it means robot will move ] <br>
 
 :move-gripper *arm* *pos* *&key* *(effort 25)* *(wait t)* 
 
+:gripper *&rest* *args* 
+
 :start-grasp *&optional* *(arm :arms)* *&key* *((:gain g) 0.01)* *((:objects objs) objects)* 
 
 :stop-grasp *&optional* *(arm :arms)* *&key* *(wait nil)* 
+
+:pr2-gripper-state-callback *arm* *msg* 
 
 :pr2-fingertip-callback *arm* *msg* 
 

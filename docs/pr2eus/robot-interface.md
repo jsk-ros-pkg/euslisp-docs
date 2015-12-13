@@ -212,6 +212,12 @@ Return value is a list of interpolatingp for all controllers, so (null (some #'i
 - stop go-velocity. return t if robot successfly stops, otherwise return nil <br>
 
 
+#### :gripper
+&nbsp;&nbsp;&nbsp;*&rest* *args* 
+
+- get information about gripper <br>
+
+
 #### :nod
 &nbsp;&nbsp;&nbsp;*&key* *(angle 40)* <br>&nbsp;&nbsp;&nbsp;*(time 3000)* 
 
