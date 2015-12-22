@@ -1,9 +1,9 @@
 % EusLisp EusLisp version 9.00/ irteus version 1.00 リファレンスマニュアル
-  -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 December 21, 2015
+  -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 December 22, 2015
 % 
 % 
 
-**EusLisp** **EusLisp version 9.00/ irteus version 1.00** **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 December 21, 2015
+**EusLisp** **EusLisp version 9.00/ irteus version 1.00** **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 December 22, 2015
 =============================================================================================================================================================
 
 **irteus 1.00** *東京大学大学院* 情報理工学系研究科 知能機械情報学専攻
@@ -2648,10 +2648,10 @@ Returns scene of given name.
 **preview-controller** [クラス]
 
       :super   riccati-equation 
-      :slots         xk uk delay f1-n y1-n dim queue-index initialize-queue-p additional-data-queue finishedp initialized-p 
+      :slots         xk uk delay f1-n y1-n queue-index initialize-queue-p additional-data-queue finishedp initialized-p output-dim input-dim 
 
 ![\\begin{emtabbing} {\\bf :init} \\it dt \\&key \\= (q) \\\\lq
-[method]\\\\ \\\> (r) \\\\ \\\> ... ...(array-dimension \\\_a 0)) \\\\
+[method]\\\\ \\\> (r) \\\\ \\\> ... ...ray-dimension \\\_b 1) 1)) \\\\
 \\\> ((:initialize-queue-p iqp)) \\rm
 \\end{emtabbing}](jmanual-img213.png)
 
@@ -2711,8 +2711,8 @@ returns list.
       :slots         orga orgb orgc xk
 
 ![\\begin{emtabbing} {\\bf :init} \\it dt \\&key \\= (q) \\\\lq
-[method]\\\\ \\\> (r) \\\\ \\\> ... ...ray-dimension \\\_orga 0)) \\\\
-\\\> ((:initialize-queue-p iqp)) \\rm
+[method]\\\\ \\\> (r) \\\\ \\\> ... ...\_orga 0)) \\\\ \\\>
+((:initialize-queue-p iqp)) \\\\ \\\> (q-mat) \\rm
 \\end{emtabbing}](jmanual-img214.png)
 
 Initialize preview-controller in extended system (error system). Q is
@@ -2736,7 +2736,7 @@ Current additional data value. First value of additional-data-queue.
 **preview-control-cart-table-cog-trajectory-generator** [クラス]
 
       :super   propertied-object 
-      :slots         pc cog-z zmp-z 
+      :slots         pcs cog-z zmp-z 
 
 ![\\begin{emtabbing} {\\bf :init} \\it dt \\\_zc \\&key \\= (q 1) \\\\lq
 [method]\\\\ \\\> (r 1... ... \\\> (preview-controller-class
@@ -6756,7 +6756,7 @@ About this document ...
 
 ****EusLisp** **EusLisp version 9.00/ irteus version 1.00**
 **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 +
-JSK-TR-10-03 December 21, 2015**
+JSK-TR-10-03 December 22, 2015**
 
 This document was generated using the
 [**LaTeX**2`HTML`](http://www.latex2html.org/) translator Version 2008
@@ -6770,8 +6770,8 @@ Macquarie University, Sydney.
 The command line arguments were: **latex2html**
 `-dir /tmp/html/ -local_icons -auto_prefix -iso_language JP jmanual -split 1 -no_navigation`
 
-The translation was initiated by on 2015-12-21
+The translation was initiated by on 2015-12-22
 
 * * * * *
 
-2015-12-21
+2015-12-22
