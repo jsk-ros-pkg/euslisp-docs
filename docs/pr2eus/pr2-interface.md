@@ -127,7 +127,7 @@ pr2-reset-pose
 
 clear-costmap 
 
-change-inflation-range *&optional* *(range 0.55)* 
+change-inflation-range *&optional* *(range 0.2)* 
 
 use-tilt-laser-obstacle-cloud *enable* 
 
