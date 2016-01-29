@@ -80,6 +80,8 @@ send-action [ send message to action server, it means robot will move ] <br>
 
 :move-to-wait *&rest* *args* *&key* *(retry 10)* *(frame-id /world)* *&allow-other-keys* 
 
+:go-waitp 
+
 :go-pos *x* *y* *&optional* *(d 0)* 
 
 :go-pos-no-wait *x* *y* *&optional* *(d 0)* 
