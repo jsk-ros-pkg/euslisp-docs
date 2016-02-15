@@ -1,9 +1,9 @@
 % EusLisp EusLisp version 9.00/ irteus version 1.00 リファレンスマニュアル
-  -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 February 14, 2016
+  -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 February 15, 2016
 % 
 % 
 
-**EusLisp** **EusLisp version 9.00/ irteus version 1.00** **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 February 14, 2016
+**EusLisp** **EusLisp version 9.00/ irteus version 1.00** **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 + JSK-TR-10-03 February 15, 2016
 =============================================================================================================================================================
 
 **irteus 1.00** *東京大学大学院* 情報理工学系研究科 知能機械情報学専攻
@@ -1953,10 +1953,20 @@ dump log only in fail (for success/fail log). :always-with-debug-log :
 dump log only in fail (for success/fail log and ik debug information
 log). nil : do not dump log.
 
+![\\begin{emtabbing} {\\bf :calc-grasp-matrix} \\it contact-points
+\\&key \\= (ret (ma... ...pcar \\char93 '(lambda (r) (unit-matrix 3))
+contact-points)) \\rm \\end{emtabbing}](jmanual-img193.png)
+
+Calc grasp matrix. Grasp matrix is defined as | E\_3 0 E\_3 0 ... | |
+p1x E\_3 p2x E\_3 ... | Arguments: contact-points is list of contact
+points[mm]. contact-rots is list of contact coords rotation[rad]. If
+contact-rots is specified, grasp matrix as follow: | R1 0 R2 0 ... | |
+p1xR1 R1 p2xR2 R2 ... |
+
 ![\\begin{emtabbing} {\\bf
 :inverse-kinematics-for-closed-loop-forward-kinematics} ...
 ...t-angle-list) \\\\ \\\> (min-loop 2) \\\\ \\\> \\&allow-other-keys
-\\rm \\end{emtabbing}](jmanual-img193.png)
+\\rm \\end{emtabbing}](jmanual-img194.png)
 
 Solve inverse-kinematics for closed loop forward kinematics. Move
 move-target to target-coords with link-list. link-list loop should be
@@ -1992,7 +2002,7 @@ users want to use interlocking joints, please overwrite this method.
 
 ![\\begin{emtabbing} {\\bf :check-interlocking-joint-angle-validity}
 \\it\\&key \\= (a... ...rlocking-joint-pairs (send self
-:interlocking-joint-pairs)) \\rm \\end{emtabbing}](jmanual-img194.png)
+:interlocking-joint-pairs)) \\rm \\end{emtabbing}](jmanual-img195.png)
 
 Check if all interlocking joint pairs are same values.
 
@@ -2128,9 +2138,6 @@ float-vector 1)) (tmp-v2 (instantiate float-vector 2)) (tmp-v3
 :collision-check-pairs)) (collision-func
 'pqp-collision-check)*[メソッド]
 
-**:calc-grasp-matrix** *contact-points &optional (ret (make-matrix 6 (6
-(length contact-points))))*[メソッド]
-
 **eusmodel-validity-check** *robot*[関数]
 
 Check if the robot model is validate
@@ -2189,7 +2196,7 @@ float-vector (calc-target-joint-dimension j-l)))*[関数]
 
 ![\\begin{emtabbing} {\\bf :init} \\it coords \\&rest args \\&key \\=
 (name (intern (fo... ...d]\\\\ \\\> ((:bodies geometry::bs)) \\\\ \\\>
-\\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img195.png)
+\\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img196.png)
 
 Create bodyset object
 
@@ -2238,7 +2245,7 @@ make ring of given ring and pipe radius
 
 ![\\begin{emtabbing} {\\bf make-fan-cylinder} \\it geometry::radius
 geometry::height... ... \\\> (angle 2pi) \\\\ \\\> (geometry::mid-angle
-(/ angle 2.0)) \\rm \\end{emtabbing}](jmanual-img196.png)
+(/ angle 2.0)) \\rm \\end{emtabbing}](jmanual-img197.png)
 
 make a cylinder whose base face is a fan. the angle of fan is defined by
 :angle keyword. and, the csg of the returned body is (:cylinder radius
@@ -2334,7 +2341,7 @@ look at hand position, l/r supports :rarm, :larm, :arms, and '(:rarm
 
 ![\\begin{emtabbing} {\\bf :inverse-kinematics} \\it target-coords
 \\&rest args \\&key... ...send mt :parent))) move-target))) \\\\ \\\>
-\\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img197.png)
+\\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img198.png)
 
 solve inverse kinematics, move move-target to target-coords
 look-at-target suppots t, nil, float-vector, coords, list of
@@ -2343,7 +2350,7 @@ move-target -\>root link link-list
 
 ![\\begin{emtabbing} {\\bf :inverse-kinematics-loop} \\it dif-pos
 dif-rot \\&rest arg... ...send mt :parent))) move-target))) \\\\ \\\>
-\\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img198.png)
+\\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img199.png)
 
 move move-target using dif-pos and dif-rot, look-at-target suppots t,
 nil, float-vector, coords, list of float-vector, list of coords
@@ -2362,19 +2369,19 @@ Set robot to initial posture.
 ![\\begin{emtabbing} {\\bf :torque-vector} \\it\\&key \\= (force-list)
 \\\\lq [method]\\\\ ... ...ords)))
 :distribute-total-wrench-to-torque-method-default)) \\rm
-\\end{emtabbing}](jmanual-img199.png)
+\\end{emtabbing}](jmanual-img200.png)
 
 Returns torque vector
 
 ![\\begin{emtabbing} {\\bf :calc-force-from-joint-torque} \\it limb
 all-torque \\&key... ...(send self limb :end-coords)) \\\\lq
-[method]\\\\ \\\> (use-torso) \\rm \\end{emtabbing}](jmanual-img200.png)
+[method]\\\\ \\\> (use-torso) \\rm \\end{emtabbing}](jmanual-img201.png)
 
 Calculates end-effector force and moment from joint torques.
 
 ![\\begin{emtabbing} {\\bf :fullbody-inverse-kinematics} \\it
 target-coords \\&rest a... ...ll-space nil) \\\\ \\\> (min-loop 2) \\\\
-\\\> \\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img201.png)
+\\\> \\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img202.png)
 
 fullbody inverse kinematics for legged robot. necessary args :
 target-coords, move-target, and link-list must include legs' (or leg's)
@@ -2390,7 +2397,7 @@ rarm-jN larm-j0 ... larm-jN torso-j0 ... torso-jN )
 
 ![\\begin{emtabbing} {\\bf :calc-zmp-from-forces-moments} \\it forces
 moments \\&key ... ...n-all-values t))) force-sensors forces moments
-cop-coords)) \\rm \\end{emtabbing}](jmanual-img202.png)
+cop-coords)) \\rm \\end{emtabbing}](jmanual-img203.png)
 
 Calculate zmp[mm] from sensor local forces and moments If force\_z is
 large, zmp can be defined and returns 3D zmp. Otherwise, zmp cannot be
@@ -2403,14 +2410,14 @@ codes, leged robot is assumed.
 
 ![\\begin{emtabbing} {\\bf :fix-leg-to-coords} \\it fix-coords
 \\&optional (l/r :both) \\&key \\= (mid 0.5) \\\\lq [method]\\\\ \\\>
-\\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img203.png)
+\\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img204.png)
 
 Fix robot's legs to a coords In the following codes, leged robot is
 assumed.
 
 ![\\begin{emtabbing} {\\bf :move-centroid-on-foot} \\it leg fix-limbs
 \\&rest args \\&... ...har93 f(0.1 0.1 0.0 0.0 0.0 0.5)) \\\\ \\\>
-\\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img204.png)
+\\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img205.png)
 
 Move robot COG to change centroid-on-foot location, leg : legs for
 target of robot's centroid, which should be :both, :rleg, and :lleg.
@@ -2418,7 +2425,7 @@ fix-limbs : limb names which are fixed in this IK.
 
 ![\\begin{emtabbing} {\\bf :calc-walk-pattern-from-footstep-list} \\it
 footstep-list... ...k-thre 1) \\\\ \\\> (ik-rthre (deg2rad 1)) \\\\ \\\>
-(calc-zmp t) \\rm \\end{emtabbing}](jmanual-img205.png)
+(calc-zmp t) \\rm \\end{emtabbing}](jmanual-img206.png)
 
 Calculate walking pattern from foot step list and return pattern list as
 a list of angle-vector, root-coords, time, and so on.
@@ -2429,7 +2436,7 @@ Generate footstep parameter
 
 ![\\begin{emtabbing} {\\bf :go-pos-params-\\textgreater footstep-list}
 \\it xx yy th ... ...(assoc leg leg-translate-pos))))) (send cc :name
-leg) cc))) \\rm \\end{emtabbing}](jmanual-img206.png)
+leg) cc))) \\rm \\end{emtabbing}](jmanual-img207.png)
 
 Calculate foot step list from goal x position [mm], goal y position
 [mm], and goal yaw orientation [deg].
@@ -2463,7 +2470,7 @@ linear-joint-name is the name of linear actuator.
 
 ![\\begin{emtabbing} {\\bf :calc-static-balance-point} \\it\\&key \\=
 (target-points (... ...nd-coords :worldpos)) 2)) \\\\ \\\>
-(update-mass-properties t) \\rm \\end{emtabbing}](jmanual-img207.png)
+(update-mass-properties t) \\rm \\end{emtabbing}](jmanual-img208.png)
 
 Calculate static balance point which is equivalent to static extended
 ZMP. target-points are end-effector points on which force-list and
@@ -2546,7 +2553,7 @@ extbody*[関数]
 
 ![\\begin{emtabbing} {\\bf :init} \\it b \\&rest args \\&key \\=
 ((:bumper-threshold bt) 20) \\\\lq [method]\\\\ \\\> name \\rm
-\\end{emtabbing}](jmanual-img208.png)
+\\end{emtabbing}](jmanual-img209.png)
 
 Create bumper model, b is the shape of an object and bt is the threshold
 in distance[mm].
@@ -2567,7 +2574,7 @@ object and 0 if not.
 
 ![\\begin{emtabbing} {\\bf :init} \\it b \\&rest args \\&key \\=
 ((:width pw) 320) \\\\lq [... ...ither 100.0) \\\\ \\\> (yon 10000.0)
-\\\\ \\\> \\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img209.png)
+\\\\ \\\> \\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img210.png)
 
 Create camera model. b is the shape of an object
 
@@ -2617,7 +2624,7 @@ Returns ray vector of given x and y.
 
 ![\\begin{emtabbing} {\\bf :draw-on} \\it\\&rest args \\&key \\=
 ((:viewer vwer) \\texta... ...textasteriskcentered ) \\\\lq [method]\\\\
-\\\> \\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img210.png)
+\\\> \\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img211.png)
 
 Draw camera raw in irtviewer, ex (send cam :draw-on :flush t)
 
@@ -2627,7 +2634,7 @@ Draw objects in camera viewer, expected type of objs is list of objects
 
 ![\\begin{emtabbing} {\\bf :get-image} \\it\\&key \\= (with-points)
 \\\\lq [method]\\\\ \\\> (with-colors) \\rm
-\\end{emtabbing}](jmanual-img211.png)
+\\end{emtabbing}](jmanual-img212.png)
 
 Get image objects you need to call :draw-objects before calling this
 function
@@ -2651,7 +2658,7 @@ default mode. objs is the same objects using :draw-objects.
 
 ![\\begin{emtabbing} {\\bf make-camera-from-param} \\it\\&key \\= pwidth
 \\\\lq [function]... ...ty 0) \\\\ \\\> parent-coords \\\\ \\\> name
-\\\\ \\\> create-viewer \\rm \\end{emtabbing}](jmanual-img212.png)
+\\\\ \\\> create-viewer \\rm \\end{emtabbing}](jmanual-img213.png)
 
 Create camera object from given parameters.
 
@@ -2666,7 +2673,7 @@ Create camera object from given parameters.
 
 ![\\begin{emtabbing} {\\bf :init} \\it\\&rest args \\&key \\= ((:name n)
 scene) \\\\lq [method]\\\\ \\\> ((:objects o)) \\rm
-\\end{emtabbing}](jmanual-img213.png)
+\\end{emtabbing}](jmanual-img214.png)
 
 Create scene model
 
@@ -2753,7 +2760,7 @@ Returns scene of given name.
 ![\\begin{emtabbing} {\\bf :init} \\it dt \\&key \\= (q) \\\\lq
 [method]\\\\ \\\> (r) \\\\ \\\> ... ...ray-dimension \\\_b 1) 1)) \\\\
 \\\> ((:initialize-queue-p iqp)) \\rm
-\\end{emtabbing}](jmanual-img214.png)
+\\end{emtabbing}](jmanual-img215.png)
 
 Initialize preview-controller. Q is weighting of output error and R is
 weighting of input. dt is sampling time [s]. delay is preview time [s].
@@ -2813,7 +2820,7 @@ returns list.
 ![\\begin{emtabbing} {\\bf :init} \\it dt \\&key \\= (q) \\\\lq
 [method]\\\\ \\\> (r) \\\\ \\\> ... ...\_orga 0)) \\\\ \\\>
 ((:initialize-queue-p iqp)) \\\\ \\\> (q-mat) \\rm
-\\end{emtabbing}](jmanual-img215.png)
+\\end{emtabbing}](jmanual-img216.png)
 
 Initialize preview-controller in extended system (error system). Q is
 weighting of output error and R is weighting of input. dt is sampling
@@ -2840,7 +2847,7 @@ Current additional data value. First value of additional-data-queue.
 
 ![\\begin{emtabbing} {\\bf :init} \\it dt \\\_zc \\&key \\= (q 1) \\\\lq
 [method]\\\\ \\\> (r 1... ... \\\> (preview-controller-class
-extended-preview-controller) \\rm \\end{emtabbing}](jmanual-img216.png)
+extended-preview-controller) \\rm \\end{emtabbing}](jmanual-img217.png)
 
 COG (xy) trajectory generator using preview-control convert reference
 ZMP from reference COG. dt -\>sampling time[s], \_zc is height of COG
@@ -3188,7 +3195,7 @@ create link for bvh model
 
 ![\\begin{emtabbing} {\\bf :init} \\it\\&rest args \\&key \\= (order
 (list :z :x :y)) \\... ...on bvh-rotation) (unit-matrix 3)) \\\\ \\\>
-\\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img217.png)
+\\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img218.png)
 
 create joint for bvh model
 
@@ -3228,7 +3235,7 @@ scl)) ((:bvh-offset-rotation bvh-rotation) (unit-matrix 3))
 
 ![\\begin{emtabbing} {\\bf :init} \\it\\&rest args \\&key \\= tree
 \\\\lq [method]\\\\ \\\> coords \\\\ \\\> ((:scale scl)) \\rm
-\\end{emtabbing}](jmanual-img218.png)
+\\end{emtabbing}](jmanual-img219.png)
 
 create robot model for bvh model
 
@@ -3304,7 +3311,7 @@ read bvh file and anmiate robot model in the viewer
 
 ![\\begin{emtabbing} {\\bf load-mcd} \\it fname \\&key \\= (scale)
 \\\\lq [function]\\\\ \\\> (coords) \\\\ \\\> (bvh-robot-model-class
-bvh-robot-model) \\rm \\end{emtabbing}](jmanual-img219.png)
+bvh-robot-model) \\rm \\end{emtabbing}](jmanual-img220.png)
 
 load motion capture data
 
@@ -3535,7 +3542,7 @@ collada::links collada::joints*[関数]
 
 ![\\begin{emtabbing} {\\bf :init} \\it\\&rest args \\&key \\= ((:points
 mat)) \\\\lq [metho... ... \\\> (fill) \\\\ \\\> (arrow-width 2.0) \\\\
-\\\> (arrow-size 0.0) \\rm \\end{emtabbing}](jmanual-img220.png)
+\\\> (arrow-size 0.0) \\rm \\end{emtabbing}](jmanual-img221.png)
 
 Create point cloud object
 
@@ -3546,17 +3553,17 @@ change width and height, this method does not change points data
 **:points** *&optional pts wd ht*[メソッド]
 
 replace points, pts should be list of points or n**![$
-times$](jmanual-img221.png)** matrix
+times$](jmanual-img222.png)** matrix
 
 **:colors** *&optional cls*[メソッド]
 
 replace colors, cls should be list of points or n**![$
-times$](jmanual-img221.png)** matrix
+times$](jmanual-img222.png)** matrix
 
 **:normals** *&optional nmls*[メソッド]
 
 replace normals by, nmls should be list of points or n**![$
-times$](jmanual-img221.png)**3 matrix
+times$](jmanual-img222.png)**3 matrix
 
 **:point-list** *&optional (remove-nan)*[メソッド]
 
@@ -3581,7 +3588,7 @@ appended point cloud and original point cloud does not change.
 
 ![\\begin{emtabbing} {\\bf :filter} \\it\\&rest args \\&key \\= create
 \\\\lq [method]\\\\ \\\> \\&allow-other-keys \\rm
-\\end{emtabbing}](jmanual-img222.png)
+\\end{emtabbing}](jmanual-img223.png)
 
 this method can take the same keywords with :filter-with-indices method.
 if :create is true, return filtered point cloud and original point cloud
@@ -3589,7 +3596,7 @@ does not change.
 
 ![\\begin{emtabbing} {\\bf :filter-with-indices} \\it idx-lst \\&key \\=
 (create) \\\\lq [method]\\\\ \\\> (negative) \\rm
-\\end{emtabbing}](jmanual-img223.png)
+\\end{emtabbing}](jmanual-img224.png)
 
 filter point cloud with list of index (points which are indicated by
 indices will remain). if :create is true, return filtered point cloud
@@ -3598,7 +3605,7 @@ which are indicated by indices will be removed.
 
 ![\\begin{emtabbing} {\\bf :filtered-indices} \\it\\&key \\= key \\\\lq
 [method]\\\\ \\\> cke... ...key \\\\ \\\> pcnkey \\\\ \\\> negative \\\\
-\\\> \\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img224.png)
+\\\> \\&allow-other-keys \\rm \\end{emtabbing}](jmanual-img225.png)
 
 create list of index where filter function retrun true. key, ckey, nkey
 are filter function for points, colors, normals. They are expected to
@@ -3609,7 +3616,7 @@ colors and normals. It is expected to take three arguments and return t
 or nil.
 
 ![\\begin{emtabbing} {\\bf :step} \\it step \\&key \\= (fixsize) \\\\lq
-[method]\\\\ \\\> (create) \\rm \\end{emtabbing}](jmanual-img225.png)
+[method]\\\\ \\\> (create) \\rm \\end{emtabbing}](jmanual-img226.png)
 
 downsample points with step
 
@@ -3987,13 +3994,13 @@ use-flat-shader
 
 ![\\begin{emtabbing} {\\bf :mirror-axis} \\it\\&key \\= (gl::create t)
 \\\\lq [method]\\\\ \\\> (gl::invert-faces t) \\\\ \\\> (gl::axis :y)
-\\rm \\end{emtabbing}](jmanual-img226.png)
+\\rm \\end{emtabbing}](jmanual-img227.png)
 
 creating mirror vertices respect to :axis
 
 ![\\begin{emtabbing} {\\bf :convert-to-faces} \\it\\&rest args \\&key
 \\= (gl::wrt :local) \\\\lq [method]\\\\ \\\> \\&allow-other-keys \\rm
-\\end{emtabbing}](jmanual-img227.png)
+\\end{emtabbing}](jmanual-img228.png)
 
 create list of faces using vertices of this object
 
@@ -4157,7 +4164,7 @@ Returns combination of given list
 
 ![\\begin{emtabbing} {\\bf find-extreams} \\it datum \\&key \\= (key
 \\char93 'identity... ...identity \\char93 '=) \\\\ \\\> (bigger
-\\char93 '\\textgreater ) \\rm \\end{emtabbing}](jmanual-img228.png)
+\\char93 '\\textgreater ) \\rm \\end{emtabbing}](jmanual-img229.png)
 
 Returns the elements of datum which maximizes key function
 
@@ -4169,7 +4176,7 @@ lisp expression
 
 ![\\begin{emtabbing} {\\bf connect-server-until-success} \\it host port
 \\&key \\= (max-port (+ port 20)) \\\\lq [function]\\\\ \\\>
-(return-with-port nil) \\rm \\end{emtabbing}](jmanual-img229.png)
+(return-with-port nil) \\rm \\end{emtabbing}](jmanual-img230.png)
 
 Connect euslisp interpreter server until success
 
@@ -4536,23 +4543,23 @@ Index
 
 **:calc-gradh-from-link-list**
 
-[ロボットモデル](jmanual.html#5939)
+[ロボットモデル](jmanual.html#5950)
 
 **:calc-grasp-matrix**
 
-[ロボットモデル](jmanual.html#6192)
+[ロボットモデル](jmanual.html#5778)
 
 **:calc-inverse-jacobian**
 
-[ロボットモデル](jmanual.html#5928)
+[ロボットモデル](jmanual.html#5939)
 
 **:calc-inverse-kinematics-nspace-from-link-list**
 
-[ロボットモデル](jmanual.html#6093)
+[ロボットモデル](jmanual.html#6104)
 
 **:calc-inverse-kinematics-weight-from-link-list**
 
-[ロボットモデル](jmanual.html#6071)
+[ロボットモデル](jmanual.html#6082)
 
 **:calc-jacobian**
 
@@ -4566,7 +4573,7 @@ Index
 
 **:calc-jacobian-for-interlocking-joints**
 
-[ロボットモデル](jmanual.html#5789)
+[ロボットモデル](jmanual.html#5800)
 
 **:calc-jacobian-from-link-list**
 
@@ -4574,11 +4581,11 @@ Index
 
 **:calc-joint-angle-speed**
 
-[ロボットモデル](jmanual.html#5950)
+[ロボットモデル](jmanual.html#5961)
 
 **:calc-joint-angle-speed-gain**
 
-[ロボットモデル](jmanual.html#5961)
+[ロボットモデル](jmanual.html#5972)
 
 **:calc-normals**
 
@@ -4586,7 +4593,7 @@ Index
 
 **:calc-nspace-from-joint-limit**
 
-[ロボットモデル](jmanual.html#6082)
+[ロボットモデル](jmanual.html#6093)
 
 **:calc-one-tick-gait-parameter**
 
@@ -4602,11 +4609,11 @@ Index
 
 **:calc-target-axis-dimension**
 
-[ロボットモデル](jmanual.html#5895)
+[ロボットモデル](jmanual.html#5906)
 
 **:calc-target-joint-dimension**
 
-[ロボットモデル](jmanual.html#5917)
+[ロボットモデル](jmanual.html#5928)
 
 **:calc-u**
 
@@ -4615,19 +4622,19 @@ Index
 
 **:calc-union-link-list**
 
-[ロボットモデル](jmanual.html#5906)
+[ロボットモデル](jmanual.html#5917)
 
 **:calc-vel-for-interlocking-joints**
 
-[ロボットモデル](jmanual.html#5799)
+[ロボットモデル](jmanual.html#5810)
 
 **:calc-vel-from-pos**
 
-[ロボットモデル](jmanual.html#6148)
+[ロボットモデル](jmanual.html#6159)
 
 **:calc-vel-from-rot**
 
-[ロボットモデル](jmanual.html#6159)
+[ロボットモデル](jmanual.html#6170)
 
 **:calc-walk-pattern-from-footstep-list**
 
@@ -4635,7 +4642,7 @@ Index
 
 **:calc-weight-from-joint-limit**
 
-[ロボットモデル](jmanual.html#6060)
+[ロボットモデル](jmanual.html#6071)
 
 **:calc-xk**
 
@@ -4677,7 +4684,7 @@ Index
 
 **:check-interlocking-joint-angle-validity**
 
-[ロボットモデル](jmanual.html#5829)
+[ロボットモデル](jmanual.html#5840)
 
 **:child-link**
 
@@ -4714,23 +4721,23 @@ Index
 
 **:collision-avoidance**
 
-[ロボットモデル](jmanual.html#6016)
+[ロボットモデル](jmanual.html#6027)
 
 **:collision-avoidance-args**
 
-[ロボットモデル](jmanual.html#6005)
+[ロボットモデル](jmanual.html#6016)
 
 **:collision-avoidance-calc-distance**
 
-[ロボットモデル](jmanual.html#5994)
+[ロボットモデル](jmanual.html#6005)
 
 **:collision-avoidance-link-pair-from-link-list**
 
-[ロボットモデル](jmanual.html#5983)
+[ロボットモデル](jmanual.html#5994)
 
 **:collision-avoidance-links**
 
-[ロボットモデル](jmanual.html#5972)
+[ロボットモデル](jmanual.html#5983)
 
 **:collision-check-objects**
 
@@ -4738,7 +4745,7 @@ Index
 
 **:collision-check-pairs**
 
-[ロボットモデル](jmanual.html#6170)
+[ロボットモデル](jmanual.html#6181)
 
 **:color-list**
 
@@ -4859,7 +4866,7 @@ Index
 
 **:draw-collision-debug-view**
 
-[ロボットモデル](jmanual.html#6126)
+[ロボットモデル](jmanual.html#6137)
 
 **:draw-event**
 
@@ -4959,11 +4966,11 @@ Index
 
 **:find-joint-angle-limit-weight-old-from-union-link-list**
 
-[ロボットモデル](jmanual.html#6038)
+[ロボットモデル](jmanual.html#6049)
 
 **:find-link-route**
 
-[ロボットモデル](jmanual.html#5851)
+[ロボットモデル](jmanual.html#5862)
 
 **:find-node-in-close-list**
 
@@ -5137,7 +5144,7 @@ Index
 
 **:ik-convergence-check**
 
-[ロボットモデル](jmanual.html#6137)
+[ロボットモデル](jmanual.html#6148)
 
 **:image-circle-filter**
 
@@ -5218,7 +5225,7 @@ Index
 
 **:interlocking-joint-pairs**
 
-[ロボットモデル](jmanual.html#5819)
+[ロボットモデル](jmanual.html#5830)
 
 **:inverse-kinematics**
 
@@ -5227,11 +5234,11 @@ Index
 
 **:inverse-kinematics-args**
 
-[ロボットモデル](jmanual.html#6115)
+[ロボットモデル](jmanual.html#6126)
 
 **:inverse-kinematics-for-closed-loop-forward-kinematics**
 
-[ロボットモデル](jmanual.html#5778)
+[ロボットモデル](jmanual.html#5789)
 
 **:inverse-kinematics-loop**
 
@@ -5397,11 +5404,11 @@ Index
 
 **:make-joint-min-max-table**
 
-[ロボットモデル](jmanual.html#5862)
+[ロボットモデル](jmanual.html#5873)
 
 **:make-min-max-table-using-collision-check**
 
-[ロボットモデル](jmanual.html#5873)
+[ロボットモデル](jmanual.html#5884)
 
 **:make-pqpmodel**
 
@@ -5449,11 +5456,11 @@ Index
 
 **:move-joints**
 
-[ロボットモデル](jmanual.html#6027)
+[ロボットモデル](jmanual.html#6038)
 
 **:move-joints-avoidance**
 
-[ロボットモデル](jmanual.html#6104)
+[ロボットモデル](jmanual.html#6115)
 
 **:move-viewing-around-viewtarget**
 
@@ -5542,7 +5549,7 @@ Index
 
 **:plot-joint-min-max-table-common**
 
-[ロボットモデル](jmanual.html#5884)
+[ロボットモデル](jmanual.html#5895)
 
 **:point-color**
 
@@ -5635,7 +5642,7 @@ Index
 
 **:reset-joint-angle-limit-weight-old**
 
-[ロボットモデル](jmanual.html#6049)
+[ロボットモデル](jmanual.html#6060)
 
 **:reset-offset-from-parent**
 
@@ -5660,7 +5667,7 @@ Index
 
 **:self-collision-check**
 
-[ロボットモデル](jmanual.html#6181)
+[ロボットモデル](jmanual.html#6192)
 
 **:set-color**
 
@@ -5681,7 +5688,7 @@ Index
 
 **:set-midpoint-for-interlocking-joints**
 
-[ロボットモデル](jmanual.html#5809)
+[ロボットモデル](jmanual.html#5820)
 
 **:set-offset**
 
@@ -5825,7 +5832,7 @@ Index
 
 **:update-descendants**
 
-[ロボットモデル](jmanual.html#5840)
+[ロボットモデル](jmanual.html#5851)
 
 **:update-xk**
 
@@ -6892,7 +6899,7 @@ About this document ...
 
 ****EusLisp** **EusLisp version 9.00/ irteus version 1.00**
 **リファレンスマニュアル** -ロボットモデリングの拡張- ETL-TR-95-19 +
-JSK-TR-10-03 February 14, 2016**
+JSK-TR-10-03 February 15, 2016**
 
 This document was generated using the
 [**LaTeX**2`HTML`](http://www.latex2html.org/) translator Version 2008
@@ -6906,8 +6913,8 @@ Macquarie University, Sydney.
 The command line arguments were: **latex2html**
 `-dir /tmp/html/ -local_icons -auto_prefix -iso_language JP jmanual -split 1 -no_navigation`
 
-The translation was initiated by on 2016-02-14
+The translation was initiated by on 2016-02-15
 
 * * * * *
 
-2016-02-14
+2016-02-15
