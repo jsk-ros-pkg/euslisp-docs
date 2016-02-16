@@ -290,6 +290,59 @@ Return value is a list of interpolatingp for all controllers, so (null (some #'i
 :show-mesh-traj-with-color *link-body-list* *link-coords-list* *&key* *((:lifetime lf) 20)* *(ns robot_traj)* *((:color col) #f(0.5 0.5 0.5))* 
 
 
+### robot-move-base-interface
+- :super **robot-interface**
+- :slots move-base-action move-base-trajectory-action move-base-goal-msg move-base-goal-coords move-base-goal-map-to-frame go-pos-unsafe-goal-msg current-goal-coords 
+
+
+
+#### :move-trajectory-sequence
+&nbsp;&nbsp;&nbsp;*trajectory-points* *time-list* *&key* *(stop t)* <br>&nbsp;&nbsp;&nbsp;*(start-time)* <br>&nbsp;&nbsp;&nbsp;*(send-action nil)* 
+
+- trajectory-points [ list of #f(x y d) ] time-list [list of time span] <br>
+stop [ stop after msec moveing ] <br>
+start-time [ robot will move at start-time ] <br>
+send-action [ send message to action server, it means robot will move ] <br>
+
+
+#### :move-trajectory
+&nbsp;&nbsp;&nbsp;*x* *y* *d* *&optional* *(msec 1000)* *&key* *(stop t)* <br>&nbsp;&nbsp;&nbsp;*(start-time)* <br>&nbsp;&nbsp;&nbsp;*(send-action nil)* 
+
+-  x [m/sec] y [m/sec] d [rad/sec] msec [milli second] <br>
+stop [ stop after msec moveing ] <br>
+start-time [ robot will move at start-time ] <br>
+send-action [ send message to action server, it means robot will move ] <br>
+
+
+:init *&rest* *args* *&key* *(move-base-action-name move_base)* *&allow-other-keys* 
+
+:go-stop *&optional* *(force-stop t)* 
+
+:make-plan *st-cds* *goal-cds* *&key* *(start-frame-id /world)* *(goal-frame-id /world)* 
+
+:move-to *coords* *&rest* *args* *&key* *(no-wait nil)* *&allow-other-keys* 
+
+:move-to-send *coords* *&key* *(frame-id /world)* *(wait-for-server-timeout 5)* *(count 0)* *&allow-other-keys* 
+
+:move-to-wait *&rest* *args* *&key* *(retry 10)* *(frame-id /world)* *&allow-other-keys* 
+
+:go-waitp 
+
+:go-pos *x* *y* *&optional* *(d 0)* 
+
+:go-pos-no-wait *x* *y* *&optional* *(d 0)* 
+
+:go-wait 
+
+:go-velocity *x* *y* *d* *&optional* *(msec 1000)* *&key* *(stop t)* *(wait)* 
+
+:go-pos-unsafe *&rest* *args* 
+
+:go-pos-unsafe-no-wait *x* *y* *&optional* *(d 0)* 
+
+:go-pos-unsafe-wait 
+
+
 ### ros-interface
 - :super **robot-interface**
 - :slots nil
