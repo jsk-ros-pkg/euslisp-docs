@@ -12,7 +12,7 @@
 
 :publish-joint-state 
 
-:wait-interpolation *&rest* *args* 
+:wait-interpolation *&optional* *(ctype)* *(timeout 0)* 
 
 :larm-controller 
 
