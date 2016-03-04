@@ -4,6 +4,16 @@
 
 
 
+#### :gripper
+&nbsp;&nbsp;&nbsp;*&rest* *args* 
+
+- get information of gripper <br>
+Arguments: <br>
+ - arm (:larm :rarm :arms) <br>
+ - type (:position :velocity :pressure) <br>
+Example: (send self :gripper :rarm :position) => 0.00 <br>
+
+
 :init *&rest* *args* *&key* *(type :default-controller)* *&allow-other-keys* 
 
 :pr2-odom-callback *msg* 
@@ -37,8 +47,6 @@
 :head-angle-vector *av* *tm* 
 
 :move-gripper *arm* *pos* *&key* *(effort 25)* *(wait t)* 
-
-:gripper *&rest* *args* 
 
 :start-grasp *&optional* *(arm :arms)* *&key* *((:gain g) 0.01)* *((:objects objs) objects)* 
 
