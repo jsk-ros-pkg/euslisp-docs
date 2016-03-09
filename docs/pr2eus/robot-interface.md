@@ -292,7 +292,7 @@ Return value is a list of interpolatingp for all controllers, so (null (some #'i
 
 ### robot-move-base-interface
 - :super **robot-interface**
-- :slots move-base-action move-base-trajectory-action move-base-goal-msg move-base-goal-coords move-base-goal-map-to-frame go-pos-unsafe-goal-msg current-goal-coords 
+- :slots move-base-action move-base-trajectory-action move-base-goal-msg move-base-goal-coords move-base-goal-map-to-frame base-frame-id odom-topic go-pos-unsafe-goal-msg current-goal-coords 
 
 
 
@@ -314,7 +314,9 @@ start-time [ robot will move at start-time ] <br>
 send-action [ send message to action server, it means robot will move ] <br>
 
 
-:init *&rest* *args* *&key* *(move-base-action-name move_base)* *&allow-other-keys* 
+:init *&rest* *args* *&key* *(move-base-action-name move_base)* *((:base-frame-id base-frame-id-name) /base_footprint)* *((:odom-topic odom-topic-name) /base_odometry/odom)* *&allow-other-keys* 
+
+:odom-callback *msg* 
 
 :go-stop *&optional* *(force-stop t)* 
 
@@ -341,6 +343,8 @@ send-action [ send message to action server, it means robot will move ] <br>
 :go-pos-unsafe-no-wait *x* *y* *&optional* *(d 0)* 
 
 :go-pos-unsafe-wait 
+
+:state *&rest* *args* 
 
 
 ### ros-interface

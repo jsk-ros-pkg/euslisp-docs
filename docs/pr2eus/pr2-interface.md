@@ -16,8 +16,6 @@ Example: (send self :gripper :rarm :position) => 0.00 <br>
 
 :init *&rest* *args* *&key* *(type :default-controller)* *&allow-other-keys* 
 
-:pr2-odom-callback *msg* 
-
 :state *&rest* *args* 
 
 :publish-joint-state 
