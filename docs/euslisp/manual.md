@@ -7351,15 +7351,15 @@ num2+tolerance$](manual-img62.png).
 \*epsilon\*)]*[function]
 
 returns T if ![$num1$](manual-img59.png) is apparently greater than
-![$num2$](manual-img60.png), i.e. ![$num1 <
-num2-tolerance$](manual-img61.png).
+![$num2$](manual-img60.png), i.e. ![$num1 \>
+num2+tolerance$](manual-img63.png).
 
 **eps![$\>=$](manual-img16.png)** *num1 num2 [(tolerance
 \*epsilon\*)]*[function]
 
 returns T if ![$num1$](manual-img59.png) is possibly greater than or
-equal to ![$num2$](manual-img60.png), i.e. ![$num1 <
-num2+tolerance$](manual-img62.png).
+equal to ![$num2$](manual-img60.png), i.e. ![$num1 \>
+num2-tolerance$](manual-img64.png).
 
 **bounding-box** [class]
 
@@ -7464,7 +7464,7 @@ from outside.
 
 defines a line passing on pvert and nvert. The line is directed from
 *pvert* to *nvert* in the parametric representation: ![$t \\cdot pvert
-+(1-t)nvert $](manual-img63.png).
++(1-t)nvert $](manual-img65.png).
 
 **:vertices** [method]
 
@@ -7474,7 +7474,7 @@ returns the list of *pvert* and *nvert*.
 
 returns a three dimensional float-vector that corresponds to the *p*
 parameter on this line. ![$parameter \\cdot pvert +
-(1-parameter)nvert$](manual-img64.png)
+(1-parameter)nvert$](manual-img66.png)
 
 **:parameter** *point*[method]
 
@@ -7705,7 +7705,7 @@ this plane.
 
 Defines a plane with the *point* on the plane and the *normal* vector.
 *Normal*must be a normalized vector, ![$\\vert
-normal\\vert=1$](manual-img65.png).
+normal\\vert=1$](manual-img67.png).
 
 **polygon** [class]
 
@@ -7933,8 +7933,8 @@ returns the bounding-box of this body.
 **:Euler** [method]
 
 calculates Euler number of this body, that is ![$faces + vertices -
-edges - 2 - holes$](manual-img66.png). This should equal to ![$-2
-rings$](manual-img67.png).
+edges - 2 - holes$](manual-img68.png). This should equal to ![$-2
+rings$](manual-img69.png).
 
 **:perimeter** [method]
 
@@ -8055,7 +8055,7 @@ Instead of giving *point*, *distance* can be specified.
 **Figure 10:** primitive bodies
 
 ![\\begin{figure}\\begin{center} \\mbox{\\epsfsize10cm
-\\epsfbox{fig/fig1.ps} } \\end{center} \\end{figure}](manual-img68.png)
+\\epsfbox{fig/fig1.ps} } \\end{center} \\end{figure}](manual-img70.png)
 
 **make-cube** *xsize ysize zsize &key name color*[function]
 
@@ -8067,7 +8067,7 @@ of the body.
 
 Makes a prism by lifting the shape defined by *bottom-points* along
 *sweep-vector*. If the *sweep-vector* is a number, not a float-vector,
-it is taken as the height of the prism in the ![$z$](manual-img69.png)
+it is taken as the height of the prism in the ![$z$](manual-img71.png)
 direction. Bottom points must be ordered as they define the bottom face
 of the body. For example, (make-prism '(\#f(1 1 0) \#f(1 -1 0) \#f(-1 -1
 0) \#f(-1 1 0)) 2.0) makes a cube of height 2.0.
@@ -8096,8 +8096,8 @@ circular faces. Thus,
 `(make-solid-of-revolution '(#f(0 0 1) #f(1 0 0)))` makes a cone, and
 `(make-solid-of-revolution '(#f(1 0 1) #f(1 0 0)))` makes a cylinder.
 The *points* are order-sensitive, and are expected to be arranged from
-higher ![$z$](manual-img69.png) coordinate to lower
-![$z$](manual-img69.png).
+higher ![$z$](manual-img71.png) coordinate to lower
+![$z$](manual-img71.png).
 
 **make-torus** *points &key (segments 16) name color*[function]
 
@@ -8281,7 +8281,7 @@ the figures designate the constraints for the pegs.
 ![\\begin{figure}\\mbox{\\epsfxsize =7.5cm
 \\epsfbox{fig/fig-peg-in-hole1.ps} } \\mbo... ...s} } \\mbox{\\epsfxsize
 =7.5cm \\epsfbox{fig/fig-peg-in-hole4.ps}
-}\\end{figure}](manual-img70.png)
+}\\end{figure}](manual-img72.png)
 
 The following figures shows an example of the possible motions of a peg
 in a hole. The example corresponds to the above program.
@@ -8291,7 +8291,7 @@ in a hole. The example corresponds to the above program.
 ![\\begin{figure}\\begin{center} \\mbox{\\epsfxsize =7.5cm
 \\epsfbox{fig/fig-peg-nana... ...\\epsfxsize =7.5cm
 \\epsfbox{fig/fig-peg-naname-m4.ps} } \\end{center}
-\\end{figure}](manual-img71.png)
+\\end{figure}](manual-img73.png)
 
 Voronoi Diagram of Polygons
 ---------------------------
@@ -8342,18 +8342,18 @@ the following fields:
            (type <:endpoint or :point-point or :segment-segment or :point-segment>)
            (outflag <t or nil>)
 
-A ![$vertex$](manual-img72.png) is a symbol whose property list contains
+A ![$vertex$](manual-img74.png) is a symbol whose property list contains
 the field "pos". This field itself contains a cons ![$(x
-y)$](manual-img73.png), (real) planar coordinates of the vertex.
-![$Pred$](manual-img74.png) and ![$succ$](manual-img75.png) field give
+y)$](manual-img75.png), (real) planar coordinates of the vertex.
+![$Pred$](manual-img76.png) and ![$succ$](manual-img77.png) field give
 counterclockwise predecessor and successor according to the dcel
 formalism (see Shamos and Preparata, Computational Geometry: An
-introduction, 1985, pp 15-17). A ![$site$](manual-img76.png) is also a
+introduction, 1985, pp 15-17). A ![$site$](manual-img78.png) is also a
 symbol, whose property list also contains relevant information. Sites
 describe original input data; they can be of type :point (a polygon
 vertex) or segment (a polygon edge).
 
-![$Type$](manual-img77.png) is the gender of the bisector, determined by
+![$Type$](manual-img79.png) is the gender of the bisector, determined by
 the type of the sites it separates. By convention, outside is the right
 side of a start-end edge. The voronoi diagram computes ouside as well as
 inside bisectors. Sort on outflag to keep the ones you want.
@@ -8361,7 +8361,7 @@ inside bisectors. Sort on outflag to keep the ones you want.
 **pv** *data*[function]
 
 Compute the Voronoi diagram of polygons from the
-![$data$](manual-img78.png) with the above format.
+![$data$](manual-img80.png) with the above format.
 
 **SAMPLE:** In order to run the program on a short sample, please
 perform the following steps: 0- Copy the following files in your
@@ -8418,7 +8418,7 @@ referred as the viewing coordinate system.
 
 ![\\begin{figure}\\begin{center} \\mbox{\\epsfsize10cm
 \\epsfbox{fig/viewcoords.ps} } \\end{center}
-\\end{figure}](manual-img79.png)
+\\end{figure}](manual-img81.png)
 
 **viewing** [class]
 
@@ -8453,7 +8453,7 @@ X-axis is in horizontal direction to the right in the viewport.
 
 ![\\begin{emtabbing} {\\bf :init} \\it \\&key \\= :target \\hspace{12mm}
 \\= \\char93 f(0... ... 1.0)) \\\\ \\\> :view-right \\\> nil \\\\ \\\>
-\\&allow-other-keys \\rm \\end{emtabbing}](manual-img80.png)
+\\&allow-other-keys \\rm \\end{emtabbing}](manual-img82.png)
 
 Since viewing inherits cascaded-coords, all the *:init* parameters such
 as *:pos*, *:rot*, *:Euler*, *:rpy*, etc. can be used to specify the
@@ -8546,7 +8546,7 @@ given, the aspect ratio is changed by setting screen-y to screen-x \*
 
 ![\\begin{emtabbing} {\\bf :init} \\it \\&key \\= :hither \\hspace{5mm}
 \\= 100.0 \\\\lq [met... ... :screen-y \\\> (\* screen-x aspect) \\\\
-\\\> \\&allow-other-keys \\rm \\end{emtabbing}](manual-img81.png)
+\\\> \\&allow-other-keys \\rm \\end{emtabbing}](manual-img83.png)
 
 initializes viewing and projection.
 
@@ -8644,7 +8644,7 @@ given to the *:height* parameter.
 
 *V1* and *v2*, which are two homogeneous vectors with four elements,
 represent a line in 3-D space. The line is clipped at the boundary of
-![$x=-1, x=1, y=-1, y=1, z=0, z=1$](manual-img82.png), and a list of two
+![$x=-1, x=1, y=-1, y=1, z=0, z=1$](manual-img84.png), and a list of two
 vectors are returned. If the line lies completely outside the viewport,
 NIL is returned.
 
@@ -8834,7 +8834,7 @@ slots of this viewer.
 
 ![\\begin{emtabbing} {\\bf view} \\it\\&key \\= (size 500) (width size)
 (height size) ... ...en) (screen-y screen) \\\\ \\\> (xcenter 500)
-(ycenter 400) \\\\ \\rm \\end{emtabbing}](manual-img83.png)
+(ycenter 400) \\\\ \\rm \\end{emtabbing}](manual-img85.png)
 
 creates a new viewer and pushes it in \*viewers\* list.
 
@@ -9275,7 +9275,7 @@ plots pixels having values between *min* and *max* inclusively with
 ![\\begin{emtabbing} {\\bf :edge1} \\it\\&optional \\=(method 1) \\\\lq
 [method]\\\\ \\\>(th1 ... ...e-length-threshold\*) (win
 geometry:\*viewsurface\*) (edgeimg1) \\rm
-\\end{emtabbing}](manual-img84.png)
+\\end{emtabbing}](manual-img86.png)
 
 detects edge of this image. And displays this edge on this image.
 
@@ -9306,7 +9306,7 @@ returns the height of this image.
 
 **:size** [method]
 
-returns ![$width \\times height$](manual-img85.png) of this image.
+returns ![$width \\times height$](manual-img87.png) of this image.
 
 **:red** [method]
 
@@ -9344,8 +9344,8 @@ either as RGB values or HLS values.
 **:monochromize** *&optional (NTSC nil)*[method]
 
 computes brightness from RGB components and returns a new `pixel-image`.
-If *NTSC* is nil, ![$(R+G+B)/3$](manual-img86.png) is computed. If T,
-![$0.299\*R+0.587\*G+0.114\*B$](manual-img87.png) is computed.
+If *NTSC* is nil, ![$(R+G+B)/3$](manual-img88.png) is computed. If T,
+![$0.299\*R+0.587\*G+0.114\*B$](manual-img89.png) is computed.
 
 **:HLS** [method]
 
@@ -9380,7 +9380,7 @@ sets translated pixel-image object as xpicture.
 ![\\begin{emtabbing} {\\bf :edge1} \\it\\&optional \\=(method 1) \\\\lq
 [method]\\\\ \\\>(th1 ... ...ld\*)\\\\ \\\>(run
 \*edge-length-threshold\*) (win \*color-viewer\*) \\rm
-\\end{emtabbing}](manual-img88.png)
+\\end{emtabbing}](manual-img90.png)
 
 detects edge of this image. And displays this edge on this image.
 
@@ -9417,7 +9417,7 @@ Edge Finding facilities are provided by `"vision/edge/edge"`.
 
 ![\\begin{emtabbing} {\\bf edge1} \\it img \\=\\&optional \\=(method 1)
 \\\\lq [function]\\\\ ... ...\>\\&aux (width (send img :width)) (height
-(send img :height)) \\rm \\end{emtabbing}](manual-img89.png)
+(send img :height)) \\rm \\end{emtabbing}](manual-img91.png)
 
 finds edge pixels in this image. **edge1** first applies a gradient
 operator to every pixel. There are three kinds of gradient operators
@@ -9446,7 +9446,7 @@ green, and isolated pixels in blue.
 ![\\begin{emtabbing} {\\bf edge2} \\it img1 edge1result \\&key
 \\=(kvalue 8.0) \\\\lq [func... ...) (line-error 2.8)\\\\
 \\\>(curve-error 2.8) (plane-limit 0.3) \\rm
-\\end{emtabbing}](manual-img90.png)
+\\end{emtabbing}](manual-img92.png)
 
 tries to fit straight lines and elliptic curves to the result obtained
 by **edge1**. A list of three elements, which represents regions,
@@ -9492,7 +9492,7 @@ represents curved-edge-segment.
 
 ![\\begin{emtabbing} {\\bf draw-ellipse-segment} \\it elp gc \\&optional
 \\=(vs \*views... ...\*) (height (send vs :height)) \\\\lq
-[function]\\\\ \\\>(x 0) (y 0) \\rm \\end{emtabbing}](manual-img91.png)
+[function]\\\\ \\\>(x 0) (y 0) \\rm \\end{emtabbing}](manual-img93.png)
 
 draws **curved-edge-segment** object *elp* on xwindow *vs*.
 
@@ -9503,7 +9503,7 @@ draws **line-edge-segment** object *s* on xwindow *vs*.
 
 ![\\begin{emtabbing} {\\bf draw-segments} \\it segs \\&key \\=(line-gc
 image::\*red-gc\*... ...\*) (height (send vs :height)) (step nil)\\\\
-\\\>(x 0) (y 0) \\rm \\end{emtabbing}](manual-img92.png)
+\\\>(x 0) (y 0) \\rm \\end{emtabbing}](manual-img94.png)
 
 draws *s*, a list of **edge-segment** objects on xwindow *vs*.
 
@@ -9538,7 +9538,7 @@ GC whose foreground color is \#00ffff
 **Figure 14:** Edge Finder and Overlaid Edges
 
 ![\\begin{figure}\\begin{center}
-\\epsfile{file=fig/block1.edg.ps,height=9cm}\\end{center}\\end{figure}](manual-img93.png)
+\\epsfile{file=fig/block1.edg.ps,height=9cm}\\end{center}\\end{figure}](manual-img95.png)
 
 Tracking
 --------
@@ -9841,7 +9841,7 @@ descendants list of the handcoords.
 ![\\begin{emtabbing} {\\bf :create} \\it\\=\\&rest args \\\\lq
 [method]\\\\ \\\>\\&key \\=((:na... ...) ((:lefty lft) t) ((:act a)
 nil)\\\\ \\\>\\&allow-other-keys \\rm
-\\end{emtabbing}](manual-img94.png)
+\\end{emtabbing}](manual-img96.png)
 
 creates and initializes a new manipulator object.
 
@@ -9881,21 +9881,21 @@ respect to the world-coords. The arm solution is independent of the
 
 Fig. [15](#JointCoords) shows the relation between coordinate systems
 (**base, J1, J2,..., handcoords** and **toolcoords**).
-![$T$](manual-img95.png) and other transformations are calculated as
+![$T$](manual-img97.png) and other transformations are calculated as
 follows.
 
 ![$ \\begin{array}{ll} T & = base \\cdot J1 \\cdot J2 \\cdot \\ldots
 \\cdot J6 \\cdot ha... ... T\_{h} & = handcoords \\\\ & =
-(manipulator-handcoords \\; eta3)\\\\ \\end{array}$](manual-img96.png)
+(manipulator-handcoords \\; eta3)\\\\ \\end{array}$](manual-img98.png)
 
-where ![$T$](manual-img95.png) is the transformation between the
+where ![$T$](manual-img97.png) is the transformation between the
 world-coords and the toolcoords.
 
 **Figure 15:** relation between coordinate systems in a manipulator
 
 ![\\begin{figure}\\begin{center} \\mbox{\\epsfysize =10cm
 \\epsfbox{fig/eta3coords.ps} } \\end{center} \\par
-\\end{figure}](manual-img97.png)
+\\end{figure}](manual-img99.png)
 
 Each joint has a geometric model represented by Breps (Boundary
 Representation). The coordinates of the vertices and the equations of
@@ -10251,11 +10251,12 @@ window.
 **Figure 16:** drawing primitives
 
 ![\\begin{figure}\\begin{center} \\mbox{\\epsfysize =6cm
-\\epsfbox{fig/xdraw.ps} } \\end{center} \\end{figure}](manual-img98.png)
+\\epsfbox{fig/xdraw.ps} } \\end{center}
+\\end{figure}](manual-img100.png)
 
 **:point** *x y &optional (gc gccon)*[method]
 
-draws a point at ![$(x, y)$](manual-img99.png) with optional *gc*.
+draws a point at ![$(x, y)$](manual-img101.png) with optional *gc*.
 
 **:line** *x1 y1 x2 y2 &optional (gc gcon)*[method]
 
@@ -10376,7 +10377,7 @@ objects can be drawn, but also by many **panel-items** and
 
 ![\\begin{emtabbing} {\\bf :create} \\it\\&key ( \\= (:parent \*root\*)
 \\\\lq [method] \\\\ ... ... \\\> event-mask (:key :button :enterLeave
-:configure :motion) \\rm \\end{emtabbing}](manual-img100.png)
+:configure :motion) \\rm \\end{emtabbing}](manual-img102.png)
 
 creates and initializes a xwindow. When *parent* is given, this window
 is created as a subwindow of *parent*, and is registered in the
@@ -10564,7 +10565,7 @@ GC.
 ![\\begin{emtabbing} {\\bf :create} \\it\\&key \\= (drawable
 defaultRootWindow) \\\\lq [me... ...e-width line-style cap-style
 join-style \\\\ \\\> font dash \\\\ \\rm
-\\end{emtabbing}](manual-img101.png)
+\\end{emtabbing}](manual-img103.png)
 
 creates a gc with given attributes. *Drawable* is used by the Xserver to
 know the screen and depth of the screen. The resulted GC can be used in
@@ -10642,7 +10643,7 @@ An integer value representing the attribute is returned.
 
 ![\\begin{emtabbing} {\\bf :change-attributes} \\it\\&key \\= function
 plane-mask fore... ...d]\\\\ \\\>line-width line-style cap-style
-join-style font dash \\rm \\end{emtabbing}](manual-img102.png)
+join-style font dash \\rm \\end{emtabbing}](manual-img104.png)
 
 change attributes. More than one attributes are changed at the same
 time.
@@ -10802,7 +10803,7 @@ be inquired by sending the `:pixel` message, for example,
 **:define-rgb-LUT** *LUT-name red green blue [private]*[method]
 
 defines an LUT for shrunk RGB representation. For example, if
-red=green=blue=2, totally ![$2\^{2+2+2}=2\^6=64$](manual-img103.png)
+red=green=blue=2, totally ![$2\^{2+2+2}=2\^6=64$](manual-img105.png)
 color cells are allocated.
 
 **:define-hls-LUT** *LUT-name count hue low-brightness high-brightness
@@ -10874,7 +10875,7 @@ creates a new color map object.
 
 defines a color in the RGB model. Use **setf** to assign value to each
 slots. The RGB values are sign extended and the greatest value is
-represented as ![$-1$](manual-img104.png).
+represented as ![$-1$](manual-img106.png).
 
 **:red** [method]
 
@@ -11082,7 +11083,7 @@ windows should be defined as subclasses of the `Panel`.
 
 ![\\begin{emtabbing} {\\bf :create} \\it\\&rest args \\= \\&key \\=
 ((:item-height iheig... ...) ((:background color) \*bisque1\*) \\\\ \\\>
-\\&allow-other-keys) \\rm \\end{emtabbing}](manual-img105.png)
+\\&allow-other-keys) \\rm \\end{emtabbing}](manual-img107.png)
 
 creates and initializes a panel. Since superclass's `:create` is
 invoked, all creation parameters for **xwindow**, such as *width,
@@ -11106,11 +11107,11 @@ and makes it visible by sending `:map`.
 
 ![\\begin{figure}\\begin{center} \\mbox{\\epsfysize =7cm
 \\epsfbox{fig/panellayout.ps} } \\end{center}
-\\end{figure}](manual-img106.png)
+\\end{figure}](manual-img108.png)
 
 ![\\begin{emtabbing} {\\bf :create-item} \\it klass label receiver
 method \\= \\&rest ... ...method]\\\\ \\\> \\&key ((font fontid)\\\\
-\\\> \\&allow-other-keys) \\rm \\end{emtabbing}](manual-img107.png)
+\\\> \\&allow-other-keys) \\rm \\end{emtabbing}](manual-img109.png)
 
 creates an instance of the panel-item class specified by *klass* (i.e.,
 `button-item,  menu-button-item, slider-item, joystick-item`, etc.), and
@@ -11125,7 +11126,7 @@ delete all panel-items.
 
 ![\\begin{emtabbing} {\\bf :create-menubar} \\it\\= \\&rest args \\\\lq
 [method]\\\\ \\\> \\&key (font fontid)\\\\ \\\> \\&allow-other-keys \\rm
-\\end{emtabbing}](manual-img108.png)
+\\end{emtabbing}](manual-img110.png)
 
 creates a *menubar-panel* and locates it at the top of the panel.
 
@@ -11197,7 +11198,7 @@ Creation of a `menu-panel` should follow the order described below:
 
 ![\\begin{emtabbing} {\\bf :create} \\it\\&rest args \\= \\&key\\=
 (items) (border-width... ...\*bisque1\*) (active \*bisque2\*) \\\\
-\\\>\\&allow-other-keys) \\rm \\end{emtabbing}](manual-img109.png)
+\\\>\\&allow-other-keys) \\rm \\end{emtabbing}](manual-img111.png)
 
 create a menu-panel window. The size of the window is expanded each time
 new menu-item is added.
@@ -11233,7 +11234,7 @@ compiled by simply cliking buttons. When a file is printed,
 
 ![\\begin{figure}\\begin{center} \\mbox{\\epsfysize =7.5cm
 \\epsfbox{fig/filepanel.ps} } \\end{center}
-\\end{figure}](manual-img110.png)
+\\end{figure}](manual-img112.png)
 
 ### Text View Panel
 
@@ -11251,7 +11252,7 @@ window manager.
 
 ![\\begin{figure}\\begin{center} \\mbox{\\epsfysize =7cm
 \\epsfbox{fig/textviewpanel.ps} } \\end{center}
-\\end{figure}](manual-img111.png)
+\\end{figure}](manual-img113.png)
 
     (defclass TextViewPanel :super panel
             :slots (quit-button find-button find-text view-window))
@@ -11332,7 +11333,7 @@ arguments passed to *notify-method* are item specific:
 
 ![\\begin{emtabbing} {\\bf :create} \\it name reciever method \\=
 \\&rest args \\\\lq [met... ...:height h) 100) (font font-courb12)\\\\
-\\\> \\&allow-other-keys \\rm \\end{emtabbing}](manual-img112.png)
+\\\> \\&allow-other-keys \\rm \\end{emtabbing}](manual-img114.png)
 
 creates a panel-item. As panel-item is an abstract class, this method
 should only be called by the subclasses via `send-super`.
@@ -11355,7 +11356,7 @@ draws button-item's label.
 ![\\begin{emtabbing} {\\bf :create} \\it label revciever method \\=
 \\&rest args \\\\lq [m... ...order-width 0) \\\\ \\\>\\\> (state
 :top)\\\\ \\\>\\&allow-other-keys \\rm
-\\end{emtabbing}](manual-img113.png)
+\\end{emtabbing}](manual-img115.png)
 
 creates a button-item. If button's width and height are not given, the
 sizes are automatically set to accomodate the label string drawn with
@@ -11386,7 +11387,7 @@ mouse button is released on one of the menu items.
 
 ![\\begin{emtabbing} {\\bf :create} \\it\\= label reciever method \\\\lq
 [method]\\\\ \\\>\\&... ...key (menu nil) (items) (state :flat)\\\\
-\\\>\\&allow-other-keys \\rm \\end{emtabbing}](manual-img114.png)
+\\\>\\&allow-other-keys \\rm \\end{emtabbing}](manual-img116.png)
 
 creates a pulldown menu button. *Receiver* and *method* arguments has no
 effect.
@@ -11419,7 +11420,7 @@ draws a bitmap/pixmap on the button.
 
 ![\\begin{emtabbing} {\\bf :create} \\it bitmap-file reciever method \\=
 \\&rest args \\\\lq [method]\\\\ \\\>\\&key width height\\\\
-\\\>\\&allow-other-keys)\\rm \\end{emtabbing}](manual-img115.png)
+\\\>\\&allow-other-keys)\\rm \\end{emtabbing}](manual-img117.png)
 
 creates bitmap-button-item. The first argument, *bitmap-file* replaces
 the *label* argument of `button-item`.
@@ -11446,7 +11447,7 @@ active, and only one choice can become active at the same time.
 
 ![\\begin{emtabbing} {\\bf :create} \\it label reciever method \\=
 \\&rest args \\\\lq [me... ...ont))\\\\ \\\>\\\>(button-size 13)\\\\
-\\\>\\\>(border-width 0)\\\\ \\rm \\end{emtabbing}](manual-img116.png)
+\\\>\\\>(border-width 0)\\\\ \\rm \\end{emtabbing}](manual-img118.png)
 
 create a choice-item-button. Each choice button is a circle of radius
 *button-size*. When a new choice is selected, *notify-object*'s
@@ -11494,7 +11495,7 @@ as the arguments.
 
 ![\\begin{emtabbing} {\\bf :create} \\it label reciever method \\=
 \\&rest args \\\\lq [me... ...nt-courb12) (span 100) (border-width 0)
-(initial-value min) \\rm \\end{emtabbing}](manual-img117.png)
+(initial-value min) \\rm \\end{emtabbing}](manual-img119.png)
 
 creates slider-item. The sliding knob is displayed as a small black
 rectangle on a bar. The left end represents the *min* value and the
@@ -11524,7 +11525,7 @@ coaxial chart that looks like a web (Fig. [20](#panelitem)).
 
 ![\\begin{emtabbing} {\\bf :create} \\it name reciever method \\=
 \\&rest args \\\\lq [met... ... \\\>\\\>(min-y -1.0) (max-y 1.0)\\\\
-\\\>\\&allow-other-keys) \\rm \\end{emtabbing}](manual-img118.png)
+\\\>\\&allow-other-keys) \\rm \\end{emtabbing}](manual-img120.png)
 
 *Stick-size* is the radius of the stick's black circle. The sizes of the
 circles in the coaxial chart are determined according to the width and
@@ -11569,7 +11570,7 @@ above, and Fig. [20](#panelitem) depicts how they appear in a panel.
 
 ![\\begin{figure}\\begin{center} \\mbox{\\epsfysize =5cm
 \\epsfbox{fig/panelitem.ps} } \\end{center}
-\\end{figure}](manual-img119.png)
+\\end{figure}](manual-img121.png)
 
 \
  **text-item** [class]
@@ -11591,7 +11592,7 @@ the *notify-object*'s *notify-method*.
 
 ![\\begin{emtabbing} {\\bf :create} \\it label revciever method \\=
 \\&rest args \\\\lq [m... ...0) (initial-value ) (border-width 0)\\\\
-\\\>\\&allow-other-keys \\rm \\end{emtabbing}](manual-img120.png)
+\\\>\\&allow-other-keys \\rm \\end{emtabbing}](manual-img122.png)
 
 creates text-item. Though the linebuffer of the textwindow may have
 unlimited length, visible portion is restricted to the *columns*
@@ -11656,7 +11657,7 @@ initializes *id*th text-window.
 ![\\begin{emtabbing} {\\bf :create} \\it\\=\\&rest args \\\\lq
 [method]\\\\ \\\>\\&key \\=width... ...tify-object nil) (notify-method
 nil)\\\\ \\\>\\&allow-other-keys \\rm
-\\end{emtabbing}](manual-img121.png)
+\\end{emtabbing}](manual-img123.png)
 
 creates text-window. The sizes of the window may be specified either by
 *width* and *height* or by *rows* and *columns*. *Notify-object*'s
@@ -11739,7 +11740,7 @@ places *str* at the cursor position.
 **:event-col** *event*[method]
 
 returns the text cursor position designated by ![$(x,
-y)$](manual-img99.png) in the *event*.
+y)$](manual-img101.png) in the *event*.
 
 **:KeyPress** *event*[method]
 
@@ -17841,8 +17842,8 @@ Macquarie University, Sydney.
 The command line arguments were: **latex2html**
 `-dir /tmp/html/ -local_icons -auto_prefix -iso_language JP manual -split 1 -no_navigation`
 
-The translation was initiated by on 2016-03-03
+The translation was initiated by on 2016-03-10
 
 * * * * *
 
-2016-03-03
+2016-03-10
