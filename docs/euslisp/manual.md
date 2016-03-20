@@ -1,9 +1,9 @@
-% EusLisp version 9.16 Reference Manual Featuring Multithread and XToolKit
+% EusLisp version 9.17 Reference Manual Featuring Multithread and XToolKit
   ETL-TR-95-2 January, 1995
 % 
 % 
 
-**EusLisp** **version 9.16** **Reference Manual** Featuring Multithread and XToolKit \
+**EusLisp** **version 9.17** **Reference Manual** Featuring Multithread and XToolKit \
  ETL-TR-95-2 January, 1995
 ======================================================================================
 
@@ -255,6 +255,9 @@ Revision History
     support microsecond add/subtract in interval-time class Version 9.16
     is released, added make-random-state, fixed bug in
     lib/llib/unittest.l
+**2016**
+  ~ Version 9.17 is released, add trace option in (init-unit-test),
+    enable to read \#f(nan inf)．fix models/doc.
 
 Installation
 ------------
@@ -17849,7 +17852,7 @@ Transformation](manual.html#27378)
 About this document ...
 =======================
 
-****EusLisp** **version 9.16** **Reference Manual** Featuring
+****EusLisp** **version 9.17** **Reference Manual** Featuring
 Multithread and XToolKit \
  ETL-TR-95-2 January, 1995**
 
