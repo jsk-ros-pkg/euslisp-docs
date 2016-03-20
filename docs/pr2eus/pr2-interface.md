@@ -89,9 +89,5 @@ pr2-tuckarm-pose *&rest* *args*
 
 pr2-reset-pose 
 
-clear-costmap 
-
-change-inflation-range *&optional* *(range 0.2)* 
-
 use-tilt-laser-obstacle-cloud *enable* 
 

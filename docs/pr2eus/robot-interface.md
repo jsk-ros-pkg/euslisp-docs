@@ -376,3 +376,7 @@ apply-trajectory_point *names* *trajpoint* *robot*
 
 apply-joint_trajectory *joint-trajectory* *robot* *&optional* *(offset 200.0)* 
 
+clear-costmap 
+
+change-inflation-range *&optional* *(range 0.2)* 
+
