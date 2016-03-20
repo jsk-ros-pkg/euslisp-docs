@@ -368,6 +368,18 @@ send-action [ send message to action server, it means robot will move ] <br>
 - call ${robot}-init function <br>
 
 
+### clear-costmap ###
+&nbsp;&nbsp;&nbsp;*&key* *(node-name /move_base_node)* 
+
+- reset local costmap and clear unknown grid around robot <br>
+
+
+### change-inflation-range ###
+&nbsp;&nbsp;&nbsp;*&optional* *(range 0.2)* *&key* *(node-name /move_base_node)* <br>&nbsp;&nbsp;&nbsp;*(costmap-name local_costmap)* <br>&nbsp;&nbsp;&nbsp;*(inflation-name inflation)* 
+
+- change inflation range of local costmap <br>
+
+
 joint-list->joint_state *jlist* *&key* *(position)* *(effort 0)* *(velocity 0)* 
 
 apply-joint_state *jointstate* *robot* 
@@ -375,8 +387,4 @@ apply-joint_state *jointstate* *robot*
 apply-trajectory_point *names* *trajpoint* *robot* 
 
 apply-joint_trajectory *joint-trajectory* *robot* *&optional* *(offset 200.0)* 
-
-clear-costmap 
-
-change-inflation-range *&optional* *(range 0.2)* 
 
