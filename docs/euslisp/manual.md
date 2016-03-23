@@ -17868,8 +17868,8 @@ Macquarie University, Sydney.
 The command line arguments were: **latex2html**
 `-dir /tmp/html/ -local_icons -auto_prefix -iso_language JP manual -split 1 -no_navigation`
 
-The translation was initiated by on 2016-03-20
+The translation was initiated by on 2016-03-23
 
 * * * * *
 
-2016-03-20
+2016-03-23
