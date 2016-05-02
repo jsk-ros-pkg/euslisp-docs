@@ -380,6 +380,24 @@ send-action [ send message to action server, it means robot will move ] <br>
 - change inflation range of local costmap <br>
 
 
+### robot-init ###
+&nbsp;&nbsp;&nbsp;*&optional* *(robot-name (ros::get-param /robot/type))* 
+
+- Initialize robot-model and robot-interface instances respectively, such as *pr2* and *ri*. <br>
+   Behavior: <br>
+     1. Without /robot/type and argument, or no interface file is found, robot instance and interface instance are not created and errors are invoked. <br>
+     2. If argument are specified and robot interface file is found, robot instance and interface with given name are created. <br>
+     3. If no argument is specified, /robot/type ROSPARAM is set, and robot interface file is found, robot instance and interface with given name are created. <br>
+   Typical usage: <br>
+     (robot-init) ;; With setting /robot/type ROSPARAM anywhere. <br>
+     (robot-init (or (ros::get-param "/robot/type") "pr2")) ;; If /robot/type ROSPARAM is specified, use it. Otherwise, use "pr2" by default. <br>
+   Configuring user-defined robot: <br>
+     This function searches robot interface file from rospack plugins. <br>
+     If user want to use their own robots from robot-init function, <br>
+     please write export tag in [user_defined_rospackage]/package.xml as pr2eus/package.xml. <br>
+    <br>
+
+
 joint-list->joint_state *jlist* *&key* *(position)* *(effort 0)* *(velocity 0)* 
 
 apply-joint_state *jointstate* *robot* 
