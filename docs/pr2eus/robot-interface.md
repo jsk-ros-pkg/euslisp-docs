@@ -31,7 +31,7 @@ robot-interface is object for interacting real robot thorugh JointTrajectoryActi
 
 
 #### :init
-&nbsp;&nbsp;&nbsp;*&rest* *args* *&key* *((:robot r))* <br>&nbsp;&nbsp;&nbsp;*((:objects objs))* <br>&nbsp;&nbsp;&nbsp;*(type :default-controller)* <br>&nbsp;&nbsp;&nbsp;*(use-tf2)* <br>&nbsp;&nbsp;&nbsp;*((:groupname nh) robot_multi_queue)* <br>&nbsp;&nbsp;&nbsp;*((:namespace ns))* <br>&nbsp;&nbsp;&nbsp;*((:joint-states-topic jst) joint_states)* <br>&nbsp;&nbsp;&nbsp;*((:publish-joint-states-topic pjst) nil)* <br>&nbsp;&nbsp;&nbsp;*((:controller-timeout ct) 3)* <br>&nbsp;&nbsp;&nbsp;*((:visuzlization-marker-topic vmt) robot_interface_marker_array)* <br>&nbsp;&nbsp;&nbsp;*((:simulation-look-all sim-look-all) t)* <br>&nbsp;&nbsp;&nbsp;*&allow-other-keys* 
+&nbsp;&nbsp;&nbsp;*&rest* *args* *&key* *((:robot r))* <br>&nbsp;&nbsp;&nbsp;*((:objects objs))* <br>&nbsp;&nbsp;&nbsp;*(type :default-controller)* <br>&nbsp;&nbsp;&nbsp;*(use-tf2)* <br>&nbsp;&nbsp;&nbsp;*((:groupname nh) robot_multi_queue)* <br>&nbsp;&nbsp;&nbsp;*((:namespace ns))* <br>&nbsp;&nbsp;&nbsp;*((:joint-states-topic jst) joint_states)* <br>&nbsp;&nbsp;&nbsp;*((:joint-states-queue-size jsq) 1)* <br>&nbsp;&nbsp;&nbsp;*((:publish-joint-states-topic pjst) nil)* <br>&nbsp;&nbsp;&nbsp;*((:controller-timeout ct) 3)* <br>&nbsp;&nbsp;&nbsp;*((:visuzlization-marker-topic vmt) robot_interface_marker_array)* <br>&nbsp;&nbsp;&nbsp;*((:simulation-look-all sim-look-all) t)* <br>&nbsp;&nbsp;&nbsp;*&allow-other-keys* 
 
 - Create robot interface <br>
 - robot : class name of robot <br>
@@ -40,7 +40,9 @@ robot-interface is object for interacting real robot thorugh JointTrajectoryActi
 - use-tf2 : use tf2 <br>
 - groupname : ros nodehandle group name <br>
 - namespace : ros nodehandle name space <br>
-- publish-joint-state-topic :  name for publishing joint state topuc (only for simulation) <br>
+- joint-states-topic jst : name for subscribing joint state topic <br>
+- joint-states-queue-size : queue size of joint state topic. if you have two different node publishing joint_state, better to use 2. default is 1 <br>
+- publish-joint-state-topic :  name for publishing joint state topic (only for simulation) <br>
 - conter-timeout : timeout seconds for controller lookup <br>
 - visualizatoin-marker-topic : topic name for visualize <br>
 
