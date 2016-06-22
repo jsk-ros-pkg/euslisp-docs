@@ -1,10 +1,12 @@
 ### controller-action-client
 - :super **ros::simple-action-client**
-- :slots time-to-finish ri angle-vector-sequence timer-sequence current-time current-angle-vector previous-angle-vector scale-angle-vector 
+- :slots time-to-finish last-feedback-msg-stamp ri angle-vector-sequence timer-sequence current-time current-angle-vector previous-angle-vector scale-angle-vector 
 
 
 
 :init *r* *&rest* *args* 
+
+:last-feedback-msg-stamp 
 
 :time-to-finish 
 
