@@ -261,6 +261,14 @@ Advertise a service <br>
 - Returns the number of publishers this subscriber is connected to.  <br>
 
 
+### ros::delete-param ###
+
+
+- key <br>
+ <br>
+Delete parameter from server <br>
+
+
 ### ros::ros-fatal ###
 
 
