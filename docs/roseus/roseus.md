@@ -134,6 +134,12 @@ Unsubscribe topic <br>
 - Unadvertise topic <br>
 
 
+### ros::get-param-cached ###
+
+
+- Get chached parameter <br>
+
+
 ### ros::get-namespace ###
 
 
@@ -380,12 +386,6 @@ Publish a message on the topic <br>
           (send msg :data (format nil "hello world ~a" (send (ros::time-now) :sec-nsec)))
           (ros::publish "chatter" msg)
           (ros::sleep))
-
-
-### ros::get-param-cashed ###
-
-
-- Get chached parameter <br>
 
 
 ### ros::roseus ###
