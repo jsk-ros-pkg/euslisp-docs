@@ -318,7 +318,7 @@ start-time [ robot will move at start-time ] <br>
 send-action [ send message to action server, it means robot will move ] <br>
 
 
-:init *&rest* *args* *&key* *(move-base-action-name move_base)* *((:base-frame-id base-frame-id-name) /base_footprint)* *((:odom-topic odom-topic-name) /base_odometry/odom)* *&allow-other-keys* 
+:init *&rest* *args* *&key* *(move-base-action-name move_base)* *((:base-frame-id base-frame-id-name) /base_footprint)* *(base-controller-action-name /base_controller/follow_joint_trajectory)* *((:odom-topic odom-topic-name) /base_odometry/odom)* *&allow-other-keys* 
 
 :odom-callback *msg* 
 
