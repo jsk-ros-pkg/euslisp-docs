@@ -46,7 +46,7 @@ Example: (send self :gripper :rarm :position) => 0.00 <br>
 
 :move-gripper *arm* *pos* *&key* *(effort 25)* *(wait t)* 
 
-:start-grasp *&optional* *(arm :arms)* *&key* *((:gain g) 0.01)* *((:objects objs) objects)* 
+:start-grasp *&optional* *(arm :arms)* *&key* *((:gain g) 0.01)* *((:objects objs) objects)* *force-assoc* 
 
 :stop-grasp *&optional* *(arm :arms)* *&key* *(wait nil)* 
 
