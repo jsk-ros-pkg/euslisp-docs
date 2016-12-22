@@ -56,7 +56,7 @@ robot-interface is object for interacting real robot thorugh JointTrajectoryActi
 
 
 #### :angle-vector
-&nbsp;&nbsp;&nbsp;*av* *&optional* *(tm nil)* *(ctype controller-type)* *(start-time 0)* *&key* *(scale 1)* <br>&nbsp;&nbsp;&nbsp;*(min-time 1.0)* 
+&nbsp;&nbsp;&nbsp;*av* *&optional* *(tm nil)* *(ctype controller-type)* *(start-time 0)* *&key* *(scale 1)* <br>&nbsp;&nbsp;&nbsp;*(min-time 1.0)* <br>&nbsp;&nbsp;&nbsp;*(end-coords-interpolation nil)* 
 
 - Send joind angle to robot, this method retuns immediately, so use :wait-interpolation to block until the motion stops. <br>
 - av : joint angle vector [rad] <br>
@@ -68,10 +68,11 @@ robot-interface is object for interacting real robot thorugh JointTrajectoryActi
 - start-time : time to start moving <br>
 - scale : if tm is not specified, it will use 1/scale of the fastest speed <br>
 - min-time : minimum time to for time to goal <br>
+- end-coords-interpolation : set t if you want to move robot in cartesian space interpolation <br>
 
 
 #### :angle-vector-sequence
-&nbsp;&nbsp;&nbsp;*avs* *&optional* *(tms (list 3000))* *(ctype controller-type)* *(start-time 0.1)* *&key* *(scale 1)* <br>&nbsp;&nbsp;&nbsp;*(min-time 0.0)* 
+&nbsp;&nbsp;&nbsp;*avs* *&optional* *(tms (list 3000))* *(ctype controller-type)* *(start-time 0.1)* *&key* *(scale 1)* <br>&nbsp;&nbsp;&nbsp;*(min-time 0.0)* <br>&nbsp;&nbsp;&nbsp;*(end-coords-interpolation nil)* 
 
 - Send joind angle to robot, this method retuns immediately, so use :wait-interpolation to block until the motion stops. <br>
 
