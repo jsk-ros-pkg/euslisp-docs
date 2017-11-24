@@ -1,0 +1,25 @@
+No implementation found for style `mytabbing'
+No implementation found for style `fancyheadings'
+No implementation found for style `graphicx'
+No implementation found for style `cases'
+
+redefining command \eqref 
+
+? brace missing for \epsfig
+
+*** wrap_cmd_eqref not defined, cannot wrap \eqref 
+
+jmanual.tex is newer than jmanual.aux: Please rerun latex.
+
+? brace missing for \
+
+Substitution of arg to newlabelxx delayed.
+
+redefining command \ 
+
+? brace missing for \oldcontentsline
+
+? brace missing for \oldnewlabel
+{eqnarray} does not have 3 columns, inserting blank cell
+
+Failed to convert image /tmp/l2h32610/image002.ps
