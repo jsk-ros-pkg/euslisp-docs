@@ -5,7 +5,7 @@ This is document collection of euslisp application programs
 ## EusLisp
 
 - [github project page](http://github.com/euslisp/EusLisp)
-- [EusLisp manual](euslisp/manual)
+- [EusLisp manual](http://euslisp.github.io/EusLisp/manual.html)
 
 ## jskeus
 
